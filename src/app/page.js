@@ -10,7 +10,6 @@ export default function Home() {
     <Hero/>
     <Navigation/>
     <Footer/>
-    <ScrollToTopButton/>
    </div>
   );
 }

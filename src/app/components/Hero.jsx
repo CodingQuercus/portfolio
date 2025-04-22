@@ -3,6 +3,9 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
+import { FaArrowDown } from 'react-icons/fa'
+
+
 export default function Hero() {
     const [mounted, setMounted] = useState(false)
     const [showScroll, setShowScroll] = useState(false)
@@ -16,7 +19,7 @@ export default function Hero() {
     if (!mounted) return null
 
     return (
-        <section className="min-h-screen flex flex-col align-center items-center justify-center px-4 text-center transition-colors duration-300 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
+        <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center transition-colors duration-300 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
             <div className="space-y-4 w-full max-w-4xl">
                 <motion.div 
                     className="text-5xl md:text-7xl lg:text-9xl font-extrabold flex gap-2"
@@ -90,21 +93,23 @@ export default function Hero() {
                 </motion.div>
             </div>
 
-            {/* Scroll Down Prompt */}
             {showScroll && (
                 <motion.div
-                    className="absolute bottom-10 text-lg text-[#328e6e] cursor-pointer"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
+                className="absolute bottom-10 text-lg text-[#328e6e] cursor-pointer"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <motion.div
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
+                  className="flex items-center justify-center"
                 >
-                    <span className="flex items-center justify-center">
-                        <motion.div
-                            className="w-8 h-8 border-t-4 border-r-4 border-[#328e6e] rounded-full animate-spin"
-                        />
-                        <p className="ml-2">Scroll down</p>
-                    </span>
+                  <FaArrowDown/>
+                  <p className="ml-2">Scroll down</p>
                 </motion.div>
+              </motion.div>
+              
             )}
         </section>
     )
