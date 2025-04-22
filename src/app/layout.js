@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Åke Flatholm | Portfolio",
-  description: "UI, UX",
+  description: "A portfolio showcasing my work as an M.Sc student in Interaction Technology and Design at Umeå University",
 };
 
 export default function RootLayout({ children }) {
