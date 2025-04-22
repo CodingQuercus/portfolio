@@ -17,7 +17,7 @@ export default function Hero() {
 
     return (
         <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center transition-colors duration-300 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
-            <div className="space-y-4 w-full max-w-4xl px-10">
+            <div className="space-y-4 w-full max-w-4xl">
                 <motion.div 
                     className="text-5xl md:text-7xl lg:text-9xl font-extrabold flex gap-2"
                     initial={{ x: '-300%' }}
