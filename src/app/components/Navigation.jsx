@@ -34,7 +34,7 @@ export default function Navigation() {
     ]
 
     return (
-        <div className="flex justify-center items-center py-20 min-h-screen lg:min-h-0 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
+        <div id="navigation" className="flex justify-center items-center py-20 min-h-screen bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
             <div className="flex flex-col w-full">
                 {sections.map(({ id, label }) => (
                     <button
