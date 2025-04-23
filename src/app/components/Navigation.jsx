@@ -28,7 +28,7 @@ export default function Navigation() {
     }, [activeSection])
 
     const sections = [
-        { id: 'about', label: 'ABOUT', content: <About /> },
+        { id: 'about', label: 'ABOUT ME', content: <About /> },
         { id: 'projects', label: 'PROJECTS', content: <Projects /> },
         { id: 'contact', label: 'CONTACT', content: <Contact /> },
     ]
