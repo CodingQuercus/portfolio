@@ -18,8 +18,7 @@ export default function About() {
                         <br />
                         <br />
                         Over the past few years, I’ve developed a passion for UI/UX and front-end
-                        development. I aim to create intuitive, user-friendly digital experiences
-                        that put people first.
+                        development. I aim to create intuitive and user-friendly digital experiences.
                         <br />
                         <br />
                         When I’m not designing or coding, you’ll probably find me exercising or
