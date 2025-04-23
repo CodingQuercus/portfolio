@@ -20,7 +20,7 @@ export default function ScrollToTopButton() {
             const windowHeight = window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
 
-            setIsAtBottom(scrollTop + windowHeight >= documentHeight - 20);
+            setIsAtBottom(scrollTop + windowHeight >= documentHeight - 50);
         };
 
         window.addEventListener("scroll", handleScroll);
