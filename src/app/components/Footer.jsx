@@ -14,7 +14,7 @@ export default function Footer() {
                         whileHover={{ scale: 1.05 }}
                         className="flex items-center gap-2 text-[#F3F3F3] hover:underline transition"
                     >
-                        <FaGithub size={36}/>
+                        <FaGithub size={24}/>
                     </motion.a>
                     <motion.a
                         href="https://www.linkedin.com/in/akeflatholm"
@@ -22,11 +22,11 @@ export default function Footer() {
                         whileHover={{ scale: 1.05 }}
                         className="flex items-center gap-2 text-[#F3F3F3] hover:underline transition"
                     >
-                        <FaLinkedin size={36}/>
+                        <FaLinkedin size={24}/>
                     </motion.a>
             </div>
 
-            <footer className="mt-8 text-md text-center">
+            <footer className="mt-8 text-sm lg:text-md text-center">
                 Developed with <strong>Next.js</strong> and <strong>Framer Motion</strong> by <strong>Åke Flatholm</strong> © 2025
             </footer>
 
