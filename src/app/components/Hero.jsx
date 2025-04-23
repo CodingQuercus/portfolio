@@ -27,7 +27,7 @@ export default function Hero() {
                     animate={{ x: 0 }}
                     transition={{ duration: 0.3, type: 'spring', stiffness: 60, delay: 0.3 }}
                 >
-                    <span className="h-20 md:h-28 lg:h-32 flex items-center">ÅKE</span>
+                    <span className="h-20 md:h-28 lg:h-32 flex items-center text-[#f3f3f3]">ÅKE</span>
                     <motion.span
                         className="flex-1 h-20 md:h-28 lg:h-32 flex items-center justify-center bg-[#328e6e] text-[#f3f3f3] rounded-full text-xl md:text-2xl lg:text-4xl font-semibold relative"
                         initial={{ x: '100%' }}
@@ -36,7 +36,7 @@ export default function Hero() {
                         whileHover={{ scale: 1.05 }}
                     >
                         <motion.div
-                            className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-[#00000080] text-white text-base md:text-xl lg:text-2xl font-semibold rounded-full opacity-0"
+                            className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-[#00000080] text-[#f3f3f3] text-base md:text-xl lg:text-2xl font-semibold rounded-full opacity-0 cursor-pointer"
                             whileHover={{ opacity: 1 }}
                             transition={{ duration: 0.3 }}
                         >
@@ -59,7 +59,7 @@ export default function Hero() {
                         whileHover={{ scale: 1.05 }}
                     >
                         <motion.div
-                            className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-[#00000080] text-white text-base md:text-xl lg:text-2xl font-semibold rounded-full opacity-0"
+                            className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-[#00000080] text-[#f3f3f3] text-base md:text-xl lg:text-2xl font-semibold rounded-full opacity-0 cursor-pointer"
                             whileHover={{ opacity: 1 }}
                             transition={{ duration: 0.3 }}
                         >
@@ -82,7 +82,7 @@ export default function Hero() {
                         whileHover={{ scale: 1.05 }}
                     >
                         <motion.div
-                            className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-[#00000080] text-white text-base md:text-xl lg:text-2xl font-semibold rounded-full opacity-0"
+                            className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-[#00000080] text-[#f3f3f3] text-base md:text-xl lg:text-2xl font-semibold rounded-full opacity-0 cursor-pointer"
                             whileHover={{ opacity: 1 }}
                             transition={{ duration: 0.3 }}
                         >

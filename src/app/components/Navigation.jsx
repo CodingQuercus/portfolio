@@ -39,7 +39,7 @@ export default function Navigation() {
                 {sections.map(({ id, label }) => (
                     <button
                         key={id}
-                        className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl py-6 sm:py-8 md:py-10 w-full text-center px-4 md:pl-10 md:pr-20 transition-colors
+                        className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl py-6 sm:py-8 md:py-10 w-full text-center px-4 md:pl-10 md:pr-20 transition-colors cursor-pointer
                             ${activeSection === id ? 'bg-[#00000080]' : 'hover:bg-[#00000080]'}`}
                         onClick={() => handleClick(id)}
                     >
