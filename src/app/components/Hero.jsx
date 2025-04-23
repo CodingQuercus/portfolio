@@ -25,14 +25,14 @@ export default function Hero() {
                     className="text-5xl md:text-7xl lg:text-9xl font-extrabold flex gap-2"
                     initial={{ x: '-300%' }}
                     animate={{ x: 0 }}
-                    transition={{ type: 'spring', stiffness: 100, delay: 0.3 }}
+                    transition={{ duration: 0.3,type: 'spring', stiffness: 60, delay: 0.3 }}
                 >
                     <span className="h-20 md:h-28 lg:h-32 flex items-center">ÅKE</span>
                     <motion.span
                         className="flex-1 h-20 md:h-28 lg:h-32 flex items-center justify-center bg-[#328e6e] text-[#f3f3f3] rounded-full text-xl md:text-2xl lg:text-4xl font-semibold relative"
                         initial={{ x: '100%' }}
                         animate={{ x: 0 }}
-                        transition={{ type: 'spring', stiffness: 100}}
+                        transition={{ type: 'spring', stiffness: 60}}
                         whileHover={{ scale: 1.05 }}
                     >
                         <motion.div 
@@ -49,13 +49,13 @@ export default function Hero() {
                     className="text-xl md:text-3xl lg:text-4xl font-semibold flex gap-2"
                     initial={{ x: '300%' }}
                     animate={{ x: 0 }}
-                    transition={{ type: 'spring', stiffness: 100, delay: 0.9 }}
+                    transition={{ type: 'spring', stiffness: 60, delay: 0.9 }}
                 >
                     <motion.span 
                         className="flex-1 h-20 md:h-28 lg:h-32 flex items-center justify-center bg-[#328e6e] text-[#f3f3f3] rounded-full relative"
                         initial={{ x: '-100%' }}
                         animate={{ x: 0 }}
-                        transition={{ type: 'spring', stiffness: 100 }}
+                        transition={{ type: 'spring', stiffness: 60 }}
                         whileHover={{ scale: 1.05 }}
                     >
                         <motion.div 
@@ -72,13 +72,13 @@ export default function Hero() {
                     className="flex text-5xl md:text-7xl lg:text-9xl font-extrabold gap-2"
                     initial={{ x: '-300%' }}
                     animate={{ x: 0 }}
-                    transition={{ type: 'spring', stiffness: 100, delay: 1.5 }}
+                    transition={{ type: 'spring', stiffness: 60, delay: 1.5 }}
                 >
                     <motion.span 
                         className="h-20 md:h-28 lg:h-32 flex-1 flex items-center justify-center bg-[#328e6e] text-[#f3f3f3] px-4 rounded-full text-lg md:text-2xl lg:text-4xl font-bold relative"
                         initial={{ x: '100%' }}
                         animate={{ x: 0 }}
-                        transition={{ type: 'spring', stiffness: 100 }}
+                        transition={{ type: 'spring', stiffness: 60 }}
                         whileHover={{ scale: 1.05 }}
                     >
                         <motion.div 
