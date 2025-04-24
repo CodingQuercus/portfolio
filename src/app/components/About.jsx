@@ -25,7 +25,7 @@ export default function About() {
 
                 <div className="w-full md:w-1/2 flex justify-center">
                     <img
-                        src="images/portfolio-img.png"
+                        src="images/about-img.png"
                         alt="Åke Flatholm"
                         className="rounded-full object-cover w-48 h-48 md:w-64 md:h-64 border-[#f3f3f3] border-3"
                     />
