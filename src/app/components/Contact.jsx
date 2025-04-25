@@ -40,7 +40,7 @@ export default function Contact() {
                     <div className="flex gap-3">
                         <motion.button
                             onClick={handleCopyEmail}
-                            className="bg-[#f3f3f3] text-[#282828] px-4 py-2 rounded-lg flex items-center gap-2 cursor-pointer"
+                            className="bg-[#f3f3f3] text-[#282828] px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-[#328e6e] cursor-pointer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -48,7 +48,7 @@ export default function Contact() {
                         </motion.button>
                         <motion.a
                             href={`mailto:${email}`}
-                            className="bg-[#f3f3f3] text-[#282828] px-4 py-2 rounded-lg flex items-center gap-2 cursor-pointer"
+                            className="bg-[#f3f3f3] text-[#282828] px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-[#328e6e] cursor-pointer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -65,9 +65,9 @@ export default function Contact() {
                     <p className="text-[#f3f3f3] text-sm mb-4">Connect with me!</p>
                     <motion.button
                         onClick={handleLinkedInRedirect}
-                        className="bg-[#f3f3f3] text-[#282828] px-5 py-2 rounded-lg flex items-center gap-2 cursor-pointer"
+                        className="bg-[#f3f3f3] text-[#282828] px-5 py-2 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-[#328e6e]"
                         whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                        whileTap={{ scale: 0.95 }}
                     >
                         <FaLinkedin size={16} /> Visit
                     </motion.button>

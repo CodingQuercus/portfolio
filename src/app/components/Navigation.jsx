@@ -39,8 +39,8 @@ export default function Navigation() {
                 {sections.map(({ id, label }) => (
                     <button
                         key={id}
-                        className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold py-6 sm:py-8 md:py-10 w-full text-center px-4 md:pl-10 md:pr-20 transition-colors cursor-pointer
-                            ${activeSection === id ? 'bg-[#00000080]' : 'hover:bg-[#00000080]'}`}
+                        className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold py-6 sm:py-8 md:py-10 w-full text-center px-4 md:pl-10 md:pr-20 transition duration-500 cursor-pointer
+                            ${activeSection === id ? 'bg-[#328e6e]' : 'hover:bg-[#328e6e]'}`}
                         onClick={() => handleClick(id)}
                     >
                         {label}
@@ -61,7 +61,7 @@ export default function Navigation() {
                         >
                             <div className="sticky top-0 w-full max-w-screen-lg bg-inherit z-50 border-b border-[#f3f3f3]">
                                 <div className="relative flex items-center justify-center py-4 sm:py-6">
-                                    <h2 className="text-4xl sm:text-6xl md:text-7xl text-center">
+                                    <h2 className="text-4xl sm:text-6xl md:text-7xl text-center font-semibold">
                                         {sections.find((section) => section.id === activeSection)?.label}
                                     </h2>
 
@@ -72,7 +72,7 @@ export default function Navigation() {
                                         exit={{ opacity: 0, y: 20 }}
                                         transition={{ duration: 0.3 }}
                                         onClick={() => setActiveSection('')}
-                                        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 text-sm sm:text-base md:text-lg bg-black text-[#f3f3f3] p-2 sm:p-3 rounded-full hover:bg-[#328E6E] cursor-pointer"
+                                        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 text-sm sm:text-base md:text-lg bg-[#f3f3f3] text-[#282828] p-2 sm:p-3 rounded-full hover:bg-[#328E6E] cursor-pointer"
                                         aria-label="Close section"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.9 }}
