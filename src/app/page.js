@@ -2,7 +2,6 @@
 import Hero from "./components/Hero";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-import ScrollToTopButton from "./components/ScrollToTopButton";
 
 export default function Home() {
   return (
@@ -10,7 +9,6 @@ export default function Home() {
     <Hero/>
     <Navigation/>
     <Footer/>
-    <ScrollToTopButton/>
    </div>
   );
 }

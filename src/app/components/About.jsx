@@ -5,7 +5,7 @@ import { MdOpenInNew, MdDownload } from 'react-icons/md';
 
 export default function About() {
     return (
-        <div id="about" className="px-6 sm:px-10 md:px-20 pb-[40px]">
+        <div id="about" className="px-1 md:px-20 pb-[20px]">
             <div className="bg-[#00000080] rounded-2xl shadow-lg px-6 py-8 flex flex-col md:flex-row gap-10 items-center">
                 <div className="flex flex-col w-full md:w-1/2">
                     <p className="text-left sm:text-base text-[#f3f3f3] font-normal leading-relaxed">

@@ -25,7 +25,7 @@ export default function Contact() {
     return (
         <div
             id="contact"
-            className="px-6 sm:px-10 md:px-20 pb-[20px] flex flex-col"
+            className="px-1 md:px-20 pb-[20px] flex flex-col"
         >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl sm:max-w-full">
                 <motion.div

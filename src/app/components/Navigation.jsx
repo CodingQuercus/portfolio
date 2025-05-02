@@ -21,7 +21,6 @@ export default function Navigation() {
     const [isTransitioning, setIsTransitioning] = useState(false)
     const [transitionDirection, setTransitionDirection] = useState('in')
     const [pendingSection, setPendingSection] = useState('')
-
     const [returningHome, setReturningHome] = useState(false)
 
 
@@ -45,20 +44,22 @@ export default function Navigation() {
         }
     }
 
+    // Function to lock scrolling when a section is open. Also redirects the user to hero section if reached end of navigation.
     useEffect(() => {
         if (activeSection) {
-            document.body.style.overflow = 'hidden'
+            document.body.classList.add('scroll-lock')
         } else {
-            document.body.style.overflow = ''
+            document.body.classList.remove('scroll-lock')
             if (returningHome) {
                 window.scrollTo({ top: 0 })
                 setReturningHome(false)
             }
         }
         return () => {
-            document.body.style.overflow = ''
+            document.body.classList.remove('scroll-lock')
         }
     }, [activeSection, returningHome])
+    
 
     return (
         <div id="navigation" className="relative flex justify-center items-center py-20 min-h-screen bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">

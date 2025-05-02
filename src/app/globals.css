@@ -26,3 +26,10 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
 }
+
+body.scroll-lock {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}

@@ -6,7 +6,7 @@ export default function Projects() {
     return (
         <div
             id="projects"
-            className="flex flex-col gap-6 px-6 sm:px-10 md:px-20 pb-[20px]"
+            className="flex flex-col gap-6 px-1 md:px-20 pb-[20px]"
         >
             <ProjectCard
                 year="2025"
