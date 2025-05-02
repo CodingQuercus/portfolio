@@ -40,7 +40,7 @@ export default function Contact() {
                     <div className="flex gap-3">
                         <motion.button
                             onClick={handleCopyEmail}
-                            className="bg-[#f3f3f3] text-[#282828] px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-[#328e6e] cursor-pointer"
+                            className="bg-[#f3f3f3] text-[#282828] px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-[#328e6e] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E]"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -48,7 +48,7 @@ export default function Contact() {
                         </motion.button>
                         <motion.a
                             href={`mailto:${email}`}
-                            className="bg-[#f3f3f3] text-[#282828] px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-[#328e6e] cursor-pointer"
+                            className="bg-[#f3f3f3] text-[#282828] px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-[#328e6e] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E]"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -65,7 +65,7 @@ export default function Contact() {
                     <p className="text-[#f3f3f3] text-sm mb-4">Connect with me!</p>
                     <motion.button
                         onClick={handleLinkedInRedirect}
-                        className="bg-[#f3f3f3] text-[#282828] px-5 py-2 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-[#328e6e]"
+                        className="bg-[#f3f3f3] text-[#282828] px-5 py-2 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-[#328e6e] focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E]"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
@@ -76,7 +76,7 @@ export default function Contact() {
 
             {alertMessage && (
                 <motion.div
-                    className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black py-2 px-4 rounded-lg shadow-lg flex items-center gap-2 z-50"
+                    className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-[#328e6e] text-[#282828] py-2 px-4 rounded-lg shadow-lg flex items-center gap-2 z-50"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}

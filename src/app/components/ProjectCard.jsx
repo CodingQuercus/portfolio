@@ -48,7 +48,7 @@ const ProjectCard = ({
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsExpanded(!isExpanded)}
                 className={`ml-10 mb-5 w-[120px] text-md py-2 px-4 rounded-lg cursor-pointer 
-                    ${isExpanded ? 'bg-[#f3f3f3] text-[#282828] hover:underline border-[#f3f3f3]' : 'text-[#f3f3f3] border border-[#f3f3f3] hover:underline hover:text-[#f3f3f3]'}`}
+                    ${isExpanded ? 'bg-[#f3f3f3] text-[#282828] hover:underline border-[#f3f3f3]' : 'text-[#f3f3f3] border border-[#f3f3f3] hover:underline hover:text-[#f3f3f3] focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E]'}`}
             >
                 {isExpanded ? "Show less" : "Show more"}
             </motion.button>

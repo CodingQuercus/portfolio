@@ -20,7 +20,7 @@ export default function ScrollToTopButton() {
             const windowHeight = window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
 
-            setIsAtBottom(scrollTop + windowHeight >= documentHeight - 50);
+            setIsAtBottom(scrollTop + windowHeight >= documentHeight - 25);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -34,7 +34,7 @@ export default function ScrollToTopButton() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
             onClick={scrollToTop}
-            className="fixed bottom-6 right-6 bg-[#f3f3f3] hover:bg-[#328E6E] text-[#282828] p-4 rounded-full shadow-lg z-50 cursor-pointer"
+            className="fixed bottom-6 right-6 bg-[#f3f3f3] hover:bg-[#328E6E] text-[#282828] p-4 rounded-full shadow-lg z-50 cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E]"
             aria-label="Back to Top"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}

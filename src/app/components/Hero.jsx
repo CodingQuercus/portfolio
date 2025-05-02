@@ -40,7 +40,7 @@ export default function Hero() {
                             whileHover={{ opacity: 1 }}
                             transition={{ duration: 0.3 }}
                         >
-                            M.Sc Student
+                            M.Sc. Student
                         </motion.div>
                     </motion.span>
                 </motion.div>
@@ -104,14 +104,14 @@ export default function Hero() {
                         el?.scrollIntoView({ behavior: 'smooth' });
                     }}
                 >
-                    <motion.div
+                    <motion.button
                         animate={{ y: [0, 10, 0] }}
                         transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
-                        className="flex items-center justify-center"
+                        className="bg-transparent flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] focus:rounded-lg cursor-pointer"
                     >
                         <FaArrowDown />
                         <p className="ml-2">Scroll down</p>
-                    </motion.div>
+                    </motion.button>
                 </motion.div>
             )}
         </section>

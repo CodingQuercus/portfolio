@@ -12,7 +12,7 @@ export default function Footer() {
                         href="https://github.com/CodingQuercus"
                         target="_blank"
                         whileHover={{ scale: 1.05 }}
-                        className="flex items-center gap-2 text-[#F3F3F3] hover:underline transition"
+                        className="flex items-center gap-2 text-[#F3F3F3] hover:underline transition focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] focus:rounded-lg"
                     >
                         <FaGithub size={24}/>
                     </motion.a>
@@ -20,7 +20,7 @@ export default function Footer() {
                         href="https://www.linkedin.com/in/akeflatholm"
                         target="_blank"
                         whileHover={{ scale: 1.05 }}
-                        className="flex items-center gap-2 text-[#F3F3F3] hover:underline transition"
+                        className="flex items-center gap-2 text-[#F3F3F3] hover:underline transition focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] focus:rounded-lg"
                     >
                         <FaLinkedin size={24}/>
                     </motion.a>
