@@ -21,8 +21,6 @@ export default function Navigation() {
     const [isTransitioning, setIsTransitioning] = useState(false)
     const [transitionDirection, setTransitionDirection] = useState('in')
     const [pendingSection, setPendingSection] = useState('')
-    const [returningHome, setReturningHome] = useState(false)
-
 
     const handleClick = (section) => {
         if (section === activeSection) {
@@ -44,22 +42,17 @@ export default function Navigation() {
         }
     }
 
-    // Function to lock scrolling when a section is open. Also redirects the user to hero section if reached end of navigation.
     useEffect(() => {
         if (activeSection) {
             document.body.classList.add('scroll-lock')
         } else {
             document.body.classList.remove('scroll-lock')
-            if (returningHome) {
-                window.scrollTo({ top: 0 })
-                setReturningHome(false)
-            }
         }
         return () => {
             document.body.classList.remove('scroll-lock')
         }
-    }, [activeSection, returningHome])
-    
+    }, [activeSection])
+
 
     return (
         <div id="navigation" className="relative flex justify-center items-center py-20 min-h-screen bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
@@ -137,8 +130,8 @@ export default function Navigation() {
                                 ) : (
                                     <motion.button
                                         onClick={() => {
-                                            setReturningHome(true)
                                             handleClick(activeSection)
+                                            window.scrollTo({top: 0})
                                         }}
                                         className="bg-[#f3f3f3] text-[#282828] px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-[#328e6e] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E]"
                                         whileHover={{ scale: 1.05 }}
