@@ -54,7 +54,7 @@ export default function Projects() {
                 why="The goal was to create an engaging and fun way to promote the brand, increase user interaction, and enhance brand visibility. By combining Swedish traditions with entertainment, we aimed to create a memorable experience that would attract new customers and encourage repeat visits."
                 process="The process began with brainstorming sessions to define the game concept. After testing several ideas, we selected a Christmas-themed game. We evaluated different game engines and chose Phaser.IO for its compatibility with web deployment. The development process included prototyping, coding, and testing, along with gathering user feedback through a test launch. We also considered marketing strategies and target audience engagement throughout the project."
                 result="The game was successfully developed, offering an interactive experience that enhanced the brand's visibility. Positive feedback from users confirmed the success of the game. The project was wrapped up with the creation of promotional materials, including a poster and presentation."
-                imageUrl="images/fika.png"
+                imageUrl={undefined}
                 contribution="My main focus during the project was implementing the game. Along with another classmate, we worked through pair programming to develop the game using the Phaser.IO game engine. I contributed to both the game logic and the implementation of game mechanics to create an engaging and functional experience."
                 link="/projects/fikaspelet"
             />

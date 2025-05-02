@@ -35,12 +35,15 @@ const ProjectCard = ({
                 </div>
 
                 <div className="flex justify-center items-center">
-                    <img
+                    {imageUrl && (
+                        <img
                         src={imageUrl}
                         alt={`${title} image`}
                         loading="lazy"
                         className="rounded-xl w-full max-w-sm sm:max-w-md object-cover"
-                    />
+                        />
+                    )}
+                    
                 </div>
             </div>
             <motion.button
