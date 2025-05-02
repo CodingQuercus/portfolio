@@ -18,28 +18,9 @@ const sections = [
 
 export default function Navigation() {
     const [activeSection, setActiveSection] = useState('')
-    const [isTransitioning, setIsTransitioning] = useState(false)
-    const [transitionDirection, setTransitionDirection] = useState('in')
-    const [pendingSection, setPendingSection] = useState('')
 
     const handleClick = (section) => {
-        if (section === activeSection) {
-            setTransitionDirection('out')
-            setIsTransitioning(true)
-            setTimeout(() => {
-                setActiveSection('')
-                setIsTransitioning(false)
-            }, 600)
-        } else {
-            setPendingSection(section)
-            setTransitionDirection('in')
-            setIsTransitioning(true)
-            setTimeout(() => {
-                setActiveSection(section)
-                setPendingSection('')
-                setIsTransitioning(false)
-            }, 600)
-        }
+        setActiveSection((prev) => (prev === section ? '' : section))
     }
 
     useEffect(() => {
@@ -53,22 +34,8 @@ export default function Navigation() {
         }
     }, [activeSection])
 
-
     return (
         <div id="navigation" className="relative flex justify-center items-center py-20 min-h-screen bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
-            <AnimatePresence>
-                {isTransitioning && (
-                    <motion.div
-                        key="transition-overlay"
-                        initial={{ y: '100%' }}
-                        animate={{ y: 0 }}
-                        exit={{ y: '-100%' }}
-                        transition={{ duration: 0.5, ease: 'easeInOut' }}
-                        className="fixed inset-0 z-50 bg-[#328E6E]"
-                    />
-                )}
-            </AnimatePresence>
-
             <div className="flex flex-col w-full">
                 {sections.map(({ id, label }) => (
                     <button
@@ -82,7 +49,7 @@ export default function Navigation() {
             </div>
 
             <AnimatePresence>
-                {activeSection && !isTransitioning && (
+                {activeSection && (
                     <motion.div
                         key={activeSection}
                         initial={{ y: '100%' }}
@@ -131,7 +98,7 @@ export default function Navigation() {
                                     <motion.button
                                         onClick={() => {
                                             handleClick(activeSection)
-                                            window.scrollTo({top: 0})
+                                            window.scrollTo({ top: 0 })
                                         }}
                                         className="bg-[#f3f3f3] text-[#282828] px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-[#328e6e] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E]"
                                         whileHover={{ scale: 1.05 }}
@@ -142,7 +109,6 @@ export default function Navigation() {
                                     </motion.button>
                                 )}
                             </div>
-
                         </div>
                     </motion.div>
                 )}
