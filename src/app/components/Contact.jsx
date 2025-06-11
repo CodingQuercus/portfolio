@@ -25,7 +25,7 @@ export default function Contact() {
     return (
         <div
             id="contact"
-            className="w-full h-screen px-10 py-16 flex flex-col justify-start items-center gap-11"
+            className="w-full h-screen px-10 py-4 xl:py-16 flex flex-col justify-start items-center gap-11"
         >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:max-w-full">
                 <motion.div
