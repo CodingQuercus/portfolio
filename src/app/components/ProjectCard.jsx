@@ -14,20 +14,20 @@ const ProjectCard = ({
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <div className="bg-[#f3f3f3] rounded-2xl shadow-lg overflow-hidden transition-all relative h-max">
+        <div className="bg-[#282828] dark:bg-[#f3f3f3] rounded-2xl shadow-lg overflow-hidden transition-all relative h-max">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-6 sm:p-10">
                 <div className="flex flex-col justify-center items-start gap-2">
-                    <h2 className="text-base sm:text-lg text-[#282828]">{year}</h2>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#282828]">{title}</h2>
+                    <h2 className="text-base sm:text-lg text-[#f3f3f3] dark:text-[#282828]">{year}</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#f3f3f3] dark:text-[#282828]">{title}</h2>
                     <h3 className="text-sm sm:text-md font-light text-[#328e6e]">{subtitle}</h3>
 
-                    <p className="text-base text-[#282828] mb-2">{desc}</p>
+                    <p className="text-base text-[#f3f3f3] dark:text-[#282828] mb-2">{desc}</p>
 
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => setIsExpanded(!isExpanded)}
-                        className="w-[120px] h-[48px] text-md py-2 px-4 rounded-lg cursor-pointer bg-[#282828] text-[#f3f3f3 ] border border-[#282828] hover:underline focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E]"
+                        className="w-[120px] h-[48px] text-md py-2 px-4 rounded-lg cursor-pointer bg-[#328e6e] text-[#f3f3f3] hover:underline shadow-md"
                     >
                         Read more
                     </motion.button>

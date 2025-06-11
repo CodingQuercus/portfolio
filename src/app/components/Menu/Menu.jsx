@@ -42,7 +42,7 @@ export default function Menu({ menuIsActive, toggleMenu, navigateToSection, curr
                         <button
                             key={id}
                             className={`text-2xl font-bold py-4 px-4 text-center transition-colors cursor-pointer
-                                        ${isActive ? 'bg-[#282828] text-[#f3f3f3s]' : 'text-white hover:bg-[#282828]'}
+                                        ${isActive ? 'bg-[#282828] text-[#f3f3f3]' : 'text-white hover:bg-[#282828]'}
                                         `}
                             onClick={() => handleClick(id)}
                         >

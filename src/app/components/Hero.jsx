@@ -21,7 +21,7 @@ export default function Hero({ navigateToSection }) {
                     animate={{ x: 0 }}
                     transition={{ duration: 0.3, type: 'spring', stiffness: 70, damping: 10, delay: 0.3 }}
                 >
-                    <span className="h-20 md:h-28 lg:h-32 flex items-center text-[#f3f3f3]">ÅKE</span>
+                    <span className="h-20 md:h-28 lg:h-32 flex items-center text-[#282828] dark:text-[#f3f3f3]">ÅKE</span>
                     <motion.span
                         className="flex-1 h-20 md:h-28 lg:h-32 flex items-center justify-center bg-[#328e6e] text-[#f3f3f3] rounded-full text-xl md:text-2xl lg:text-4xl font-semibold relative"
                         initial={{ x: '100%' }}
@@ -93,7 +93,7 @@ export default function Hero({ navigateToSection }) {
                 transition={{ duration: 0.5, delay: 2.5 }}
             >
                 <motion.button
-                    className="bg-[#328e6e] border-[#328e6e] border-2 px-2 py-2 w-36 h-12 md:w-44 md:h-16 rounded-lg cursor-pointer text-white font-semibold"
+                    className="bg-[#328e6e] border-[#328e6e] border-2 px-2 py-2 w-36 h-12 md:w-44 md:h-16 rounded-lg cursor-pointer text-[#f3f3f3]"
                     onClick={() => navigateToSection("contact")}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

@@ -8,7 +8,7 @@ export default function About() {
         <div id="about" className="w-full min-h-screen px-10 md:px-16 xl:px-72 2xl:px-96 py-4 xl:py-16 flex flex-col justify-start items-center">
             <div className="flex flex-col md:flex-row gap-10 items-center">
                 <div className="flex flex-col w-full md:w-1/2 gap-8">
-                    <p className="text-left sm:text-base text-[#f3f3f3] font-normal leading-relaxed">
+                    <p className="text-left sm:text-base text-[#282828] dark:text-[#f3f3f3] font-normal leading-relaxed">
                         Hey! I’m Åke, a fourth-year student in the M.Sc. programme in Interaction
                         Technology and Design at Umeå University. This spring, I’m finishing my final
                         courses before starting my master’s thesis in the fall.
