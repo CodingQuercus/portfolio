@@ -13,7 +13,7 @@ export default function Projects() {
                 title="aWAre"
                 subtitle="Social Media Technology, 7.5hp"
                 desc="A collaboration between engineering students at Umeå University and marketing students at Edith Cowan University. The final concept was a location-based application to increase awareness of natural hazards and accidents in Western Australia"
-                imageUrl="images/aware-mock.png"
+                imageUrl="images/aWAre-MOCK.png"
                 link="/projects/aware"
             />
 
@@ -22,7 +22,7 @@ export default function Projects() {
                 title="Sketch'N'Guess"
                 subtitle="Prototype Development for Mobile Applications, 7.5hp"
                 desc="A game implemented in React Native and Node.JS. A mix of Strava and Pictionary, where players draw using GPS and the remaining players guess the drawing."
-                imageUrl="images/sng-mock.png"
+                imageUrl="images/SNG-MOCK.png"
                 link="/projects/sketchnguess"
             />
 
@@ -31,7 +31,7 @@ export default function Projects() {
                 title="FikaSpelet"
                 subtitle="Product Development in Media Technology using the 'Design-build-test' method, 7.5hp"
                 desc="A collaboration between a group of students and a Swedish company. The result was a marketing game developed in React and Phaser with the aim of increasing the proportion of customers through the use of Gamification."
-                imageUrl="images/fs-mock.png"
+                imageUrl="images/FS-MOCK.png"
                 link="/projects/fikaspelet"
             />
             <ProjectCard
@@ -39,7 +39,7 @@ export default function Projects() {
                 title="ReCharge"
                 subtitle="Design in user experience, 15hp"
                 desc="A concept application targeting owners of electrical vehicles with the goal of making their experience better."
-                imageUrl="images/recharge-mock.png"
+                imageUrl="images/Recharge-MOCK.png"
                 link="/projects/recharge"
             />
         </div>
