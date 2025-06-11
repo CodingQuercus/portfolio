@@ -3,23 +3,20 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
-import { FaArrowDown } from 'react-icons/fa'
+import Link from 'next/link'
 
 
-export default function Hero() {
+export default function Hero({ navigateToSection }) {
     const [mounted, setMounted] = useState(false)
-    const [showScroll, setShowScroll] = useState(false)
 
     useEffect(() => {
         setMounted(true)
-        const timer = setTimeout(() => setShowScroll(true), 3000)
-        return () => clearTimeout(timer)
     }, [])
 
     if (!mounted) return null
 
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center transition-colors duration-300 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
+        <section className="min-h-screen flex flex-col items-center px-10 py-20 md:py-36 justify-center text-center gap-5 transition-colors duration-300 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
             <div className="space-y-4 w-full max-w-4xl">
                 <motion.div
                     className="text-5xl md:text-7xl lg:text-9xl font-extrabold flex gap-2"
@@ -92,28 +89,30 @@ export default function Hero() {
                     <span className="flex-1 h-20 md:h-28 lg:h-32 flex items-center">FLATHOLM</span>
                 </motion.div>
             </div>
-
-            {showScroll && (
-                <motion.div
-                    className="absolute bottom-10 text-lg text-[#328e6e] cursor-pointer"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                    onClick={() => {
-                        const el = document.getElementById('navigation');
-                        el?.scrollIntoView({ behavior: 'smooth' });
-                    }}
+            <motion.div
+                className="flex flex-row py-4 gap-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 2.5 }}
+            >
+                <motion.button
+                    className="bg-[#328e6e] border-[#328e6e] border-2 px-2 py-2 w-36 h-12 md:w-44 md:h-16 rounded-lg cursor-pointer text-white font-semibold"
+                    onClick={() => navigateToSection("contact")}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                 >
-                    <motion.button
-                        animate={{ y: [0, 10, 0] }}
-                        transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
-                        className="bg-transparent flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] focus:rounded-lg cursor-pointer"
-                    >
-                        <FaArrowDown />
-                        <p className="ml-2">Scroll down</p>
-                    </motion.button>
-                </motion.div>
-            )}
+                    Contact
+                </motion.button>
+
+                <motion.button
+                    className="border-[#328e6e] border-2 px-2 py-2 w-36 h-12 md:w-44 md:h-16 rounded-lg cursor-pointer text-[#328e6e] hover:bg-[#328e6e] hover:border-[#328e6e] hover:text-[#f3f3f3]"
+                    onClick={() => navigateToSection("projects")}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    Projects
+                </motion.button>
+            </motion.div>
         </section>
     )
 }
