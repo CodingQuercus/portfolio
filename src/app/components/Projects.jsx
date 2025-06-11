@@ -6,7 +6,7 @@ export default function Projects() {
     return (
         <div
             id="projects"
-            className="w-full h-max px-10 md:px-36 py-16 flex flex-col justify-start items-center gap-12"
+            className="w-full h-max px-10 md:px-16 lg:px-48 py-16 flex flex-col justify-start items-center gap-12"
         >
             <ProjectCard
                 year="2025"
