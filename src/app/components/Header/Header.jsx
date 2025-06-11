@@ -33,7 +33,7 @@ export default function Header({ currentSection, menuIsActive, toggleMenu, navig
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.3 }}
-                        className="font-bold text-2xl md:text-4xl uppercase text-[#f3f3f3]"
+                        className="font-bold text-2xl md:text-4xl uppercase text-[#282828] dark:text-[#f3f3f3]"
                     >
                         {sectionLabels[currentSection]}
                     </motion.p>
