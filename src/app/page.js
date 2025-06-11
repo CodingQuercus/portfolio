@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
 import Header from "./components/Header/Header"
@@ -15,7 +15,24 @@ import PixelBackground from './components/PixelTransition';
 export default function Home() {
   const [menuIsActive, setMenuIsActive] = useState(false);
   const [currentSection, setCurrentSection] = useState('home')
-  const [isTransitioning, setIsTransitioning] = useState(false)
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const hasMounted = useRef(false);
+
+  useEffect(() => {
+    const savedSection = sessionStorage.getItem('currentSection');
+    if (savedSection && savedSection !== currentSection) {
+      setCurrentSection(savedSection);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (hasMounted.current) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      hasMounted.current = true;
+    }
+  }, [currentSection]);
 
   const toggleMenu = (value) => {
     setMenuIsActive(value);
@@ -23,9 +40,11 @@ export default function Home() {
 
   const navigateToSection = (section) => {
     if (section === currentSection) return;
+
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentSection(section);
+      sessionStorage.setItem('currentSection', section);
       setIsTransitioning(false);
     }, 800);
   };
