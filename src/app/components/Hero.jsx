@@ -16,7 +16,7 @@ export default function Hero({ navigateToSection }) {
     if (!mounted) return null
 
     return (
-        <section className="min-h-screen flex flex-col items-center px-10 py-20 md:py-36 justify-center text-center gap-5 transition-colors duration-300 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
+        <section className="min-h-screen flex flex-col items-center px-10 py-16 justify-start text-center gap-5 transition-colors duration-300 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
             <div className="space-y-4 w-full max-w-4xl">
                 <motion.div
                     className="text-5xl md:text-7xl lg:text-9xl font-extrabold flex gap-2"

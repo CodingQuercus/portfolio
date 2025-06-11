@@ -14,7 +14,7 @@ export default function Header({ currentSection, menuIsActive, toggleMenu, navig
     }
 
     return (
-        <div className={`w-screen flex flex-row justify-between items-center fixed py-4 z-30 px-10 md:px-36 transition-colors duration-300 ${currentSection === 'home' ? 'bg-transparent' : 'bg-[#282828]'
+        <div className={`w-screen flex flex-row justify-between items-center sticky top-0 py-4 z-30 px-10 md:px-36 shadow-md transition-colors duration-300 ${currentSection === 'home' ? 'bg-transparent' : 'bg-[#282828]'
             }`}>
             <motion.button
                 onClick={() => navigateToSection("home")}
