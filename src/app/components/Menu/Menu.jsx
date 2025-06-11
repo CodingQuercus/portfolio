@@ -29,7 +29,7 @@ export default function Menu({ menuIsActive, toggleMenu, navigateToSection, curr
 
     return (
         <motion.div
-            className="fixed top-0 right-0 h-full w-64 md:w-72 lg:w-96 bg-[#328e6e] z-20 flex flex-col justify-center shadow-xl"
+            className="fixed top-0 right-0 h-full w-64 md:w-72 lg:w-96 xl:w-xl bg-[#328e6e] z-20 flex flex-col justify-center shadow-xl"
             initial="closed"
             animate={menuIsActive ? 'open' : 'closed'}
             variants={anim}
