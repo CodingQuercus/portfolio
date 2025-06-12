@@ -1,36 +1,36 @@
 .pixelBackground {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 15;
-  background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    background: transparent;
 }
 
 .column {
-  width: 5vw;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+    width: 5vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .block {
-  width: 100%;
-  height: 5vw;
-  background-color: #328e6e;
+    width: 100%;
+    height: 5vw;
+    background-color: #328e6e;
 }
 
 @media (max-width: 768px) {
-  .column {
-    width: 40vw;
-  }
+    .column {
+        width: 40vw;
+    }
 
-  .block {
-    height: 40vw;
-  }
+    .block {
+        height: 40vw;
+    }
 }

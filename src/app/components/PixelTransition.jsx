@@ -3,17 +3,17 @@ import { motion } from 'framer-motion';
 import styles from './Pixel.module.css';
 
 const anim = {
-  initial: {
-    opacity: 0,
-  },
-  open: (i) => ({
-    opacity: 1,
-    transition: { duration: 0, delay: 0.03 * i },
-  }),
-  closed: (i) => ({
-    opacity: 0,
-    transition: { duration: 0, delay: 0.03 * i },
-  }),
+    initial: {
+        opacity: 0,
+    },
+    open: (i) => ({
+        opacity: 1,
+        transition: { duration: 0, delay: 0.03 * i },
+    }),
+    closed: (i) => ({
+        opacity: 0,
+        transition: { duration: 0, delay: 0.03 * i },
+    }),
 };
 
 /*
@@ -22,56 +22,56 @@ const anim = {
 *
 */
 export default function PixelBackground({ isTransitioning }) {
-  const [blocksPerColumn, setBlocksPerColumn] = useState(0);
+    const [blocksPerColumn, setBlocksPerColumn] = useState(0);
 
-  const shuffle = (a) => {
-    let j, x, i;
-    for (i = a.length - 1; i > 0; i--) {
-      j = Math.floor(Math.random() * (i + 1));
-      x = a[i];
-      a[i] = a[j];
-      a[j] = x;
-    }
-    return a;
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      const { innerWidth, innerHeight } = window;
-      const blockSize = innerWidth * 0.05;
-      const nbOfBlocks = Math.ceil(innerHeight / blockSize);
-      setBlocksPerColumn(nbOfBlocks);
+    const shuffle = (a) => {
+        let j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
     };
 
-    handleResize();
-    window.addEventListener('resize', handleResize);
+    useEffect(() => {
+        const handleResize = () => {
+            const { innerWidth, innerHeight } = window;
+            const blockSize = innerWidth * 0.05;
+            const nbOfBlocks = Math.ceil(innerHeight / blockSize);
+            setBlocksPerColumn(nbOfBlocks);
+        };
 
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+        handleResize();
+        window.addEventListener('resize', handleResize);
 
-  const getBlocks = () => {
-    if (blocksPerColumn === 0) return null;
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
-    const shuffledIndexes = shuffle([...Array(blocksPerColumn)].map((_, i) => i));
-    return shuffledIndexes.map((randomIndex, index) => (
-      <motion.div
-        key={index}
-        className={styles.block}
-        variants={anim}
-        initial="initial"
-        animate={isTransitioning ? 'open' : 'closed'}
-        custom={randomIndex}
-      />
-    ));
-  };
+    const getBlocks = () => {
+        if (blocksPerColumn === 0) return null;
 
-  return (
-    <div className={styles.pixelBackground}>
-      {[...Array(20)].map((_, index) => (
-        <div key={index} className={styles.column}>
-          {getBlocks()}
+        const shuffledIndexes = shuffle([...Array(blocksPerColumn)].map((_, i) => i));
+        return shuffledIndexes.map((randomIndex, index) => (
+            <motion.div
+                key={index}
+                className={styles.block}
+                variants={anim}
+                initial="initial"
+                animate={isTransitioning ? 'open' : 'closed'}
+                custom={randomIndex}
+            />
+        ));
+    };
+
+    return (
+        <div className={styles.pixelBackground}>
+            {[...Array(20)].map((_, index) => (
+                <div key={index} className={styles.column}>
+                    {getBlocks()}
+                </div>
+            ))}
         </div>
-      ))}
-    </div>
-  );
+    );
 }

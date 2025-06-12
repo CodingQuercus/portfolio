@@ -23,14 +23,14 @@ const ProjectCard = ({
 
                     <p className="text-base text-[#f3f3f3] dark:text-[#282828] mb-2">{desc}</p>
 
-                    <motion.button
+                    {/*<motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => setIsExpanded(!isExpanded)}
                         className="w-[120px] h-[48px] text-md py-2 px-4 rounded-lg cursor-pointer bg-[#328e6e] text-[#f3f3f3] hover:underline shadow-md"
                     >
                         Read more
-                    </motion.button>
+                    </motion.button>*/}
                 </div>
 
                 <div className="flex justify-center items-center">
@@ -39,7 +39,7 @@ const ProjectCard = ({
                             src={imageUrl}
                             alt={`${title} image`}
                             loading="lazy"
-                            className="rounded-xl"
+                            className="rounded-xl w-full max-w-[240px] h-auto object-contain"
                         />
                     )}
 
@@ -53,16 +53,8 @@ ProjectCard.propTypes = {
     year: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
-    desc1: PropTypes.string.isRequired,
-    desc2: PropTypes.string.isRequired,
-    desc3: PropTypes.string.isRequired,
-    quote: PropTypes.string.isRequired,
-    what: PropTypes.string.isRequired,
-    why: PropTypes.string.isRequired,
-    process: PropTypes.string.isRequired,
-    result: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
-    contribution: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;
