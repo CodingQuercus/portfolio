@@ -9,13 +9,12 @@ export default function About() {
             <div className="flex flex-col md:flex-row gap-10 items-center">
                 <div className="flex flex-col w-full md:w-1/2 gap-8">
                     <p className="text-left sm:text-base text-[#282828] dark:text-[#f3f3f3] font-normal leading-relaxed">
-                        Hey! I’m Åke, a fourth-year student in the M.Sc. programme in Interaction
-                        Technology and Design at Umeå University. This spring, I’m finishing my final
-                        courses before starting my master’s thesis in the fall.
+                        Hey! I’m Åke, a soon-to-be fifth-year student in the M.Sc. program in Interaction Technology and Design at 
+                        Umeå University. I’m currently wrapping up my final courses and looking forward to starting with my master’s thesis this fall.
                         <br />
                         <br />
-                        Over the past few years, I’ve developed a passion for UI/UX and front-end
-                        development. I aim to create intuitive and user-friendly digital experiences.
+                        Over the past few years, I’ve developed a interest in UI/UX design and front-end development. 
+                        I enjoy turning ideas into intuitive, accessible, and visually engaging experiences.
                         <br />
                         <br />
                         When I’m not designing or coding, you’ll probably find me exercising or
@@ -49,7 +48,7 @@ export default function About() {
                     <img
                         src="images/about-img.png"
                         alt="Åke Flatholm"
-                        className="rounded-full object-cover w-48 h-48 md:w-96 md:h-96 border-[#282828] dark:border-[#f3f3f3] border-3"
+                        className="rounded-full object-cover w-48 h-48 md:w-96 md:h-96 border-[#328e6e] border-8"
                     />
                 </div>
             </div>

@@ -97,6 +97,7 @@ export default function Hero({ navigateToSection }) {
                     onClick={() => navigateToSection("contact")}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    aria-label="Button to contact section"
                 >
                     Contact
                 </motion.button>
@@ -106,6 +107,7 @@ export default function Hero({ navigateToSection }) {
                     onClick={() => navigateToSection("projects")}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    aria-label="Button to project section"
                 >
                     Projects
                 </motion.button>
