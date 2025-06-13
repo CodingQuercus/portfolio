@@ -6,7 +6,7 @@ This is my personal portfolio website built with **Next.js**, **Tailwind CSS**, 
 
 I created this portfolio to present my projects done as an Interaction Technology & Design student.
 
-To create the pixel transition, a guide was followed (https://blog.olivierlarose.com/tutorials/pixel-transition).
+Pixel transition: https://blog.olivierlarose.com/tutorials/pixel-transition
 
 
 ## Tech Stack
