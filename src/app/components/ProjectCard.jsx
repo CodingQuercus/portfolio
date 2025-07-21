@@ -39,7 +39,7 @@ const ProjectCard = ({
                             src={imageUrl}
                             alt={`${title} image`}
                             loading="lazy"
-                            className="rounded-xl w-full max-w-[240px] h-auto object-contain"
+                            className="rounded-xl w-full max-w-[600px] h-auto object-contain"
                         />
                     )}
 
