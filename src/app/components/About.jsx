@@ -27,7 +27,7 @@ export default function About() {
                             whileTap={{ scale: 0.95 }}
                             href="cv/Ake_Flatholm_CV.pdf"
                             download
-                            className="flex flex-row justify-center items-center gap-2 px-2 py-2 w-40 h-12 md:w-44 md:h-16 border border-[#328e6e] bg-[#328e6e] text-[#f3f3f3] rounded-lg shadow-md cursor-pointer hover:bg-[#328e6e] hover:border-[#328e6e] text-center"
+                            className="flex flex-row justify-center items-center gap-2 px-2 py-2 w-40 h-12 md:w-44 md:h-16 border border-[#328e6e] bg-[#328e6e] text-[#f3f3f3] rounded-lg shadow-md cursor-pointer hover:bg-[#328e6e90] hover:border-[#328e6e] text-center"
                         >
                             <MdDownload /> Download CV
                         </motion.a>
@@ -37,8 +37,7 @@ export default function About() {
                             href="cv/Ake_Flatholm_CV.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex flex-row justify-center items-center gap-2 px-2 py-2 w-40 h-12 md:w-44 md:h-16 border-2 border-[#328e6e] text-[#328e6e] rounded-lg shadow-md hover:bg-[#328e6e] hover:border-[#328e6e] hover:text-[#f3f3f3] cursor-pointer text-center"
-                        >
+                            className="flex flex-row justify-center items-center gap-2 px-2 py-2 w-40 h-12 md:w-44 md:h-16 border border-[#328e6e] bg-[#328e6e] text-[#f3f3f3] rounded-lg shadow-md cursor-pointer hover:bg-[#328e6e90] hover:border-[#328e6e] text-center"                        >
                             <MdOpenInNew size={16} /> View CV
                         </motion.a>
                     </div>
