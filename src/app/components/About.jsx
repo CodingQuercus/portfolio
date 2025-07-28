@@ -17,8 +17,7 @@ export default function About() {
                         I enjoy turning ideas into intuitive, accessible, and visually engaging experiences.
                         <br />
                         <br />
-                        When I’m not designing or coding, you’ll probably find me exercising or
-                        playing music.
+                        When I’m not designing or coding, you’ll probably find me exercising, playing music or spending time with friends and family.
                     </p>
 
                     <div className="flex flex-wrap justify-start gap-4">
