@@ -46,7 +46,7 @@ export default function About() {
                     <img
                         src="images/about-img.png"
                         alt="Åke Flatholm"
-                        className="rounded-full object-cover w-48 h-48 md:w-96 md:h-96 border-[#328e6e] border-8"
+                        className="rounded-xl object-cover w-3/4 h-full md:w-96 md:h-96"
                     />
                 </div>
             </div>

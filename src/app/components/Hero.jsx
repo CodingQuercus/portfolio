@@ -13,8 +13,8 @@ export default function Hero({ navigateToSection }) {
     if (!mounted) return null
 
     return (
-        <section className="min-h-screen flex flex-col items-center px-8 md:px-16 py-16 justify-start text-center gap-5 transition-colors duration-300 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
-            <div className="space-y-4 w-full max-w-4xl">
+        <section className="min-h-screen flex flex-col items-center px-10 md:px-16 py-16 justify-start text-center gap-5 transition-colors duration-300 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]">
+            <div className="space-y-4 w-full max-w-4xl h-full">
                 <motion.div
                     className="text-5xl md:text-7xl lg:text-9xl font-extrabold flex gap-2"
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -26,7 +26,7 @@ export default function Hero({ navigateToSection }) {
                         className="flex-1 h-20 md:h-28 lg:h-32 flex items-center justify-center bg-[#328e6e] text-[#f3f3f3] rounded-full text-xl md:text-2xl lg:text-4xl font-semibold relative"
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
                         whileHover={{ scale: 1.05 }}
                     >
                         <motion.div
@@ -49,7 +49,7 @@ export default function Hero({ navigateToSection }) {
                         className="flex-1 h-20 md:h-28 lg:h-32 flex items-center justify-center bg-[#328e6e] text-[#f3f3f3] rounded-full relative"
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
                         whileHover={{ scale: 1.05 }}
                     >
                         <motion.div
@@ -72,7 +72,7 @@ export default function Hero({ navigateToSection }) {
                         className="h-20 md:h-28 lg:h-32 flex-1 flex items-center justify-center bg-[#328e6e] text-[#f3f3f3] px-4 rounded-full text-lg md:text-2xl lg:text-4xl font-bold relative"
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
                         whileHover={{ scale: 1.05 }}
                     >
                         <motion.div

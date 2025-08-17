@@ -25,22 +25,27 @@ export default function Contact() {
     return (
         <div
             id="contact"
-            className="w-full h-screen px-10 py-4 xl:py-16 flex flex-col justify-start items-center gap-11"
+            className="w-full h-screen px-10 flex flex-col justify-start p-40 items-center"
         >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:max-w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-1 gap-8 md:gap-12 lg:gap-16 sm:max-w-full">
                 <motion.div
-                    className="bg-[#282828] dark:bg-[#f3f3f3] rounded-2xl shadow-lg p-6 flex flex-col items-center text-center"
+                    className="bg-transparent flex flex-col sm:flex-row justify-between sm:items-center text-center gap-4 w-full max-w-3xl"
                 >
-                    <FaEnvelope
-                        size={36}
-                        className="text-[#f3f3f3] dark:text-[#282828] mb-4"
-                    />
-                    <h2 className="text-xl font-semibold mb-2 text-[#f3f3f3] dark:text-[#282828]">Email</h2>
-                    <p className="text-[#f3f3f3] dark:text-[#282828] text-sm mb-4">{email}</p>
-                    <div className="flex gap-3">
+                    <div className="flex flex-col items-start gap-2">
+                        <div className="flex flex-row items-center gap-2">
+                            <FaEnvelope
+                                className="text-4xl md:text-4xl lg:text-5xl text-[#282828] dark:text-[#f3f3f3]"
+                            />
+                            <h2 className="text-4xl md:text-4xl lg:text-5xl font-semibold text-[#282828] dark:text-[#f3f3f3]">Email</h2>
+                        </div>
+
+                        <p className="text-lg md:text-xl lg:text-2xl text-[#282828] dark:text-[#f3f3f3] break-all">{email}</p>
+                    </div>
+
+                    <div className="flex flex-row sm:flex-col gap-2">
                         <motion.button
                             onClick={handleCopyEmail}
-                            className="bg-[#328e6e] text-[#f3f3f3] dark px-4 py-2 border-2 border-[#328e6e] rounded-lg flex items-center gap-2 hover:bg-[#328e6e90] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E]"
+                            className="bg-[#328e6e] text-[#f3f3f3] dark px-4 py-2 border-2 border-[#328e6e] rounded-lg flex justify-center items-center gap-2 hover:bg-[#328e6e90] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] w-[120px]"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -48,7 +53,7 @@ export default function Contact() {
                         </motion.button>
                         <motion.a
                             href={`mailto:${email}`}
-                            className="bg-[#328e6e] text-[#f3f3f3] px-4 py-2 border-2 border-[#328e6e] rounded-lg flex items-center gap-2 hover:bg-[#328e6e90] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E]"
+                            className="bg-[#328e6e] text-[#f3f3f3] dark px-4 py-2 border-2 border-[#328e6e] rounded-lg flex justify-center items-center gap-2 hover:bg-[#328e6e90] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] w-[120px]"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -58,19 +63,29 @@ export default function Contact() {
                 </motion.div>
 
                 <motion.div
-                    className="bg-[#282828] dark:bg-[#f3f3f3] rounded-2xl shadow-lg p-6 flex flex-col items-center text-center"
+                    className="bg-transparent flex flex-col sm:flex-row justify-between sm:items-center text-center gap-4 w-full max-w-3xl"
                 >
-                    <FaLinkedin size={36} className="text-[#f3f3f3] dark:text-[#282828] mb-4" />
-                    <h2 className="text-xl font-semibold mb-2 text-[#f3f3f3] dark:text-[#282828]">LinkedIn</h2>
-                    <p className="text-[#f3f3f3] dark:text-[#282828] text-sm mb-4">Connect with me!</p>
-                    <motion.button
-                        onClick={handleLinkedInRedirect}
-                        className="bg-[#328e6e] text-[#f3f3f3] px-4 py-2 border-2 border-[#328e6e] rounded-lg flex items-center gap-2 cursor-pointer hover:bg-[#328e6e90] focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E]"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        <FaLinkedin size={16} /> Visit
-                    </motion.button>
+                    <div className="flex flex-col items-start gap-2">
+                        <div className="flex flex-row items-center gap-2">
+                            <FaLinkedin
+                                className="text-4xl md:text-4xl lg:text-5xl text-[#282828] dark:text-[#f3f3f3]"
+                            />
+                            <h2 className="text-4xl md:text-4xl lg:text-5xl font-semibold text-[#282828] dark:text-[#f3f3f3]">LinkedIn</h2>
+                        </div>
+                        <p className="text-lg md:text-xl lg:text-2xl text-[#282828] dark:text-[#f3f3f3]">Connect with me!</p>
+
+                    </div>
+
+                    <div className="flex flex-row sm:flex-col gap-2">
+                        <motion.button
+                            onClick={handleLinkedInRedirect}
+                            className="bg-[#328e6e] text-[#f3f3f3] dark px-4 py-2 border-2 border-[#328e6e] rounded-lg flex justify-center items-center gap-2 hover:bg-[#328e6e90] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] w-[120px]"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <FaLinkedin size={16} /> Visit
+                        </motion.button>
+                    </div>
                 </motion.div>
             </div>
 

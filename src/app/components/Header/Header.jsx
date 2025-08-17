@@ -18,7 +18,7 @@ export default function Header({ currentSection, menuIsActive, toggleMenu, navig
             <motion.button
                 onClick={() => navigateToSection("home")}
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center justify-center gap-2 text-[#f3f3f3] bg-[#282828] dark:text-[#282828] dark:bg-[#f3f3f3] rounded-lg w-12 h-12 md:h-16 md:w-16 cursor-pointer hover:bg-[#f3f3f3] hover:text-[#282828] hover:border-[#282828] hover:border-2 transition-colors dark:hover:bg-[#282828] dark:hover:text-[#f3f3f3] dark:hover:border-[#f3f3f3]"
+                className="flex items-center justify-center gap-2 text-[#f3f3f3] bg-[#282828] dark:text-[#282828] dark:bg-[#f3f3f3] rounded-lg w-12 h-12 md:h-12 md:w-12 cursor-pointer hover:bg-[#f3f3f3] hover:text-[#282828] hover:border-[#282828] hover:border-2 transition-colors dark:hover:bg-[#282828] dark:hover:text-[#f3f3f3] dark:hover:border-[#f3f3f3]"
                 aria-label="Button to home section"
             >
                 <svg width="36" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-colors">
@@ -42,7 +42,7 @@ export default function Header({ currentSection, menuIsActive, toggleMenu, navig
             </AnimatePresence>
             <motion.button
                 onClick={() => toggleMenu(!menuIsActive)}
-                className="flex items-center justify-center gap-2 text-[#f3f3f3] bg-[#282828] dark:text-[#282828] dark:bg-[#f3f3f3] rounded-lg w-12 h-12 md:h-16 md:w-16 cursor-pointer hover:bg-[#f3f3f3] hover:text-[#282828] hover:border-[#282828] hover:border-2 dark:hover:bg-[#282828] dark:hover:text-[#f3f3f3] dark:hover:border-[#f3f3f3]"
+                className="flex items-center justify-center gap-2 text-[#f3f3f3] bg-[#282828] dark:text-[#282828] dark:bg-[#f3f3f3] rounded-lg w-12 h-12 md:h-12 md:w-12 cursor-pointer hover:bg-[#f3f3f3] hover:text-[#282828] hover:border-[#282828] hover:border-2 dark:hover:bg-[#282828] dark:hover:text-[#f3f3f3] dark:hover:border-[#f3f3f3]"
                 whileHover={{ scale: 1.05 }}
                 aria-label={menuIsActive ? 'Close menu' : 'Open menu'}
             >
@@ -56,7 +56,7 @@ export default function Header({ currentSection, menuIsActive, toggleMenu, navig
                             transition={{ duration: 0.3 }}
                             style={{ display: "flex" }}
                         >
-                            <IoClose size={32} className="sm:size-8 md:size-12"/>
+                            <IoClose size={32} className="sm:size-8 md:size-8"/>
                         </motion.div>
                     ) : (
                         <motion.div
@@ -67,7 +67,7 @@ export default function Header({ currentSection, menuIsActive, toggleMenu, navig
                             transition={{ duration: 0.3 }}
                             style={{ display: "flex" }}
                         >
-                            <IoMenu size={32} className="sm:size-8 md:size-12"/>
+                            <IoMenu size={32} className="sm:size-8 md:size-8"/>
                         </motion.div>
                     )}
                 </AnimatePresence>

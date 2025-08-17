@@ -6,8 +6,8 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export default function Footer() {
     return (
-        <div className='flex flex-col align-middle items-center pb-5 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3] px-5'>
-            <div className="mt-12 flex items-center gap-6">
+        <div className='flex flex-col align-middle gap-4 items-center py-4 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3] px-5'>
+            <div className="flex items-center gap-6">
                     <motion.a
                         href="https://github.com/CodingQuercus"
                         target="_blank"
@@ -26,7 +26,7 @@ export default function Footer() {
                     </motion.a>
             </div>
 
-            <footer className="mt-8 text-sm lg:text-md text-center">
+            <footer className="text-sm lg:text-md text-center">
                 Developed with <a href="https://nextjs.org/" target="_blank" className="hover:underline font-bold">Next.js</a> and <strong><a href="https://motion.dev" target="_blank" className="hover:underline font-bold">Motion</a></strong> by <strong>Åke Flatholm</strong> © 2025
             </footer>
 
