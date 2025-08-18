@@ -27,7 +27,7 @@ export default function Hero({ navigateToSection }) {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.03 }}
                     >
                         <motion.div
                             className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-[#00000080] text-[#f3f3f3] text-base md:text-xl lg:text-2xl font-semibold rounded-full opacity-0 cursor-pointer"
@@ -50,7 +50,7 @@ export default function Hero({ navigateToSection }) {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.03 }}
                     >
                         <motion.div
                             className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-[#00000080] text-[#f3f3f3] text-base md:text-xl lg:text-2xl font-semibold rounded-full opacity-0 cursor-pointer"
@@ -73,7 +73,7 @@ export default function Hero({ navigateToSection }) {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.03 }}
                     >
                         <motion.div
                             className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-[#00000080] text-[#f3f3f3] text-base md:text-xl lg:text-2xl font-semibold rounded-full opacity-0 cursor-pointer"
@@ -87,13 +87,13 @@ export default function Hero({ navigateToSection }) {
                 </motion.div>
             </div>
             <motion.div
-                className="flex flex-row py-4 gap-8"
+                className="flex flex-row py-4 gap-2 md:gap-4"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
             >
                 <motion.button
-                    className="bg-[#328e6e] border-[#328e6e] border-2 px-2 py-2 w-36 h-12 md:w-44 md:h-16 rounded-lg cursor-pointer text-[#f3f3f3] hover:bg-[#328e6e90]"
+                    className="bg-[#328e6e] border-[#328e6e] border-2 px-4 py-2 w-36 h-12 md:w-48 md:h-16 rounded-xl cursor-pointer text-[#f3f3f3] hover:bg-[#328e6e90]"
                     onClick={() => navigateToSection("contact")}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -103,7 +103,7 @@ export default function Hero({ navigateToSection }) {
                 </motion.button>
 
                 <motion.button
-                    className="bg-[#328e6e] border-[#328e6e] border-2 px-2 py-2 w-36 h-12 md:w-44 md:h-16 rounded-lg cursor-pointer text-[#f3f3f3] hover:bg-[#328e6e90]"
+                    className="bg-[#328e6e] border-[#328e6e] border-2 px-4 py-2 w-36 h-12 md:w-48 md:h-16 rounded-xl cursor-pointer text-[#f3f3f3] hover:bg-[#328e6e90]"
                     onClick={() => navigateToSection("projects")}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

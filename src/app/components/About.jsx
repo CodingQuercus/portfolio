@@ -20,13 +20,13 @@ export default function About() {
                         When I’m not designing or coding, you’ll probably find me exercising, playing music or spending time with friends and family.
                     </p>
 
-                    <div className="flex flex-wrap justify-start gap-4">
+                    <div className="flex flex-wrap justify-start gap-2 md:gap-4">
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             href="cv/Ake_Flatholm_CV.pdf"
                             download
-                            className="flex flex-row justify-center items-center gap-2 px-2 py-2 w-40 h-12 md:w-44 md:h-16 border-2 border-[#328e6e] bg-[#328e6e] text-[#f3f3f3] rounded-lg shadow-md cursor-pointer hover:bg-[#328e6e90] hover:border-[#328e6e] text-center"
+                            className="flex flex-row justify-center items-center gap-2 px-4 py-2 w-40 h-12 md:w-48 md:h-16 border-2 border-[#328e6e] bg-[#328e6e] text-[#f3f3f3] rounded-xl shadow-md cursor-pointer hover:bg-[#328e6e90] hover:border-[#328e6e] text-center"
                         >
                             <MdDownload /> Download CV
                         </motion.a>
@@ -36,7 +36,7 @@ export default function About() {
                             href="cv/Ake_Flatholm_CV.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex flex-row justify-center items-center gap-2 px-2 py-2 w-40 h-12 md:w-44 md:h-16 border-2 border-[#328e6e] bg-[#328e6e] text-[#f3f3f3] rounded-lg shadow-md cursor-pointer hover:bg-[#328e6e90] hover:border-[#328e6e] text-center"                        >
+                            className="flex flex-row justify-center items-center gap-2 px-4 py-2 w-40 h-12 md:w-48 md:h-16 border-2 border-[#328e6e] bg-[#328e6e] text-[#f3f3f3] rounded-xl shadow-md cursor-pointer hover:bg-[#328e6e90] hover:border-[#328e6e] text-center"                        >
                             <MdOpenInNew size={16} /> View CV
                         </motion.a>
                     </div>

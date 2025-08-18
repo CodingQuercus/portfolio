@@ -14,7 +14,7 @@ const ProjectCard = ({
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <div className="bg-[#282828] dark:bg-[#f3f3f3] rounded-2xl shadow-lg overflow-hidden transition-all relative h-max">
+        <div className="bg-[#282828] dark:bg-[#f3f3f3] rounded-2xl shadow-xl overflow-hidden transition-all relative h-max">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-6 sm:p-10">
                 <div className="flex flex-col justify-center items-start gap-2">
                     <h2 className="text-base sm:text-lg text-[#f3f3f3] dark:text-[#282828]">{year}</h2>

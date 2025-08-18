@@ -6,8 +6,8 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export default function Footer() {
     return (
-        <div className='flex flex-col align-middle gap-4 items-center py-4 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3] px-5'>
-            <div className="flex items-center gap-6">
+        <div className='w-full flex flex-col align-middle gap-4 py-4 px-10 md:px-72 bg-[#f3f3f3] text-[#282828] dark:bg-[#282828] dark:text-[#f3f3f3]'>
+                <div className="flex flex-row justify-center gap-4">
                     <motion.a
                         href="https://github.com/CodingQuercus"
                         target="_blank"

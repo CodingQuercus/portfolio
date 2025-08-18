@@ -45,7 +45,7 @@ export default function Contact() {
                     <div className="flex flex-row sm:flex-col gap-2">
                         <motion.button
                             onClick={handleCopyEmail}
-                            className="bg-[#328e6e] text-[#f3f3f3] dark px-4 py-2 border-2 border-[#328e6e] rounded-lg flex justify-center items-center gap-2 hover:bg-[#328e6e90] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] w-[120px]"
+                            className="bg-[#328e6e] text-[#f3f3f3] dark px-4 py-2 border-2 border-[#328e6e] rounded-xl flex justify-center items-center gap-2 hover:bg-[#328e6e90] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] w-[120px]"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -53,7 +53,7 @@ export default function Contact() {
                         </motion.button>
                         <motion.a
                             href={`mailto:${email}`}
-                            className="bg-[#328e6e] text-[#f3f3f3] dark px-4 py-2 border-2 border-[#328e6e] rounded-lg flex justify-center items-center gap-2 hover:bg-[#328e6e90] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] w-[120px]"
+                            className="bg-[#328e6e] text-[#f3f3f3] dark px-4 py-2 border-2 border-[#328e6e] rounded-xl flex justify-center items-center gap-2 hover:bg-[#328e6e90] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] w-[120px]"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -79,7 +79,7 @@ export default function Contact() {
                     <div className="flex flex-row sm:flex-col gap-2">
                         <motion.button
                             onClick={handleLinkedInRedirect}
-                            className="bg-[#328e6e] text-[#f3f3f3] dark px-4 py-2 border-2 border-[#328e6e] rounded-lg flex justify-center items-center gap-2 hover:bg-[#328e6e90] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] w-[120px]"
+                            className="bg-[#328e6e] text-[#f3f3f3] dark px-4 py-2 border-2 border-[#328e6e] rounded-xl flex justify-center items-center gap-2 hover:bg-[#328e6e90] cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#328E6E] focus:border-[#328E6E] w-[120px]"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
