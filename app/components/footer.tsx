@@ -30,7 +30,7 @@ export default function Footer() {
                             <FaGithubSquare size={22} />
                         </a>
                         <a
-                            href="/AF_CV.pdf"
+                            href="./AF_CV.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#282828] px-4 sm:w-[196px] h-12 rounded-full flex justify-center items-center gap-2 hover:bg-[#328e6e] transition"

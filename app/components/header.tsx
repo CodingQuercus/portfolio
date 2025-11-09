@@ -52,8 +52,8 @@ export default function Header() {
             <a
               href={`#${id}`}
               onClick={handleClick(id)}
-              className={`flex items-center gap-2 px-4 py-2 sm:w-32 justify-center rounded-full hover:bg-[#328e6e] hover:text-[#f3f3f3] transition ${
-                active === id ? "bg-[#f3f3f3] text-[#328e6e]" : ""
+              className={`flex items-center gap-2 px-4 py-2 sm:w-32 justify-center rounded-full hover:bg-[#f3f3f3] hover:text-[#328e6e] transition ${
+                active === id ? "bg-[#328e6e] text-[#f3f3f3]" : ""
               }`}
             >
               <Icon />

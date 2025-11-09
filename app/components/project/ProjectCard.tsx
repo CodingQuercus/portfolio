@@ -24,7 +24,7 @@ export default function ProjectCard({ year, title, description, image }: Project
                 className="object-cover rounded-4xl"
             />
 
-            <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#28282840] to-[#282828]" />
+            <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#28282840] to-[#282828] rounded-4xl" />
 
             <div className="absolute bottom-4 left-4 z-20 flex flex-col gap-3 pr-4">
                 <div className="text-sm">{year}</div>
