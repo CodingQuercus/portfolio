@@ -46,13 +46,13 @@ export default function Header() {
 
   return (
     <nav className="fixed bg-[#28282880] left-1/2 -translate-x-1/2 top-4 px-4 h-12 z-50 flex items-center justify-center rounded-full backdrop-blur-md">
-      <ul className="flex gap-16 sm:gap-2 justify-center items-center">
+      <ul className="flex gap-8 sm:gap-2 justify-center items-center">
         {navItems.map(({ id, label, icon: Icon }) => (
           <li key={id}>
             <a
               href={`#${id}`}
               onClick={handleClick(id)}
-              className={`flex items-center gap-2 px-2 py-1 sm:w-32 justify-center rounded-full hover:bg-[#328e6e] transition ${
+              className={`flex items-center gap-2 px-4 py-2 sm:w-32 justify-center rounded-full hover:bg-[#328e6e] transition ${
                 active === id ? "bg-[#f3f3f3] text-[#328e6e]" : ""
               }`}
             >
