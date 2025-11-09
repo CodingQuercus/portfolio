@@ -24,6 +24,7 @@ type ProjectData = {
     features: string[];
     impact: string[];
     tech: string[];
+    color: string,
 };
 
 const projects: Record<string, ProjectData> = {
@@ -48,6 +49,7 @@ const projects: Record<string, ProjectData> = {
             "WIP"
         ],
         tech: ["React Native", "TypeScript", "Firebase"],
+        color: "#328e6e",
     },
     sketch_n_guess: {
         title: "Sketch'N'Guess",
@@ -70,10 +72,11 @@ const projects: Record<string, ProjectData> = {
             "WIP"
         ],
         tech: ["React Native", "TypeScript", "Node.js"],
+        color: "#E96FA6"
     },
     fikaspelet: {
         title: "FikaSpelet",
-        subtitle: "Increasing customer traffic through gamification",
+        subtitle: "Increasing customer traffic and engagement through gamification.",
         year: "2024",
         role: "Designer & Developer",
         course: "Prototype Development with Design Build Test, 7.5 ECTS",
@@ -91,11 +94,12 @@ const projects: Record<string, ProjectData> = {
         impact: [
             "WIP"
         ],
-        tech: ["React Native", "JavaScript","Phaser",".NET", "SQL"],
+        tech: ["React Native", "JavaScript", "Phaser", ".NET", "SQL"],
+        color: "#0050A1"
     },
     recharge: {
         title: "ReCharge",
-        subtitle: "Improved user experience while owning electrical vehicles",
+        subtitle: "Enhancing EV ownership through smoother charger discovery and planning.",
         year: "2023",
         role: "Designer",
         course: "Design for User Experience, 15 ECTS",
@@ -114,11 +118,12 @@ const projects: Record<string, ProjectData> = {
             "WIP"
         ],
         tech: ["Figma"],
+        color: "#00A3FF"
     },
 };
 
 export function generateStaticParams() {
-  return Object.keys(projects).map((slug) => ({ slug }));
+    return Object.keys(projects).map((slug) => ({ slug }));
 }
 
 export default async function ProjectDetail({ params }: { params: { slug: string } }) {
@@ -139,7 +144,11 @@ export default async function ProjectDetail({ params }: { params: { slug: string
     return (
         <div className="flex flex-col gap-8 pt-20 px-20 max-w-screen-xl mx-auto">
 
-            <Link href="/#projects" className="flex flex-row items-center justify-center gap-2 bg-[#328e6e] w-48 h-12 rounded-full hover:bg-[#328e6e80]">
+            <Link 
+                href="/#projects" 
+                className="flex flex-row items-center justify-center gap-2 w-48 h-12 rounded-full hover:opacity-80]"
+                style={{backgroundColor: data.color}}
+            >
                 <FaChevronLeft size={24}></FaChevronLeft>Back to projects
             </Link>
 
@@ -200,7 +209,13 @@ export default async function ProjectDetail({ params }: { params: { slug: string
             <Section title="Tech Stack">
                 <div className="flex gap-3 flex-wrap">
                     {data.tech.map((t, i) => (
-                        <Tag key={i}>{t}</Tag>
+                        <span
+                            key={i}
+                            className="px-4 py-2 rounded-full text-sm"
+                            style={{ backgroundColor: data.color }}
+                        >
+                            {t}
+                        </span>
                     ))}
                 </div>
             </Section>
@@ -221,7 +236,8 @@ export default async function ProjectDetail({ params }: { params: { slug: string
 
                         <Link
                             href="/#contact"
-                            className="min-w-40 bg-[#328e6e] px-4 py-2 text-center rounded-full hover:bg-[#328e6e80]"
+                            className="min-w-40 px-4 py-2 text-center rounded-full hover:opacity-80"
+                            style={{ backgroundColor: data.color }}
                         >
                             Get in touch
                         </Link>
@@ -248,13 +264,5 @@ function Section({ title, children }: { title: string; children: any }) {
             <h2 className="text-3xl font-bold">{title}</h2>
             {children}
         </div>
-    );
-}
-
-function Tag({ children }: { children: string }) {
-    return (
-        <span className="bg-[#328e6e] px-4 py-2 rounded-full text-sm">
-            {children}
-        </span>
     );
 }
