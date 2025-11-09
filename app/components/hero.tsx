@@ -1,5 +1,5 @@
 import Image from "next/image";
-import heroGraphic from "@/public/hero_img.svg";
+import heroGraphic from "@/public/hero_img.png";
 import { FaLinkedin, FaGithubSquare, FaFileAlt } from "react-icons/fa";
 
 export default function Hero() {
