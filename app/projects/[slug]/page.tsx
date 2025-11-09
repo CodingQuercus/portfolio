@@ -1,8 +1,9 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 import { FaChevronLeft } from "react-icons/fa";
 
+import awareProject from "@/public/aware-project.png";
 import Footer from "@/app/components/footer";
 
 type ProjectData = {
@@ -12,7 +13,7 @@ type ProjectData = {
     role: string;
     course: string;
     duration: string;
-    heroImage: string;
+    heroImage: StaticImageData;
     overview: string;
     challenge: string;
     solution: string;
@@ -29,7 +30,7 @@ const projects: Record<string, ProjectData> = {
         role: "Designer & Developer",
         course: "Technology for Social Media, 7.5 ECTS",
         duration: "2 months",
-        heroImage: "/aware-project.png",
+        heroImage: awareProject,
         overview:
             "WIP",
         challenge:

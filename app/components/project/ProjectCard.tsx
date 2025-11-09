@@ -1,13 +1,13 @@
 "use client"
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 type ProjectCardProps = {
     year: string;
     title: string;
     description: string;
-    image: string;
+    image: StaticImageData;
 };
 
 export default function ProjectCard({ year, title, description, image }: ProjectCardProps) {
