@@ -12,7 +12,7 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ year, title, description, image }: ProjectCardProps) {
 
-    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g,"_");
 
     return (
         <div className="relative w-full max-w-[540px] h-[420px] sm:h-[460px] md:h-[495px] rounded-4xl overflow-hidden">

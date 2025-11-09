@@ -4,6 +4,10 @@ import Link from "next/link";
 import { FaChevronLeft } from "react-icons/fa";
 
 import awareProject from "@/public/aware-project.png";
+import sngProject from "@/public/sng-project.png";
+import fsProject from "@/public/fs-project.png";
+import rechargeProject from "@/public/recharge-project.png";
+
 import Footer from "@/app/components/footer";
 
 type ProjectData = {
@@ -44,6 +48,72 @@ const projects: Record<string, ProjectData> = {
             "WIP"
         ],
         tech: ["React Native", "TypeScript", "Firebase"],
+    },
+    sketch_n_guess: {
+        title: "Sketch'N'Guess",
+        subtitle: "Making outdoor activities a bit more fun!",
+        year: "2024",
+        role: "Designer & Developer",
+        course: "Prototype Development for Mobile Applications, 7.5 ECTS",
+        duration: "2 months",
+        heroImage: sngProject,
+        overview:
+            "WIP",
+        challenge:
+            "WIP",
+        solution:
+            "WIP",
+        features: [
+            "WIP",
+        ],
+        impact: [
+            "WIP"
+        ],
+        tech: ["React Native", "TypeScript", "Node.js"],
+    },
+    fikaspelet: {
+        title: "FikaSpelet",
+        subtitle: "Increasing customer traffic through gamification",
+        year: "2024",
+        role: "Designer & Developer",
+        course: "Prototype Development with Design Build Test, 7.5 ECTS",
+        duration: "6 months",
+        heroImage: fsProject,
+        overview:
+            "WIP",
+        challenge:
+            "WIP",
+        solution:
+            "WIP",
+        features: [
+            "WIP",
+        ],
+        impact: [
+            "WIP"
+        ],
+        tech: ["React Native", "JavaScript","Phaser",".NET", "SQL"],
+    },
+    recharge: {
+        title: "ReCharge",
+        subtitle: "Improved user experience while owning electrical vehicles",
+        year: "2023",
+        role: "Designer",
+        course: "Design for User Experience, 15 ECTS",
+        duration: "2 months",
+        heroImage: rechargeProject,
+        overview:
+            "WIP",
+        challenge:
+            "WIP",
+        solution:
+            "WIP",
+        features: [
+            "WIP",
+        ],
+        impact: [
+            "WIP"
+        ],
+        tech: ["Figma"],
     },
 };
 
