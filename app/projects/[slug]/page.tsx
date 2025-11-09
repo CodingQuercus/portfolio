@@ -142,7 +142,7 @@ export default async function ProjectDetail({ params }: { params: { slug: string
     }
 
     return (
-        <div className="flex flex-col gap-8 pt-20 px-20 max-w-screen-xl mx-auto">
+        <div className="flex flex-col gap-8 pt-20 px-4 sm:px-10 max-w-screen-xl mx-auto">
 
             <Link 
                 href="/#projects" 
