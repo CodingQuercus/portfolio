@@ -12,7 +12,6 @@ export default function About() {
         <div className="bg-[#282828] rounded-4xl p-6 sm:p-8 w-full lg:w-1/2 text-base sm:text-lg leading-relaxed">
           <strong>Hey!</strong>
           <br />
-          <br />
           I am Åke, a fifth year student in the M.Sc program in Interaction
           Technology and Design at Umeå University. I am currently writing my
           masters thesis.
