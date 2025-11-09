@@ -94,7 +94,7 @@ export default function AboutQuiz() {
         <div className="flex flex-col gap-2">
           <div className="text-lg font-bold">Get to know me!</div>
           <button
-            className="px-4 py-2 bg-[#328e6e] rounded-full hover:opacity-80"
+            className="px-4 py-2 bg-[#328e6e] rounded-full cursor-pointer hover:opacity-80"
             onClick={() => setStarted(true)}
           >
             Start Quiz
@@ -104,7 +104,6 @@ export default function AboutQuiz() {
 
       {started && !finished && (
         <div className="flex flex-col gap-8 w-full">
-          {/* Header + Progress */}
           <div className="flex flex-col gap-2 w-full">
             <div className="flex justify-between">
               <span className="font-bold">Get to know me!</span>
@@ -120,14 +119,13 @@ export default function AboutQuiz() {
             </div>
           </div>
 
-          {/* Question + Answers */}
           <div className="flex flex-col gap-2">
             <div className="text-md font-semibold text-left">
               {questions[currentQ].question}
             </div>
             {questions[currentQ].answers.map((ans, i) => {
               const chosen = i === selected;
-              const base = "px-4 py-2 rounded-full bg-[#000000] text-left transition-colors";
+              const base = "px-4 py-2 rounded-full bg-[#000000] text-left transition-colors cursor-pointer";
               let styles = "hover:bg-[#00000075]";
 
               if (answered) {
@@ -156,7 +154,7 @@ export default function AboutQuiz() {
             You got {score} / {questions.length} correct!
           </div>
           <button
-            className="px-4 py-2 bg-[#328e6e] rounded-full hover:opacity-80"
+            className="px-4 py-2 bg-[#328e6e] rounded-full cursor-pointer hover:opacity-80"
             onClick={restart}
           >
             Play again!
