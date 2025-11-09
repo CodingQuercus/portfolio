@@ -46,6 +46,10 @@ const projects: Record<string, ProjectData> = {
     },
 };
 
+export function generateStaticParams() {
+  return Object.keys(projects).map((slug) => ({ slug }));
+}
+
 export default async function ProjectDetail({ params }: { params: { slug: string } }) {
     const { slug } = await params;
     const data = projects[slug];
