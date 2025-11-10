@@ -9,6 +9,7 @@ import fsProject from "@/public/fs-project.png";
 import rechargeProject from "@/public/recharge-project.png";
 
 import Footer from "@/app/components/footer";
+import { ScrollProgress } from "@/app/components/ScrollProgres.";
 
 type ProjectData = {
     title: string;
@@ -142,8 +143,8 @@ export default async function ProjectDetail({ params }: { params: { slug: string
     }
 
     return (
-        <div className="flex flex-col gap-8 pt-20 px-4 sm:px-10 max-w-screen-xl mx-auto">
-
+        <div className="flex flex-col gap-8 pt-10 px-4 sm:px-10 max-w-screen-xl mx-auto">
+            <ScrollProgress color={data.color}/>
             <Link 
                 href="/#projects" 
                 className="flex flex-row items-center justify-center gap-2 w-48 h-12 rounded-full hover:opacity-80]"

@@ -1,7 +1,12 @@
 "use client"
 import { motion, useScroll, useSpring } from "motion/react";
 
-export function ScrollProgress() {
+type ScrollProps = {
+  color?: string,
+}
+
+export function ScrollProgress({color = "#328e6e"} : ScrollProps) {
+  {/* lägga till så att färgtas in*/}
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -11,8 +16,11 @@ export function ScrollProgress() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 h-2 bg-[#328e6e] origin-left z-50"
-      style={{ scaleX }}
+      className="fixed top-0 left-0 right-0 h-2 origin-left z-50"
+      style={{ 
+        scaleX,
+        backgroundColor: color,
+      }}
     />
   );
 }

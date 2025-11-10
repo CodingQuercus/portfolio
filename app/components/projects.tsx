@@ -11,7 +11,7 @@ export default function Projects() {
         <div className="flex flex-col items-start gap-12 w-full pt-20 px-4">
             <div className="text-4xl sm:text-6xl md:text-8xl font-bold">PROJECTS</div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
+            <div className="flex flex-col items-center lg:grid lg:grid-cols-2 gap-4 w-full">
                 <ProjectCard
                     year={"2025"}
                     title={"aWAre"}
