@@ -143,7 +143,8 @@ export default async function ProjectDetail({ params }: { params: { slug: string
     }
 
     return (
-        <div className="flex flex-col gap-8 pt-10 px-4 sm:px-10 max-w-screen-xl mx-auto">
+        <div className="flex flex-col items-center min-h-screen">
+            <div className="flex flex-col gap-8 w-full max-w-[1200px] pt-10 px-4 sm:px-10 z-20">
             <ScrollProgress color={data.color}/>
 
             <div className="fixed inset-0 opacity-25 pointer-events-none z-10">
@@ -266,6 +267,7 @@ export default async function ProjectDetail({ params }: { params: { slug: string
                 </div>
             </div>
             <Footer></Footer>
+            </div>
         </div>
     );
 }
