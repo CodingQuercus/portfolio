@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithubSquare, FaFileAlt } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <div className="border-t-2 border-[#282828] z-50 px-4">
+        <div className="border-t-2 border-[#282828] z-50 px-10">
             <div className="flex flex-col gap-4 py-8">
                 <div className="flex flex-row flex-wrap gap-4 justify-between">
                     <div className="flex flex-col">
@@ -31,7 +31,7 @@ export default function Footer() {
                             href="./AF_CV.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[#282828] px-4 sm:w-[196px] h-12 rounded-full flex justify-center items-center gap-2 hover:bg-[#328e6e] transition"
+                            className="bg-[#282828] px-4 w-12 sm:w-[196px] h-12 rounded-full flex justify-center items-center gap-2 hover:bg-[#328e6e] transition"
                         >
                             <FaFileAlt size={22} />
                             <span className="hidden sm:inline">View Resume</span>
