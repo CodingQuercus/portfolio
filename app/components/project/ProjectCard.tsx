@@ -26,7 +26,7 @@ export default function ProjectCard({ year, title, description, image }: Project
 
             <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#28282840] to-[#282828] rounded-4xl" />
 
-            <div className="absolute bottom-4 left-4 z-20 flex flex-col gap-3 pr-4">
+            <div className="absolute bottom-4 left-4 z-20 flex flex-col gap-1">
                 <div className="text-sm">{year}</div>
                 <div className="font-bold text-xl sm:text-2xl md:text-3xl">{title}</div>
                 <div className="text-sm sm:text-base md:text-lg w-4/5">
