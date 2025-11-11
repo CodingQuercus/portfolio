@@ -144,129 +144,128 @@ export default async function ProjectDetail({ params }: { params: { slug: string
 
     return (
         <div className="flex flex-col items-center min-h-screen">
-            <div className="flex flex-col gap-8 w-full max-w-[1200px] pt-10 px-4 sm:px-10 z-20">
-            <ScrollProgress color={data.color}/>
-
             <div className="fixed inset-0 opacity-25 pointer-events-none z-10">
-                <div 
-                    className="absolute top-0 -left-4 w-44 h-44 rounded-full mix-blend-multiply filter blur-xl animate-blob" 
-                    style = {{backgroundColor: data.color}}
+                <div
+                    className="absolute top-0 -left-4 w-44 h-44 rounded-full mix-blend-multiply filter blur-xl animate-blob"
+                    style={{ backgroundColor: data.color }}
                 />
-                <div 
-                    className="absolute top-0 -right-4 w-72 h-72 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000" 
-                    style = {{backgroundColor: data.color}}
+                <div
+                    className="absolute top-0 -right-4 w-72 h-72 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"
+                    style={{ backgroundColor: data.color }}
                 />
-                <div 
-                    className="absolute -bottom-8 left-20 w-72 h-72 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000" 
-                    style = {{backgroundColor: data.color}}
+                <div
+                    className="absolute -bottom-8 left-20 w-72 h-72 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"
+                    style={{ backgroundColor: data.color }}
                 />
-                <div 
-                    className="absolute -bottom-8 right-24 w-44 h-44 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-6000" 
-                    style = {{backgroundColor: data.color}}
+                <div
+                    className="absolute -bottom-8 right-24 w-44 h-44 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-6000"
+                    style={{ backgroundColor: data.color }}
                 />
             </div>
+            <div className="flex flex-col gap-8 w-full max-w-[1200px] pt-10 px-4 sm:px-10 z-20">
+                <ScrollProgress color={data.color} />
 
-            <Link 
-                href="/#projects" 
-                className="flex flex-row items-center justify-center gap-2 w-48 h-12 rounded-full hover:opacity-80]"
-                style={{backgroundColor: data.color}}
-            >
-                <FaChevronLeft size={24}></FaChevronLeft>Back to projects
-            </Link>
+                <Link
+                    href="/#projects"
+                    className="flex flex-row items-center justify-center gap-2 w-48 h-12 rounded-full hover:opacity-80]"
+                    style={{ backgroundColor: data.color }}
+                >
+                    <FaChevronLeft size={24}></FaChevronLeft>Back to projects
+                </Link>
 
-            <div>
-                <p className="text-lg">{data.year}</p>
-                <h1 className="text-4xl sm:text-6xl font-bold">{data.title}</h1>
-                <p className="text-lg sm:text-xl">{data.subtitle}</p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <QuickFact label="Role" value={data.role} />
-                <QuickFact label="Course" value={data.course} />
-                <QuickFact label="Duration" value={data.duration} />
-            </div>
-
-            <div className="w-full rounded-4xl">
-                <div className="relative w-full h-[400px] sm:h-[500px] md:h-[650px] rounded-3xl overflow-hidden">
-                    <Image
-                        src={data.heroImage}
-                        alt={data.title}
-                        fill
-                        className="object-cover"
-                    />
+                <div>
+                    <p className="text-lg">{data.year}</p>
+                    <h1 className="text-4xl sm:text-6xl font-bold">{data.title}</h1>
+                    <p className="text-lg sm:text-xl">{data.subtitle}</p>
                 </div>
-            </div>
 
-            <Section title="Overview">
-                <p>{data.overview}</p>
-            </Section>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Section title="The Challenge">
-                    <p>{data.challenge}</p>
-                </Section>
-                <Section title="The Solution">
-                    <p>{data.solution}</p>
-                </Section>
-            </div>
-
-            <Section title="Key Features">
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {data.features.map((f, i) => (
-                        <li key={i} className="bg-[#282828] p-4 rounded-3xl">
-                            {f}
-                        </li>
-                    ))}
-                </ul>
-            </Section>
-
-            <Section title="Impact">
-                <ul className="flex flex-col gap-2">
-                    {data.impact.map((x, i) => (
-                        <li key={i} className="leading-snug">• {x}</li>
-                    ))}
-                </ul>
-            </Section>
-
-            <Section title="Tech Stack">
-                <div className="flex gap-3 flex-wrap">
-                    {data.tech.map((t, i) => (
-                        <span
-                            key={i}
-                            className="px-4 py-2 rounded-full text-sm"
-                            style={{ backgroundColor: data.color }}
-                        >
-                            {t}
-                        </span>
-                    ))}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <QuickFact label="Role" value={data.role} />
+                    <QuickFact label="Course" value={data.course} />
+                    <QuickFact label="Duration" value={data.duration} />
                 </div>
-            </Section>
 
-            <div className="flex flex-col items-center justify-center">
-                <div className="bg-[#282828] p-6 rounded-4xl flex flex-col gap-4">
-                    <div className="font-bold text-lg">
-                        Interested to hear more about this project?
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-2">
-                        <Link
-                            href="/#projects"
-                            className="min-w-40 bg-[#000000] px-4 py-2 text-center rounded-full hover:bg-[#00000080]"
-                        >
-                            View more projects
-                        </Link>
-
-                        <Link
-                            href="/#contact"
-                            className="min-w-40 px-4 py-2 text-center rounded-full hover:opacity-80"
-                            style={{ backgroundColor: data.color }}
-                        >
-                            Get in touch
-                        </Link>
+                <div className="w-full rounded-4xl">
+                    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[650px] rounded-3xl overflow-hidden">
+                        <Image
+                            src={data.heroImage}
+                            alt={data.title}
+                            fill
+                            className="object-cover"
+                        />
                     </div>
                 </div>
-            </div>
-            <Footer></Footer>
+
+                <Section title="Overview">
+                    <p>{data.overview}</p>
+                </Section>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <Section title="The Challenge">
+                        <p>{data.challenge}</p>
+                    </Section>
+                    <Section title="The Solution">
+                        <p>{data.solution}</p>
+                    </Section>
+                </div>
+
+                <Section title="Key Features">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {data.features.map((f, i) => (
+                            <li key={i} className="bg-[#282828] p-4 rounded-3xl">
+                                {f}
+                            </li>
+                        ))}
+                    </ul>
+                </Section>
+
+                <Section title="Impact">
+                    <ul className="flex flex-col gap-2">
+                        {data.impact.map((x, i) => (
+                            <li key={i} className="leading-snug">• {x}</li>
+                        ))}
+                    </ul>
+                </Section>
+
+                <Section title="Tech Stack">
+                    <div className="flex gap-3 flex-wrap">
+                        {data.tech.map((t, i) => (
+                            <span
+                                key={i}
+                                className="px-4 py-2 rounded-full text-sm"
+                                style={{ backgroundColor: data.color }}
+                            >
+                                {t}
+                            </span>
+                        ))}
+                    </div>
+                </Section>
+
+                <div className="flex flex-col items-center justify-center">
+                    <div className="bg-[#282828] p-6 rounded-4xl flex flex-col gap-4">
+                        <div className="font-bold text-lg">
+                            Interested to hear more about this project?
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-2">
+                            <Link
+                                href="/#projects"
+                                className="min-w-40 bg-[#000000] px-4 py-2 text-center rounded-full hover:bg-[#00000080]"
+                            >
+                                View more projects
+                            </Link>
+
+                            <Link
+                                href="/#contact"
+                                className="min-w-40 px-4 py-2 text-center rounded-full hover:opacity-80"
+                                style={{ backgroundColor: data.color }}
+                            >
+                                Get in touch
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <Footer></Footer>
             </div>
         </div>
     );
