@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithubSquare, FaFileAlt } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <div className="border-t-2 border-[#282828] z-50 px-10">
+        <div className="border-t-2 border-[#282828] z-50 px-4 sm:px-0">
             <div className="flex flex-col gap-4 py-8">
                 <div className="flex flex-row flex-wrap gap-4 justify-between">
                     <div className="flex flex-col">
