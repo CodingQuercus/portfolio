@@ -7,7 +7,7 @@ import About from "./components/about"
 import Projects from "./components/projects"
 import Contact from "./components/contact"
 import Footer from "./components/footer"
-import { ScrollProgress } from "./components/ScrollProgres.";
+import { ScrollProgress } from "./components/ScrollProgress";
 
 export default function Home() {
     return (

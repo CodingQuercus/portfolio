@@ -9,7 +9,7 @@ import fsProject from "@/public/fs-project.png";
 import rechargeProject from "@/public/recharge-project.png";
 
 import Footer from "@/app/components/footer";
-import { ScrollProgress } from "@/app/components/ScrollProgres.";
+import { ScrollProgress } from "@/app/components/ScrollProgress";
 
 type ProjectData = {
     title: string;
