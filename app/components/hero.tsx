@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithubSquare, FaFileAlt } from "react-icons/fa";
 
 export default function Hero() {
     return (
-        <section id="home" className="flex flex-col items-center gap-6 pt-20 text-center">
+        <section id="home" className="flex flex-col items-center gap-4 sm:gap-6 pt-20 text-center">
             <div className="flex flex-col items-center gap-2">
                 <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold">
                     ÅKE FLATHOLM

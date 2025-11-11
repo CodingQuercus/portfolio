@@ -145,6 +145,26 @@ export default async function ProjectDetail({ params }: { params: { slug: string
     return (
         <div className="flex flex-col gap-8 pt-10 px-4 sm:px-10 max-w-screen-xl mx-auto">
             <ScrollProgress color={data.color}/>
+
+            <div className="fixed inset-0 opacity-25 pointer-events-none z-10">
+                <div 
+                    className="absolute top-0 -left-4 w-44 h-44 rounded-full mix-blend-multiply filter blur-xl animate-blob" 
+                    style = {{backgroundColor: data.color}}
+                />
+                <div 
+                    className="absolute top-0 -right-4 w-72 h-72 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000" 
+                    style = {{backgroundColor: data.color}}
+                />
+                <div 
+                    className="absolute -bottom-8 left-20 w-72 h-72 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000" 
+                    style = {{backgroundColor: data.color}}
+                />
+                <div 
+                    className="absolute -bottom-8 right-24 w-44 h-44 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-6000" 
+                    style = {{backgroundColor: data.color}}
+                />
+            </div>
+
             <Link 
                 href="/#projects" 
                 className="flex flex-row items-center justify-center gap-2 w-48 h-12 rounded-full hover:opacity-80]"

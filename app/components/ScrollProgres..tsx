@@ -6,7 +6,6 @@ type ScrollProps = {
 }
 
 export function ScrollProgress({color = "#328e6e"} : ScrollProps) {
-  {/* lägga till så att färgtas in*/}
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,

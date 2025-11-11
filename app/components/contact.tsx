@@ -4,11 +4,11 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col items-start gap-12 w-full pt-20 pb-20 px-4"
+      className="flex flex-col items-start gap-4 sm:gap-8 w-full pt-20 pb-20 px-4"
     >
       <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold">CONTACT</h2>
 
-      <div className="flex flex-col lg:flex-row gap-6 w-full">
+      <div className="flex flex-col lg:flex-row gap-4 w-full">
         <div className="bg-[#282828] rounded-4xl p-6 sm:p-8 w-full lg:w-1/2 text-2xl sm:text-3xl leading-relaxed">
           Have an <strong>idea</strong>, a <strong>problem to solve</strong>, or
           <strong> just want to talk</strong>?

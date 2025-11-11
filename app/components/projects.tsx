@@ -8,7 +8,7 @@ import rechargeCard from "@/public/recharge-card-image.png";
 
 export default function Projects() {
     return (
-        <div className="flex flex-col items-start gap-12 w-full pt-20 px-4">
+        <div className="flex flex-col items-start gap-4 sm:gap-8 w-full pt-20 px-4">
             <div className="text-4xl sm:text-6xl md:text-8xl font-bold">PROJECTS</div>
 
             <div className="flex flex-col items-center lg:grid lg:grid-cols-2 gap-4 w-full">

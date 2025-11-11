@@ -4,12 +4,12 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col items-start gap-8 pt-20 px-4 sm:px-0 w-full"
+      className="flex flex-col items-start gap-4 sm:gap-8 pt-20 px-4 sm:px-0 w-full"
     >
       <div className="text-4xl sm:text-6xl md:text-8xl font-bold">ABOUT ME</div>
 
-      <div className="flex flex-col lg:flex-row gap-6 w-full">
-        <div className="bg-[#282828] rounded-4xl p-6 sm:p-8 w-full lg:w-1/2 text-base sm:text-lg leading-relaxed">
+      <div className="flex flex-col lg:flex-row gap-4 w-full">
+        <div className="bg-[#282828] rounded-4xl p-8 sm:p-8 w-full lg:w-1/2 text-base sm:text-lg leading-relaxed">
           <strong>Hey!</strong>
           <br />
           I am Åke, a fifth year student in the M.Sc program in Interaction

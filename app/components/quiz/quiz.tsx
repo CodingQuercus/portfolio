@@ -89,7 +89,7 @@ export default function AboutQuiz() {
   const isCorrect = (i: number) => i === questions[currentQ].correct;
 
   return (
-    <div className="flex flex-col bg-[#282828] p-8 w-[493px] rounded-3xl gap-4 items-center justify-center text-center">
+    <div className="flex flex-col bg-[#282828] p-16 w-full rounded-3xl gap-4 items-center justify-center text-center">
       {!started && !finished && (
         <div className="flex flex-col gap-2">
           <div className="text-lg font-bold">Get to know me!</div>

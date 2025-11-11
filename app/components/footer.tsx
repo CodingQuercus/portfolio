@@ -3,11 +3,9 @@ import { FaLinkedin, FaGithubSquare, FaFileAlt } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <div className="border-t-2 border-[#282828] z-50">
-            <div className="flex flex-col gap-5 py-8">
-
-
-                <div className="flex flex-row justify-between">
+        <div className="border-t-2 border-[#282828] z-50 px-4">
+            <div className="flex flex-col gap-4 py-8">
+                <div className="flex flex-row flex-wrap gap-4 justify-between">
                     <div className="flex flex-col">
                         <div className="font-bold text-lg">Åke Flatholm</div>
                         <div className="text-base">M.Sc Student in Interaction Technology and Design</div>
