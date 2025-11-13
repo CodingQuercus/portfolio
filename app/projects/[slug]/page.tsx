@@ -22,8 +22,6 @@ type ProjectData = {
     overview: string;
     challenge: string;
     solution: string;
-    features: string[];
-    impact: string[];
     tech: string[];
     color: string,
 };
@@ -43,12 +41,6 @@ const projects: Record<string, ProjectData> = {
             "WIP",
         solution:
             "WIP",
-        features: [
-            "WIP",
-        ],
-        impact: [
-            "WIP"
-        ],
         tech: ["React Native", "TypeScript", "Firebase"],
         color: "#328e6e",
     },
@@ -66,12 +58,6 @@ const projects: Record<string, ProjectData> = {
             "WIP",
         solution:
             "WIP",
-        features: [
-            "WIP",
-        ],
-        impact: [
-            "WIP"
-        ],
         tech: ["React Native", "TypeScript", "Node.js"],
         color: "#E96FA6"
     },
@@ -89,12 +75,6 @@ const projects: Record<string, ProjectData> = {
             "WIP",
         solution:
             "WIP",
-        features: [
-            "WIP",
-        ],
-        impact: [
-            "WIP"
-        ],
         tech: ["React Native", "JavaScript", "Phaser", ".NET", "SQL"],
         color: "#0050A1"
     },
@@ -112,12 +92,6 @@ const projects: Record<string, ProjectData> = {
             "WIP",
         solution:
             "WIP",
-        features: [
-            "WIP",
-        ],
-        impact: [
-            "WIP"
-        ],
         tech: ["Figma"],
         color: "#00A3FF"
     },
@@ -208,24 +182,6 @@ export default async function ProjectDetail({ params }: { params: { slug: string
                         <p>{data.solution}</p>
                     </Section>
                 </div>
-
-                <Section title="Key Features">
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {data.features.map((f, i) => (
-                            <li key={i} className="bg-[#282828] p-4 rounded-3xl">
-                                {f}
-                            </li>
-                        ))}
-                    </ul>
-                </Section>
-
-                <Section title="Impact">
-                    <ul className="flex flex-col gap-2">
-                        {data.impact.map((x, i) => (
-                            <li key={i} className="leading-snug">• {x}</li>
-                        ))}
-                    </ul>
-                </Section>
 
                 <Section title="Tech Stack">
                     <div className="flex gap-3 flex-wrap">
