@@ -1,0 +1,56 @@
+"use client"
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ChevronRight } from "lucide-react";
+
+export default function Footer() {
+    return (
+        <section id="contact">
+            <div className="flex flex-col mb-10">
+                <div className="text-5xl font-medium mb-4">Let&apos;s get in touch</div>
+
+                <div className="flex flex-col w-32 gap-2">
+
+                    <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 18 }}
+                        className="flex flex-row items-center justify-between cursor-pointer"
+                    >
+                        <Link 
+                            href="https://www.linkedin.com/in/akeflatholm/" 
+                            target="_blank" 
+                            className="text-3xl"
+                        >
+                            LinkedIn
+                        </Link>
+
+                        <motion.span
+                            whileHover={{ x: 4 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >
+                            <ChevronRight size={32}/>
+                        </motion.span>
+                    </motion.div>
+
+                    <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 18 }}
+                        className="flex flex-row items-center justify-between cursor-pointer"
+                    >
+                        <Link href="mailto:akeflatholm@gmail.com" className="text-3xl">
+                            Email
+                        </Link>
+
+                        <motion.span
+                            whileHover={{ x: 4 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >
+                            <ChevronRight size={32}/>
+                        </motion.span>
+                    </motion.div>
+
+                </div>
+            </div>
+        </section>
+    );
+}
