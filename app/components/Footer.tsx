@@ -5,7 +5,7 @@ import { ChevronRight } from "lucide-react";
 
 export default function Footer() {
     return (
-        <section id="contact">
+        <section id="contact" className="w-full max-w-[1200px] px-10 md:px-20">
             <div className="flex flex-col mb-10">
                 <div className="text-5xl font-medium mb-4">Let&apos;s get in touch</div>
 

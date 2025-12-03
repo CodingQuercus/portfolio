@@ -6,9 +6,7 @@ import awareProject from "@/public/aware-project.png"
 
 export default function AwarePage() {
     return (
-        <div className="flex flex-col items-center min-h-screen bg-[#f7f7f7]">
-            <Navbar></Navbar>
-            <div className="w-full max-w-[1200px] px-4 sm:px-10 z-20 pt-20">
+            <div className="w-full max-w-[1200px] min-h-screen px-10 sm:px-20 pt-20">
                 <div>
                     <p className="font-base">2025</p>
                     <h1 className="text-5xl font-medium text-left">aWAre</h1>
@@ -46,6 +44,5 @@ export default function AwarePage() {
                     Impact
                 </div>
             </div>
-        </div>
     );
 }

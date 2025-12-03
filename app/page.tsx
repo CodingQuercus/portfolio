@@ -5,14 +5,9 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-[#f7f7f7]">
-      <Navbar></Navbar>
       <div className="flex flex-col gap-16 w-full max-w-[1200px] px-10 md:px-20 z-20">
         <Hero></Hero>
         <CaseStudies></CaseStudies>
-        <Footer></Footer>
       </div>
-      
-    </div>
   );
 }
