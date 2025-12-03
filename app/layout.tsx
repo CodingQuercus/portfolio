@@ -10,7 +10,12 @@ const InterFont = Inter({
 
 export const metadata: Metadata = {
   title: "Åke Flatholm - Portfolio",
-  description: "UI/UX Designer and Frontend Developer",
+  description: "UI/UX Designer",
+  icons: {
+    icon: [
+      {url: "/icon.png"}
+    ]
+  }
 };
 
 export default function RootLayout({
