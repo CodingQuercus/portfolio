@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import { useState, useEffect } from "react"
-import { motion, scale } from "framer-motion";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {

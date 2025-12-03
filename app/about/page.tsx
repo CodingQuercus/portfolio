@@ -1,9 +1,8 @@
 "use client"
 
 import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
 
-import {motion, scale } from "framer-motion"
+import { motion } from "framer-motion"
 
 export default function About() {
     return (
