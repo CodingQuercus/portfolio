@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import Navbar from "@/app/components/Navbar";
 
+import awareProject from "@/public/aware-project.png"
+
 export default function AwarePage() {
     return (
         <div className="flex flex-col items-center min-h-screen bg-[#f7f7f7]">
@@ -17,14 +19,13 @@ export default function AwarePage() {
 
 
                 <Image
-                    src="/aware-project.png"
+                    src={awareProject}
                     alt="aWAre"
                     height={400}
-                    width={600}
+                    width={1200}
                     className="rounded-lg mb-16"
                 />
-            </div>
-            <div>
+                <div>
                 <div>Role, UX/UI, Full-Stack Developer</div>
                     <div>Time, 10 weeks, 50</div>
                 </div>
@@ -36,18 +37,15 @@ export default function AwarePage() {
                 <div>
                     Process (Design Thinking)
                     Understanding the market by reading reports from marketing students and performing a competitive analysis.
-
-                    User Test, is the game playable? is it an enjoyable experience?
-                    Iterative development, game should not be to hard, but not to easy.
                 </div>
                 <div>
                     Solution
-                    Marketing game
+                   
                 </div>
                 <div>
-                    Results
-                    2500 games played, 40 plays per user, 126 redirections to customer website.
+                    Impact
                 </div>
+            </div>
         </div>
     );
 }

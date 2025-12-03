@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import Navbar from "@/app/components/Navbar";
 
+import fsProject from "@/public/fs-project.png"
+
 export default function FikaSpeletPage() {
     return (
         <div className="flex flex-col items-center min-h-screen bg-[#f7f7f7]">
@@ -17,11 +19,11 @@ export default function FikaSpeletPage() {
 
 
                 <Image
-                    src="/aware-card-image.png"
-                    alt="aWAre"
+                    src={fsProject}
+                    alt="FikaSpelet"
                     height={400}
-                    width={400}
-                    className="rounded-lg mb-16"
+                    width={1200}
+                    className="rounded-lg"
                 />
                 <div>
                     <div>Role, UX/UI, Full-Stack Developer</div>
@@ -37,13 +39,12 @@ export default function FikaSpeletPage() {
                     User Test, is the game playable? is it an enjoyable experience?
                     Iterative development, game should not be to hard, but not to easy.
                 </div>
-                <div>
+                 <div>
                     Solution
                     Marketing game
                 </div>
                 <div>
-                    Results
-                    2500 games played, 40 plays per user, 126 redirections to customer website.
+                    How can this increase customer traffic? During a test run which lasted for 2 days, a total of 2500 games were played, approximately 40 plays per user, with 126 redirections to the website.
                 </div>
             </div>
         </div>

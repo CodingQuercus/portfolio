@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import Navbar from "@/app/components/Navbar";
 
+import sngProject from "@/public/sng-project.png"
+
 export default function SketchNGuessPage() {
     return (
         <div className="flex flex-col items-center min-h-screen bg-[#f7f7f7]">
@@ -17,10 +19,10 @@ export default function SketchNGuessPage() {
 
 
                 <Image
-                    src="/aware-card-image.png"
-                    alt="aWAre"
+                    src={sngProject}
+                    alt="Sketch'N'Guess"
                     height={400}
-                    width={400}
+                    width={1200}
                     className="rounded-lg mb-16"
                 />
 

@@ -12,7 +12,7 @@ type CaseCardProps = {
 	subtitle: string,
 	desc: string,
 	tags: string[],
-	image: string,
+	image: StaticImageData,
 	href: string,
 	variant: boolean
 }
