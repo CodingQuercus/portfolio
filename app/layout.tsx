@@ -15,10 +15,11 @@ export const metadata: Metadata = {
   description: "UI/UX Designer",
   icons: {
     icon: [
-      {url: "/icon.svg"}
-    ]
-  }
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
+
 
 export default function RootLayout({
   children,
