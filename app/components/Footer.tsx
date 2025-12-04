@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <section id="contact" className="w-full max-w-[1200px] px-10 md:px-20">
             <div className="flex flex-col mb-10">
-                <div className="text-5xl font-medium mb-4">Let&apos;s get in touch</div>
+                <div className="text-4xl sm:text-5xl font-medium mb-4">Let&apos;s get in touch</div>
 
                 <div className="flex flex-col w-32 gap-2">
 
@@ -19,7 +19,7 @@ export default function Footer() {
                         <Link 
                             href="https://www.linkedin.com/in/akeflatholm/" 
                             target="_blank" 
-                            className="text-3xl"
+                            className="text-2xl md:text-3xl"
                         >
                             LinkedIn
                         </Link>
@@ -37,7 +37,7 @@ export default function Footer() {
                         transition={{ type: "spring", stiffness: 300, damping: 18 }}
                         className="flex flex-row items-center justify-between cursor-pointer"
                     >
-                        <Link href="mailto:akeflatholm@gmail.com" className="text-3xl">
+                        <Link href="mailto:akeflatholm@gmail.com" className="text-2xl md:text-3xl">
                             Email
                         </Link>
 

@@ -19,7 +19,7 @@ export default function About() {
                 <h1 className="text-5xl font-medium text-left">About</h1>
                 <div className="text-base leading-relaxed flex flex-col gap-2 w-max-[600px] my-4">
                     <p>
-                        Hey, I&apos;m Åke. A Master of Science student in Interaction Technology and Design.
+                        Hi, I&apos;m Åke. A Master of Science student in Interaction Technology and Design from Umeå.
                     </p>
                 </div>
                 </motion.div>

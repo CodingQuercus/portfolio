@@ -12,7 +12,7 @@ export default function CaseStudies() {
   return (
     <section className="flex flex-col mb-10">
       <motion.h2
-        className="text-5xl font-medium mb-8"
+        className="text-4xl sm:text-5xl font-medium mb-8"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
@@ -33,7 +33,7 @@ export default function CaseStudies() {
             year="2025"
             subtitle="How do we increase awareness of natural hazards in Western Australia?"
             desc="aWAre is a mobile app designed to help international travelers stay informed about hazards such as bushfires, shark sightings, extreme weather, and traffic incidents. The app combines an interactive map with a community feature for local insights and was developed through a design thinking process in collaboration with marketing students at Edith Cowan University."
-            tags={["Mobile App Design", "UX Research", "React Native", "Firebase"]}
+            tags={["UX", "React Native", "Firebase", "Design Thinking"]}
             image={awareCard}
             href="/work/aware"
             variant={true}
