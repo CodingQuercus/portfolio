@@ -35,7 +35,9 @@ export default function About() {
             >
                 <motion.button
                     whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.35, delay: 0.18, ease: "easeOut" }}
                     className="px-4 py-2 bg-foreground text-background rounded-full flex flex-row items-center gap-1 hover:opacity-50 cursor-pointer"
                 >
                     Resume
