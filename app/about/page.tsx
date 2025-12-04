@@ -15,7 +15,7 @@ export default function About() {
             >
 
                 <h1 className="text-5xl font-medium text-left">About</h1>
-                <div className="text-base text-neutral-600 leading-relaxed flex flex-col gap-2 w-[500px] my-4">
+                <div className="text-base text-neutral-600 leading-relaxed flex flex-col gap-2 w-full sm:w-[500px] my-4">
                     <p>
                         Hi, I&apos;m Åke. A Master of Science student in Interaction Technology and Design.
                     </p>
