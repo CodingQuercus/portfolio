@@ -4,18 +4,17 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
     return (
-        <section className="flex flex-col gap-5 md:gap-4 items-start justify-evenly min-h-screen">
+        <section className="flex flex-col items-start justify-evenly min-h-screen">
             <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="flex flex-col gap-4"
+                className="flex flex-col gap-2"
             >
                 <motion.div
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.35, delay: 0.1, ease: "easeOut" }}
-                    className="flex flex-col gap-1"
                 >
                     <div className="text-5xl font-semibold sm:text-7xl md:text-8xl lg:text-9xl">
                         Åke Flatholm
@@ -26,7 +25,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.35, delay: 0.18, ease: "easeOut" }}
-                    className="flex flex-col gap-3 sm:w-4/5 md:w-3/4"
+                    className="flex flex-col gap-1 sm:gap-2 sm:w-4/5 md:w-3/4"
                 >
                     <p className="text-base md:text-2xl">
                         Hi, I&apos;m a Master of Science Student in Interaction Technology and Design from Umeå.

@@ -20,8 +20,8 @@ type CaseCardProps = {
 export default function CaseCard({ title, year, subtitle, desc, tags, image, href, variant }: CaseCardProps) {
 	return (
 		<div className={`flex flex-col gap-4 md:flex-row ${variant ? "md:flex-row" : "md:flex-row-reverse"} w-full md:items-stretch md:justify-between`}>
-			<div className="flex flex-1 flex-col justify-between gap-8 lg:gap-0">
-				<div className="flex flex-col gap-4">
+			<div className="flex flex-1 flex-col justify-between gap-4 lg:gap-0">
+				<div className="flex flex-col gap-2">
 					<div className="flex flex-col gap-0.5">
 						<p className="text-base">{year}</p>
 						<h3 className="text-3xl font-medium">{title}</h3>

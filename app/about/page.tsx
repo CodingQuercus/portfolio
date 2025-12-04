@@ -13,10 +13,10 @@ export default function About() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.35, delay: 0.1, ease: "easeOut" }}
+                className="mb-4"
             >
-
-                <h1 className="text-5xl font-medium text-left">About</h1>
-                <div className="text-base text-neutral-600 leading-relaxed flex flex-col gap-2 w-full sm:w-[500px] my-4">
+                <h1 className="text-4xl sm:text-5xl font-medium mb-2">About</h1>
+                <div className="text-base text-neutral-600 leading-relaxed flex flex-col gap-2 w-full sm:w-[500px]">
                     <p>
                         Hi, I&apos;m Åke. A Master of Science student in Interaction Technology and Design.
                     </p>

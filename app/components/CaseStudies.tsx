@@ -12,7 +12,7 @@ export default function CaseStudies() {
   return (
     <section className="flex flex-col mb-10">
       <motion.h2
-        className="text-4xl sm:text-5xl font-medium mb-8"
+        className="text-4xl sm:text-5xl font-medium mb-4 sm:mb-8"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
