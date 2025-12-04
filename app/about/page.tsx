@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { motion } from "framer-motion"
 import { ExternalLink } from "lucide-react"
 
@@ -28,27 +29,24 @@ export default function About() {
 
                 </div>
             </motion.div>
-            <motion.button
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, delay: 0.18, ease: "easeOut" }}
-                className="flex flex-row cursor-pointer"
+            <Link
+                href="./Ake_Flatholm_Resume.pdf"
+                target="_blank"
             >
-                <motion.a
+                <motion.button
                     whileHover={{ scale: 1.05 }}
-                    href="./Ake_Flatholm_Resume.pdf"
-                    target="_blank"
-                    className="flex flex-row items-center gap-1 px-8 py-2 bg-foreground text-background text-base rounded-full hover:opacity-50"
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="px-4 py-2 bg-foreground text-background rounded-full flex flex-row items-center gap-1 hover:opacity-50 cursor-pointer"
                 >
                     Resume
                     <motion.span
-						whileHover={{ x: 4 }}
-						transition={{ type: "spring", stiffness: 300 }}
-					>
-                        <ExternalLink size={16}/>
-					</motion.span>
-                </motion.a>
-            </motion.button>
+                        whileHover={{ x: 4 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                    >
+                        <ExternalLink size={16} />
+                    </motion.span>
+                </motion.button>
+            </Link>
         </motion.div>
     )
 }
