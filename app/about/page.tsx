@@ -29,26 +29,29 @@ export default function About() {
 
                 </div>
             </motion.div>
-            <Link
-                href="./Ake_Flatholm_Resume.pdf"
-                target="_blank"
+            <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: 0.18, ease: "easeOut" }}
             >
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.35, delay: 0.18, ease: "easeOut" }}
-                    className="px-4 py-2 bg-foreground text-background rounded-full flex flex-row items-center gap-1 hover:opacity-50 cursor-pointer"
+                <Link
+                    href="./Ake_Flatholm_Resume.pdf"
+                    target="_blank"
                 >
-                    Resume
-                    <motion.span
-                        whileHover={{ x: 4 }}
-                        transition={{ type: "spring", stiffness: 300 }}
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        className="px-4 py-2 bg-foreground text-background rounded-full flex flex-row items-center gap-1 hover:opacity-50 cursor-pointer"
                     >
-                        <ExternalLink size={16} />
-                    </motion.span>
-                </motion.button>
-            </Link>
+                        Resume
+                        <motion.span
+                            whileHover={{ x: 4 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >
+                            <ExternalLink size={16} />
+                        </motion.span>
+                    </motion.button>
+                </Link>
+            </motion.div>
         </motion.div>
     )
 }
