@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export default function GesturePage() {
     return (
@@ -10,6 +9,8 @@ export default function GesturePage() {
                     What are young adults in Swedens attitudes toward gesture based interactions?
                 </p>
             </div>
+
+            If you are interested in reading the paper, feel free to reach out!
         </div>
     );
 }

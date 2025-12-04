@@ -46,7 +46,7 @@ export default function Navbar() {
                                 hover: { width: "100%" }
                             }}
                             transition={{ duration: 0.25, ease: "easeOut" }}
-                            className="absolute left-0 -bottom-1 h-[2px] bg-foreground"
+                            className="absolute left-0 -bottom-1 h-0.5 bg-foreground"
                         />
                     </motion.div>
 
@@ -66,15 +66,15 @@ export default function Navbar() {
                                 hover: { width: "100%" }
                             }}
                             transition={{ duration: 0.25, ease: "easeOut" }}
-                            className="absolute left-0 -bottom-1 h-[2px] bg-foreground"
+                            className="absolute left-0 -bottom-1 h-0.5 bg-foreground"
                         />
                     </motion.div>
                     <motion.div whileHover={{scale: 1.05}}>
                         <Link
                             href="#contact"
-                            className="px-4 py-2 bg-foreground rounded-full text-background hover:opacity-50 transition"
+                            className="text-lg px-4 py-2 bg-foreground rounded-full text-background hover:opacity-50 transition"
                         >
-                            Contact
+                            Get in Touch
                         </Link>
                     </motion.div>
                 </div>

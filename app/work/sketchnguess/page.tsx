@@ -1,8 +1,6 @@
 import Image from "next/image";
 
-import Navbar from "@/app/components/Navbar";
-
-import sngProject from "@/public/sng-project.png"
+import sngProject from "@/public/sng/sng-project.png"
 
 export default function SketchNGuessPage() {
     return (

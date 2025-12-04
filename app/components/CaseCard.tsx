@@ -36,7 +36,7 @@ export default function CaseCard({ title, year, subtitle, desc, tags, image, hre
 				<div className="flex flex-col gap-4">
 					<div className="flex flex-wrap gap-2">
 						{tags.map(tag => (
-							<span key={tag} className="px-4 py-2 text-sm bg-[#d3d3d3] rounded-lg">
+							<span key={tag} className="px-4 py-2 text-sm border rounded-full border-foreground hover:border-transparent hover:bg-foreground hover:text-background cursor-pointer">
 								{tag}
 							</span>
 						))}

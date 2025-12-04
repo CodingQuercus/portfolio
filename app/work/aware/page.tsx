@@ -1,8 +1,6 @@
 import Image from "next/image";
 
-import Navbar from "@/app/components/Navbar";
-
-import awareProject from "@/public/aware-project.png"
+import awareProject from "@/public/aware/aware-project.png"
 
 export default function AwarePage() {
     return (
@@ -32,12 +30,24 @@ export default function AwarePage() {
                     How might we effectively educate people about the dangers of wildlife and natural hazards in Western Australia (such as swimming risks, bushfires, and shark attacks)?
                     
                 </div>
-                <div>
-                    Process (Design Thinking)
-                    Understanding the market by reading reports from marketing students and performing a competitive analysis.
+                <div className="flex flex-row">
+                    <div>
+                    <h2>Process</h2>
+                    The project followed the Design Thinking method. 
+                    The intial phase was empathize, to understand the target users, we read reports from the marketing students and performed a competitive analysis of similar applications already used in Western Australia.
+                    The main problem with the current market was that the applications existing create a fragmented experience for users, there werent any applications who showed all types of dangers. 
+
+                    Brainstorming concepts. First two concepts, a location based application and a gamificatio application.
+                    Chose together with stakeholders to continue developing the location based application.
+
+                    Continously during the project we had meetings with ECU students and UMU students, showing progress and discussing features. 
+                    </div>
+
+
                 </div>
                 <div>
                     Solution
+                    
                    
                 </div>
                 <div>

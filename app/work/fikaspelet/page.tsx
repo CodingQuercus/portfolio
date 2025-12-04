@@ -1,8 +1,6 @@
 import Image from "next/image";
 
-import Navbar from "@/app/components/Navbar";
-
-import fsProject from "@/public/fs-project.png"
+import fsProject from "@/public/fs/fs-project.png"
 
 export default function FikaSpeletPage() {
     return (

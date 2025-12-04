@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import CaseCard from "./CaseCard";
 
-import awareCard from "@/public/aware-card-image.png";
-import gestureCard from "@/public/gesture.png";
-import sngCard from "@/public/sng-card-image.png";
-import fsCard from "@/public/fs-card-image.png";
+import awareCard from "@/public/aware/aware-card-image.png";
+import gestureCard from "@/public/gesture/gesture.png";
+import sngCard from "@/public/sng/sng-card-image.png";
+import fsCard from "@/public/fs/fs-card-image.png";
 
 export default function CaseStudies() {
   return (

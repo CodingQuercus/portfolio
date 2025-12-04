@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: "UI/UX Designer",
   icons: {
     icon: [
-      {url: "/icon.png"}
+      {url: "/icon.svg"}
     ]
   }
 };
