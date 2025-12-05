@@ -28,7 +28,7 @@ export default function Navbar() {
                     </Link>
                 </motion.div>
 
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-6 sm:gap-12">
 
                     <motion.div
                         className="relative w-fit"
