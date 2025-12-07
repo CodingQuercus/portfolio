@@ -31,7 +31,7 @@ export default function Hero() {
                         Hi, I&apos;m a Master of Science Student in Interaction Technology and Design from Umeå.
                     </p>
                     <p className="text-base md:text-2xl leading-normal">
-                        Currently working on my master&apos;s thesis, where I design and evaluate AI-driven conversational user interfaces in compliance-driven environments, with a focus on user trust.
+                        Currently working on my master&apos;s thesis, where I design and evaluate AI-driven conversational user interfaces, with a focus on user trust.
                     </p>
                 </motion.div>
             </motion.div>

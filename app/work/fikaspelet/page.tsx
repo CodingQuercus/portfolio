@@ -9,7 +9,7 @@ export default function FikaSpeletPage() {
                 <p className="font-base">2024</p>
                 <h1 className="text-5xl font-medium text-left">FikaSpelet</h1>
                 <p className="text-xl">
-                    How can we increase customer traffic through gamification?
+                    A gamified experience designed to increase customer traffic
                 </p>
             </div>
 

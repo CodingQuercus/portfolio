@@ -9,7 +9,7 @@ export default function AwarePage() {
                     <p className="font-base">2025</p>
                     <h1 className="text-5xl font-medium text-left">aWAre</h1>
                     <p className="text-xl">
-                        How do we increase awareness of natural hazards in Western Australia?
+                        Increasing awareness of natural hazards in Western Australia.
                     </p>
                 </div>
 
@@ -26,9 +26,7 @@ export default function AwarePage() {
                     <div>Time, 10 weeks, 50</div>
                 </div>
                 <div>
-                    Problem 
                     How might we effectively educate people about the dangers of wildlife and natural hazards in Western Australia (such as swimming risks, bushfires, and shark attacks)?
-                    
                 </div>
                 <div className="flex flex-row">
                     <div>
@@ -42,8 +40,9 @@ export default function AwarePage() {
 
                     Continously during the project we had meetings with ECU students and UMU students, showing progress and discussing features. 
                     </div>
-
-
+                </div>
+                <div>
+                    Target Group: International visitors (students, backpackers etc.)
                 </div>
                 <div>
                     Solution

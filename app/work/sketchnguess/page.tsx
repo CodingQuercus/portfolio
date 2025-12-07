@@ -9,7 +9,7 @@ export default function SketchNGuessPage() {
                 <p className="font-base">2024</p>
                 <h1 className="text-5xl font-medium text-left">Sketch&apos;N&apos;Guess</h1>
                 <p className="text-xl">
-                    A playful and social game.
+                    A playful multiplayer drawing game built around real-world movement
                 </p>
             </div>
 
