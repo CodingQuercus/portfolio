@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="flex flex-col mb-10">
                 <div className="text-4xl sm:text-5xl font-medium mb-4">Let&apos;s get in touch</div>
 
-                <div className="flex flex-col w-32 gap-2">
+                <div className="flex flex-col w-40 gap-2">
 
                     <motion.div
                         whileHover={{ scale: 1.1 }}
@@ -48,7 +48,6 @@ export default function Footer() {
                             <ChevronRight size={32}/>
                         </motion.span>
                     </motion.div>
-
                 </div>
             </div>
         </section>

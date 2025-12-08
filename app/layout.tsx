@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${InterFont.variable} ${InterFont.variable} antialiased flex flex-col items-center min-h-screen bg-[#f7f7f7]`}
+        className={`${InterFont.variable} ${InterFont.variable} antialiased flex flex-col items-center min-h-screen bg-background`}
       >
         <Navbar></Navbar>
         {children}
