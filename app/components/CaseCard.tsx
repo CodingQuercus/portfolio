@@ -10,14 +10,15 @@ type CaseCardProps = {
 	title: string,
 	year: string,
 	subtitle: string,
-	desc: string,
+	desc_1: string,
+	desc_2: string,
 	tags: string[],
 	image: StaticImageData,
 	href: string,
 	variant: boolean
 }
 
-export default function CaseCard({ title, year, subtitle, desc, tags, image, href, variant }: CaseCardProps) {
+export default function CaseCard({ title, year, subtitle, desc_1, desc_2, tags, image, href, variant }: CaseCardProps) {
 	return (
 		<div className={`flex flex-col gap-4 md:flex-row ${variant ? "md:flex-row" : "md:flex-row-reverse"} w-full md:items-stretch md:justify-between`}>
 			<div className="flex flex-1 flex-col justify-between gap-4 lg:gap-0">
@@ -28,8 +29,11 @@ export default function CaseCard({ title, year, subtitle, desc, tags, image, hre
 						<p className="text-lg">{subtitle}</p>
 					</div>
 
-					<p className="text-neutral-600 leading-relaxed">
-						{desc}
+					<p className="text-base text-neutral-600 leading-relaxed">
+						{desc_1}
+					</p>
+					<p className="text-base text-neutral-600 leading-relaxed">
+						{desc_2}
 					</p>
 				</div>
 

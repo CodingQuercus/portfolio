@@ -38,7 +38,7 @@ export default function AwarePage() {
                     Brainstorming concepts. First two concepts, a location based application and a gamificatio application.
                     Chose together with stakeholders to continue developing the location based application.
 
-                    Continously during the project we had meetings with ECU students and UMU students, showing progress and discussing features. 
+                    Continously during the project we had meetings with ECU students and UMU students, showing progress and discussing features and getting feedback on the design.
                     </div>
                 </div>
                 <div>
@@ -46,11 +46,8 @@ export default function AwarePage() {
                 </div>
                 <div>
                     Solution
-                    
+                    A location-based application.
                    
-                </div>
-                <div>
-                    Impact
                 </div>
             </div>
     );
