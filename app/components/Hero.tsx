@@ -1,40 +1,36 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export default function Hero() {
     return (
-        <section className="flex flex-col items-start justify-evenly min-h-screen">
-            <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="flex flex-col gap-2"
-            >
-                <motion.div
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.35, delay: 0.1, ease: "easeOut" }}
-                >
-                    <div className="text-5xl font-semibold sm:text-7xl md:text-8xl lg:text-9xl">
-                        Åke Flatholm
-                    </div>
-                </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.35, delay: 0.18, ease: "easeOut" }}
-                    className="flex flex-col gap-1 sm:gap-2 sm:w-4/5 md:w-3/4"
-                >
-                    <p className="text-base md:text-2xl">
-                        Hi, I&apos;m a Master of Science Student in Interaction Technology and Design from Umeå.
+        <section className="flex flex-col gap-2 md:gap-4 justify-center min-h-screen px-10 md:px-10 lg:px-0">
+            <div className="flex flex-row items-center gap-1 md:gap-4 w-full">
+                <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold">
+                    Åke
+                </h1>
+                <span className="flex-1 rounded-full bg-foreground px-4 py-2 lg:px-24 lg:py-12">
+                    <p className="font-bold text-background text-center text-sm md:text-2xl xl:text-3xl">
+                        UX Designer
                     </p>
-                    <p className="text-base md:text-2xl leading-normal">
-                        Currently working on my master&apos;s thesis, where I design and evaluate AI-driven conversational user interfaces, with a focus on user trust.
+                </span>
+                <span className="flex-1 rounded-full bg-foreground px-4 py-2 lg:px-24 lg:py-12">
+                    <p className="font-bold text-background text-center text-sm md:text-2xl xl:text-3xl">
+                        Frontend Dev
                     </p>
-                </motion.div>
-            </motion.div>
+                </span>
+            </div>
+            <div className="flex flex-row items-center gap-1 md:gap-4 w-full">
+                <span className="flex-1 rounded-full bg-foreground px-4 py-2 lg:px-24 lg:py-12">
+                    <p className="font-bold text-background text-center text-sm md:text-2xl xl:text-3xl">
+                        Umeå, Sweden
+                    </p>
+                </span>
+                <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold">
+                    Flatholm
+                </h1>
+            </div>
+            <p className="text-base md:text-xl lg:text-3xl mt-4 w-full md:w-4/5">
+                I design and build with the user in mind, making what could have been a complex system feel like an intuitive experience.
+            </p>
         </section>
     );
 }

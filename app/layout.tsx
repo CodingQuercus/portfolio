@@ -1,41 +1,43 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const InterFont = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"]
-});
+const MontserratFont = Montserrat({
+    variable: "--font-montserrat",
+    subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
-  title: "Åke Flatholm - Portfolio",
-  description: "UI/UX Designer",
-  icons: {
-    icon: [
-      { url: "./favicon.svg", type: "image/svg+xml" },
-      { url: "./favicon.png", type: "image/png" },
-    ],
-  },
+    title: "Åke Flatholm - Portfolio",
+    description: "UI/UX Designer",
+    icons: {
+        icon: [
+            { url: "./favicon.svg", type: "image/svg+xml" },
+            { url: "./favicon.png", type: "image/png" },
+        ],
+    },
 };
 
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${InterFont.variable} ${InterFont.variable} antialiased flex flex-col items-center min-h-screen bg-background`}
-      >
-        <Navbar></Navbar>
-        {children}
-        <Footer></Footer>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body
+                className={`${MontserratFont.variable} antialiased bg-background`}
+            >
+                <Navbar />
+                <div className="px-4 md:px-8 lg:px-12 max-w-7xl mx-auto flex flex-col min-h-screen">
+                    {children}
+                    <Footer />
+                </div>
+            </body>
+        </html>
+    );
 }

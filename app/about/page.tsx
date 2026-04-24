@@ -1,57 +1,91 @@
-"use client"
+"use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion"
-import { ExternalLink } from "lucide-react"
+import Image from "next/image";
+import aboutImage from "@/public/about_img2.jpeg";
+
+type Skill = {
+  label: string;
+};
+
+const skills: Skill[] = [
+  { label: "UX Design" },
+  { label: "Frontend Development" },
+  { label: "User Research" },
+  { label: "Prototyping" },
+  { label: "Usability Testing" },
+  { label: "React" },
+  { label: "Design Methods" },
+  { label: "Figma" },
+  { label: "React Native" },
+];
 
 export default function About() {
-    return (
-        <motion.div
-            className="min-h-screen w-full max-w-[1200px] px-10 md:px-20 z-20 pt-20"
-        >
-            <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, delay: 0.1, ease: "easeOut" }}
-                className="mb-4"
-            >
-                <h1 className="text-4xl sm:text-5xl font-medium mb-2">About</h1>
-                <div className="text-base text-neutral-600 leading-relaxed flex flex-col gap-2 w-full sm:w-[500px]">
-                    <p>
-                        Hi, I&apos;m Åke. A Master of Science student in Interaction Technology and Design.
-                    </p>
-                    <p>
-                        I came into this field without a programming background, but early in my studies I discovered that I really enjoy working with code and the structure behind digital interfaces. That led me toward frontend development and interaction design, where I get to combine logical problem-solving with creating clear and usable experiences.
-                    </p>
-                    <p>
-                        Outside of my studies, I enjoy exercising, listening to and playing music, and spending time with my family and friends.
-                    </p>
+  return (
+    <section className="flex flex-col items-center pt-24 md:pt-30 gap-12 md:gap-16">
+      <div className="flex flex-col md:flex-row items-center justify-around gap-8 w-full">
+        <div className="flex flex-col gap-4 order-2 md:order-1">
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold">
+            Åke Flatholm
+          </h2>
+          <div className="flex flex-col gap-4 text-base md:text-xl lg:text-2xl leading-7 md:leading-8 w-full md:max-w-lg">
+            <p>
+              I&apos;m a UX designer and Frontend Developer based in Umeå,
+              Sweden. I design and build digital experiences grounded in how
+              people actually think by combining user research, interaction
+              design, and code.
+            </p>
+            <p>
+              I have a Master of Science in Engineering with a specialization
+              in Interaction Technology and Design. A degree which has given me
+              a foundation in both the human side of technology and the craft
+              of building it.
+            </p>
+          </div>
+        </div>
+        <Image
+          src={aboutImage}
+          alt="An image of Åke"
+          width={384}
+          height={520}
+          className="rounded-4xl order-1 md:order-2 w-64 md:w-96 h-auto"
+        />
+      </div>
 
-                </div>
-            </motion.div>
-            <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, delay: 0.18, ease: "easeOut" }}
+      <div className="flex flex-col gap-4 md:gap-6 w-full">
+        <h3 className="text-2xl md:text-3xl font-bold">Skills & Tools</h3>
+        <div className="flex flex-row flex-wrap gap-2 md:gap-4">
+          {skills.map((skill) => (
+            <span
+              key={skill.label}
+              className="rounded-full px-4 md:px-6 py-2 md:py-3 text-background bg-darkGrey font-bold text-sm md:text-base"
             >
-                <Link
-                    href="./Ake_Flatholm_Resume.pdf"
-                    target="_blank"
-                >
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        className="px-4 py-2 bg-foreground text-background rounded-full flex flex-row items-center gap-1 hover:opacity-50 cursor-pointer"
-                    >
-                        Resume
-                        <motion.span
-                            whileHover={{ x: 4 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                        >
-                            <ExternalLink size={16} />
-                        </motion.span>
-                    </motion.button>
-                </Link>
-            </motion.div>
-        </motion.div>
-    )
+              {skill.label}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-4 md:gap-6 w-full">
+        <h3 className="text-2xl md:text-3xl font-bold">Education</h3>
+        <div className="flex flex-col gap-2 bg-darkGrey text-background px-6 md:px-8 py-4 rounded-2xl">
+          <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-16 font-bold text-lg md:text-xl lg:text-2xl w-full">
+            <h4 className="flex-1">
+              Master of Science in Engineering with a specialization in
+              Interaction Technology and Design
+            </h4>
+            <h4 className="whitespace-nowrap">2021 - 2026</h4>
+          </div>
+          <p className="text-base md:text-lg lg:text-xl">Umeå University</p>
+        </div>
+        <Link
+          href="/Ake_Flatholm_Resume.pdf"
+          target="_blank"
+          className="text-background bg-foreground px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-xl w-fit"
+        >
+          Download CV
+        </Link>
+      </div>
+    </section>
+  );
 }

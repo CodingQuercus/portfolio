@@ -1,84 +1,136 @@
-"use client"
+"use client";
+
 import Link from "next/link";
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+
+const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+];
 
 export default function Navbar() {
     const pathname = usePathname();
-    const [scrolled, setScrolled] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
+    // Lock body scroll when menu is open
     useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 20);
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [isOpen]);
 
     return (
-        <nav className={`fixed z-50 px-4 sm:px-10 py-4 left-1/2 -translate-x-1/2 top-0 w-full transition
-            ${scrolled ? "backdrop-blur-sm shadow-sm" : "bg-transparent"}
-        `}>
-            <div className="flex items-center justify-between">
+        <>
+            <nav className="fixed z-50 top-0 inset-x-0 bg-background shadow-md">
+                <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-4 flex items-center justify-between">
+                    {/* Logo */}
+                    <motion.div whileHover={{ scale: 1.1 }}>
+                        <Link href="/" className="font-semibold text-xl" onClick={() => setIsOpen(false)}>
+                            <svg width="48" height="48" viewBox="0 0 65 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M-0.000562549 47.8076L21.6954 14.2076H29.4234L37.6794 47.8076H29.9034L23.3754 18.0476H26.4474L8.30344 47.8076H-0.000562549ZM8.97544 40.6076L12.1434 34.7036H29.4714L30.3834 40.6076H8.97544ZM27.2154 11.6156C26.0954 11.6156 25.0874 11.3596 24.1914 10.8476C23.2954 10.3036 22.5754 9.59962 22.0314 8.73562C21.5194 7.87162 21.2634 6.89562 21.2634 5.80761C21.2634 4.75161 21.5194 3.79161 22.0314 2.92761C22.5754 2.03161 23.2954 1.32761 24.1914 0.815616C25.1194 0.271615 26.1274 -0.000385284 27.2154 -0.000385284C28.3674 -0.000385284 29.3914 0.271615 30.2874 0.815616C31.1834 1.32761 31.8874 2.03161 32.3994 2.92761C32.9434 3.79161 33.2154 4.75161 33.2154 5.80761C33.2154 6.89562 32.9434 7.87162 32.3994 8.73562C31.8874 9.59962 31.1834 10.3036 30.2874 10.8476C29.3914 11.3596 28.3674 11.6156 27.2154 11.6156ZM27.2154 8.73562C28.0794 8.73562 28.7834 8.46362 29.3274 7.91962C29.8714 7.37562 30.1434 6.68762 30.1434 5.85562C30.1434 4.99162 29.8714 4.28762 29.3274 3.74362C28.7834 3.16761 28.0794 2.87961 27.2154 2.87961C26.4154 2.87961 25.7274 3.15162 25.1514 3.69562C24.6074 4.23961 24.3354 4.94361 24.3354 5.80761C24.3354 6.67161 24.6074 7.37562 25.1514 7.91962C25.6954 8.46362 26.3834 8.73562 27.2154 8.73562ZM43.4214 29.3276H59.5974L58.3014 35.5676H42.1734L43.4214 29.3276ZM40.3494 47.8076H32.5254L39.2454 14.2076H64.6374L63.3414 20.4476H45.7734L40.3494 47.8076Z" fill="#040404" />
+                            </svg>
+                        </Link>
+                    </motion.div>
 
-                <motion.div whileHover={{ scale: 1.1 }}>
-                    <Link href="/" className="font-semibold text-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 40 32" fill="none">
-                            <path d="M6.0455 31.4545H4.43459e-05L11.716 8.18182H19.2046L23.1932 31.4545H17.1478L14.591 14.0455H14.4091L6.0455 31.4545ZM6.77277 22.2955H19.4091L18.6819 26.5682H6.0455L6.77277 22.2955ZM15.75 6.92045C14.75 6.92045 13.9546 6.57576 13.3637 5.88636C12.7728 5.19697 12.5531 4.37121 12.7046 3.40909C12.8107 2.77273 13.0607 2.19697 13.4546 1.68182C13.8561 1.15909 14.3447 0.749999 14.9205 0.454546C15.5038 0.151515 16.1213 0 16.7728 0C17.447 0 18.0379 0.159091 18.5455 0.477272C19.0531 0.787879 19.4281 1.20833 19.6705 1.73864C19.9129 2.26894 19.9697 2.85985 19.841 3.51136C19.7273 4.13258 19.4697 4.70455 19.0682 5.22727C18.6667 5.74242 18.1743 6.1553 17.591 6.46591C17.0076 6.76894 16.394 6.92045 15.75 6.92045ZM16.0341 4.88636C16.4357 4.88636 16.8107 4.74621 17.1591 4.46591C17.5152 4.18561 17.7197 3.84848 17.7728 3.45455C17.8182 3.06061 17.7197 2.72727 17.4773 2.45455C17.2349 2.17424 16.9016 2.03409 16.4773 2.03409C16.0758 2.03409 15.7122 2.17424 15.3864 2.45455C15.0607 2.72727 14.8599 3.06061 14.7841 3.45455C14.716 3.84091 14.8031 4.17803 15.0455 4.46591C15.2879 4.74621 15.6175 4.88636 16.0341 4.88636ZM19.9389 31.4545L23.8025 8.18182H39.6889L38.9162 12.75H28.6548L27.8821 17.5227H37.1321L36.3594 22.1023H27.1094L25.5639 31.4545H19.9389Z" fill="#040404" />
-                        </svg>
-                    </Link>
-                </motion.div>
+                    {/* Desktop menu */}
+                    <div className="hidden md:flex items-center gap-12">
+                        {navLinks.map((link) => (
+                            <motion.div
+                                key={link.href}
+                                className="relative w-fit"
+                                whileHover="hover"
+                                initial="rest"
+                                animate="rest"
+                            >
+                                <Link href={link.href} className="text-xl">
+                                    {link.label}
+                                </Link>
+                                <motion.span
+                                    variants={{
+                                        rest: { width: pathname === link.href ? "100%" : 0 },
+                                        hover: { width: "100%" },
+                                    }}
+                                    transition={{ duration: 0.25, ease: "easeOut" }}
+                                    className="absolute left-0 -bottom-1 h-0.5 bg-foreground"
+                                />
+                            </motion.div>
+                        ))}
+                        <motion.div whileHover={{ scale: 1.05 }}>
+                            <Link
+                                href="#contact"
+                                className="text-lg px-6 py-3 bg-foreground rounded-full text-background hover:bg-mintgreen transition"
+                            >
+                                Contact
+                            </Link>
+                        </motion.div>
+                    </div>
 
-                <div className="flex items-center gap-6 sm:gap-12">
-
-                    <motion.div
-                        className="relative w-fit"
-                        whileHover="hover"
-                        initial="rest"
-                        animate="rest"
+                    {/* Mobile hamburger button */}
+                    <button
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="md:hidden p-2 z-50 relative"
+                        aria-label={isOpen ? "Close menu" : "Open menu"}
                     >
-                        <Link href="/" className="text-base sm:text-lg">
-                            Home
-                        </Link>
-
-                        <motion.span
-                            variants={{
-                                rest: { width: pathname === "/" ? "100%" : 0 },
-                                hover: { width: "100%" }
-                            }}
-                            transition={{ duration: 0.25, ease: "easeOut" }}
-                            className="absolute left-0 -bottom-1 h-0.5 bg-foreground"
-                        />
-                    </motion.div>
-
-                    <motion.div
-                        className="relative w-fit"
-                        whileHover="hover"
-                        initial="rest"
-                        animate="rest"
-                    >
-                        <Link href="/about" className="text-base sm:text-lg">
-                            About
-                        </Link>
-
-                        <motion.span
-                            variants={{
-                                rest: { width: pathname === "/about" ? "100%" : 0 },
-                                hover: { width: "100%" }
-                            }}
-                            transition={{ duration: 0.25, ease: "easeOut" }}
-                            className="absolute left-0 -bottom-1 h-0.5 bg-foreground"
-                        />
-                    </motion.div>
-                    <motion.div whileHover={{scale: 1.05}}>
-                        <Link
-                            href="#contact"
-                            className="text-base sm:text-lg px-4 py-2 bg-foreground rounded-full text-background hover:opacity-50 transition"
-                        >
-                            Get in Touch
-                        </Link>
-                    </motion.div>
+                        {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                    </button>
                 </div>
-            </div>
-        </nav>
+            </nav>
+
+            {/* Mobile menu */}
+            <AnimatePresence>
+                {isOpen && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.25 }}
+                            onClick={() => setIsOpen(false)}
+                            className="fixed inset-0 bg-black/40 z-40 md:hidden"
+                        />
+
+                        <motion.aside
+                            initial={{ x: "100%" }}
+                            animate={{ x: 0 }}
+                            exit={{ x: "100%" }}
+                            transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
+                            className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-background shadow-xl z-40 md:hidden flex flex-col gap-3 px-6 pt-24 pb-8"
+                        >
+                            {navLinks.map((link) => {
+                                const isActive = pathname === link.href;
+                                return (
+                                    <Link
+                                        key={link.href}
+                                        href={link.href}
+                                        onClick={() => setIsOpen(false)}
+                                        className={`text-xl text-center font-semibold px-6 py-4 rounded-full transition ${isActive
+                                                ? "bg-mintgreen text-background"
+                                                : "bg-transparent text-foreground hover:bg-foreground/5"
+                                            }`}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                );
+                            })}
+                            <Link
+                                href="#contact"
+                                onClick={() => setIsOpen(false)}
+                                className="text-xl font-semibold px-6 py-4 rounded-full bg-foreground text-background hover:bg-mintgreen transition text-center"
+                            >
+                                Contact
+                            </Link>
+                        </motion.aside>
+                    </>
+                )}
+            </AnimatePresence>
+        </>
     );
 }
