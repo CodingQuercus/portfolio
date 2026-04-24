@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+import PillButton from "./PillButton";
+
 const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
@@ -63,14 +65,9 @@ export default function Navbar() {
                                 />
                             </motion.div>
                         ))}
-                        <motion.div whileHover={{ scale: 1.05 }}>
-                            <Link
-                                href="#contact"
-                                className="text-lg px-6 py-3 bg-foreground rounded-full text-background hover:bg-mintgreen transition"
-                            >
-                                Contact
-                            </Link>
-                        </motion.div>
+                        <PillButton href="#contact">
+  Contact
+</PillButton>
                     </div>
 
                     {/* Mobile hamburger button */}

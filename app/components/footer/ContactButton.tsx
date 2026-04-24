@@ -17,18 +17,18 @@ export default function ContactButton({
     external,
 }: ContactButtonProps) {
     return (
-        <motion.div
-            whileHover={{ translateY: -4 }}
-            className="bg-foreground text-background rounded-full px-6 py-3 md:px-8 md:py-4 lg:py-8 md:flex-1 hover:bg-mintgreen cursor-pointer transition-colors w-44 md:w-auto"
+        <Link
+            href={href}
+            target={external ? "_blank" : undefined}
+            className="w-44 md:w-auto md:flex-1"
         >
-            <Link
-                href={href}
-                target={external ? "_blank" : undefined}
-                className="text-base md:text-lg lg:text-xl flex flex-row gap-2 items-center justify-center"
+            <motion.div
+                whileHover={{ translateY: -4 }}
+                className="bg-foreground text-background border border-foreground rounded-full px-6 py-3 md:px-8 md:py-4 lg:py-8 cursor-pointer transition-colors hover:bg-background hover:text-foreground text-base md:text-lg lg:text-xl flex flex-row gap-2 items-center justify-center"
             >
                 {icon}
                 {label}
-            </Link>
-        </motion.div>
+            </motion.div>
+        </Link>
     );
 }

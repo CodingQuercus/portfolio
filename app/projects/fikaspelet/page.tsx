@@ -7,7 +7,7 @@ export default function FikaSpeletPage() {
     return (
         <article className="flex flex-col gap-8 min-h-screen pt-24">
 
-            <BackButton href="/" label="Back to projects" />
+            <BackButton label="Back to projects" />
 
             <ProjectHeader
                 title="FikaSpelet"

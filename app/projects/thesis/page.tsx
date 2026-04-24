@@ -18,6 +18,8 @@ import ProjectMockupGrid from "@/app/components/projects/ProjectMockupGrid";
 import ProjectStatRow from "@/app/components/projects/ProjectStatRow";
 import ProjectKeyInsight from "@/app/components/projects/ProjectKeyInsight";
 
+import PillButton from "@/app/components/PillButton";
+
 import methodImage from "@/public/thesis/thesis_method.png";
 
 import mockup1 from "@/public/thesis/thesis_mockup_1.png";
@@ -32,8 +34,8 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function ThesisPage() {
     return (
-        <article className="flex flex-col gap-4 md:gap-8 min-h-screen pt-24">
-            <BackButton href="/" label="Back to projects" />
+        <article className="flex flex-col gap-4 md:gap-8 min-h-screen pt-32">
+            <BackButton label="Back to projects" />
 
             <ProjectHeader
                 title="Designing Trustworthy CUIs for Reliable Information Retrieval"
@@ -119,19 +121,13 @@ export default function ThesisPage() {
                     />
                 </div>
             </ProjectSection>
-            <motion.div
-                whileHover={{ translateY: -4 }}
-                className="bg-foreground text-background rounded-full hover:bg-mintgreen cursor-pointer w-fit px-4 md:px-6 py-2 md:py-3 transition"
+            <PillButton
+                href="https://urn.kb.se/resolve?urn=urn:nbn:se:umu:diva-249334"
+                target="_blank"
             >
-                <Link
-                    href="https://urn.kb.se/resolve?urn=urn:nbn:se:umu:diva-249334"
-                    target="_blank"
-                    className="text-base md:text-lg lg:text-xl flex flex-row gap-2 items-center justify-center"
-                >
-                    Read the full thesis
-                    <FaExternalLinkAlt size={16} className="md:w-5 md:h-5" />
-                </Link>
-            </motion.div>
+                Read the full thesis
+                <FaExternalLinkAlt size={16} className="md:w-5 md:h-5" />
+            </PillButton>
         </article>
     );
 }

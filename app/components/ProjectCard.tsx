@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import {motion} from "framer-motion"
 import { FaChevronRight } from "react-icons/fa";
 
 type ProjectCardProps = {
@@ -22,7 +23,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
     return (
         <div
-            className="flex flex-col justify-between gap-8 rounded-3xl p-6 md:p-8 min-h-[60vh] lg:h-[70vh]"
+            className="flex flex-col justify-between gap-8 rounded-3xl p-6 md:p-8 min-h-[440px] md:min-h-[520px] lg:min-h-[600px]"
             style={{ backgroundColor }}
         >
             <div className="flex flex-col gap-4">
@@ -46,10 +47,15 @@ export default function ProjectCard({
                 {showExploreLink && (
                     <Link
                         href={href}
-                        className="flex flex-row items-center gap-2 bg-background text-foreground px-4 md:px-6 py-2 md:py-3 rounded-full w-fit hover:bg-foreground hover:text-background transition-colors text-base lg:text-lg"
+                        className="w-fit"
                     >
-                        Explore project
-                        <FaChevronRight size={18} className="md:w-5 md:h-5" />
+                        <motion.div
+                            whileHover={{scale: 1.05}}
+                            className="flex flex-row items-center gap-2 bg-background text-foreground px-4 md:px-6 py-2 md:py-3 rounded-full w-fit hover:bg-foreground hover:text-background transition-colors text-base lg:text-lg"
+                        >
+                            Explore project
+                            <FaChevronRight size={18} className="md:w-5 md:h-5" />
+                        </motion.div>
                     </Link>
                 )}
             </div>
