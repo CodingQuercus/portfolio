@@ -29,7 +29,7 @@ export default function Hero() {
                 </h1>
             </div>
             <p className="text-base md:text-xl lg:text-3xl mt-4 w-full md:w-4/5">
-                I design and build with the user in mind, making what could have been a complex system feel like an intuitive experience.
+                I enjoy the process of making complex systems easier to use.
             </p>
         </section>
     );

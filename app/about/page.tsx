@@ -30,16 +30,15 @@ export default function About() {
           </h2>
           <div className="flex flex-col gap-4 text-base md:text-xl lg:text-2xl leading-7 md:leading-8 w-full md:max-w-lg">
             <p>
-              I&apos;m a UX designer and Frontend Developer based in Umeå,
-              Sweden. I design and build digital experiences grounded in how
-              people actually think by combining user research, interaction
-              design, and code.
+                I&apos;m a UX designer and frontend developer based in Umeå, Sweden. 
+                I enjoy the whole loop of a project: researching what users want, designing 
+                and building to meet those needs, then iterating through usability testing.
             </p>
             <p>
-              I have a Master of Science in Engineering with a specialization
-              in Interaction Technology and Design. A degree which has given me
-              a foundation in both the human side of technology and the craft
-              of building it.
+                I have a Master of Science in Engineering with a specialization in 
+                Interaction Technology and Design from Umeå University. 
+                The program combines the human side of technology with the craft of building it, 
+                which describes how I like to work.
             </p>
           </div>
         </div>
