@@ -18,7 +18,6 @@ const skills: Skill[] = [
     { label: "Prototyping" },
     { label: "Usability Testing" },
     { label: "React" },
-    { label: "Design Methods" },
     { label: "Figma" },
     { label: "React Native" },
 ];
@@ -34,14 +33,15 @@ export default function About() {
                     <div className="flex flex-col gap-4 text-base md:text-xl lg:text-2xl leading-7 md:leading-8 w-full md:max-w-lg">
                         <p>
                             I&apos;m a UX designer and frontend developer based in Umeå, Sweden.
-                            I enjoy the whole loop of a project: researching what users want, designing
-                            and building to meet those needs, then iterating through usability testing.
+                            I enjoy working across the full process of a project, from understanding user needs through research
+                            to designing and building solutions, and iterating on them through usability testing.
+
                         </p>
                         <p>
                             I have a Master of Science in Engineering with a specialization in
                             Interaction Technology and Design from Umeå University.
                             The program combines the human side of technology with the craft of building it,
-                            which describes how I like to work.
+                            which reflects how I approach my work.
                         </p>
                     </div>
                 </div>
