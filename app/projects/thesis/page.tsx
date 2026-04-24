@@ -50,7 +50,8 @@ export default function ThesisPage() {
             <ProjectSection title="The Problem">
                 <ProjectParagraph
                     paragraphs={[
-                        "Quality management systems store critical compliance documentation, but finding the right information can be slow and dependent on prior system knowledge. Folder-based navigation and free-text search often assume users already know what they're looking for. A conversational interface offers an alternative. In a compliance-driven domain, though, the design question isn't whether it works. It's whether users can trust what it surfaces.",
+                        "Quality management systems store critical compliance documentation, but finding the right information can be slow and dependent on prior system knowledge. Folder-based navigation and free-text search often assume users already know what they're looking for.",
+                        "A conversational interface offers an alternative. But in a compliance-driven domain, the design question isn't whether it works. It's whether users can trust what it surfaces.",
                     ]}
                 />
             </ProjectSection>
@@ -64,11 +65,11 @@ export default function ThesisPage() {
 
                 <ProjectProcessList
                     steps={[
-                        { title: "Empathize: Interviews", information: "Semi-structured interviews with 3 end users and 2 AM System employees to understand current workflows, pain points, and attitudes toward AI-assisted search." },
-                        { title: "Define: Thematic Analysis & User Need Statements", information: "Interview data synthesized into 6 themes and 7 user need statements. Key themes: transparency enables trust, reliability through metadata, and efficiency as a motivator." },
-                        { title: "Ideate: HMW Questions & Brainstorming", information: "How Might We questions reframed user needs into design challenges. Solutions focused on source visibility, metadata display, role-based filtering, and multiple document formats." },
-                        { title: "Prototype: LoFi → HiFi in Figma", information: "Two iterations. LoFi revealed issues with response length, visual noise, and unclear document connections. HiFi addressed these with shorter answers, a redesigned source card, and contextual document formats including flowcharts and step-by-step presentations." },
-                        { title: "Test: Two rounds of moderated usability testing", information: "LoFi tested with 4 AM System employees. HiFi tested with 4 end users using think-aloud protocol, SUS, and S-TIAS questionnaires." },
+                        { title: "Empathize: Interviews", information: "Semi-structured interviews were conducted with 3 end users and 2 AM System employees to understand current workflows, pain points, and attitudes toward AI-assisted search." },
+                        { title: "Define: Thematic Analysis & User Need Statements", information: "A thematic analysis of the interview data resulted in 6 themes and 7 user need statements. Key themes included transparency enables trust, reliability through metadata, and efficiency as a motivator." },
+                        { title: "Ideate: HMW Questions & Brainstorming", information: "The user need statements were reframed into How Might We questions to create actionable design challenges. The ideation was conducted individually due to project constraints, which focused the output but limited the breadth of ideas explored. Solutions centered on source visibility, metadata display, role-based filtering, and multiple document formats." },
+                        { title: "Prototype: LoFi → HiFi in Figma", information: "Two prototype iterations were created in Figma. The LoFi prototype revealed issues with response length, visual noise, and unclear document connections. The HiFi prototype addressed these with shorter answers, a redesigned source card, and contextual document formats including flowcharts and step-by-step presentations. AI responses were simulated through Figma rather than a live implementation, which kept the focus on interface design and trust independent of AI variability." },
+                        { title: "Test: Two rounds of moderated usability testing", information: "Two rounds of moderated usability testing were conducted. The LoFi prototype was tested with 4 AM System employees, and the HiFi prototype with 4 end users using think-aloud protocol, SUS, and S-TIAS questionnaires." },
                     ]}
                 />
             </ProjectSection>
@@ -77,12 +78,12 @@ export default function ThesisPage() {
 
                 <ProjectMockupGrid
                     mockups={[
-                        { src: mockup1, alt: "Starting view of the HiFi prototype." },
-                        { src: mockup2, alt: "A user has searched for information." },
-                        { src: mockup3, alt: "A user is viewing the original document." },
-                        { src: mockup4, alt: "A user is viewing the summary of a document." },
-                        { src: mockup5, alt: "A user is viewing the flowchart of a document." },
-                        { src: mockup6, alt: "A user is viewing the presentation mode of a document." },
+                        { src: mockup1, alt: "The start view of the HiFi prototype, showing a conversational search interface with role-based suggested questions and a search input field.", caption: "Start view with role-based suggested questions and a search input" },
+                        { src: mockup2, alt: "A conversation view showing the system asking for more context, a generated response with a source card containing document metadata, and a related document suggestion.", caption: "Generated response with source card and related document" },
+                        { src: mockup3, alt: "The original document view of a routine, showing document metadata including creator, approver, and dates, alongside the full document content.", caption: "Original document view with full metadata" },
+                        { src: mockup4, alt: "The summary view of a document, showing collapsible sections for each part of the routine.", caption: "Summary view with collapsible sections for quick navigation" },
+                        { src: mockup5, alt: "A flowchart view of an assembly instruction, showing an information node, a step node, and a control point node connected by arrows.", caption: "Flowchart view of an assembly instruction" },
+                        { src: mockup6, alt: "A presentation view of an assembly instruction, showing a step progress bar at the top and the current step content below.", caption: "Presentation view, a step-by-step instruction format" },
                     ]}
                 />
             </ProjectSection>
@@ -113,7 +114,7 @@ export default function ThesisPage() {
                     <ProjectKeyInsight
                         introduction="Trust was not built through the idea of an AI-driven system. It was built through transparency."
                         paragraphs={[
-                            "What made users trust the system was the ability to verify information by accessing the source document and validating the metadata: creator, approver, version, and date. The conversational interaction itself was familiar and efficient, but it wasn't what created trust. Interface design, specifically the source card, document metadata, and one-click access to the original document, had a impact on perceived trust.",
+                            "What made users trust the system was the ability to verify information by accessing the source document and validating the metadata: creator, approver, version, and date. The conversational interaction itself was familiar and efficient, but it wasn't what created trust. Interface design, specifically the source card, document metadata, and one-click access to the original document, had an impact on perceived trust.",
                         ]}
                     />
                 </div>
