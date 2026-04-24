@@ -22,7 +22,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
     return (
         <div
-            className="flex flex-col justify-between gap-8 rounded-3xl p-6 md:p-8 min-h-[60vh] lg:h-[50vh] 2xl:h-[60vh]"
+            className="flex flex-col justify-between gap-8 rounded-3xl p-6 md:p-8 min-h-[60vh] lg:h-[70vh]"
             style={{ backgroundColor }}
         >
             <div className="flex flex-col gap-4">

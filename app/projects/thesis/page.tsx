@@ -50,7 +50,7 @@ export default function ThesisPage() {
             <ProjectSection title="The Problem">
                 <ProjectParagraph
                     paragraphs={[
-                        "Quality management systems store critical compliance documentation — but finding the right information can be slow and dependent on prior system knowledge. Folder-based navigation and free-text search often assume users already know what they're looking for. A conversational interface offers an alternative, but in a compliance-driven domain the design question isn't whether it works — it's whether users can trust what it surfaces.",
+                        "Quality management systems store critical compliance documentation, but finding the right information can be slow and dependent on prior system knowledge. Folder-based navigation and free-text search often assume users already know what they're looking for. A conversational interface offers an alternative. In a compliance-driven domain, though, the design question isn't whether it works. It's whether users can trust what it surfaces.",
                     ]}
                 />
             </ProjectSection>
@@ -64,11 +64,11 @@ export default function ThesisPage() {
 
                 <ProjectProcessList
                     steps={[
-                        { title: "Empathize — Interviews", information: "Semi-structured interviews with 3 end users and 2 AM System employees to understand current workflows, pain points, and attitudes toward AI-assisted search." },
-                        { title: "Define — Thematic Analysis & User Need Statements", information: "Interview data synthesized into 6 themes and 7 user need statements. Key themes: transparency enables trust, reliability through metadata, and efficiency as a motivator." },
-                        { title: "Ideate — HMW Questions & Brainstorming", information: "How Might We questions reframed user needs into design challenges. Solutions focused on source visibility, metadata display, role-based filtering, and multiple document formats." },
-                        { title: "Prototype — LoFi → HiFi in Figma", information: "Two iterations. LoFi revealed issues with response length, visual noise, and unclear document connections. HiFi addressed these with shorter answers, a redesigned source card, and contextual document formats including flowcharts and step-by-step presentations." },
-                        { title: "Test — Two rounds of moderated usability testing", information: "LoFi tested with 4 AM System employees. HiFi tested with 4 end users using think-aloud protocol, SUS, and S-TIAS questionnaires." },
+                        { title: "Empathize: Interviews", information: "Semi-structured interviews with 3 end users and 2 AM System employees to understand current workflows, pain points, and attitudes toward AI-assisted search." },
+                        { title: "Define: Thematic Analysis & User Need Statements", information: "Interview data synthesized into 6 themes and 7 user need statements. Key themes: transparency enables trust, reliability through metadata, and efficiency as a motivator." },
+                        { title: "Ideate: HMW Questions & Brainstorming", information: "How Might We questions reframed user needs into design challenges. Solutions focused on source visibility, metadata display, role-based filtering, and multiple document formats." },
+                        { title: "Prototype: LoFi → HiFi in Figma", information: "Two iterations. LoFi revealed issues with response length, visual noise, and unclear document connections. HiFi addressed these with shorter answers, a redesigned source card, and contextual document formats including flowcharts and step-by-step presentations." },
+                        { title: "Test: Two rounds of moderated usability testing", information: "LoFi tested with 4 AM System employees. HiFi tested with 4 end users using think-aloud protocol, SUS, and S-TIAS questionnaires." },
                     ]}
                 />
             </ProjectSection>
@@ -91,7 +91,7 @@ export default function ThesisPage() {
             <ProjectSection title="Results">
                 <ProjectParagraph
                     paragraphs={[
-                        "The HiFi prototype received a SUS score of 90 — an \"A\" grade indicating excellent perceived usability — and a trust score of 5.50 out of 7 on the S-TIAS scale. All four participants completed tasks without difficulty and described natural-language search as intuitive and familiar.",
+                        "The HiFi prototype received a SUS score of 90 (an 'A' grade indicating excellent perceived usability) and a trust score of 5.50 out of 7 on the S-TIAS scale. All four participants completed tasks without difficulty and described natural-language search as intuitive and familiar.",
                         "But the numbers only tell part of the story. The more interesting finding was how users interacted with the generated answers: not as a final authority, but as an entry point.",
                     ]}
                 />
@@ -106,14 +106,14 @@ export default function ThesisPage() {
                     <ProjectKeyInsight
                         introduction="Users treated the generated answer as a starting point, not the conclusion."
                         paragraphs={[
-                            "Every participant opened the source card at least once after receiving a response — often immediately, before finishing reading the answer itself. They weren't looking for the AI to be right. They were looking for a faster way to reach the document they could verify themselves.",
+                            "Every participant opened the source card at least once after receiving a response, often immediately, before finishing reading the answer itself. They weren't looking for the AI to be right. They were looking for a faster way to reach the document they could verify themselves.",
                             "As one participant put it: \"Without the source card, I would not have felt like I could trust the response.\"",
                         ]}
                     />
                     <ProjectKeyInsight
-                        introduction="Trust was not built through the idea of an AI-driven system — it was built through transparency."
+                        introduction="Trust was not built through the idea of an AI-driven system. It was built through transparency."
                         paragraphs={[
-                            "What made users trust the system was the ability to verify information — by accessing the source document and validating the metadata: creator, approver, version, and date. The conversational interaction itself was familiar and efficient, but it wasn't what created trust. Interface design — specifically the source card, document metadata, and one-click access to the original document — had a direct impact on perceived trust.",
+                            "What made users trust the system was the ability to verify information by accessing the source document and validating the metadata: creator, approver, version, and date. The conversational interaction itself was familiar and efficient, but it wasn't what created trust. Interface design, specifically the source card, document metadata, and one-click access to the original document, had a impact on perceived trust.",
                         ]}
                     />
                 </div>
