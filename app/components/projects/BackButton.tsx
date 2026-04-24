@@ -12,7 +12,7 @@ type BackButtonProps = {
 export default function BackButton({ href, label }: BackButtonProps) {
     return (
         <motion.div
-            whileHover={{ translateX: -4 }}
+            whileHover={{ translateY: -4 }}
             className="bg-foreground text-background px-4 md:px-6 py-2 md:py-3 rounded-full w-fit hover:bg-mintgreen cursor-pointer transition-colors"
         >
             <Link

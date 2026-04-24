@@ -46,10 +46,10 @@ export default function ProjectCard({
                 {showExploreLink && (
                     <Link
                         href={href}
-                        className="flex flex-row items-center gap-2 bg-background px-6 py-3 rounded-full w-fit hover:bg-foreground hover:text-background transition"
+                        className="flex flex-row items-center gap-2 bg-background text-foreground px-4 md:px-6 py-2 md:py-3 rounded-full w-fit hover:bg-foreground hover:text-background transition-colors text-base lg:text-lg"
                     >
                         Explore project
-                        <FaChevronRight size={20} />
+                        <FaChevronRight size={18} className="md:w-5 md:h-5" />
                     </Link>
                 )}
             </div>
