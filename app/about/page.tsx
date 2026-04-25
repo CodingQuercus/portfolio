@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants} from "framer-motion";
 import Image from "next/image";
 import aboutImage from "@/public/about_img2.jpeg";
 
@@ -22,10 +21,35 @@ const skills: Skill[] = [
     { label: "React Native" },
 ];
 
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
 export default function About() {
     return (
-        <section className="flex flex-col items-center pt-24 md:pt-30 gap-12 md:gap-16">
-            <div className="flex flex-col md:flex-row items-center justify-around gap-8 w-full">
+        <motion.section 
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            className="flex flex-col items-center pt-24 md:pt-30 gap-12 md:gap-16"
+        >
+            <motion.div 
+                variants={itemVariants}
+                className="flex flex-col md:flex-row items-center justify-around gap-8 w-full"
+            >
                 <div className="flex flex-col gap-4 order-2 md:order-1">
                     <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold">
                         Åke Flatholm
@@ -50,11 +74,15 @@ export default function About() {
                     alt="An image of Åke"
                     width={384}
                     height={520}
+                    loading="eager"
                     className="rounded-4xl order-1 md:order-2 w-64 md:w-96 h-auto"
                 />
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col gap-4 md:gap-6 w-full">
+            <motion.div 
+                variants={itemVariants}
+                className="flex flex-col gap-4 md:gap-6 w-full"
+            >
                 <h3 className="text-2xl md:text-3xl font-bold">Skills & Tools</h3>
                 <div className="flex flex-row flex-wrap gap-2 md:gap-4">
                     {skills.map((skill) => (
@@ -66,9 +94,12 @@ export default function About() {
                         </span>
                     ))}
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col gap-4 md:gap-6 w-full">
+            <motion.div 
+                variants={itemVariants}
+                className="flex flex-col gap-4 md:gap-6 w-full"
+            >
                 <h3 className="text-2xl md:text-3xl font-bold">Education</h3>
                 <div className="flex flex-col gap-2 bg-darkGrey text-background px-6 md:px-8 py-4 rounded-2xl">
                     <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-16 font-bold text-lg md:text-xl lg:text-2xl w-full">
@@ -84,7 +115,7 @@ export default function About() {
                 <PillButton href="/Ake_Flatholm_Resume.pdf" target="_blank">
                     Download CV
                 </PillButton>
-            </div>
-        </section>
+            </motion.div>
+        </motion.section>
     );
 }
