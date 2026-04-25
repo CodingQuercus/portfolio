@@ -47,7 +47,7 @@ export default function ProjectCard({
                 {showExploreLink && (
                     <Link
                         href={href}
-                        className="w-fit"
+                        className="w-fit self-end md:self-auto"
                     >
                         <motion.div
                             whileHover={{scale: 1.05}}
