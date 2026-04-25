@@ -1,11 +1,37 @@
 "use client";
 
+import { motion, Variants } from "framer-motion";
+
+const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+    },
+};
+
+const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+
 export default function Hero() {
     return (
-        <section className="flex flex-col gap-2 md:gap-4 justify-center min-h-screen">
+        <section
+            className="flex flex-col gap-2 md:gap-4 justify-center min-h-screen"
+        >
 
-            <div className="flex flex-col justify-center gap-3 md:hidden w-fit mx-auto">
-                <div className="flex flex-row items-center gap-3 w-full">
+            <motion.div 
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+                className="flex flex-col justify-center gap-3 md:hidden w-fit mx-auto"
+            >
+                <motion.div
+                    className="flex flex-row items-center gap-3 w-full"
+                    variants={itemVariants}
+                >
                     <h1 className="text-7xl font-bold leading-none tracking-tight">
                         Åke
                     </h1>
@@ -21,22 +47,39 @@ export default function Hero() {
                             </p>
                         </span>
                     </div>
-                </div>
-                <h1 className="text-7xl font-bold leading-none tracking-tight">
+                </motion.div>
+                <motion.h1
+                    variants={itemVariants}
+                    className="text-7xl font-bold leading-none tracking-tight"
+                >
                     Flatholm
-                </h1>
-                <span className="rounded-full bg-foreground px-5 py-2 w-full">
+                </motion.h1>
+                <motion.span
+                    variants={itemVariants}
+                    className="rounded-full bg-foreground px-5 py-2 w-full"
+                >
                     <p className="font-bold text-background text-center text-base">
                         Umeå, Sweden
                     </p>
-                </span>
-                <p className="text-base mt-2 w-0 min-w-full">
+                </motion.span>
+                <motion.p
+                    variants={itemVariants}
+                    className="text-base mt-2 w-0 min-w-full"
+                >
                     I enjoy the process of making complex systems easier to use.
-                </p>
-            </div>
+                </motion.p>
+            </motion.div>
 
-            <div className="hidden md:flex md:flex-col md:gap-4">
-                <div className="flex flex-row items-center gap-1 md:gap-4 w-full">
+            <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+                className="hidden md:flex md:flex-col md:gap-4"
+            >
+                <motion.div
+                    variants={itemVariants}
+                    className="flex flex-row items-center gap-1 md:gap-4 w-full"
+                >
                     <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold">
                         Åke
                     </h1>
@@ -50,8 +93,11 @@ export default function Hero() {
                             Frontend Dev
                         </p>
                     </span>
-                </div>
-                <div className="flex flex-row items-center gap-1 md:gap-4 w-full">
+                </motion.div>
+                <motion.div
+                    variants={itemVariants}
+                    className="flex flex-row items-center gap-1 md:gap-4 w-full"
+                >
                     <span className="flex-1 rounded-full bg-foreground px-2 py-2 sm:p-4 md:p-6 lg:px-12 lg:py-12">
                         <p className="font-bold text-background text-center text-sm md:text-2xl xl:text-3xl">
                             Umeå, Sweden
@@ -60,11 +106,14 @@ export default function Hero() {
                     <h1 className="text-4xl md:text-8xl lg:text-9xl font-bold">
                         Flatholm
                     </h1>
-                </div>
-                <p className="text-base md:text-xl lg:text-3xl mt-4 w-full md:w-4/5">
+                </motion.div>
+                <motion.p
+                    variants={itemVariants}
+                    className="text-base md:text-xl lg:text-3xl mt-4 w-full md:w-4/5"
+                >
                     I enjoy the process of making complex systems easier to use.
-                </p>
-            </div>
+                </motion.p>
+            </motion.div>
         </section>
     );
 }
