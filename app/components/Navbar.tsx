@@ -123,7 +123,7 @@ export default function Navbar() {
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                             transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
-                            className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-background shadow-xl z-40 md:hidden flex flex-col gap-3 px-6 pt-24 pb-8"
+                            className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-background shadow-xl z-40 md:hidden flex flex-col items-center justify-center gap-3 px-6 pt-24 pb-8"
                         >
                             {[
                                 ...navLinks,
@@ -139,7 +139,7 @@ export default function Navbar() {
                                                 ? handleMobileContactClick
                                                 : () => setIsOpen(false)
                                         }
-                                        className={`text-base text-center px-4 py-2 rounded-full transition-colors ${isActive
+                                        className={`text-xl text-center px-4 py-2 rounded-full transition-colors ${isActive
                                             ? "underline underline-offset-8 decoration-2"
                                             : "hover:bg-foreground/5"
                                             }`}

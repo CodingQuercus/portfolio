@@ -31,7 +31,7 @@ body {
 }
 
 html {
-  scroll-padding-top: 80px;
+  scroll-padding-top: 120px;
 }
 
 @media (prefers-reduced-motion: reduce) {
