@@ -14,12 +14,44 @@ const MontserratFont = Montserrat({
 })
 
 export const metadata: Metadata = {
-    title: "Åke Flatholm - Portfolio",
-    description: "UI/UX Designer",
+    metadataBase: new URL("https://codingquercus.github.io/portfolio/"),
+    title: {
+        default: "Portfolio | Åke Flatholm",
+        template: "%s | Åke Flatholm",
+    },
+    description:
+        "UX Designer and Frontend Developer based in Umeå, Sweden.",
+    keywords: [
+        "UX Designer",
+        "Frontend Developer",
+        "Interaction Design",
+        "User Research",
+        "Umeå",
+        "Sweden",
+        "Portfolio",
+        "React",
+        "Figma",
+    ],
+    authors: [{ name: "Åke Flatholm" }],
+    creator: "Åke Flatholm",
+    openGraph: {
+        type: "website",
+        title: "Åke Flatholm | Portfolio",
+        description:
+            "UX Designer and Frontend Developer based in Umeå, Sweden.",
+        images: ["/og-image.png"],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Åke Flatholm | Portfolio",
+        description:
+            "UX Designer and Frontend Developer based in Umeå, Sweden.",
+        images: ["/og-image.png"],
+    },
     icons: {
         icon: [
-            { url: "./favicon.svg", type: "image/svg+xml" },
-            { url: "./favicon.png", type: "image/png" },
+            { url: "/favicon.svg", type: "image/svg+xml" },
+            { url: "/favicon.png", type: "image/png" },
         ],
     },
 };

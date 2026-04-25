@@ -1,4 +1,4 @@
-"use client"
+import { Metadata } from "next";
 import Image from "next/image";
 
 import BackButton from "@/app/components/projects/BackButton";
@@ -20,6 +20,12 @@ import mockup5 from "@/public/thesis/thesis_mockup_5.png";
 import mockup6 from "@/public/thesis/thesis_mockup_6.png";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
+
+export const metadata: Metadata = {
+    title: "M.Sc. Thesis",
+    description:
+        "A design thinking study exploring how conversational interfaces can be designed to support reliable, AI-driven information retrieval in quality management systems, with a focus on transparency and user trust.",
+};
 
 export default function ThesisPage() {
     return (
@@ -113,7 +119,7 @@ export default function ThesisPage() {
                 target="_blank"
             >
                 Read the full thesis
-                <FaExternalLinkAlt size={16} className="md:w-5 md:h-5" aria-hidden="true"/>
+                <FaExternalLinkAlt size={16} className="md:w-5 md:h-5" aria-hidden="true" />
                 <span className="sr-only">(opens in new tab)</span>
             </PillButton>
 

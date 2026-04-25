@@ -1,9 +1,15 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import aboutImage from "@/public/about_img2.jpeg";
 
 import PillButton from "../components/PillButton";
+
+export const metadata: Metadata = {
+    title: "About",
+    description:
+        "About Åke Flatholm — UX Designer and Frontend Developer based in Umeå, Sweden.",
+};
+
 
 type Skill = {
     label: string;
