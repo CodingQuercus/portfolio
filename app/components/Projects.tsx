@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
@@ -81,6 +82,22 @@ const projects = [
 
 
 export default function Projects() {
+
+    const [shouldAnimate] = useState(() => {
+        if (typeof window === "undefined") return false;
+        const hasVisited = sessionStorage.getItem("home-visited");
+        if (!hasVisited) {
+            sessionStorage.setItem("home-visited", "true");
+            return true;
+        }
+        return false;
+    });
+
+    const cardVariants: Variants = {
+        hidden: shouldAnimate ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    };
+
     return (
         <section className="flex flex-col w-full">
             <h1 className="text-4xl md:text-5xl lg:text-7xl 2xl:text-9xl font-bold mb-4">

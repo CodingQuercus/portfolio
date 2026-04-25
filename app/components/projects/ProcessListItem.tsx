@@ -15,9 +15,9 @@ export default function ProcessListItem({
                 <span className="flex justify-center items-center bg-darkGrey text-background text-lg md:text-xl lg:text-2xl rounded-full w-8 h-8 md:w-10 md:h-10 shrink-0">
                     {number}
                 </span>
-                <h4 className="text-xl md:text-2xl lg:text-3xl text-foreground font-bold">
+                <p className="text-xl md:text-2xl lg:text-3xl text-foreground font-bold">
                     {title}
-                </h4>
+                </p>
             </div>
             <p className="text-base md:text-lg lg:text-xl text-foreground w-full lg:w-4/5">
                 {information}
