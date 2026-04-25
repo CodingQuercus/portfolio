@@ -5,20 +5,26 @@ import { StaggerContainer, StaggerItem } from "./StaggerOnMount";
 export default function Hero() {
     return (
         <section
+            aria-label="Introduction"
             className="flex flex-col gap-2 md:gap-4 justify-center min-h-screen"
         >
 
+            <h1 className="sr-only">
+                Åke Flatholm — UX Designer and Frontend Developer based in Umeå, Sweden. I enjoy the process of making complex systems easier to use.
+            </h1>
+
             {/*Mobile*/}
             <StaggerContainer
+                aria-hidden="true"
                 className="flex flex-col justify-center gap-3 md:hidden w-fit mx-auto"
             >
                 <StaggerItem>
                     <div
                         className="flex flex-row items-center gap-3 w-full"
                     >
-                        <h1 className="text-7xl font-bold leading-none tracking-tight">
+                        <div className="text-7xl font-bold leading-none tracking-tight">
                             Åke
-                        </h1>
+                        </div>
                         <div className="flex flex-col gap-2 flex-1">
                             <span className="rounded-full bg-foreground px-4 py-2">
                                 <p className="font-bold text-background text-center text-sm">
@@ -35,9 +41,9 @@ export default function Hero() {
                 </StaggerItem>
 
                 <StaggerItem>
-                    <h1 className="text-7xl font-bold leading-none tracking-tight">
+                    <div className="text-7xl font-bold leading-none tracking-tight">
                         Flatholm
-                    </h1>
+                    </div>
                 </StaggerItem>
 
                 <StaggerItem>
@@ -48,9 +54,7 @@ export default function Hero() {
                     </span>
                 </StaggerItem>
                 <StaggerItem>
-                    <p
-                        className="text-base mt-2 w-0 min-w-full"
-                    >
+                    <p className="text-base mt-2 w-0 min-w-full" >
                         I enjoy the process of making complex systems easier to use.
                     </p>
                 </StaggerItem>
@@ -58,13 +62,14 @@ export default function Hero() {
 
             {/*Desktop*/}
             <StaggerContainer
+                aria-hidden="true"
                 className="hidden md:flex md:flex-col md:gap-4"
             >
                 <StaggerItem>
                     <div className="flex flex-row items-center gap-1 md:gap-4 w-full">
-                        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold">
+                        <div className="text-6xl md:text-8xl lg:text-9xl font-bold">
                             Åke
-                        </h1>
+                        </div>
                         <span className="flex-1 rounded-full bg-foreground px-2 py-2 sm:p-4 md:p-6 lg:px-12 lg:py-12">
                             <p className="font-bold text-background text-center text-sm md:text-2xl xl:text-3xl">
                                 UX Designer
@@ -84,9 +89,9 @@ export default function Hero() {
                                 Umeå, Sweden
                             </p>
                         </span>
-                        <h1 className="text-4xl md:text-8xl lg:text-9xl font-bold">
+                        <div className="text-4xl md:text-8xl lg:text-9xl font-bold">
                             Flatholm
-                        </h1>
+                        </div>
                     </div>
                 </StaggerItem>
                 <StaggerItem>

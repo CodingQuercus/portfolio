@@ -1,13 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import ProjectCard from "./ProjectCard";
-
-const cardVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
-};
 
 const projects = [
     {
@@ -100,9 +95,9 @@ export default function Projects() {
 
     return (
         <section className="flex flex-col w-full">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl 2xl:text-9xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl lg:text-7xl 2xl:text-9xl font-bold mb-4">
                 Projects
-            </h1>
+            </h2>
             <div className="flex flex-col gap-8" >
                 {projects.map((project) => (
                     <motion.div

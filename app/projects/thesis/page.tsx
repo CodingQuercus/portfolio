@@ -1,8 +1,6 @@
 "use client"
 import Image from "next/image";
 
-import { StaggerContainer, StaggerItem } from "@/app/components/StaggerOnMount";
-import AnimatedSection from "@/app/components/projects/AnimatedSection";
 import BackButton from "@/app/components/projects/BackButton";
 import ProjectHeader from "@/app/components/projects/ProjectHeader";
 import ProjectSection from "@/app/components/projects/ProjectSection";
@@ -26,21 +24,19 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 export default function ThesisPage() {
     return (
         <article className="flex flex-col gap-4 md:gap-8 min-h-screen pt-24 md:pt-30">
-            <div className="flex flex-col gap-4 md:gap-8">
-                <BackButton label="Back to projects" />
+            <BackButton label="Back to projects" />
 
-                <ProjectHeader
-                    title="Designing Trustworthy CUIs for Reliable Information Retrieval"
-                    backgroundColor="#EA9734"
-                    description="A design thinking study exploring how conversational interfaces can be designed to support reliable, AI-driven information retrieval in quality management systems, with a focus on transparency and user trust."
-                    tags={["M.Sc. Thesis", "Design Thinking", "User Research", "Usability Testing", "Prototyping", "Figma"]}
-                    meta={[
-                        { label: "Role", information: "UX Researcher & Designer" },
-                        { label: "Timeline", information: "Autumn 2025" },
-                        { label: "External Partner", information: "AM System" },
-                    ]}
-                />
-            </div>
+            <ProjectHeader
+                title="Designing Trustworthy CUIs for Reliable Information Retrieval"
+                backgroundColor="#EA9734"
+                description="A design thinking study exploring how conversational interfaces can be designed to support reliable, AI-driven information retrieval in quality management systems, with a focus on transparency and user trust."
+                tags={["M.Sc. Thesis", "Design Thinking", "User Research", "Usability Testing", "Prototyping", "Figma"]}
+                meta={[
+                    { label: "Role", information: "UX Researcher & Designer" },
+                    { label: "Timeline", information: "Autumn 2025" },
+                    { label: "External Partner", information: "AM System" },
+                ]}
+            />
 
             <ProjectSection title="The Problem">
                 <ProjectParagraph
@@ -54,7 +50,7 @@ export default function ThesisPage() {
             <ProjectSection title="Process">
                 <Image
                     src={methodImage}
-                    alt="An image of the design thinking process. Showing the five phases; Empathize, Define, Ideate, Prototype, and Test"
+                    alt="The design thinking process: five phases; Empathize, Define, Ideate, Prototype, and Test"
                     className="rounded-3xl"
                 />
 
@@ -117,7 +113,8 @@ export default function ThesisPage() {
                 target="_blank"
             >
                 Read the full thesis
-                <FaExternalLinkAlt size={16} className="md:w-5 md:h-5" />
+                <FaExternalLinkAlt size={16} className="md:w-5 md:h-5" aria-hidden="true"/>
+                <span className="sr-only">(opens in new tab)</span>
             </PillButton>
 
         </article>

@@ -11,7 +11,7 @@ type ProcessListProps = {
 
 export default function ProjectProcessList({ steps }: ProcessListProps) {
     return (
-        <div className="flex flex-col gap-6 md:gap-8">
+        <ol className="flex flex-col gap-6 md:gap-8 list-none">
             {steps.map((step, i) => (
                 <ProcessListItem
                     key={step.title}
@@ -20,6 +20,6 @@ export default function ProjectProcessList({ steps }: ProcessListProps) {
                     information={step.information}
                 />
             ))}
-        </div>
+        </ol>
     );
 }

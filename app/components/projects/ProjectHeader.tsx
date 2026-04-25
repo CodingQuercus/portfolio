@@ -30,6 +30,7 @@ export default function ProjectHeader({
 				tags={tags}
 				href=""
 				showExploreLink={false}
+				headingLevel="h1"
 			/>
 			<ProjectMetaRow items={meta} />
 		</div>
