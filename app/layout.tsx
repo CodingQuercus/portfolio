@@ -48,12 +48,6 @@ export const metadata: Metadata = {
             "UX Designer and Frontend Developer based in Umeå, Sweden.",
         images: ["/og-image.png"],
     },
-    icons: {
-        icon: [
-            { url: "/favicon.svg", type: "image/svg+xml" },
-            { url: "/favicon.png", type: "image/png" },
-        ],
-    },
 };
 
 
