@@ -68,7 +68,7 @@ const projects = [
             "Figma",
             "Web/Mobile Development",
             "React",
-            "Phaser.js",
+            "Phaser",
         ],
         href: "/projects/fikaspelet",
         showExploreLink: true,
