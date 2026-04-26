@@ -95,7 +95,7 @@ export default function Projects() {
 
     return (
         <section className="flex flex-col w-full">
-            <h2 className="text-4xl md:text-5xl lg:text-7xl 2xl:text-9xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4">
                 Projects
             </h2>
             <div className="flex flex-col gap-8" >

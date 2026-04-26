@@ -9,7 +9,7 @@ export default function Footer() {
         <footer id="contact" className="my-6 md:my-12 flex flex-col gap-4 md:gap-8">
                 <div className="flex flex-col gap-2 md:gap-4">
                     <div className="flex flex-col gap-2 md:gap-4">
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl 2xl:text-9xl font-bold">
+                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold">
                             Contact
                         </h2>
                         <div className="flex flex-row flex-wrap gap-2 md:gap-4 w-full">
@@ -34,7 +34,7 @@ export default function Footer() {
                     </div>
 
                     <div className="flex flex-col gap-2 md:gap-4">
-                        <h3 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-6xl font-bold">
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold">
                             Download CV
                         </h3>
                         <div className="flex flex-row flex-wrap gap-2 md:gap-4">
