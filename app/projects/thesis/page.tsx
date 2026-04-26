@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function ThesisPage() {
     return (
-        <article className="flex flex-col gap-4 md:gap-8 min-h-screen pt-24 md:pt-30">
+        <article className="flex flex-col gap-4 md:gap-8 min-h-screen pt-24 md:pt-32">
             <BackButton label="Back to projects" />
 
             <ProjectHeader

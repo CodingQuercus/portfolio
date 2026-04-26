@@ -88,11 +88,6 @@ export default function About() {
                     </div>
                     <p className="text-base md:text-lg lg:text-xl">Umeå University</p>
                 </div>
-
-                <PillButton href="/Ake_Flatholm_Resume.pdf" target="_blank">
-                    Download CV
-                    <span className="sr-only">(opens in new tab)</span>
-                </PillButton>
             </div>
         </section>
     );
