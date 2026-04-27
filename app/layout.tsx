@@ -14,7 +14,7 @@ const MontserratFont = Montserrat({
 })
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://codingquercus.github.io/portfolio/"),
+    metadataBase: new URL("https://akeflatholm.com"),
     title: {
         default: "Portfolio | Åke Flatholm",
         template: "%s | Åke Flatholm",
