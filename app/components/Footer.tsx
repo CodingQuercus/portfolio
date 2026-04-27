@@ -26,7 +26,7 @@ export default function Footer() {
                                 external
                             />
                             <ContactButton
-                                href="mailto:akeflatholm@gmail.com"
+                                href="mailto:hello@akeflatholm.com"
                                 label="Email"
                                 icon={<FaEnvelope size={20} aria-hidden="true" />}
                             />
