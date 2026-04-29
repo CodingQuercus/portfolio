@@ -104,7 +104,7 @@ export default function AwarePage() {
             <ProjectSection title="Concept Evolution">
                 <ProjectParagraph
                     paragraphs={[
-                        "We started with two concepts. A map app showing hazards in real time, and a quiz app for learning about dangers before arriving. The ECU students pushed back on both. The map was too similar to what already existed, and they believed that no one would open a quiz app while visiting. But both had something worth keeping, and the discussion that followed led to a new concept combining the map concept with a community feature.",
+                        "We started with two concepts. A map app showing hazards, and a quiz app for learning about dangers before arriving. The ECU students pushed back on both. The map was too similar to what already existed, and they believed that no one would open a quiz app while visiting. But both had something worth keeping, and the discussion that followed led to a new concept combining the map concept with a community feature.",
                         "We made one decision early that shaped everything after: the app would inform, not advise. Users are responsible for their own choices. aWAre helps the user to gain awareness about their surroundings, but what they do with that information is up to them."]} />
                 <ProjectImage src={moscowImage} alt="MoSCoW produced after the joint concept session with ECU students." />
 
