@@ -20,11 +20,12 @@ import mockup5 from "@/public/thesis/thesis_mockup_5.png";
 import mockup6 from "@/public/thesis/thesis_mockup_6.png";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
+import ProjectImage from "@/app/components/projects/ProjectImage";
 
 export const metadata: Metadata = {
     title: "M.Sc. Thesis",
     description:
-        "A design thinking study exploring how conversational interfaces can be designed to support reliable, AI-driven information retrieval in quality management systems, with a focus on transparency and user trust.",
+        "A design thinking study exploring how conversational interfaces can be designed to support reliable information retrieval in quality management systems, with a focus on transparency and user trust.",
 };
 
 export default function ThesisPage() {
@@ -54,12 +55,7 @@ export default function ThesisPage() {
             </ProjectSection>
 
             <ProjectSection title="Process">
-                <Image
-                    src={methodImage}
-                    alt="The design thinking process: five phases; Empathize, Define, Ideate, Prototype, and Test"
-                    className="rounded-3xl"
-                />
-
+                <ProjectImage src={methodImage} alt="The design thinking process and its five phases empathize, define, ideate, prototype and test."/>
                 <ProjectProcessList
                     steps={[
                         { title: "Empathize: Interviews", information: "Semi-structured interviews were conducted with 3 end users and 2 AM System employees to understand current workflows, pain points, and attitudes toward AI-assisted search." },
@@ -81,6 +77,7 @@ export default function ThesisPage() {
                         { src: mockup5, alt: "A flowchart view of an assembly instruction, showing an information node, a step node, and a control point node connected by arrows.", caption: "Flowchart view of an assembly instruction" },
                         { src: mockup6, alt: "A presentation view of an assembly instruction, showing a step progress bar at the top and the current step content below.", caption: "Presentation view, a step-by-step instruction format" },
                     ]}
+                    cols={1}
                 />
             </ProjectSection>
             <ProjectSection title="Results">

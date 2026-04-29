@@ -31,6 +31,7 @@ export default function ProjectHeader({
 				href=""
 				showExploreLink={false}
 				headingLevel="h1"
+				variant="compact"
 			/>
 			<ProjectMetaRow items={meta} />
 		</div>

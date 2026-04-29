@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+
 import aboutImage from "@/public/about_img2.jpeg";
 
 export const metadata: Metadata = {

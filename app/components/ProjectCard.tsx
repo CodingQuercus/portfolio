@@ -12,6 +12,7 @@ type ProjectCardProps = {
     href?: string;
     showExploreLink?: boolean;
     headingLevel?: "h1" | "h2" | "h3";
+    variant?: "default" | "compact";
 };
 
 
@@ -23,13 +24,15 @@ export default function ProjectCard({
     href,
     showExploreLink,
     headingLevel = "h3",
+    variant = "default",
 }: ProjectCardProps) {
 
     const Heading = headingLevel;
+    const isCompact = variant === "compact";
 
     return (
         <div
-            className="flex flex-col justify-between gap-8 rounded-3xl p-6 md:p-8 min-h-[440px] md:min-h-[520px] lg:min-h-[600px]"
+            className={`flex flex-col justify-between gap-8 rounded-3xl p-6 md:p-8 ${isCompact ? "" : "min-h-[440px] md:min-h-[520px] lg:min-h-[600px]"}`}
             style={{ backgroundColor }}
         >
             <div className="flex flex-col gap-4">

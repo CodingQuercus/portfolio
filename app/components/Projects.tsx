@@ -9,7 +9,7 @@ const projects = [
         title: "Designing Trustworthy CUIs for Reliable Information Retrieval",
         backgroundColor: "#EA9734",
         description:
-            "A design thinking study exploring how conversational interfaces can be designed to support reliable, AI-driven information retrieval in quality management systems, with a focus on transparency and user trust.",
+            "A design thinking study exploring how conversational interfaces can be designed to support reliable information retrieval in quality management systems, with a focus on transparency and user trust.",
         tags: [
             "M.Sc. Thesis",
             "Design Thinking",
@@ -25,7 +25,7 @@ const projects = [
         title: "aWAre",
         backgroundColor: "#1ABA87",
         description:
-            "A safety app developed in collaboration with marketing students at Edith Cowan University in Perth, providing users with hazard alerts across Western Australia.",
+            "A safety app developed in collaboration with marketing students at Edith Cowan University in Perth, providing users with hazard alerts and local community posts across Western Australia.",
         tags: [
             "International Collaboration",
             "Design Thinking",
