@@ -1,33 +1,21 @@
 # Portfolio
 
-This is my personal portfolio, built to showcase my work as a UX designer and frontend developer.
-
-## About
-
-The goal of this portfolio is to present both how I think and how I build.  
-It focuses on projects where I’ve worked across the full process, from research and design to implementation and testing.
+Personal portfolio showcasing my work as a UX designer and frontend develoer. Built to present both how I think and how I build.
 
 ## Tech stack
 
-- React (Next.js)
-- TypeScript
+- Next.js (React + TypeScript
 - Tailwind CSS
 - Framer Motion
-
-## Features
-
-- Responsive layout across devices
-- Dynamic project pages
-- Clean component-based structure
 
 ## Projects
 
 The portfolio includes a mix of UX and development projects:
 
-- **Thesis** – Designing trustworthy conversational interfaces
-- **aWAre** – Safety app with location-based hazard alerts
-- **Sketch'N'Guess** – Real-time multiplayer mobile game
-- **FikaSpelet** – Gamified marketing game
+- **Thesis** — Designing trustworthy conversational interfaces for information retrieval
+- **aWAre** — Safety app for international tourists in Western Australia, with hazard maps and location-based community posts
+- **Sketch'N'Guess** — GPS-based multiplayer drawing and guessing game for mobile
+- **FikaSpelet** — Gamified marketing game combining brand engagement with web-based gameplay
 
 ## Getting started
 
