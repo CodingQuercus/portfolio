@@ -19,7 +19,7 @@ export default function ProjectCodeBlock({ code, description }: ProjectCodeBlock
                     animate={{ height: expanded? "auto" : "8rem" }}
                     transition={{duration: 0.4, ease: "easeInOut" }}
                 >
-                    <pre className={`p-4 md:p-6 overflow-x-auto text-sm leading-relaxed transition-all duration-300 ${expanded ? "" : "max-h-32 [mask-image:linear-gradient(to_bottom,black_40%,transparent_100%)]"}`}>
+                    <pre className={`p-4 md:p-6 overflow-x-auto text-sm leading-relaxed transition-all duration-300 ${expanded ? "" : "max-h-32 mask-[linear-gradient(to_bottom,black_40%,transparent_100%)]"}`}>
                         <code>{code}</code>
                     </pre>
                     <AnimatePresence>
