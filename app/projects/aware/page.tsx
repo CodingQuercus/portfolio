@@ -92,7 +92,7 @@ export default function AwarePage() {
                 ]}
             />
 
-            <ProjectSection title="The Problem">
+            <ProjectSection title="Problem">
                 <ProjectParagraph
                     paragraphs={[
                         "Our ECU partners came to us with a wicked problem: how might we effectively educate people about the dangers of wildlife and natural hazards in Western Australia?",

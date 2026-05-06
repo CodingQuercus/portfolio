@@ -45,7 +45,7 @@ export default function ThesisPage() {
                 ]}
             />
 
-            <ProjectSection title="The Problem">
+            <ProjectSection title="Problem">
                 <ProjectParagraph
                     paragraphs={[
                         "Quality management systems store critical compliance documentation, but finding the right information can be slow and dependent on prior system knowledge. Folder-based navigation and free-text search often assume users already know what they're looking for.",

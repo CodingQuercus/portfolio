@@ -20,7 +20,7 @@ export default function FikaSpeletPage() {
                 ]}
             />
 
-            <ProjectSection title="The Problem">
+            <ProjectSection title="Problem">
                 <ProjectParagraph
                     paragraphs={[
                         "Under Construction"
