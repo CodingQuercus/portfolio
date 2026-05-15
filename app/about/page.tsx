@@ -36,7 +36,7 @@ export default function About() {
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold">
                         Åke Flatholm
                     </h1>
-                    <div className="flex flex-col gap-4 text-base md:text-xl lg:text-2xl leading-7 md:leading-8 w-full md:max-w-lg">
+                    <div className="flex flex-col gap-4 text-base md:text-lg leading-7 md:leading-8 w-full md:max-w-lg">
                         <p>
                             I&apos;m a UX designer and frontend developer based in Umeå, Sweden.
                             I enjoy working across the full process of a project, from understanding user needs through research
@@ -67,7 +67,7 @@ export default function About() {
                     {skills.map((skill) => (
                         <span
                             key={skill.label}
-                            className="rounded-full px-4 md:px-6 py-2 md:py-3 text-background bg-darkGrey font-bold text-sm md:text-base"
+                            className="rounded-full px-4 md:px-6 py-2 md:py-3 text-background bg-darkGrey font-semibold text-sm md:text-base"
                         >
                             {skill.label}
                         </span>
@@ -78,14 +78,14 @@ export default function About() {
             <div className="flex flex-col gap-4 md:gap-6 w-full">
                 <h2 className="text-2xl md:text-3xl font-bold">Education</h2>
                 <div className="flex flex-col gap-2 bg-darkGrey text-background px-6 md:px-8 py-4 rounded-2xl">
-                    <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-16 font-bold text-lg md:text-xl lg:text-2xl w-full">
+                    <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-16 font-bold text-base md:text-xl w-full">
                         <p className="flex-1">
                             Master of Science in Engineering with a specialization in
                             Interaction Technology and Design
                         </p>
                         <p className="whitespace-nowrap">2021 - 2026</p>
                     </div>
-                    <p className="text-base md:text-lg lg:text-xl">Umeå University</p>
+                    <p className="text-base md:text-lg">Umeå University</p>
                 </div>
             </div>
         </section>

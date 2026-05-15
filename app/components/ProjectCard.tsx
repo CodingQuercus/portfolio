@@ -39,7 +39,7 @@ export default function ProjectCard({
                 <Heading className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-background w-full lg:w-4/5">
                     {title}
                 </Heading>
-                <p className="text-background text-base md:text-lg lg:text-xl w-full lg:w-5/6">
+                <p className="text-background text-base md:text-lg w-full lg:w-5/6">
                     {description}
                 </p>
             </div>

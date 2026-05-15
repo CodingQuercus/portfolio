@@ -95,7 +95,7 @@ export default function Hero() {
                     </div>
                 </StaggerItem>
                 <StaggerItem>
-                    <p className="text-base md:text-xl lg:text-3xl mt-4 w-full md:w-4/5">
+                    <p className="text-base md:text-2xl mt-4 w-full md:w-4/5">
                         I enjoy the process of making complex systems easier to use.
                     </p>
                 </StaggerItem>

@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 
 import BackButton from "@/app/components/projects/BackButton";
 import ProjectHeader from "@/app/components/projects/ProjectHeader";

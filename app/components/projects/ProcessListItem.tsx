@@ -14,15 +14,15 @@ export default function ProcessListItem({
             <div className="flex flex-row items-center gap-3">
                 <span 
                     aria-hidden="true"
-                    className="flex justify-center items-center bg-darkGrey text-background text-lg md:text-xl lg:text-2xl rounded-full w-8 h-8 md:w-10 md:h-10 shrink-0"
+                    className="flex justify-center items-center bg-darkGrey text-background text-lg md:text-xl rounded-full w-8 h-8 md:w-10 md:h-10 shrink-0"
                 >
                     {number}
                 </span>
-                <p className="text-xl md:text-2xl lg:text-3xl text-foreground font-bold">
+                <p className="text-lg md:text-2xl text-foreground font-bold">
                     {title}
                 </p>
             </div>
-            <p className="text-base md:text-lg lg:text-xl text-foreground w-full lg:w-4/5">
+            <p className="text-base md:text-lg leading-7 md:leading-8 text-foreground w-full lg:w-4/5">
                 {information}
             </p>
         </li>
