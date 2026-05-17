@@ -12,7 +12,7 @@ export default function ProjectCodeBlock({ code, description }: ProjectCodeBlock
     const [expanded, setExpanded] = useState(false);
 
     return (
-        <figure className="flex flex-col gap-2 md:3/4 lg:w-2/3">
+        <figure className="flex flex-col gap-2 md:w-3/4 lg:w-2/3">
             <div className="rounded-2xl md:rounded-3xl bg-foreground/5 overflow-hidden">
                 <motion.div
                     initial={false}

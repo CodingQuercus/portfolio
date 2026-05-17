@@ -8,7 +8,7 @@ type ProjectImageProps = {
 
 export default function ProjectImage({ src, alt }: ProjectImageProps) {
     return (
-        <div className="flex flex-col gap-1 md:gap-2 md:w-3/4 lg:w-2/3">
+        <div className="flex flex-col gap-1 md:gap-2 md:w-3/4 lg:w-2/3 mx-auto">
             <div className="rounded-3xl overflow-hidden">
                 <Image
                     src={src}
@@ -16,7 +16,7 @@ export default function ProjectImage({ src, alt }: ProjectImageProps) {
                     className="rounded-3xl w-full"
                 />
             </div>
-            <figcaption className="text-sm text-foreground/60">
+            <figcaption className="text-sm text-foreground/60 text-center">
                 {alt}
             </figcaption>
         </div>

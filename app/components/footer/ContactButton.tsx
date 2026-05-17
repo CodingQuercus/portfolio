@@ -24,7 +24,7 @@ export default function ContactButton({
         >
             <motion.div
                 whileHover={{ translateY: -4 }}
-                className="bg-foreground text-background border border-foreground rounded-full px-6 py-3 md:px-8 md:py-4 lg:py-8 cursor-pointer transition-colors hover:bg-background hover:text-foreground text-base md:text-lg lg:text-xl flex flex-row gap-2 items-center justify-center"
+                className="bg-foreground text-background border border-foreground rounded-full px-4 py-2 md:px-6 md:py-3 lg:py-8 cursor-pointer transition-colors hover:bg-background hover:text-foreground text-base md:text-lg lg:text-xl flex flex-row gap-2 items-center justify-center"
             >
                 {icon}
                 {label}
