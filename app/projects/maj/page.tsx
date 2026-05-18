@@ -5,9 +5,20 @@ import ProjectHeader from "@/app/components/projects/ProjectHeader";
 import ProjectSection from "@/app/components/projects/ProjectSection";
 import ProjectParagraph from "@/app/components/projects/ProjectParagraph";
 import ProjectImage from "@/app/components/projects/ProjectImage";
+import ProjectMockupGrid from "@/app/components/projects/ProjectMockupGrid";
+import ProjectKeyInsight from "@/app/components/projects/ProjectKeyInsight";
 import PillButton from "@/app/components/PillButton";
 
 import landingImage from "@/public/maj/maj_landing.png";
+import erImage from "@/public/maj/maj_er.png";
+import schemaImage from "@/public/maj/maj_schema.png";
+import listImage from "@/public/maj/maj_applications.png";
+import drawerImage from "@/public/maj/maj_add.png";
+import detailImage from "@/public/maj/maj_detail.png";
+import editImage from "@/public/maj/maj_edit.png";
+import searchImage from "@/public/maj/maj_search.png";
+import filterImage from "@/public/maj/maj_filter.png";
+import dashboardImage from "@/public/maj/maj_dashboard.png";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 
@@ -40,9 +51,94 @@ export default function MajPage() {
                         "Spreadsheets worked but felt clunky. I decided to build something purpose-built, and use it as an opportunity to learn Next.js App Router and Supabase in a real project with auth, a database, and full CRUD.",
                     ]}
                 />
+                <ProjectImage src={landingImage} alt="Maj landing page." />
             </ProjectSection>
 
-            <ProjectImage src={landingImage} alt="Maj landing page." />
+            <ProjectSection title="Data model">
+                <ProjectParagraph
+                    paragraphs={[
+                        "The database has three tables, users, job_applications and contacts. Each application belongs to a user, and each contact belongs to an application.",
+                    ]}
+                />
+                <ProjectMockupGrid
+                    mockups={[
+                        { src: erImage, alt: "Entity relationship diagram showing users, applications and contacts.", caption: "Entity relationship diagram" },
+                        { src: schemaImage, alt: "Database schema showing all fields per table.", caption: "Database schema" },
+                    ]}
+                    cols={2}
+                />
+            </ProjectSection>
+
+
+            <ProjectSection title="Application list">
+                <ProjectParagraph
+                    paragraphs={[
+                        "The list lets you sort by any column, filter by status, and search by role or company. Each row shows key information of each application, and clicking a row navigates to the full detail view.",
+                    ]}
+                />
+                <ProjectMockupGrid
+                    mockups={[
+                        { src: listImage, alt: "Applications list view showing sortable columns for role, company, location, applied date and status.", caption: "Applications list view showing sortable columns for role, company, location, applied date and status" },
+                        { src: searchImage, alt: "List view with search filtering results by role or company name.", caption: "List view with search filtering results by role or company name" },
+                        { src: filterImage, alt: "List view filtered by a specific status.", caption: "List view filtered by a specific status" },
+                    ]}
+                    cols={2}
+                />
+            </ProjectSection>
+
+
+            <ProjectSection title="Adding and editing applications">
+                <ProjectParagraph
+                    paragraphs={[
+                        "Rather than navigating to a separate page, a slide-in drawer keeps the user in context. The same drawer handles both create and edit. If an application is passed as a prop it's edit mode, otherwise create mode. One component, one source of truth for the form logic.",
+                    ]}
+                />
+                <ProjectMockupGrid
+                    mockups={[
+                        { src: drawerImage, alt: "Application list with the new application drawer open on the right side.", caption: "Application list with the new application drawer open on the right side" },
+                        { src: editImage, alt: "Application detail view with the edit drawer open.", caption: "Application detail view with the edit drawer open" }
+                    ]}
+                />
+            </ProjectSection>
+
+            <ProjectSection title="Detail view">
+                <ProjectParagraph
+                    paragraphs={[
+                        "Each application has a detail page with the full job description, notes, contacts and inline status updates. Status can be changed directly on the page. Clicking a badge in the list also updates it via a popover without navigating away",
+                    ]}
+                />
+                <ProjectImage src={detailImage} alt="Application detail view showing title, metadata, status selector, job description and notes" />
+            </ProjectSection>
+
+            <ProjectSection title="Dashboard">
+                <ProjectParagraph
+                    paragraphs={[
+                        "A live dashboard showing stat cards per status and a donut chart with the breakdown of all applications."
+                    ]}
+                />
+                <ProjectImage src={dashboardImage} alt="Dashboard showing stat cards for total, applied, assessment, interview, offer, rejected and withdrawn, plus a donut chart" />
+            </ProjectSection>
+
+            <ProjectSection title="Technical decisions">
+                <ProjectKeyInsight
+                    introduction="Server components fetch data, client components handle interactivity."
+                    paragraphs={[
+                        "Page-level data fetching happens in server components, no loading states, and no useEffect for initial data. Supabase Row Level Security ensures users can only access their own data server-side, even if client-side code is modified.",
+                    ]}
+                />
+                <ProjectKeyInsight
+                    introduction="Optimistic updates with rollback."
+                    paragraphs={[
+                        "Status changes update the UI immediately before the database confirms. The previous status is saved before the update, if the write fails, it's restored. This keeps the interface feeling fast without sacrificing correctness.",
+                    ]}
+                />
+                <ProjectKeyInsight
+                    introduction="A design system built from scratch."
+                    paragraphs={[
+                        "Instead of using a component library, I built a full design system in globals.css with CSS custom properties, spacing scale, color tokens, status badge variants, and button sizes. A single source of truth that keeps the UI consistent throughout the application.",
+                    ]}
+                />
+            </ProjectSection>
 
             <PillButton
                 href="https://github.com/codingquercus/maj"
