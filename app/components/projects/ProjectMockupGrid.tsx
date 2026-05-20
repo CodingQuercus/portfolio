@@ -8,15 +8,18 @@ type Mockup = {
 
 type ProjectMockupGridProps = {
     mockups: Mockup[];
-    cols?: 1 | 2 | 3 | 4;
+    cols?: 1 | 2 | 3 | 4 | 5 | 6;
+    aspectRatio?: string;
 };
 
-export default function ProjectMockupGrid({ mockups, cols = 1 }: ProjectMockupGridProps) {
+export default function ProjectMockupGrid({ mockups, cols = 1, aspectRatio}: ProjectMockupGridProps) {
     const colClass = {
         1: "grid-cols-1 md:grid-cols-2",
         2: "grid-cols-2",
         3: "grid-cols-2 md:grid-cols-3",
         4: "grid-cols-2 md:grid-cols-4",
+        5: "grid-cols-2 md:grid-cols-5",
+        6: "grid-cols-2 md:grid-cols-6"
     }[cols];
 
     return (
@@ -27,7 +30,7 @@ export default function ProjectMockupGrid({ mockups, cols = 1 }: ProjectMockupGr
                         <Image
                             src={mockup.src}
                             alt={mockup.alt}
-                            className="w-full h-auto max-h-96 object-contain"
+                            className={`w-full ${aspectRatio ? 'h-full object-cover' : 'h-auto object-contain'}`}
                         />
                     </div>
                     {mockup.caption && (

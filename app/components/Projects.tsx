@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import ProjectCard from "./ProjectCard";
+import PillButton from "./PillButton";
+import { ChevronRight } from "lucide-react";
 
 const projects = [
     {
@@ -45,13 +47,13 @@ const projects = [
         description:
             "A GPS-based multiplayer drawing and guessing game for mobile, developed during a design sprint using React Native, Node.js, and Socket.io for real-time communication.",
         tags: [
-            "Design Sprint",
-            "Prototyping",
-            "Figma",
             "Mobile Development",
             "React Native",
             "Node.js",
             "Socket.io",
+            "Design Sprint",
+            "Prototyping",
+            "Figma",
         ],
         href: "/projects/sketchnguess",
         showExploreLink: true,
@@ -60,7 +62,7 @@ const projects = [
         title: "FikaSpelet",
         backgroundColor: "#0050A1",
         description:
-            "A web-based mobile game developed in collaboration with a company using the Design-Build-Test method, combining gamification with brand marketing and resulting in 2,500 play sessions over two days.",
+            "A web-based marketing game developed in collaboration with Svensk Husman, combining gamification with brand marketing. 2,500 play sessions over two days.",
         tags: [
             "Design-Build-Test",
             "Gamification",
@@ -94,7 +96,7 @@ export default function Projects() {
     };
 
     return (
-        <section className="flex flex-col w-full">
+        <section className="flex flex-col w-full gap-4">
             <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4">
                 Projects
             </h2>
@@ -111,6 +113,10 @@ export default function Projects() {
                     </motion.div>
                 ))}
             </div>
+            <PillButton href="/projects">
+                Explore more projects
+                <ChevronRight size={24}/>
+            </PillButton>
         </section>
     );
 }
