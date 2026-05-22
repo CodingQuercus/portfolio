@@ -12,9 +12,10 @@ Personal portfolio showcasing my work as a UX designer and frontend develoer. Bu
 
 The portfolio includes a mix of UX and development projects:
 
-- **Maj** - A full-stack application for helping you keep track of job applications.
+- **Maj** — A full-stack application for helping you keep track of job applications.
 - **Thesis** — Designing trustworthy conversational interfaces for information retrieval
 - **aWAre** — Safety app for international tourists in Western Australia, with hazard maps and location-based community posts
+- **BouldR** — Android native application for tracking boulder problems.
 - **Sketch'N'Guess** — GPS-based multiplayer drawing and guessing game for mobile
 - **FikaSpelet** — Gamified marketing game combining brand engagement with web-based gameplay
 
