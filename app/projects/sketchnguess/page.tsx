@@ -4,7 +4,6 @@ import BackButton from '@/app/components/projects/BackButton';
 import ProjectHeader from '@/app/components/projects/ProjectHeader';
 import ProjectSection from '@/app/components/projects/ProjectSection';
 import ProjectParagraph from '@/app/components/projects/ProjectParagraph';
-import ProjectImage from '@/app/components/projects/ProjectImage';
 import ProjectMockupGrid from '@/app/components/projects/ProjectMockupGrid';
 import ProjectKeyInsight from '@/app/components/projects/ProjectKeyInsight';
 import PillButton from '@/app/components/PillButton';
