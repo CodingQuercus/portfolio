@@ -1,4 +1,4 @@
-import ProjectStatCard from "./ProjectStatCard";
+import ProjectStatCard from './ProjectStatCard';
 
 type StatItem = {
     value: string;

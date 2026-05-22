@@ -1,7 +1,7 @@
-"use client";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+'use client';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
 
 type PillButtonProps = {
     href: string;
@@ -11,12 +11,23 @@ type PillButtonProps = {
     fullWidth?: boolean;
 };
 
-export default function PillButton({ href, children, target, onClick, fullWidth }: PillButtonProps) {
+export default function PillButton({
+    href,
+    children,
+    target,
+    onClick,
+    fullWidth,
+}: PillButtonProps) {
     return (
-        <Link href={href} target={target} onClick={onClick} className={fullWidth ? "w-full" : "w-fit"}>
+        <Link
+            href={href}
+            target={target}
+            onClick={onClick}
+            className={fullWidth ? 'w-full' : 'w-fit'}
+        >
             <motion.div
                 whileHover={{ translateY: -4 }}
-                className={`bg-foreground text-background border border-foreground rounded-full px-4 py-2 cursor-pointer transition-colors hover:bg-background hover:text-foreground text-base md:text-lg flex flex-row gap-2 items-center ${fullWidth ? "justify-center" : ""}`}
+                className={`bg-foreground text-background border border-foreground rounded-full px-4 py-2 cursor-pointer transition-colors hover:bg-background hover:text-foreground text-base md:text-lg flex flex-row gap-2 items-center ${fullWidth ? 'justify-center' : ''}`}
             >
                 {children}
             </motion.div>

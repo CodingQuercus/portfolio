@@ -1,90 +1,88 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { motion, Variants } from "framer-motion";
-import ProjectCard from "./ProjectCard";
-import PillButton from "./PillButton";
-import { ChevronRight } from "lucide-react";
+import { useState } from 'react';
+import { motion, Variants } from 'framer-motion';
+import ProjectCard from './ProjectCard';
+import PillButton from './PillButton';
+import { ChevronRight } from 'lucide-react';
 
 const projects = [
     {
-        title: "Designing Trustworthy CUIs for Reliable Information Retrieval",
-        backgroundColor: "#EA9734",
+        title: 'Designing Trustworthy CUIs for Reliable Information Retrieval',
+        backgroundColor: '#1D93F3',
         description:
-            "A design thinking study exploring how conversational interfaces can be designed to support reliable information retrieval in quality management systems, with a focus on transparency and user trust.",
+            'A design thinking study exploring how conversational interfaces can be designed to support reliable information retrieval in quality management systems, with a focus on transparency and user trust.',
         tags: [
-            "M.Sc. Thesis",
-            "Design Thinking",
-            "User Research",
-            "Usability Testing",
-            "Prototyping",
-            "Figma",
+            'M.Sc. Thesis',
+            'Design Thinking',
+            'User Research',
+            'Usability Testing',
+            'Prototyping',
+            'Figma',
         ],
-        href: "/projects/thesis",
+        href: '/projects/thesis',
         showExploreLink: true,
     },
     {
-        title: "aWAre",
-        backgroundColor: "#1ABA87",
+        title: 'aWAre',
+        backgroundColor: '#1ABA87',
         description:
-            "A safety app developed in collaboration with marketing students at Edith Cowan University in Perth, providing users with hazard alerts and local community posts across Western Australia.",
+            'A safety app developed in collaboration with marketing students at Edith Cowan University in Perth, providing users with hazard alerts and local community posts across Western Australia.',
         tags: [
-            "International Collaboration",
-            "Design Thinking",
-            "User Research",
-            "Prototyping",
-            "Figma",
-            "Mobile Development",
-            "React Native",
-            "Firebase",
+            'International Collaboration',
+            'Design Thinking',
+            'User Research',
+            'Prototyping',
+            'Figma',
+            'Mobile Development',
+            'React Native',
+            'Firebase',
         ],
-        href: "/projects/aware",
+        href: '/projects/aware',
         showExploreLink: true,
     },
     {
         title: "Sketch'N'Guess",
-        backgroundColor: "#E96FA6",
+        backgroundColor: '#E96FA6',
         description:
-            "A GPS-based multiplayer drawing and guessing game for mobile, developed during a design sprint using React Native, Node.js, and Socket.io for real-time communication.",
+            'A GPS-based multiplayer drawing and guessing game for mobile, developed during a design sprint using React Native, Node.js, and Socket.io for real-time communication.',
         tags: [
-            "Mobile Development",
-            "React Native",
-            "Node.js",
-            "Socket.io",
-            "Design Sprint",
-            "Prototyping",
-            "Figma",
+            'Mobile Development',
+            'React Native',
+            'Node.js',
+            'Socket.io',
+            'Design Sprint',
+            'Prototyping',
+            'Figma',
         ],
-        href: "/projects/sketchnguess",
+        href: '/projects/sketchnguess',
         showExploreLink: true,
     },
     {
-        title: "FikaSpelet",
-        backgroundColor: "#0050A1",
+        title: 'FikaSpelet',
+        backgroundColor: '#0050A1',
         description:
-            "A web-based marketing game developed in collaboration with Svensk Husman, combining gamification with brand marketing. 2,500 play sessions over two days.",
+            'A web-based marketing game developed in collaboration with Svensk Husman, combining gamification with brand marketing. 2,500 play sessions over two days.',
         tags: [
-            "Design-Build-Test",
-            "Gamification",
-            "Prototyping",
-            "Figma",
-            "Web/Mobile Development",
-            "React",
-            "Phaser",
+            'Design-Build-Test',
+            'Gamification',
+            'Prototyping',
+            'Figma',
+            'Web/Mobile Development',
+            'React',
+            'Phaser',
         ],
-        href: "/projects/fikaspelet",
+        href: '/projects/fikaspelet',
         showExploreLink: true,
     },
-]
-
+];
 
 export default function Projects() {
-
     const [shouldAnimate] = useState(() => {
-        if (typeof window === "undefined") return false;
-        const hasVisited = sessionStorage.getItem("home-visited");
+        if (typeof window === 'undefined') return false;
+        const hasVisited = sessionStorage.getItem('home-visited');
         if (!hasVisited) {
-            sessionStorage.setItem("home-visited", "true");
+            sessionStorage.setItem('home-visited', 'true');
             return true;
         }
         return false;
@@ -92,7 +90,11 @@ export default function Projects() {
 
     const cardVariants: Variants = {
         hidden: shouldAnimate ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5, ease: 'easeOut' },
+        },
     };
 
     return (
@@ -100,7 +102,7 @@ export default function Projects() {
             <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4">
                 Projects
             </h2>
-            <div className="flex flex-col gap-8" >
+            <div className="flex flex-col gap-8">
                 {projects.map((project) => (
                     <motion.div
                         key={project.href}
@@ -115,7 +117,7 @@ export default function Projects() {
             </div>
             <PillButton href="/projects">
                 Explore more projects
-                <ChevronRight size={24}/>
+                <ChevronRight size={24} />
             </PillButton>
         </section>
     );

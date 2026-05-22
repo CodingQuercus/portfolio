@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { motion } from "framer-motion";
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 type ContactButtonProps = {
     href: string;
@@ -19,7 +19,7 @@ export default function ContactButton({
     return (
         <Link
             href={href}
-            target={external ? "_blank" : undefined}
+            target={external ? '_blank' : undefined}
             className="w-44 md:w-auto md:flex-1"
         >
             <motion.div

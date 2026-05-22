@@ -1,55 +1,53 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
 
-import { Montserrat } from "next/font/google";
+import { Montserrat } from 'next/font/google';
 
-import MotionProvider from "./components/MotionProvider";
+import MotionProvider from './components/MotionProvider';
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const MontserratFont = Montserrat({
-    variable: "--font-montserrat",
-    subsets: ["latin"]
-})
+    variable: '--font-montserrat',
+    subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://akeflatholm.com"),
+    metadataBase: new URL('https://akeflatholm.com'),
     title: {
-        default: "Portfolio | Åke Flatholm",
-        template: "%s | Åke Flatholm",
+        default: 'Portfolio | Åke Flatholm',
+        template: '%s | Åke Flatholm',
     },
-    description:
-        "UX Designer and Frontend Developer based in Umeå, Sweden.",
+    description: 'UX Designer and Frontend Developer based in Umeå, Sweden.',
     keywords: [
-        "UX Designer",
-        "Frontend Developer",
-        "Interaction Design",
-        "User Research",
-        "Umeå",
-        "Sweden",
-        "Portfolio",
-        "React",
-        "Figma",
+        'UX Designer',
+        'Frontend Developer',
+        'Interaction Design',
+        'User Research',
+        'Umeå',
+        'Sweden',
+        'Portfolio',
+        'React',
+        'Figma',
     ],
-    authors: [{ name: "Åke Flatholm" }],
-    creator: "Åke Flatholm",
+    authors: [{ name: 'Åke Flatholm' }],
+    creator: 'Åke Flatholm',
     openGraph: {
-        type: "website",
-        title: "Åke Flatholm | Portfolio",
+        type: 'website',
+        title: 'Åke Flatholm | Portfolio',
         description:
-            "UX Designer and Frontend Developer based in Umeå, Sweden.",
-        images: ["/og-image.png"],
+            'UX Designer and Frontend Developer based in Umeå, Sweden.',
+        images: ['/og-image.png'],
     },
     twitter: {
-        card: "summary_large_image",
-        title: "Åke Flatholm | Portfolio",
+        card: 'summary_large_image',
+        title: 'Åke Flatholm | Portfolio',
         description:
-            "UX Designer and Frontend Developer based in Umeå, Sweden.",
-        images: ["/og-image.png"],
+            'UX Designer and Frontend Developer based in Umeå, Sweden.',
+        images: ['/og-image.png'],
     },
 };
-
 
 export default function RootLayout({
     children,

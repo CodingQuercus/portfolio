@@ -1,14 +1,17 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 type ProjectCodeBlockProps = {
     code: string;
     description?: string;
 };
 
-export default function ProjectCodeBlock({ code, description }: ProjectCodeBlockProps) {
+export default function ProjectCodeBlock({
+    code,
+    description,
+}: ProjectCodeBlockProps) {
     const [expanded, setExpanded] = useState(false);
 
     return (
@@ -16,10 +19,12 @@ export default function ProjectCodeBlock({ code, description }: ProjectCodeBlock
             <div className="rounded-2xl md:rounded-3xl bg-foreground/5 overflow-hidden">
                 <motion.div
                     initial={false}
-                    animate={{ height: expanded? "auto" : "8rem" }}
-                    transition={{duration: 0.4, ease: "easeInOut" }}
+                    animate={{ height: expanded ? 'auto' : '8rem' }}
+                    transition={{ duration: 0.4, ease: 'easeInOut' }}
                 >
-                    <pre className={`p-4 md:p-6 overflow-x-auto text-sm leading-relaxed transition-all duration-300 ${expanded ? "" : "max-h-32 mask-[linear-gradient(to_bottom,black_40%,transparent_100%)]"}`}>
+                    <pre
+                        className={`p-4 md:p-6 overflow-x-auto text-sm leading-relaxed transition-all duration-300 ${expanded ? '' : 'max-h-32 mask-[linear-gradient(to_bottom,black_40%,transparent_100%)]'}`}
+                    >
                         <code>{code}</code>
                     </pre>
                     <AnimatePresence>
@@ -34,12 +39,12 @@ export default function ProjectCodeBlock({ code, description }: ProjectCodeBlock
                         )}
                     </AnimatePresence>
                 </motion.div>
-            
+
                 <button
                     onClick={() => setExpanded(!expanded)}
                     className="w-full py-3 text-sm text-foreground/60 hover:text-foreground/80 transition-colors border-t border-foreground/10"
                 >
-                    {expanded ? "Show less" : "Show full implementation"}
+                    {expanded ? 'Show less' : 'Show full implementation'}
                 </button>
             </div>
             {description && (

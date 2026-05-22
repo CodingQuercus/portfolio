@@ -1,7 +1,7 @@
-"use client";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { FaChevronRight } from "react-icons/fa";
+'use client';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { FaChevronRight } from 'react-icons/fa';
 
 type ProjectCardMiniProps = {
     title: string;
@@ -39,7 +39,11 @@ export default function ProjectCardMini({
                     className="flex flex-row items-center gap-2 bg-background text-foreground px-4 md:px-6 py-2 md:py-3 rounded-full w-fit hover:bg-foreground hover:text-background transition-colors text-base lg:text-lg"
                 >
                     Explore project
-                    <FaChevronRight size={18} className="md:w-5 md:h-5" aria-hidden="true" />
+                    <FaChevronRight
+                        size={18}
+                        className="md:w-5 md:h-5"
+                        aria-hidden="true"
+                    />
                 </motion.div>
             </Link>
         </div>

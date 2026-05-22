@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { StaggerContainer, StaggerItem } from "./StaggerOnMount";
+import { StaggerContainer, StaggerItem } from './StaggerOnMount';
 
 export default function Hero() {
     return (
@@ -8,9 +8,10 @@ export default function Hero() {
             aria-label="Introduction"
             className="flex flex-col gap-2 md:gap-4 justify-center min-h-screen"
         >
-
             <h1 className="sr-only">
-                Åke Flatholm — UX Designer and Frontend Developer based in Umeå, Sweden. I enjoy the process of making complex systems easier to use.
+                Åke Flatholm — UX Designer and Frontend Developer based in Umeå,
+                Sweden. I enjoy the process of making complex systems easier to
+                use.
             </h1>
 
             {/*Mobile*/}
@@ -19,9 +20,7 @@ export default function Hero() {
                 className="flex flex-col justify-center gap-3 md:hidden w-fit mx-auto"
             >
                 <StaggerItem>
-                    <div
-                        className="flex flex-row items-center gap-3 w-full"
-                    >
+                    <div className="flex flex-row items-center gap-3 w-full">
                         <div className="text-7xl font-bold leading-none tracking-tight">
                             Åke
                         </div>
@@ -54,8 +53,9 @@ export default function Hero() {
                     </span>
                 </StaggerItem>
                 <StaggerItem>
-                    <p className="text-base mt-2 w-0 min-w-full" >
-                        I enjoy the process of making complex systems easier to use.
+                    <p className="text-base mt-2 w-0 min-w-full">
+                        I enjoy the process of making complex systems easier to
+                        use.
                     </p>
                 </StaggerItem>
             </StaggerContainer>
@@ -96,7 +96,8 @@ export default function Hero() {
                 </StaggerItem>
                 <StaggerItem>
                     <p className="text-base md:text-2xl mt-4 w-full md:w-4/5">
-                        I enjoy the process of making complex systems easier to use.
+                        I enjoy the process of making complex systems easier to
+                        use.
                     </p>
                 </StaggerItem>
             </StaggerContainer>

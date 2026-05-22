@@ -1,4 +1,4 @@
-import ProcessListItem from "@/app/components/projects/ProcessListItem";
+import ProcessListItem from '@/app/components/projects/ProcessListItem';
 
 type ProcessStep = {
     title: string;
