@@ -61,14 +61,14 @@ export default function About() {
     return (
         <section
             aria-label="About"
-            className="flex flex-col items-center pt-24 md:pt-28 gap-12 md:gap-16"
+            className="flex flex-col items-center pt-24 md:pt-28 gap-4 md:gap-8"
         >
             <div className="flex flex-col md:flex-row items-center justify-around gap-8 w-full">
-                <div className="flex flex-col gap-4 order-2 md:order-1">
+                <div className="flex flex-col gap-2 order-2 md:order-1">
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold">
                         Åke Flatholm
                     </h1>
-                    <div className="flex flex-col gap-4 text-base md:text-lg leading-7 md:leading-8 w-full md:max-w-lg">
+                    <div className="flex flex-col gap-2 text-base md:text-lg leading-7 md:leading-8 w-full md:max-w-lg">
                         <p>
                             I&apos;m a UX designer and developer based
                             in Umeå, Sweden. I enjoy working across

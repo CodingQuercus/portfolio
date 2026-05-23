@@ -22,7 +22,7 @@ export default function ProjectHeader({
     meta,
 }: ProjectHeaderProps) {
     return (
-        <div className="flex flex-col gap-6 md:gap-8">
+        <div className="flex flex-col gap-4">
             <ProjectCard
                 title={title}
                 backgroundColor={backgroundColor}

@@ -6,10 +6,16 @@ import ProjectCard from './ProjectCard';
 import PillButton from './PillButton';
 import { ChevronRight } from 'lucide-react';
 
+import thesisMockup from '@/public/thesis/thesis_mockup.png';
+import awareMockup from '@/public/aware/aware_mockup.png';
+import sngMockup from '@/public/sng/sng_mockup.png';
+import fsMockup from '@/public/fs/fs_mockup.png';
+
 const projects = [
     {
-        title: 'Designing Trustworthy CUIs for Reliable Information Retrieval',
+        title: 'M.Sc. Thesis',
         backgroundColor: '#1D93F3',
+        subtitle: 'Designing Trustworthy CUIs for Reliable Information Retrieval in QMS.',
         description:
             'A design thinking study exploring how conversational interfaces can be designed to support reliable information retrieval in quality management systems, with a focus on transparency and user trust.',
         tags: [
@@ -20,6 +26,7 @@ const projects = [
             'Prototyping',
             'Figma',
         ],
+        mockupImage: thesisMockup, 
         href: '/projects/thesis',
         showExploreLink: true,
     },
@@ -38,6 +45,7 @@ const projects = [
             'React Native',
             'Firebase',
         ],
+        mockupImage: awareMockup,
         href: '/projects/aware',
         showExploreLink: true,
     },
@@ -55,6 +63,7 @@ const projects = [
             'Prototyping',
             'Figma',
         ],
+        mockupImage: sngMockup,
         href: '/projects/sketchnguess',
         showExploreLink: true,
     },
@@ -72,6 +81,7 @@ const projects = [
             'React',
             'Phaser',
         ],
+        mockupImage: fsMockup,
         href: '/projects/fikaspelet',
         showExploreLink: true,
     },
@@ -99,10 +109,10 @@ export default function Projects() {
 
     return (
         <section className="flex flex-col w-full gap-4">
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold">
                 Projects
             </h2>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4 md:gap-6">
                 {projects.map((project) => (
                     <motion.div
                         key={project.href}
