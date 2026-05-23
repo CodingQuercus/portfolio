@@ -182,38 +182,33 @@ export default function MajPage() {
                     ]}
                 />
             </ProjectSection>
-            
-            <div className='flex flex-col gap-2'>
-                <div className="flex flex-col md:flex-row gap-4">
-                    <PillButton
-                        href="https://maj.akeflatholm.com"
-                        target="_blank"
-                    >
-                        Live demo
-                        <FaExternalLinkAlt
-                            size={16}
-                            className="md:w-5 md:h-5"
-                            aria-hidden="true"
-                        />
-                        <span className="sr-only">(opens in new tab)</span>
-                    </PillButton>
 
-                    <PillButton
-                        href="https://github.com/codingquercus/maj"
-                        target="_blank"
-                    >
-                        View on GitHub
-                        <FaExternalLinkAlt
-                            size={16}
-                            className="md:w-5 md:h-5"
-                            aria-hidden="true"
-                        />
-                        <span className="sr-only">(opens in new tab)</span>
-                    </PillButton>
-                </div>
-                <p className='text-sm text-gray-700'>
-                    Demo account: demo@akeflatholm.com — majdemo123
-                </p>
+            <div className="flex flex-col md:flex-row gap-4">
+                <PillButton
+                    href="https://maj.akeflatholm.com"
+                    target="_blank"
+                >
+                    Live demo
+                    <FaExternalLinkAlt
+                        size={16}
+                        className="md:w-5 md:h-5"
+                        aria-hidden="true"
+                    />
+                    <span className="sr-only">(opens in new tab)</span>
+                </PillButton>
+
+                <PillButton
+                    href="https://github.com/codingquercus/maj"
+                    target="_blank"
+                >
+                    View on GitHub
+                    <FaExternalLinkAlt
+                        size={16}
+                        className="md:w-5 md:h-5"
+                        aria-hidden="true"
+                    />
+                    <span className="sr-only">(opens in new tab)</span>
+                </PillButton>
             </div>
         </article>
     );
