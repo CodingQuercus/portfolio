@@ -36,7 +36,7 @@ export default function ProjectCard({
 
     return (
         <div
-            className="flex flex-col gap-6 rounded-3xl p-6 md:p-8"
+            className="flex flex-col gap-6 rounded-3xl p-6 md:p-8 min-h-[424px] md:min-h-0"
             style={{ backgroundColor }}
         >
             {isCompact ? (
@@ -63,7 +63,7 @@ export default function ProjectCard({
                             {description}
                         </p>
                     </div>
-                    <div className="rounded-2xl overflow-hidden aspect-video flex items-center justify-center">
+                    <div className="rounded-2xl overflow-hidden aspect-video hidden md:flex items-center justify-center">
                         {mockupImage ? (
                             <Image
                                 src={mockupImage}
@@ -79,7 +79,7 @@ export default function ProjectCard({
                 </div>
             )}
 
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-white/20 pt-4">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-white/20 pt-4 mt-auto">
                 <ul
                     className="flex flex-row flex-wrap gap-x-4 gap-y-2 md:max-w-[60%]"
                     aria-label="Project tags"
