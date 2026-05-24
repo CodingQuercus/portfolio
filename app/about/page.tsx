@@ -70,23 +70,25 @@ export default function About() {
                     </h1>
                     <div className="flex flex-col gap-2 text-base md:text-lg leading-7 md:leading-8 w-full md:max-w-lg">
                         <p>
-                            I&apos;m a UX designer and developer based
-                            in Umeå, Sweden. I enjoy working across
-                            the full process of a project, from understanding
-                            user needs through research to designing and building
-                            solutions, and iterating on them.
+                            I&apos;m a UX designer and developer based in Umeå,
+                            Sweden. I enjoy working across the full process of a
+                            project, from understanding user needs through
+                            research to designing and building solutions, and
+                            iterating on them.
                         </p>
                         <p>
-                            What drew me to this line of work is understanding how
-                            complex systems can be and how simple they can feel to use.
-                            Closing this gap requires taking both sides of the equation
-                            into consideration: the users and the implementation.
+                            What drew me to this line of work is understanding
+                            how complex systems can be and how simple they can
+                            feel to use. Closing this gap requires taking both
+                            sides of the equation into consideration: the users
+                            and the implementation.
                         </p>
                         <p>
                             I have a Master of Science in Engineering with a
                             specialization in Interaction Technology and Design
-                            from Umeå University. A programme that treats the human
-                            side and the technical side as the same problem.
+                            from Umeå University. A programme that treats the
+                            human side and the technical side as the same
+                            problem.
                         </p>
                     </div>
                 </div>
@@ -117,7 +119,9 @@ export default function About() {
             </div>
 
             <div className="flex flex-col gap-2 md:gap-4 w-full">
-                <h2 className="text-2xl md:text-3xl font-bold">Get to know me</h2>
+                <h2 className="text-2xl md:text-3xl font-bold">
+                    Get to know me
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
                     {hobbies.map((hobby) => {
                         const Icon = hobby.icon;
@@ -127,8 +131,11 @@ export default function About() {
                                 style={{ background: hobby.color }}
                                 className="flex flex-col gap-2 text-background px-6 py-5 rounded-2xl"
                             >
-                                <div className='flex flex-row gap-2 items-center'>
-                                    <Icon size={24} className="text-background opacity-90" />
+                                <div className="flex flex-row gap-2 items-center">
+                                    <Icon
+                                        size={24}
+                                        className="text-background opacity-90"
+                                    />
                                     <p className="font-bold text-base md:text-lg">
                                         {hobby.title}
                                     </p>
@@ -141,7 +148,6 @@ export default function About() {
                     })}
                 </div>
             </div>
-
 
             <div className="flex flex-col gap-2 md:gap-4 w-full">
                 <h2 className="text-2xl md:text-3xl font-bold">Education</h2>

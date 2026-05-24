@@ -15,7 +15,8 @@ const projects = [
     {
         title: 'M.Sc. Thesis',
         backgroundColor: '#1D93F3',
-        subtitle: 'Designing Trustworthy CUIs for Reliable Information Retrieval in QMS.',
+        subtitle:
+            'Designing Trustworthy CUIs for Reliable Information Retrieval in QMS.',
         description:
             'A design thinking study exploring how conversational interfaces can be designed to support reliable information retrieval in quality management systems, with a focus on transparency and user trust.',
         tags: [
@@ -26,7 +27,7 @@ const projects = [
             'Prototyping',
             'Figma',
         ],
-        mockupImage: thesisMockup, 
+        mockupImage: thesisMockup,
         href: '/projects/thesis',
         showExploreLink: true,
     },

@@ -184,10 +184,7 @@ export default function MajPage() {
             </ProjectSection>
 
             <div className="flex flex-col md:flex-row gap-4">
-                <PillButton
-                    href="https://maj.akeflatholm.com"
-                    target="_blank"
-                >
+                <PillButton href="https://maj.akeflatholm.com" target="_blank">
                     Live demo
                     <FaExternalLinkAlt
                         size={16}

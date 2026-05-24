@@ -13,12 +13,7 @@ const projects = [
         backgroundColor: '#0F766E',
         description:
             'A full-stack job application tracker built to solve a real problem during my own job search.',
-        tags: [
-            'Next.js',
-            'Supabase',
-            'Tailwind CSS',
-            'Recharts'
-        ],
+        tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Recharts'],
         href: '/projects/maj',
     },
     {
@@ -30,7 +25,7 @@ const projects = [
             'Design Thinking',
             'User Research',
             'Usability Testing',
-            'Figma'
+            'Figma',
         ],
         href: '/projects/thesis',
     },
@@ -52,12 +47,7 @@ const projects = [
         backgroundColor: '#EA9734',
         description:
             'A native Android app for climbers who want to log routes, track progress and review their sessions.',
-        tags: [
-            'Jetpack Compose',
-            'Room',
-            'MVVM',
-            'CameraX'
-        ],
+        tags: ['Jetpack Compose', 'Room', 'MVVM', 'CameraX'],
         href: '/projects/bouldr',
     },
     {
@@ -65,12 +55,7 @@ const projects = [
         backgroundColor: '#E96FA6',
         description:
             'A GPS-based multiplayer drawing and guessing game for mobile, developed during a design sprint using React Native, Node.js, and Socket.io for real-time communication.',
-        tags: [
-            'React Native',
-            'Node.js',
-            'Socket.io',
-            'Figma'
-        ],
+        tags: ['React Native', 'Node.js', 'Socket.io', 'Figma'],
         href: '/projects/sketchnguess',
     },
     {
@@ -78,11 +63,7 @@ const projects = [
         backgroundColor: '#0050A1',
         description:
             'A web-based mobile game developed in collaboration with a company using the Design-Build-Test method, combining gamification with brand marketing and resulting in 2,500 play sessions over two days.',
-        tags: [
-            'React',
-            'ASP .NET Core',
-            'Phaser'
-        ],
+        tags: ['React', 'ASP .NET Core', 'Phaser'],
         href: '/projects/fikaspelet',
     },
 ];
