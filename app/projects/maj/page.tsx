@@ -9,11 +9,11 @@ import ProjectMockupGrid from '@/app/components/projects/ProjectMockupGrid';
 import ProjectKeyInsight from '@/app/components/projects/ProjectKeyInsight';
 import PillButton from '@/app/components/PillButton';
 
-import landingImage from '@/public/maj/maj_landing.png';
+import landingImage from '@/public/maj/maj_start.png';
 import erImage from '@/public/maj/maj_er.png';
 import schemaImage from '@/public/maj/maj_schema.png';
 import listImage from '@/public/maj/maj_applications.png';
-import drawerImage from '@/public/maj/maj_add.png';
+import drawerImage from '@/public/maj/maj_new.png';
 import detailImage from '@/public/maj/maj_detail.png';
 import editImage from '@/public/maj/maj_edit.png';
 import searchImage from '@/public/maj/maj_search.png';
@@ -90,28 +90,9 @@ export default function MajPage() {
                         'The list lets you sort by any column, filter by status, and search by role or company. Each row shows key information of each application, and clicking a row navigates to the full detail view.',
                     ]}
                 />
-                <ProjectMockupGrid
-                    mockups={[
-                        {
-                            src: listImage,
-                            alt: 'Applications list view showing sortable columns for role, company, location, applied date and status.',
-                            caption:
-                                'Applications list view showing sortable columns for role, company, location, applied date and status',
-                        },
-                        {
-                            src: searchImage,
-                            alt: 'List view with search filtering results by role or company name.',
-                            caption:
-                                'List view with search filtering results by role or company name',
-                        },
-                        {
-                            src: filterImage,
-                            alt: 'List view filtered by a specific status.',
-                            caption: 'List view filtered by a specific status',
-                        },
-                    ]}
-                    cols={2}
-                />
+                <ProjectImage src={listImage} alt="Applications list view" caption="Sortable columns for role, company, location, applied date and status" />
+                <ProjectImage src={searchImage} alt="Applications list filtered by search query" caption="Search filters results by role or company name" />
+                <ProjectImage src={filterImage} alt="Applications list filtered by status" caption="Filter by status to narrow down your applications"/>
             </ProjectSection>
 
             <ProjectSection title="Adding and editing applications">
@@ -146,7 +127,8 @@ export default function MajPage() {
                 />
                 <ProjectImage
                     src={detailImage}
-                    alt="Application detail view showing title, metadata, status selector, job description and notes"
+                    alt="Application detail view"
+                    caption="Full job description, notes, contacts and inline status selector"
                 />
             </ProjectSection>
 
@@ -158,7 +140,8 @@ export default function MajPage() {
                 />
                 <ProjectImage
                     src={dashboardImage}
-                    alt="Dashboard showing stat cards for total, applied, assessment, interview, offer, rejected and withdrawn, plus a donut chart"
+                    alt="Application dashboard"
+                    caption="Stat cards per status and a donut chart showing the breakdown of all applications"
                 />
             </ProjectSection>
 
