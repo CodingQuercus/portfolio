@@ -70,6 +70,7 @@ export default function ProjectCard({
                                 alt={mockupAlt}
                                 width={600}
                                 height={400}
+                                loading="eager"
                                 className="w-full h-full object-cover object-top"
                             />
                         ) : (

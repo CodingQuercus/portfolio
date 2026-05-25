@@ -11,27 +11,12 @@ export const metadata: Metadata = {
         'About Åke Flatholm — UX Designer and Frontend Developer based in Umeå, Sweden.',
 };
 
-type Skill = {
-    label: string;
-};
-
 type Hobby = {
     title: string;
     description: string;
     color: string;
     icon: LucideIcon;
 };
-
-const skills: Skill[] = [
-    { label: 'UX Design' },
-    { label: 'Frontend Development' },
-    { label: 'User Research' },
-    { label: 'Prototyping' },
-    { label: 'Usability Testing' },
-    { label: 'React' },
-    { label: 'Figma' },
-    { label: 'React Native' },
-];
 
 const hobbies: Hobby[] = [
     {
@@ -100,22 +85,6 @@ export default function About() {
                     loading="eager"
                     className="rounded-4xl order-1 md:order-2 w-64 md:w-96 h-auto"
                 />
-            </div>
-
-            <div className="flex flex-col gap-2 md:gap-4 w-full">
-                <h2 className="text-2xl md:text-3xl font-bold">
-                    Skills & Tools
-                </h2>
-                <div className="flex flex-row flex-wrap gap-2 md:gap-4">
-                    {skills.map((skill) => (
-                        <span
-                            key={skill.label}
-                            className="rounded-full px-4 md:px-6 py-2 md:py-3 text-background bg-darkGrey font-semibold text-sm md:text-base"
-                        >
-                            {skill.label}
-                        </span>
-                    ))}
-                </div>
             </div>
 
             <div className="flex flex-col gap-2 md:gap-4 w-full">

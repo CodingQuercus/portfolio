@@ -25,7 +25,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 export const metadata: Metadata = {
     title: 'Maj',
     description:
-        'A personal job application tracker built with Next.js and Supabase.',
+        'A full-stack job application tracker built with Next.js, TypeScript, and Supabase. Features auth, CRUD, search, filtering, and a live dashboard.',
 };
 
 export default function MajPage() {

@@ -6,12 +6,26 @@ import ProjectCard from './ProjectCard';
 import PillButton from './PillButton';
 import { ChevronRight } from 'lucide-react';
 
+import majMockup from '@/public/maj/maj_mockup.png';
 import thesisMockup from '@/public/thesis/thesis_mockup.png';
 import awareMockup from '@/public/aware/aware_mockup.png';
 import sngMockup from '@/public/sng/sng_mockup.png';
-import fsMockup from '@/public/fs/fs_mockup.png';
 
 const projects = [
+    {
+        title: 'Maj',
+        backgroundColor: '#0F766E',
+        description:
+            'A full-stack job application tracker built to solve a real problem during my own job search.',
+        tags: [
+            'Next.js', 
+            'Supabase', 
+            'Tailwind CSS', 
+            'Recharts'],
+        mockupImage: majMockup,
+        href: '/projects/maj',
+        showExploreLink: true,
+    },
     {
         title: 'M.Sc. Thesis',
         backgroundColor: '#1D93F3',
@@ -39,12 +53,9 @@ const projects = [
         tags: [
             'International Collaboration',
             'Design Thinking',
-            'User Research',
-            'Prototyping',
-            'Figma',
-            'Mobile Development',
             'React Native',
             'Firebase',
+            'Figma',
         ],
         mockupImage: awareMockup,
         href: '/projects/aware',
@@ -56,36 +67,16 @@ const projects = [
         description:
             'A GPS-based multiplayer drawing and guessing game for mobile, developed during a design sprint using React Native, Node.js, and Socket.io for real-time communication.',
         tags: [
-            'Mobile Development',
             'React Native',
             'Node.js',
             'Socket.io',
             'Design Sprint',
-            'Prototyping',
             'Figma',
         ],
         mockupImage: sngMockup,
         href: '/projects/sketchnguess',
         showExploreLink: true,
-    },
-    {
-        title: 'FikaSpelet',
-        backgroundColor: '#0050A1',
-        description:
-            'A web-based marketing game developed in collaboration with Svensk Husman, combining gamification with brand marketing. 2,500 play sessions over two days.',
-        tags: [
-            'Design-Build-Test',
-            'Gamification',
-            'Prototyping',
-            'Figma',
-            'Web/Mobile Development',
-            'React',
-            'Phaser',
-        ],
-        mockupImage: fsMockup,
-        href: '/projects/fikaspelet',
-        showExploreLink: true,
-    },
+    }
 ];
 
 export default function Projects() {

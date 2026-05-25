@@ -15,6 +15,13 @@ const MontserratFont = Montserrat({
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://akeflatholm.com'),
+    alternates: {
+        canonical: 'https://akeflatholm.com',
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
     title: {
         default: 'Portfolio | Åke Flatholm',
         template: '%s | Åke Flatholm',
@@ -35,14 +42,14 @@ export const metadata: Metadata = {
     creator: 'Åke Flatholm',
     openGraph: {
         type: 'website',
-        title: 'Åke Flatholm | Portfolio',
+        title: 'Portfolio | Åke Flatholm',
         description:
             'UX Designer and Frontend Developer based in Umeå, Sweden.',
         images: ['/og-image.png'],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Åke Flatholm | Portfolio',
+        title: 'Portfolio | Åke Flatholm',
         description:
             'UX Designer and Frontend Developer based in Umeå, Sweden.',
         images: ['/og-image.png'],

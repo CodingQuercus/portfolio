@@ -21,7 +21,8 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 
 export const metadata: Metadata = {
     title: 'BouldR',
-    description: 'A native Android app for tracking climbing routes.',
+    description: 
+        'A native Android app for climbers to log routes, track progress, and review sessions. Built with Kotlin, Jetpack Compose, Room, and CameraX following MVVM architecture.',
 };
 
 export default function BouldRPage() {
