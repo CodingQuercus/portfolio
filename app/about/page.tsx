@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
-import aboutImage from '@/public/about_img2.jpeg';
+import aboutImage from '@/public/about_img.png';
 
 import { Dumbbell, LucideIcon, Music, Sandwich } from 'lucide-react';
 
@@ -83,7 +83,8 @@ export default function About() {
                     width={384}
                     height={520}
                     loading="eager"
-                    className="rounded-4xl order-1 md:order-2 w-64 md:w-96 h-auto"
+                    style={{ height: 'auto' }}
+                    className="rounded-4xl order-1 md:order-2 w-64 md:w-96"
                 />
             </div>
 
