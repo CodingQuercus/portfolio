@@ -56,6 +56,7 @@ export default function MajPage() {
                     paragraphs={[
                         "I'm currently looking for my first job after graduating, and I needed a way to keep track of where I had applied.",
                         'Spreadsheets worked but felt clunky. I decided to build something purpose-built, and use it as an opportunity to learn Next.js App Router and Supabase in a real project with auth, a database, and full CRUD.',
+                        "The result is a fully responsive full-stack app, testable via a live demo account."
                     ]}
                 />
                 <ProjectImage src={landingImage} alt="Maj landing page." />
@@ -87,7 +88,7 @@ export default function MajPage() {
             <ProjectSection title="Application list">
                 <ProjectParagraph
                     paragraphs={[
-                        'The list lets you sort by any column, filter by status, and search by role or company. Each row shows key information of each application, and clicking a row navigates to the full detail view.',
+                        'The list lets you sort by any column, filter by one or more statuses, and search by role or company. Each row shows key information of each application, and clicking a row navigates to the full detail view.',
                     ]}
                 />
                 <ProjectImage src={listImage} alt="Applications list view" caption="Sortable columns for role, company, location, applied date and status" />
@@ -99,6 +100,7 @@ export default function MajPage() {
                 <ProjectParagraph
                     paragraphs={[
                         "Rather than navigating to a separate page, a slide-in drawer keeps the user in context. The same drawer handles both create and edit. If an application is passed as a prop it's edit mode, otherwise create mode. One component, one source of truth for the form logic.",
+                        "On desktop the drawer is resizable, which is useful when editing longer job descriptions or notes where more horizontal space genuinely helps."
                     ]}
                 />
                 <ProjectMockupGrid
@@ -135,7 +137,7 @@ export default function MajPage() {
             <ProjectSection title="Dashboard">
                 <ProjectParagraph
                     paragraphs={[
-                        'A live dashboard showing stat cards per status and a donut chart with the breakdown of all applications.',
+                        'A live dashboard showing stat cards per status, an in-process rate showing how many applications have reached assessment or beyond, a donut chart with status breakdown, and an area chart showing applications over time.',
                     ]}
                 />
                 <ProjectImage
