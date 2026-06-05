@@ -9,11 +9,9 @@ export default function Hero() {
             className="flex flex-col gap-2 md:gap-4 justify-center min-h-screen"
         >
             <h1 className="sr-only">
-                Åke Flatholm — UX Designer and Frontend Developer based in Umeå,
-                Sweden. I enjoy the process of making complex systems easier to
-                use.
+                Åke Flatholm — UX Designer and Developer based in Umeå,
+                Sweden. I enjoy the process of making complex systems easier to use.
             </h1>
-
             {/*Mobile*/}
             <StaggerContainer
                 aria-hidden="true"
@@ -32,7 +30,7 @@ export default function Hero() {
                             </span>
                             <span className="rounded-full bg-foreground px-4 py-2">
                                 <p className="font-bold text-background text-center text-sm">
-                                    Frontend Dev
+                                    Developer
                                 </p>
                             </span>
                         </div>
@@ -77,7 +75,7 @@ export default function Hero() {
                         </span>
                         <span className="flex-1 rounded-full bg-foreground px-2 py-2 sm:p-4 md:p-6 lg:px-12 lg:py-12">
                             <p className="font-bold text-background text-center text-sm md:text-2xl xl:text-3xl">
-                                Frontend Dev
+                                Developer
                             </p>
                         </span>
                     </div>

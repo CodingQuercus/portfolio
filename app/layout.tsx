@@ -26,32 +26,22 @@ export const metadata: Metadata = {
         default: 'Portfolio | Åke Flatholm',
         template: '%s | Åke Flatholm',
     },
-    description: 'UX Designer and Frontend Developer based in Umeå, Sweden.',
-    keywords: [
-        'UX Designer',
-        'Frontend Developer',
-        'Interaction Design',
-        'User Research',
-        'Umeå',
-        'Sweden',
-        'Portfolio',
-        'React',
-        'Figma',
-    ],
+    description:
+            'UX Designer and Developer based in Umeå, Sweden.',
     authors: [{ name: 'Åke Flatholm' }],
     creator: 'Åke Flatholm',
     openGraph: {
         type: 'website',
         title: 'Portfolio | Åke Flatholm',
         description:
-            'UX Designer and Frontend Developer based in Umeå, Sweden.',
+            'UX Designer and Developer based in Umeå, Sweden.',
         images: ['/og-image.png'],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Portfolio | Åke Flatholm',
         description:
-            'UX Designer and Frontend Developer based in Umeå, Sweden.',
+            'UX Designer and Developer based in Umeå, Sweden.',
         images: ['/og-image.png'],
     },
 };
@@ -62,7 +52,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" data-scroll-behavior="smooth">
+        <html lang="en">
             <body
                 className={`${MontserratFont.variable} antialiased bg-background`}
             >
