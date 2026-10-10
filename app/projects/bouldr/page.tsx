@@ -6,7 +6,7 @@ import ProjectSection from '@/app/components/projects/ProjectSection';
 import ProjectParagraph from '@/app/components/projects/ProjectParagraph';
 import ProjectMockupGrid from '@/app/components/projects/ProjectMockupGrid';
 import ProjectKeyInsight from '@/app/components/projects/ProjectKeyInsight';
-import PillButton from '@/app/components/PillButton';
+import LinkButton from '@/app/components/LinkButton';
 
 import homeEmptyImage from '@/public/bouldr/bouldr_home_empty.png';
 import homeImage from '@/public/bouldr/bouldr_home.png';
@@ -17,7 +17,6 @@ import newRouteFilledImage from '@/public/bouldr/bouldr_new_route.png';
 import routeDetailImage from '@/public/bouldr/bouldr_routedetail.png';
 import cameraImage from '@/public/bouldr/bouldr_camera.png';
 
-import { FaExternalLinkAlt } from 'react-icons/fa';
 
 export const metadata: Metadata = {
     title: 'BouldR',
@@ -27,12 +26,11 @@ export const metadata: Metadata = {
 
 export default function BouldRPage() {
     return (
-        <article className="flex flex-col gap-4 md:gap-6 min-h-screen pt-24 md:pt-28">
+        <article className="flex flex-col gap-12 md:gap-20 min-h-screen pt-24 md:pt-28">
             <BackButton label="Back to projects" />
 
             <ProjectHeader
                 title="BouldR"
-                backgroundColor="#EA9734"
                 description="A native Android app for climbers who want to log routes, track progress and review their sessions. Built during a mobile development course at Umeå University."
                 tags={['Kotlin', 'Jetpack Compose', 'Room', 'CameraX', 'MVVM']}
                 meta={[
@@ -183,18 +181,12 @@ export default function BouldRPage() {
                 />
             </ProjectSection>
 
-            <PillButton
+            <LinkButton
                 href="https://github.com/codingquercus/bouldr"
                 target="_blank"
             >
                 View on GitHub
-                <FaExternalLinkAlt
-                    size={16}
-                    className="md:w-5 md:h-5"
-                    aria-hidden="true"
-                />
-                <span className="sr-only">(opens in new tab)</span>
-            </PillButton>
+            </LinkButton>
         </article>
     );
 }

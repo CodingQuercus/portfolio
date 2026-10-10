@@ -5,6 +5,8 @@ import aboutImage from '@/public/about_img.png';
 
 import { Dumbbell, LucideIcon, Music, Sandwich } from 'lucide-react';
 
+import { Reveal, RevealLine } from '../components/Reveal';
+
 export const metadata: Metadata = {
     title: 'About',
     description:
@@ -14,7 +16,6 @@ export const metadata: Metadata = {
 type Hobby = {
     title: string;
     description: string;
-    color: string;
     icon: LucideIcon;
 };
 
@@ -23,21 +24,18 @@ const hobbies: Hobby[] = [
         title: 'Training',
         description:
             'My biggest passion. Gym, running, and pretty much anything else. I find it energising rather than draining.',
-        color: '#1D93F3',
         icon: Dumbbell,
     },
     {
         title: 'Music',
         description:
             'I listen daily and play most days too. Fun fact, I play three instruments, guitar, bass, and piano.',
-        color: '#E96FA6',
         icon: Music,
     },
     {
         title: 'Food',
         description:
             "I love eating good food. I like to cook, and lately I've gotten into baking bread.",
-        color: '#1ABA87',
         icon: Sandwich,
     },
 ];
@@ -46,12 +44,13 @@ export default function About() {
     return (
         <section
             aria-label="About"
-            className="flex flex-col items-center pt-24 md:pt-28 gap-4 md:gap-8"
+            className="flex flex-col pt-24 md:pt-28 gap-16 md:gap-24"
         >
-            <div className="flex flex-col md:flex-row items-center justify-around gap-8 w-full">
-                <div className="flex flex-col gap-2 order-2 md:order-1">
+            {/* Text from the left edge, photo to the right edge, like the other pages. */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start w-full">
+                <div className="flex flex-col gap-4 md:gap-6 order-2 md:order-1 md:col-span-7">
                     <h1 className="type-h1">Åke Flatholm</h1>
-                    <div className="flex flex-col gap-2 type-body w-full md:max-w-lg">
+                    <div className="flex flex-col gap-3 type-body max-w-[65ch]">
                         <p>
                             I&apos;m a UX designer and developer based in Umeå,
                             Sweden. I enjoy working across the full process of a
@@ -82,49 +81,55 @@ export default function About() {
                     height={520}
                     loading="eager"
                     style={{ height: 'auto' }}
-                    className="rounded-3xl order-1 md:order-2 w-64 md:w-96"
+                    className="order-1 md:order-2 w-64 md:w-full md:col-start-9 md:col-span-4"
                 />
             </div>
 
-            <div className="flex flex-col gap-2 md:gap-4 w-full">
+            <div className="flex flex-col gap-6 md:gap-8 w-full">
                 <h2 className="type-h2">Get to know me</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {hobbies.map((hobby) => {
                         const Icon = hobby.icon;
                         return (
-                            <div
-                                key={hobby.title}
-                                style={{ background: hobby.color }}
-                                className="flex flex-col gap-2 text-background px-6 py-5 rounded-3xl"
-                            >
-                                <div className="flex flex-row gap-2 items-center">
-                                    <Icon
-                                        size={24}
-                                        className="text-background opacity-90"
-                                    />
-                                    <p className="type-h3">{hobby.title}</p>
+                            <Reveal key={hobby.title} className="relative pt-4">
+                                <RevealLine />
+                                <div className="flex flex-col gap-2">
+                                    <div className="flex flex-row gap-2 items-center">
+                                        <Icon
+                                            size={20}
+                                            strokeWidth={1.5}
+                                            aria-hidden="true"
+                                        />
+                                        <p className="type-h3">{hobby.title}</p>
+                                    </div>
+                                    <p className="type-body-sm">
+                                        {hobby.description}
+                                    </p>
                                 </div>
-                                <p className="type-body-sm">
-                                    {hobby.description}
-                                </p>
-                            </div>
+                            </Reveal>
                         );
                     })}
                 </div>
             </div>
 
-            <div className="flex flex-col gap-2 md:gap-4 w-full">
+            <div className="flex flex-col gap-6 md:gap-8 w-full">
                 <h2 className="type-h2">Education</h2>
-                <div className="flex flex-col gap-2 bg-foreground text-background px-6 md:px-8 py-4 rounded-3xl">
-                    <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-16 type-h3 w-full">
-                        <p className="flex-1">
-                            Master of Science in Engineering with a
-                            specialization in Interaction Technology and Design
+                <Reveal className="relative pt-4">
+                    <RevealLine />
+                    <div className="flex flex-col gap-1">
+                        <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-16 type-h3 w-full">
+                            <p className="flex-1">
+                                Master of Science in Engineering with a
+                                specialization in Interaction Technology and
+                                Design
+                            </p>
+                            <p className="whitespace-nowrap">2021 - 2026</p>
+                        </div>
+                        <p className="type-body text-foreground/60">
+                            Umeå University
                         </p>
-                        <p className="whitespace-nowrap">2021 - 2026</p>
                     </div>
-                    <p className="type-body">Umeå University</p>
-                </div>
+                </Reveal>
             </div>
         </section>
     );

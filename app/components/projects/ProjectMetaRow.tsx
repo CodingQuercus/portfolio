@@ -11,7 +11,7 @@ type ProjectMetaRowProps = {
 
 export default function ProjectMetaRow({ items }: ProjectMetaRowProps) {
     return (
-        <dl className="flex flex-col md:flex-row gap-4">
+        <dl className="flex flex-col md:flex-row gap-6 md:gap-8">
             {items.map((item) => (
                 <ProjectMetaItem
                     key={item.label}

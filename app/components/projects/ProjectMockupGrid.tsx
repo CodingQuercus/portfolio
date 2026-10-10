@@ -34,7 +34,7 @@ export default function ProjectMockupGrid({
                     className="flex flex-col gap-2 items-center"
                 >
                     <div
-                        className="rounded-3xl overflow-hidden"
+                        className="overflow-hidden"
                         style={{ aspectRatio: aspectRatio ?? 'auto' }}
                     >
                         <Image

@@ -1,10 +1,7 @@
 'use client';
 
-import { motion, Variants } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import PillButton from './PillButton';
-import { useIntroMode } from './useIntroMode';
-import { EASE_OUT } from './motionTokens';
+import LinkButton from './LinkButton';
 
 import majMockup from '@/public/maj/maj_mockup.png';
 import thesisMockup from '@/public/thesis/thesis_mockup.png';
@@ -14,16 +11,19 @@ import sngMockup from '@/public/sng/sng_mockup.png';
 const projects = [
     {
         title: 'Maj',
+        year: '2026',
+        kind: 'Personal project',
         backgroundColor: '#0F766E',
         description:
             'A full-stack job application tracker built to solve a real problem during my own job search.',
         tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Recharts'],
         mockupImage: majMockup,
         href: '/projects/maj',
-        showExploreLink: true,
     },
     {
         title: 'M.Sc. Thesis',
+        year: '2025',
+        kind: "Master's thesis",
         backgroundColor: '#1D93F3',
         subtitle:
             'Designing Trustworthy CUIs for Reliable Information Retrieval in QMS.',
@@ -39,10 +39,11 @@ const projects = [
         ],
         mockupImage: thesisMockup,
         href: '/projects/thesis',
-        showExploreLink: true,
     },
     {
         title: 'aWAre',
+        year: '2025',
+        kind: 'Course project',
         backgroundColor: '#1ABA87',
         description:
             'A safety app developed in collaboration with marketing students at Edith Cowan University in Perth, providing users with hazard alerts and local community posts across Western Australia.',
@@ -55,10 +56,11 @@ const projects = [
         ],
         mockupImage: awareMockup,
         href: '/projects/aware',
-        showExploreLink: true,
     },
     {
         title: "Sketch'N'Guess",
+        year: '2024',
+        kind: 'Course project',
         backgroundColor: '#E96FA6',
         description:
             'A GPS-based multiplayer drawing and guessing game for mobile, developed during a design sprint using React Native, Node.js, and Socket.io for real-time communication.',
@@ -71,46 +73,25 @@ const projects = [
         ],
         mockupImage: sngMockup,
         href: '/projects/sketchnguess',
-        showExploreLink: true,
     },
 ];
 
-const cardVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-};
-
 export default function Projects() {
-    // Cards fade in on scroll as part of the first-visit intro only;
-    // otherwise they're shown straight away.
-    const introMode = useIntroMode();
-    const playIntro = introMode === 'play';
-
     return (
-        <section className="flex flex-col w-full gap-4">
+        <section className="flex flex-col w-full gap-8 md:gap-12">
             <h2 className="type-h1">Projects</h2>
-            <div className="flex flex-col gap-4 md:gap-6">
-                {projects.map((project) => (
-                    <motion.div
+            <div className="flex flex-col gap-16 md:gap-24">
+                {projects.map((project, i) => (
+                    <ProjectCard
                         key={project.href}
-                        variants={cardVariants}
-                        initial="hidden"
-                        animate={introMode === 'skip' ? 'visible' : undefined}
-                        whileInView={playIntro ? 'visible' : undefined}
-                        viewport={{ once: true, amount: 0.2 }}
-                        transition={
-                            playIntro
-                                ? { duration: 0.8, ease: EASE_OUT }
-                                : { duration: 0 }
-                        }
-                    >
-                        <ProjectCard {...project} />
-                    </motion.div>
+                        {...project}
+                        reverse={i % 2 === 1}
+                    />
                 ))}
             </div>
-            <PillButton arrow="right" href="/projects">
+            <LinkButton arrow="right" href="/projects">
                 Explore more projects
-            </PillButton>
+            </LinkButton>
         </section>
     );
 }

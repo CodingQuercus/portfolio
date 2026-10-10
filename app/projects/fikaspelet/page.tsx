@@ -21,12 +21,11 @@ export const metadata: Metadata = {
 
 export default function FikaSpeletPage() {
     return (
-        <article className="flex flex-col gap-4 md:gap-6 min-h-screen pt-24 md:pt-28">
+        <article className="flex flex-col gap-12 md:gap-20 min-h-screen pt-24 md:pt-28">
             <BackButton label="Back to projects" />
 
             <ProjectHeader
                 title="FikaSpelet"
-                backgroundColor="#0050A1"
                 description="A web-based marketing game developed in collaboration with Svensk Husman, combining gamification with brand marketing. 2,500 play sessions over two days."
                 tags={[
                     'Design-Build-Test',

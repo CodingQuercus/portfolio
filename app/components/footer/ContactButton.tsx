@@ -1,27 +1,26 @@
-import PillButton from '../PillButton';
+import LinkButton from '../LinkButton';
 
 type ContactButtonProps = {
     href: string;
     label: string;
-    icon: React.ReactNode;
     external?: boolean;
 };
 
+/** A large contact link on a full-width hairline, like the hero tags. */
 export default function ContactButton({
     href,
     label,
-    icon,
     external,
 }: ContactButtonProps) {
     return (
-        <PillButton
+        <LinkButton
             href={href}
             target={external ? '_blank' : undefined}
+            arrow={external ? 'external' : 'right'}
             size="lg"
-            className="w-44 md:w-auto md:flex-1"
+            className="md:flex-1"
         >
-            {icon}
             {label}
-        </PillButton>
+        </LinkButton>
     );
 }

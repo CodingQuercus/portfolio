@@ -7,7 +7,7 @@ import ProjectParagraph from '@/app/components/projects/ProjectParagraph';
 import ProjectImage from '@/app/components/projects/ProjectImage';
 import ProjectMockupGrid from '@/app/components/projects/ProjectMockupGrid';
 import ProjectKeyInsight from '@/app/components/projects/ProjectKeyInsight';
-import PillButton from '@/app/components/PillButton';
+import LinkButton from '@/app/components/LinkButton';
 
 import landingImage from '@/public/maj/maj_start.png';
 import erImage from '@/public/maj/maj_er.png';
@@ -20,7 +20,6 @@ import searchImage from '@/public/maj/maj_search.png';
 import filterImage from '@/public/maj/maj_filter.png';
 import dashboardImage from '@/public/maj/maj_dashboard.png';
 
-import { FaExternalLinkAlt } from 'react-icons/fa';
 
 export const metadata: Metadata = {
     title: 'Maj',
@@ -30,12 +29,11 @@ export const metadata: Metadata = {
 
 export default function MajPage() {
     return (
-        <article className="flex flex-col gap-4 md:gap-6 min-h-screen pt-24 md:pt-28">
+        <article className="flex flex-col gap-12 md:gap-20 min-h-screen pt-24 md:pt-28">
             <BackButton label="Back to projects" />
 
             <ProjectHeader
                 title="Maj"
-                backgroundColor="#0F766E"
                 description="My application journal, a full-stack job application tracker built to solve a real problem during my own job search."
                 tags={[
                     'Next.js',
@@ -164,28 +162,16 @@ export default function MajPage() {
             </ProjectSection>
 
             <div className="flex flex-col md:flex-row gap-4">
-                <PillButton href="https://maj.akeflatholm.com" target="_blank">
+                <LinkButton href="https://maj.akeflatholm.com" target="_blank">
                     Live demo
-                    <FaExternalLinkAlt
-                        size={16}
-                        className="md:w-5 md:h-5"
-                        aria-hidden="true"
-                    />
-                    <span className="sr-only">(opens in new tab)</span>
-                </PillButton>
+                </LinkButton>
 
-                <PillButton
+                <LinkButton
                     href="https://github.com/codingquercus/maj"
                     target="_blank"
                 >
                     View on GitHub
-                    <FaExternalLinkAlt
-                        size={16}
-                        className="md:w-5 md:h-5"
-                        aria-hidden="true"
-                    />
-                    <span className="sr-only">(opens in new tab)</span>
-                </PillButton>
+                </LinkButton>
             </div>
         </article>
     );

@@ -16,7 +16,7 @@ export default function ProjectCodeBlock({
 
     return (
         <figure className="flex flex-col gap-2 md:w-3/4 lg:w-2/3">
-            <div className="rounded-3xl bg-foreground/5 overflow-hidden">
+            <div className="bg-foreground/5 overflow-hidden">
                 <motion.div
                     initial={false}
                     animate={{ height: expanded ? 'auto' : '8rem' }}

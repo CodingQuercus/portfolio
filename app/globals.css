@@ -1,15 +1,25 @@
 @import 'tailwindcss';
 
+/* Light by default. Dark follows the system setting unless the visitor has
+   picked a theme with the toggle, which sets data-theme on <html>. */
 :root {
-    --background: #f7f7f7;
-    --foreground: #040404;
+    --background: #f3f2ef;
+    --foreground: #161616;
+    color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --background: #f7f7f7;
-        --foreground: #040404;
+    :root:not([data-theme='light']) {
+        --background: #121211;
+        --foreground: #e6e4df;
+        color-scheme: dark;
     }
+}
+
+:root[data-theme='dark'] {
+    --background: #121211;
+    --foreground: #e6e4df;
+    color-scheme: dark;
 }
 
 @theme inline {

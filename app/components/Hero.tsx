@@ -231,7 +231,7 @@ export default function Hero() {
     const mobileName = 'text-7xl font-medium leading-none tracking-tighter';
     // Role and location tags: text on a hairline underline.
     const mobileTag = 'relative pb-1';
-    const mobileTagText = 'font-semibold text-left text-sm';
+    const mobileTagText = 'font-medium text-left text-base';
 
     const desktopFirst =
         'text-6xl md:text-8xl lg:text-9xl font-medium tracking-tighter';
@@ -241,7 +241,7 @@ export default function Hero() {
     const desktopTag =
         'relative flex-1 self-end pb-2 md:pb-3 mb-[8px] md:mb-[13px] lg:mb-[18px]';
     const desktopTagText =
-        'font-semibold text-left text-sm md:text-xl xl:text-2xl';
+        'font-medium text-left text-base md:text-2xl lg:text-3xl xl:text-4xl';
 
     return (
         <section

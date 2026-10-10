@@ -13,8 +13,8 @@ export default function ProjectImage({
 }: ProjectImageProps) {
     return (
         <div className="flex flex-col gap-1 md:gap-2 md:w-3/4 lg:w-2/3 mx-auto">
-            <div className="rounded-3xl overflow-hidden">
-                <Image src={src} alt={alt} className="rounded-3xl w-full" />
+            <div className="overflow-hidden">
+                <Image src={src} alt={alt} className="w-full" />
             </div>
             <figcaption className="type-caption text-center">
                 {caption}

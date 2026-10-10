@@ -6,7 +6,7 @@ import ProjectSection from '@/app/components/projects/ProjectSection';
 import ProjectParagraph from '@/app/components/projects/ProjectParagraph';
 import ProjectMockupGrid from '@/app/components/projects/ProjectMockupGrid';
 import ProjectKeyInsight from '@/app/components/projects/ProjectKeyInsight';
-import PillButton from '@/app/components/PillButton';
+import LinkButton from '@/app/components/LinkButton';
 
 import iphoneStart from '@/public/sng/sng_i_start.png';
 import iphoneCreate from '@/public/sng/sng_i_create.png';
@@ -31,7 +31,6 @@ import androidChat from '@/public/sng/sng_a_chat.png';
 import androidCorrect from '@/public/sng/sng_a_correct_guess.png';
 import androidLeaderboard from '@/public/sng/sng_a_leaderboard.png';
 
-import { FaExternalLinkAlt } from 'react-icons/fa';
 
 export const metadata: Metadata = {
     title: "Sketch'N'Guess",
@@ -41,12 +40,11 @@ export const metadata: Metadata = {
 
 export default function SketchPage() {
     return (
-        <article className="flex flex-col gap-4 md:gap-6 min-h-screen pt-24 md:pt-28">
+        <article className="flex flex-col gap-12 md:gap-20 min-h-screen pt-24 md:pt-28">
             <BackButton label="Back to projects" />
 
             <ProjectHeader
                 title="Sketch'N'Guess"
-                backgroundColor="#E96FA6"
                 description="A GPS-based multiplayer drawing and guessing game for mobile, developed during a design sprint using React Native, Node.js and Socket.io for real-time communication."
                 tags={[
                     'Mobile Development',
@@ -263,30 +261,18 @@ export default function SketchPage() {
             </ProjectSection>
 
             <div className="flex flex-col md:flex-row gap-4">
-                <PillButton
+                <LinkButton
                     href="https://github.com/codingquercus/sng-app"
                     target="_blank"
                 >
                     View Client Code on GitHub
-                    <FaExternalLinkAlt
-                        size={16}
-                        className="md:w-5 md:h-5"
-                        aria-hidden="true"
-                    />
-                    <span className="sr-only">(opens in new tab)</span>
-                </PillButton>
-                <PillButton
+                </LinkButton>
+                <LinkButton
                     href="https://github.com/codingquercus/sng-server"
                     target="_blank"
                 >
                     View Server Code on GitHub
-                    <FaExternalLinkAlt
-                        size={16}
-                        className="md:w-5 md:h-5"
-                        aria-hidden="true"
-                    />
-                    <span className="sr-only">(opens in new tab)</span>
-                </PillButton>
+                </LinkButton>
             </div>
         </article>
     );

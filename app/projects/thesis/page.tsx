@@ -8,7 +8,7 @@ import ProjectProcessList from '@/app/components/projects/ProjectProcessList';
 import ProjectMockupGrid from '@/app/components/projects/ProjectMockupGrid';
 import ProjectStatRow from '@/app/components/projects/ProjectStatRow';
 import ProjectKeyInsight from '@/app/components/projects/ProjectKeyInsight';
-import PillButton from '@/app/components/PillButton';
+import LinkButton from '@/app/components/LinkButton';
 
 import methodImage from '@/public/thesis/thesis_method.png';
 import mockup1 from '@/public/thesis/thesis_mockup_1.png';
@@ -18,7 +18,6 @@ import mockup4 from '@/public/thesis/thesis_mockup_4.png';
 import mockup5 from '@/public/thesis/thesis_mockup_5.png';
 import mockup6 from '@/public/thesis/thesis_mockup_6.png';
 
-import { FaExternalLinkAlt } from 'react-icons/fa';
 import ProjectImage from '@/app/components/projects/ProjectImage';
 
 export const metadata: Metadata = {
@@ -29,12 +28,11 @@ export const metadata: Metadata = {
 
 export default function ThesisPage() {
     return (
-        <article className="flex flex-col gap-4 md:gap-6 min-h-screen pt-24 md:pt-28">
+        <article className="flex flex-col gap-12 md:gap-20 min-h-screen pt-24 md:pt-28">
             <BackButton label="Back to projects" />
 
             <ProjectHeader
                 title="Designing Trustworthy CUIs for Reliable Information Retrieval"
-                backgroundColor="#1D93F3"
                 description="A design thinking study exploring how conversational interfaces can be designed to support reliable, AI-driven information retrieval in quality management systems, with a focus on transparency and user trust."
                 tags={[
                     'M.Sc. Thesis',
@@ -147,7 +145,7 @@ export default function ThesisPage() {
                     ]}
                 />
 
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-10 md:gap-12">
                     <ProjectStatRow
                         stats={[
                             {
@@ -179,18 +177,12 @@ export default function ThesisPage() {
                 </div>
             </ProjectSection>
 
-            <PillButton
+            <LinkButton
                 href="https://urn.kb.se/resolve?urn=urn:nbn:se:umu:diva-249334"
                 target="_blank"
             >
                 Read the full thesis
-                <FaExternalLinkAlt
-                    size={16}
-                    className="md:w-5 md:h-5"
-                    aria-hidden="true"
-                />
-                <span className="sr-only">(opens in new tab)</span>
-            </PillButton>
+            </LinkButton>
         </article>
     );
 }

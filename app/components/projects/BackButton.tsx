@@ -1,4 +1,4 @@
-import PillButton from '@/app/components/PillButton';
+import LinkButton from '@/app/components/LinkButton';
 
 type BackButtonProps = {
     label: string;
@@ -6,8 +6,9 @@ type BackButtonProps = {
 
 export default function BackButton({ label }: BackButtonProps) {
     return (
-        <PillButton arrow="left" href="/projects">
+        // Pulled up towards the title, which follows it with a section-sized gap.
+        <LinkButton arrow="left" href="/projects" className="-mb-6 md:-mb-12">
             {label}
-        </PillButton>
+        </LinkButton>
     );
 }

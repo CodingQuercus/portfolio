@@ -10,19 +10,15 @@ export default function ProcessListItem({
     information,
 }: ProcessListItemProps) {
     return (
-        <li className="flex flex-col text-background gap-2">
-            <div className="flex flex-row items-center gap-3">
-                <span
-                    aria-hidden="true"
-                    className="flex justify-center items-center bg-foreground text-background text-lg md:text-xl font-medium rounded-full w-8 h-8 md:w-10 md:h-10 shrink-0"
-                >
-                    {number}
-                </span>
-                <p className="type-h3 text-foreground">{title}</p>
-            </div>
-            <p className="type-body text-foreground w-full lg:w-4/5">
-                {information}
-            </p>
+        <li className="grid grid-cols-[2.5rem_minmax(0,1fr)] md:grid-cols-[4rem_minmax(0,1fr)] gap-y-2 border-t border-foreground/20 pt-4">
+            <span
+                aria-hidden="true"
+                className="type-h3 text-foreground/60 tabular-nums"
+            >
+                {number.padStart(2, '0')}
+            </span>
+            <p className="type-h3">{title}</p>
+            <p className="type-body col-start-2 max-w-3xl">{information}</p>
         </li>
     );
 }

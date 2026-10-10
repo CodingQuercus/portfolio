@@ -10,7 +10,8 @@ export const metadata: Metadata = {
 const projects = [
     {
         title: 'Maj',
-        backgroundColor: '#0F766E',
+        year: '2026',
+        kind: 'Personal project',
         description:
             'A full-stack job application tracker built to solve a real problem during my own job search.',
         tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Recharts'],
@@ -18,7 +19,8 @@ const projects = [
     },
     {
         title: 'M.Sc. Thesis',
-        backgroundColor: '#1D93F3',
+        year: '2025',
+        kind: "Master's thesis",
         description:
             'A design thinking study exploring how conversational interfaces can be designed to support reliable information retrieval in quality management systems, with a focus on transparency and user trust.',
         tags: [
@@ -31,7 +33,8 @@ const projects = [
     },
     {
         title: 'aWAre',
-        backgroundColor: '#1ABA87',
+        year: '2025',
+        kind: 'Course project',
         description:
             'A safety app developed in collaboration with marketing students at Edith Cowan University in Perth, providing users with hazard alerts and local community posts across Western Australia.',
         tags: [
@@ -44,7 +47,8 @@ const projects = [
     },
     {
         title: 'BouldR',
-        backgroundColor: '#EA9734',
+        year: '2025',
+        kind: 'Course project',
         description:
             'A native Android app for climbers who want to log routes, track progress and review their sessions.',
         tags: ['Jetpack Compose', 'Room', 'MVVM', 'CameraX'],
@@ -52,7 +56,8 @@ const projects = [
     },
     {
         title: "Sketch'N'Guess",
-        backgroundColor: '#E96FA6',
+        year: '2024',
+        kind: 'Course project',
         description:
             'A GPS-based multiplayer drawing and guessing game for mobile, developed during a design sprint using React Native, Node.js, and Socket.io for real-time communication.',
         tags: ['React Native', 'Node.js', 'Socket.io', 'Figma'],
@@ -60,7 +65,8 @@ const projects = [
     },
     {
         title: 'FikaSpelet',
-        backgroundColor: '#0050A1',
+        year: '2024',
+        kind: 'Course project',
         description:
             'A web-based mobile game developed in collaboration with a company using the Design-Build-Test method, combining gamification with brand marketing and resulting in 2,500 play sessions over two days.',
         tags: ['React', 'ASP .NET Core', 'Phaser'],
@@ -70,10 +76,10 @@ const projects = [
 
 export default function ProjectsPage() {
     return (
-        <section className="flex flex-col gap-4 pt-24 md:pt-28">
+        <section className="flex flex-col gap-8 md:gap-12 pt-24 md:pt-28">
             <h1 className="type-h1">Projects</h1>
 
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 md:gap-y-20">
                 {projects.map((project, index) => (
                     <ProjectCardMini
                         {...project}
