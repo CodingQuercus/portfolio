@@ -22,6 +22,8 @@ const splitTransition: Transition = {
     layout: { duration: SPLIT_DURATION, ease: EASE_IN_OUT },
 };
 const instant: Transition = { duration: 0 };
+// How long after a tag starts sliding in that its underline starts drawing.
+const UNDERLINE_LAG = 0.5;
 
 type Phase = 'typing' | 'split';
 
@@ -137,6 +139,29 @@ function IntroName({
     );
 }
 
+/** The hairline under a tag; draws left to right once the text has arrived. */
+function Underline({
+    show,
+    animate,
+    delay,
+}: {
+    show: boolean;
+    animate: boolean;
+    delay: number;
+}) {
+    return (
+        <motion.span
+            aria-hidden="true"
+            className="absolute inset-x-0 bottom-0 h-px bg-foreground origin-left"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: show ? 1 : 0 }}
+            transition={
+                animate ? { duration: 0.9, ease: EASE_IN_OUT, delay } : instant
+            }
+        />
+    );
+}
+
 function SlideIn({
     children,
     className,
@@ -204,17 +229,19 @@ export default function Hero() {
     const animate = mode === 'play';
 
     const mobileName = 'text-7xl font-medium leading-none tracking-tighter';
-    const mobilePill = 'rounded-full bg-foreground px-4 py-2';
-    const mobilePillText = 'font-medium text-background text-center text-sm';
+    // Role and location tags: text on a hairline underline.
+    const mobileTag = 'relative pb-1';
+    const mobileTagText = 'font-semibold text-left text-sm';
 
     const desktopFirst =
         'text-6xl md:text-8xl lg:text-9xl font-medium tracking-tighter';
     const desktopLast =
         'text-4xl md:text-8xl lg:text-9xl font-medium tracking-tighter';
-    const desktopPill =
-        'flex-1 rounded-full bg-foreground px-2 py-2 sm:p-4 md:p-6 lg:px-12 lg:py-12';
-    const desktopPillText =
-        'font-medium text-background text-center text-sm md:text-xl xl:text-2xl';
+    // Bottom margin lifts each underline onto the name's baseline.
+    const desktopTag =
+        'relative flex-1 self-end pb-2 md:pb-3 mb-[8px] md:mb-[13px] lg:mb-[18px]';
+    const desktopTagText =
+        'font-semibold text-left text-sm md:text-xl xl:text-2xl';
 
     return (
         <section
@@ -258,24 +285,36 @@ export default function Hero() {
                         animate={animate}
                         className={mobileName}
                     />
-                    <div className="flex flex-col gap-2 flex-1">
+                    <div className="flex flex-col gap-3 flex-1">
                         <SlideIn
                             from="right"
                             show={split}
                             animate={animate}
                             delay={PILLS_DELAY}
-                            className={mobilePill}
+                            className={mobileTag}
                         >
-                            <p className={mobilePillText}>UX Designer</p>
+                            <p className={mobileTagText}>UX Designer</p>
+                            <Underline
+                                show={split}
+                                animate={animate}
+                                delay={PILLS_DELAY + UNDERLINE_LAG}
+                            />
                         </SlideIn>
                         <SlideIn
                             from="right"
                             show={split}
                             animate={animate}
                             delay={PILLS_DELAY + PILL_STAGGER}
-                            className={mobilePill}
+                            className={mobileTag}
                         >
-                            <p className={mobilePillText}>Developer</p>
+                            <p className={mobileTagText}>Developer</p>
+                            <Underline
+                                show={split}
+                                animate={animate}
+                                delay={
+                                    PILLS_DELAY + PILL_STAGGER + UNDERLINE_LAG
+                                }
+                            />
                         </SlideIn>
                     </div>
                 </div>
@@ -293,11 +332,14 @@ export default function Hero() {
                     show={split}
                     animate={animate}
                     delay={PILLS_DELAY}
-                    className="block rounded-full bg-foreground px-4 py-2 w-full"
+                    className={`block w-full ${mobileTag}`}
                 >
-                    <p className="font-medium text-background text-center text-sm">
-                        Umeå, Sweden
-                    </p>
+                    <p className={mobileTagText}>Umeå, Sweden</p>
+                    <Underline
+                        show={split}
+                        animate={animate}
+                        delay={PILLS_DELAY + UNDERLINE_LAG}
+                    />
                 </SlideIn>
                 <Tagline
                     show={split}
@@ -312,7 +354,7 @@ export default function Hero() {
                 aria-hidden="true"
                 className="hidden md:flex md:flex-col md:gap-4"
             >
-                <div className="flex flex-row items-center gap-1 md:gap-4 w-full">
+                <div className="flex flex-row items-center gap-2 md:gap-8 w-full">
                     <NameSlot
                         text={FIRST}
                         layoutId="desktop-first"
@@ -325,29 +367,44 @@ export default function Hero() {
                         show={split}
                         animate={animate}
                         delay={PILLS_DELAY}
-                        className={desktopPill}
+                        className={desktopTag}
                     >
-                        <p className={desktopPillText}>UX Designer</p>
+                        <p className={desktopTagText}>UX Designer</p>
+                        <Underline
+                            show={split}
+                            animate={animate}
+                            delay={PILLS_DELAY + UNDERLINE_LAG}
+                        />
                     </SlideIn>
                     <SlideIn
                         from="right"
                         show={split}
                         animate={animate}
                         delay={PILLS_DELAY + PILL_STAGGER}
-                        className={desktopPill}
+                        className={desktopTag}
                     >
-                        <p className={desktopPillText}>Developer</p>
+                        <p className={desktopTagText}>Developer</p>
+                        <Underline
+                            show={split}
+                            animate={animate}
+                            delay={PILLS_DELAY + PILL_STAGGER + UNDERLINE_LAG}
+                        />
                     </SlideIn>
                 </div>
-                <div className="flex flex-row items-center gap-1 md:gap-4 w-full">
+                <div className="flex flex-row items-center gap-2 md:gap-8 w-full">
                     <SlideIn
                         from="left"
                         show={split}
                         animate={animate}
                         delay={PILLS_DELAY}
-                        className={desktopPill}
+                        className={desktopTag}
                     >
-                        <p className={desktopPillText}>Umeå, Sweden</p>
+                        <p className={desktopTagText}>Umeå, Sweden</p>
+                        <Underline
+                            show={split}
+                            animate={animate}
+                            delay={PILLS_DELAY + UNDERLINE_LAG}
+                        />
                     </SlideIn>
                     <NameSlot
                         text={LAST}
