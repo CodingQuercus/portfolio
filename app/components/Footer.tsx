@@ -42,7 +42,7 @@ export default function Footer() {
                         target="_blank"
                         arrow="down"
                     >
-                        Svenska
+                        <span lang="sv">Svenska</span>
                     </LinkButton>
                 </div>
             </div>

@@ -10,7 +10,7 @@ export default function ProjectMetaItem({
 }: ProjectMetaItemProps) {
     return (
         <div className="flex flex-col flex-1 gap-1 border-b border-foreground pb-3">
-            <dt className="type-small text-foreground/60">{label}</dt>
+            <dt className="type-small text-foreground/70">{label}</dt>
             <dd className="type-h3">{information}</dd>
         </div>
     );

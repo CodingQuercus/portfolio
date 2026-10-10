@@ -22,7 +22,10 @@ export default function ProjectCodeBlock({
                     animate={{ height: expanded ? 'auto' : '8rem' }}
                     transition={{ duration: 0.4, ease: 'easeInOut' }}
                 >
+                    {/* Focusable so keyboard users can scroll long lines sideways. */}
                     <pre
+                        tabIndex={0}
+                        aria-label={description ?? 'Code example'}
                         className={`p-4 md:p-6 overflow-x-auto text-sm leading-relaxed transition-all duration-300 ${expanded ? '' : 'max-h-32 mask-[linear-gradient(to_bottom,black_40%,transparent_100%)]'}`}
                     >
                         <code>{code}</code>
@@ -42,7 +45,7 @@ export default function ProjectCodeBlock({
 
                 <button
                     onClick={() => setExpanded(!expanded)}
-                    className="w-full py-3 text-sm text-foreground/60 hover:text-foreground/80 transition-colors border-t border-foreground/10"
+                    className="w-full py-3 text-sm text-foreground/70 hover:text-foreground/80 transition-colors border-t border-foreground/10"
                 >
                     {expanded ? 'Show less' : 'Show full implementation'}
                 </button>

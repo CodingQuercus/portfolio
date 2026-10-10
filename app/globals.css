@@ -35,6 +35,14 @@
     --font-mono: var(--font-montserrat);
 }
 
+@layer base {
+    /* One visible focus style for keyboard users; components may refine it. */
+    :focus-visible {
+        outline: 2px solid var(--foreground);
+        outline-offset: 4px;
+    }
+}
+
 body {
     background: var(--background);
     color: var(--foreground);
@@ -74,5 +82,5 @@ html {
     @apply text-sm;
 }
 @utility type-caption {
-    @apply text-sm text-foreground/60;
+    @apply text-sm text-foreground/70;
 }

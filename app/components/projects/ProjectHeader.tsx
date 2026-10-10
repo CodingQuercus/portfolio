@@ -24,7 +24,7 @@ export default function ProjectHeader({
                 <h1 className="type-h1 text-balance">{title}</h1>
                 <p className="type-body max-w-3xl">{description}</p>
                 <ul
-                    className="flex flex-row flex-wrap gap-x-4 gap-y-1 type-small text-foreground/60"
+                    className="flex flex-row flex-wrap gap-x-4 gap-y-1 type-small text-foreground/70"
                     aria-label="Project tags"
                 >
                     {tags.map((tag) => (

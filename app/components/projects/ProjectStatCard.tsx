@@ -19,7 +19,7 @@ export default function ProjectStatCard({
             </p>
             <p className="type-h3">{label}</p>
             {subtitle && (
-                <p className="type-small text-foreground/60">{subtitle}</p>
+                <p className="type-small text-foreground/70">{subtitle}</p>
             )}
         </div>
     );

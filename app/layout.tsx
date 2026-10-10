@@ -64,10 +64,26 @@ export default function RootLayout({
             <body
                 className={`${MontserratFont.variable} antialiased bg-background`}
             >
+                <a
+                    href="#main"
+                    className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-background focus:px-4 focus:py-2 focus:border focus:border-foreground"
+                >
+                    Skip to content
+                </a>
                 <MotionProvider>
                     <Navbar />
-                    <div className="px-4 md:px-8 lg:px-12 max-w-7xl mx-auto flex flex-col min-h-screen">
-                        {children}
+                    {/* "page" is made inert while the mobile menu is open. */}
+                    <div
+                        id="page"
+                        className="px-4 md:px-8 lg:px-12 max-w-7xl mx-auto flex flex-col min-h-screen"
+                    >
+                        <main
+                            id="main"
+                            tabIndex={-1}
+                            className="flex flex-col focus:outline-none"
+                        >
+                            {children}
+                        </main>
                         <Footer />
                     </div>
                 </MotionProvider>

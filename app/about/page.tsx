@@ -125,7 +125,7 @@ export default function About() {
                             </p>
                             <p className="whitespace-nowrap">2021 - 2026</p>
                         </div>
-                        <p className="type-body text-foreground/60">
+                        <p className="type-body text-foreground/70">
                             Umeå University
                         </p>
                     </div>

@@ -44,7 +44,7 @@ export default function ProjectCard({
             className="relative grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 pt-3"
         >
             <RevealLine />
-            <div className="md:col-span-2 flex justify-between gap-4 type-small text-foreground/60 md:mb-4">
+            <div className="md:col-span-2 flex justify-between gap-4 type-small text-foreground/70 md:mb-4">
                 <span className="tabular-nums">{year}</span>
                 <span className="text-right">{kind}</span>
             </div>
@@ -57,7 +57,7 @@ export default function ProjectCard({
                 </div>
                 <p className="type-body-sm max-w-prose">{description}</p>
                 <ul
-                    className="flex flex-row flex-wrap gap-x-4 gap-y-1 type-small text-foreground/60"
+                    className="flex flex-row flex-wrap gap-x-4 gap-y-1 type-small text-foreground/70"
                     aria-label="Project tags"
                 >
                     {tags.map((tag) => (

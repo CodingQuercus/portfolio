@@ -23,14 +23,14 @@ export default function ProjectCardMini({
         <Reveal as="li" className="relative flex flex-col gap-4 pt-3">
             <RevealLine />
             <div className="flex flex-col gap-4 flex-1">
-                <p className="flex justify-between gap-4 type-small text-foreground/60 mb-2">
+                <p className="flex justify-between gap-4 type-small text-foreground/70 mb-2">
                     <span className="tabular-nums">{year}</span>
                     <span className="text-right">{kind}</span>
                 </p>
                 <h2 className="type-card-title">{title}</h2>
                 <p className="type-body-sm line-clamp-3">{description}</p>
                 <ul
-                    className="flex flex-row flex-wrap gap-x-4 gap-y-1 type-small text-foreground/60"
+                    className="flex flex-row flex-wrap gap-x-4 gap-y-1 type-small text-foreground/70"
                     aria-label="Project tags"
                 >
                     {tags.map((tag) => (

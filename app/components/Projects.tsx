@@ -18,6 +18,8 @@ const projects = [
             'A full-stack job application tracker built to solve a real problem during my own job search.',
         tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Recharts'],
         mockupImage: majMockup,
+        mockupAlt:
+            'Maj on a laptop and a phone, showing the list of job applications.',
         href: '/projects/maj',
     },
     {
@@ -38,6 +40,8 @@ const projects = [
             'Figma',
         ],
         mockupImage: thesisMockup,
+        mockupAlt:
+            'The conversational search prototype from the thesis, shown on a laptop.',
         href: '/projects/thesis',
     },
     {
@@ -55,6 +59,8 @@ const projects = [
             'Figma',
         ],
         mockupImage: awareMockup,
+        mockupAlt:
+            'aWAre shown on three phones, including the hazard map.',
         href: '/projects/aware',
     },
     {
@@ -72,6 +78,7 @@ const projects = [
             'Figma',
         ],
         mockupImage: sngMockup,
+        mockupAlt: "Sketch'N'Guess on three phones during a game.",
         href: '/projects/sketchnguess',
     },
 ];
