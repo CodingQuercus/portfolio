@@ -6,6 +6,9 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
 import PillButton from './PillButton';
+import { NAVBAR_DELAY } from './introTimeline';
+import { useIntroMode } from './useIntroMode';
+import { EASE_IN_OUT, EASE_OUT } from './motionTokens';
 
 type NavLink = {
     href: string;
@@ -22,6 +25,11 @@ const navLinks: NavLink[] = [
 export default function Navbar() {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const introMode = useIntroMode();
+    // Server-rendered hidden on the home page until we know whether the
+    // first-visit intro plays; then it drops in after it, or shows at once.
+    const [introOnLoad] = useState(pathname === '/');
+    const hiddenNav = { y: '-120%' };
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -61,12 +69,30 @@ export default function Navbar() {
 
     return (
         <>
-            <nav
+            <motion.nav
+                initial={introOnLoad ? hiddenNav : false}
+                animate={
+                    introOnLoad && introMode === 'pending'
+                        ? hiddenNav
+                        : { y: 0 }
+                }
+                transition={
+                    introMode === 'play'
+                        ? {
+                              duration: 1,
+                              ease: EASE_OUT,
+                              delay: NAVBAR_DELAY,
+                          }
+                        : { duration: 0 }
+                }
                 className="fixed z-50 top-0 inset-x-0 bg-background shadow-md"
                 aria-label="Main navigation"
             >
                 <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-4 flex items-center justify-between">
-                    <motion.div whileHover={{ scale: 1.1 }}>
+                    <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.5, ease: EASE_IN_OUT }}
+                    >
                         <Link
                             href="/"
                             className="font-semibold text-lg"
@@ -97,7 +123,7 @@ export default function Navbar() {
                                 initial="rest"
                                 animate="rest"
                             >
-                                <Link href={link.href} className="text-lg">
+                                <Link href={link.href} className="text-base">
                                     {link.label}
                                 </Link>
                                 <motion.span
@@ -111,8 +137,8 @@ export default function Navbar() {
                                         hover: { width: '100%' },
                                     }}
                                     transition={{
-                                        duration: 0.25,
-                                        ease: 'easeOut',
+                                        duration: 0.5,
+                                        ease: EASE_IN_OUT,
                                     }}
                                     className="absolute left-0 -bottom-1 h-0.5 bg-foreground"
                                 />
@@ -158,7 +184,7 @@ export default function Navbar() {
                         />
                     </button>
                 </div>
-            </nav>
+            </motion.nav>
 
             <AnimatePresence>
                 {isOpen && (
@@ -167,7 +193,7 @@ export default function Navbar() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.25 }}
+                            transition={{ duration: 0.4, ease: EASE_OUT }}
                             onClick={() => setIsOpen(false)}
                             className="fixed inset-0 bg-black/40 z-40 md:hidden"
                             aria-hidden="true"
@@ -179,8 +205,8 @@ export default function Navbar() {
                             exit={{ x: '100%' }}
                             transition={{
                                 type: 'tween',
-                                duration: 0.3,
-                                ease: 'easeOut',
+                                duration: 0.5,
+                                ease: EASE_OUT,
                             }}
                             className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-background shadow-xl z-40 md:hidden flex flex-col items-center justify-center gap-3 px-6 pt-24 pb-8"
                             id="mobile-menu"

@@ -71,9 +71,7 @@ const projects = [
 export default function ProjectsPage() {
     return (
         <section className="flex flex-col gap-4 pt-24 md:pt-28">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold">
-                Projects
-            </h1>
+            <h1 className="type-h1">Projects</h1>
 
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 {projects.map((project, index) => (

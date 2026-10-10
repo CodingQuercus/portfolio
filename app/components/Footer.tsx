@@ -17,9 +17,7 @@ export default function Footer() {
         >
             <div className="flex flex-col gap-2 md:gap-4">
                 <div className="flex flex-col gap-2 md:gap-4">
-                    <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold">
-                        Contact
-                    </h2>
+                    <h2 className="type-h1">Contact</h2>
                     <div className="flex flex-row flex-wrap gap-2 md:gap-4 w-full">
                         <ContactButton
                             href="https://www.linkedin.com/in/akeflatholm/"
@@ -44,9 +42,7 @@ export default function Footer() {
                 </div>
 
                 <div className="flex flex-col gap-2 md:gap-4">
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold">
-                        Download CV
-                    </h3>
+                    <h3 className="type-h2">Download CV</h3>
                     <div className="flex flex-row flex-wrap gap-2 md:gap-4">
                         <PillButton href="/AF_CV_EN.pdf" target="_blank">
                             <FaDownload size={14} aria-hidden="true" />
@@ -62,7 +58,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <p className="text-sm text-foreground/60">
+            <p className="type-caption">
                 © {new Date().getFullYear()} Åke Flatholm
             </p>
         </footer>

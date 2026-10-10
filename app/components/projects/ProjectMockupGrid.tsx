@@ -34,7 +34,7 @@ export default function ProjectMockupGrid({
                     className="flex flex-col gap-2 items-center"
                 >
                     <div
-                        className="rounded-2xl md:rounded-3xl overflow-hidden"
+                        className="rounded-3xl overflow-hidden"
                         style={{ aspectRatio: aspectRatio ?? 'auto' }}
                     >
                         <Image
@@ -44,7 +44,7 @@ export default function ProjectMockupGrid({
                         />
                     </div>
                     {mockup.caption && (
-                        <figcaption className="text-sm text-center text-foreground/60">
+                        <figcaption className="type-caption text-center">
                             {mockup.caption}
                         </figcaption>
                     )}

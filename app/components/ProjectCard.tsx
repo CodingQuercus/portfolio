@@ -1,8 +1,6 @@
 'use client';
-import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import { motion } from 'framer-motion';
-import { FaChevronRight } from 'react-icons/fa';
+import PillButton from './PillButton';
 
 type ProjectCardProps = {
     title: string;
@@ -36,30 +34,30 @@ export default function ProjectCard({
 
     return (
         <div
-            className="flex flex-col gap-6 rounded-3xl p-6 md:p-8 min-h-[424px] md:min-h-0"
+            className={`flex flex-col gap-6 rounded-3xl p-6 md:p-8 ${isCompact ? '' : 'min-h-[424px] md:min-h-0'}`}
             style={{ backgroundColor }}
         >
             {isCompact ? (
                 <div className="flex flex-col gap-4">
-                    <Heading className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-background w-full">
+                    <Heading className="type-card-title text-background w-full">
                         {title}
                     </Heading>
-                    <p className="text-background text-base md:text-lg opacity-90 w-full lg:w-5/6">
+                    <p className="type-body-sm text-background w-full lg:w-5/6">
                         {description}
                     </p>
                 </div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
                     <div className="flex flex-col gap-2">
-                        <Heading className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-background w-full">
+                        <Heading className="type-card-title text-background w-full">
                             {title}
                         </Heading>
                         {subtitle && (
-                            <p className="text-background text-lg md:text-xl font-medium">
+                            <p className="type-h3 text-background">
                                 {subtitle}
                             </p>
                         )}
-                        <p className="text-background text-base md:text-lg w-full">
+                        <p className="type-body-sm text-background w-full">
                             {description}
                         </p>
                     </div>
@@ -88,26 +86,22 @@ export default function ProjectCard({
                     {tags.map((tag) => (
                         <li
                             key={tag}
-                            className="text-background text-sm md:text-base opacity-90"
+                            className="type-small text-background opacity-90"
                         >
                             {tag}
                         </li>
                     ))}
                 </ul>
                 {showExploreLink && href && (
-                    <Link
+                    <PillButton
+                        arrow="right"
                         href={href}
-                        className="w-fit shrink-0 self-end md:self-auto"
-                        aria-label={`Explore project: ${title}`}
+                        variant="inverse"
+                        ariaLabel={`Explore project: ${title}`}
+                        className="shrink-0 self-end md:self-auto"
                     >
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            className="flex flex-row items-center gap-2 bg-background text-foreground px-4 md:px-6 py-2 md:py-3 rounded-full w-fit hover:bg-foreground hover:text-background transition-colors text-base"
-                        >
-                            Explore project
-                            <FaChevronRight size={16} aria-hidden="true" />
-                        </motion.div>
-                    </Link>
+                        Explore project
+                    </PillButton>
                 )}
             </div>
         </div>
