@@ -10,15 +10,15 @@ export default function ProjectStatCard({
     subtitle,
 }: StatCardProps) {
     return (
-        <div className="flex flex-col flex-1 bg-darkGrey text-background rounded-2xl md:rounded-3xl px-8 md:px-12 lg:px-16 py-6 md:py-8">
+        <div className="flex flex-col flex-1 bg-foreground text-background rounded-3xl px-8 md:px-12 lg:px-16 py-6 md:py-8">
             <p
-                className="text-5xl md:text-6xl lg:text-7xl font-bold"
+                className="text-5xl md:text-6xl lg:text-7xl font-medium tracking-tighter"
                 aria-label={`Score: ${value}`}
             >
                 {value}
             </p>
-            <p className="text-base md:text-lg">{label}</p>
-            {subtitle && <p className="text-sm md:text-base">{subtitle}</p>}
+            <p className="type-body">{label}</p>
+            {subtitle && <p className="type-small">{subtitle}</p>}
         </div>
     );
 }

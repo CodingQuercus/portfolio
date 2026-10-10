@@ -16,7 +16,7 @@ export default function ProjectCodeBlock({
 
     return (
         <figure className="flex flex-col gap-2 md:w-3/4 lg:w-2/3">
-            <div className="rounded-2xl md:rounded-3xl bg-foreground/5 overflow-hidden">
+            <div className="rounded-3xl bg-foreground/5 overflow-hidden">
                 <motion.div
                     initial={false}
                     animate={{ height: expanded ? 'auto' : '8rem' }}
@@ -48,7 +48,7 @@ export default function ProjectCodeBlock({
                 </button>
             </div>
             {description && (
-                <figcaption className="text-sm text-center text-foreground/60">
+                <figcaption className="type-caption text-center">
                     {description}
                 </figcaption>
             )}

@@ -1,10 +1,10 @@
 'use client';
 
-import { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import PillButton from './PillButton';
-import { ChevronRight } from 'lucide-react';
+import { useIntroMode } from './useIntroMode';
+import { EASE_OUT } from './motionTokens';
 
 import majMockup from '@/public/maj/maj_mockup.png';
 import thesisMockup from '@/public/thesis/thesis_mockup.png';
@@ -17,11 +17,7 @@ const projects = [
         backgroundColor: '#0F766E',
         description:
             'A full-stack job application tracker built to solve a real problem during my own job search.',
-        tags: [
-            'Next.js', 
-            'Supabase', 
-            'Tailwind CSS', 
-            'Recharts'],
+        tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Recharts'],
         mockupImage: majMockup,
         href: '/projects/maj',
         showExploreLink: true,
@@ -76,50 +72,44 @@ const projects = [
         mockupImage: sngMockup,
         href: '/projects/sketchnguess',
         showExploreLink: true,
-    }
+    },
 ];
 
-export default function Projects() {
-    const [shouldAnimate] = useState(() => {
-        if (typeof window === 'undefined') return false;
-        const hasVisited = sessionStorage.getItem('home-visited');
-        if (!hasVisited) {
-            sessionStorage.setItem('home-visited', 'true');
-            return true;
-        }
-        return false;
-    });
+const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+};
 
-    const cardVariants: Variants = {
-        hidden: shouldAnimate ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.5, ease: 'easeOut' },
-        },
-    };
+export default function Projects() {
+    // Cards fade in on scroll as part of the first-visit intro only;
+    // otherwise they're shown straight away.
+    const introMode = useIntroMode();
+    const playIntro = introMode === 'play';
 
     return (
         <section className="flex flex-col w-full gap-4">
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold">
-                Projects
-            </h2>
+            <h2 className="type-h1">Projects</h2>
             <div className="flex flex-col gap-4 md:gap-6">
                 {projects.map((project) => (
                     <motion.div
                         key={project.href}
                         variants={cardVariants}
                         initial="hidden"
-                        whileInView="visible"
+                        animate={introMode === 'skip' ? 'visible' : undefined}
+                        whileInView={playIntro ? 'visible' : undefined}
                         viewport={{ once: true, amount: 0.2 }}
+                        transition={
+                            playIntro
+                                ? { duration: 0.8, ease: EASE_OUT }
+                                : { duration: 0 }
+                        }
                     >
                         <ProjectCard {...project} />
                     </motion.div>
                 ))}
             </div>
-            <PillButton href="/projects">
+            <PillButton arrow="right" href="/projects">
                 Explore more projects
-                <ChevronRight size={24} />
             </PillButton>
         </section>
     );

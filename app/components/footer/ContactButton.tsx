@@ -1,7 +1,4 @@
-'use client';
-
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import PillButton from '../PillButton';
 
 type ContactButtonProps = {
     href: string;
@@ -17,18 +14,14 @@ export default function ContactButton({
     external,
 }: ContactButtonProps) {
     return (
-        <Link
+        <PillButton
             href={href}
             target={external ? '_blank' : undefined}
+            size="lg"
             className="w-44 md:w-auto md:flex-1"
         >
-            <motion.div
-                whileHover={{ translateY: -4 }}
-                className="bg-foreground text-background border border-foreground rounded-full px-4 py-2 md:px-6 md:py-3 lg:py-8 cursor-pointer transition-colors hover:bg-background hover:text-foreground text-base md:text-lg lg:text-xl flex flex-row gap-2 items-center justify-center"
-            >
-                {icon}
-                {label}
-            </motion.div>
-        </Link>
+            {icon}
+            {label}
+        </PillButton>
     );
 }
