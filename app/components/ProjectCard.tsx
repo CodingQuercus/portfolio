@@ -2,6 +2,7 @@ import Image, { StaticImageData } from 'next/image';
 
 import LinkButton from './LinkButton';
 import { Reveal, RevealLine } from './Reveal';
+import RowCover from './RowCover';
 
 type ProjectCardProps = {
     title: string;
@@ -41,9 +42,10 @@ export default function ProjectCard({
     return (
         <Reveal
             as="article"
-            className="relative grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 pt-3"
+            className="group/row relative isolate grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 pt-3 pb-4 px-3 md:px-4"
         >
             <RevealLine />
+            <RowCover href={href} color={backgroundColor} />
             <div className="md:col-span-2 flex justify-between gap-4 type-small text-foreground/70 md:mb-4">
                 <span className="tabular-nums">{year}</span>
                 <span className="text-right">{kind}</span>
@@ -68,7 +70,7 @@ export default function ProjectCard({
                     arrow="right"
                     href={href}
                     ariaLabel={`Explore project: ${title}`}
-                    className="mt-2 md:mt-auto"
+                    className="relative z-10 mt-2 md:mt-auto"
                 >
                     Explore project
                 </LinkButton>

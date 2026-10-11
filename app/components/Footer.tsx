@@ -4,19 +4,19 @@ export default function Footer() {
     return (
         <footer
             id="contact"
-            // On wider screens the footer fills the screen below the navbar.
-            className="mt-24 md:mt-40 pb-8 md:pb-12 md:min-h-[calc(100dvh-5rem)] flex flex-col gap-8 md:gap-12"
+            // Focusable so the navbar's Contact link can move focus here.
+            tabIndex={-1}
+            // On wider screens the footer exactly fills the screen when
+            // scrolled to, matching the page's 120px scroll-padding-top.
+            className="focus:outline-none mt-24 md:mt-40 pb-8 md:pb-12 md:min-h-[calc(100dvh-120px)] flex flex-col gap-8 md:gap-12"
         >
             <h2 className="type-h1">Contact</h2>
 
-            {/* Tiles separated by 1px hairlines: the grid's own colour shows
-                through the 1px gaps between them. */}
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-px bg-foreground/20 border border-foreground/20">
+            {/* Open grid: each tile has only a top hairline, with space between. */}
+            <div className="flex-1 grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-x-6 gap-y-8">
                 <ContactTile
                     href="mailto:hello@akeflatholm.com"
                     kind="internal"
-                    // Shown so the address can be read or copied without a mail app.
-                    label="hello@akeflatholm.com"
                     className="col-span-2 md:row-span-2 md:min-h-64"
                 >
                     Email

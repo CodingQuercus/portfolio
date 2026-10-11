@@ -16,6 +16,7 @@ const projects = [
             'A full-stack job application tracker built to solve a real problem during my own job search.',
         tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Recharts'],
         href: '/projects/maj',
+        color: '#0F766E',
     },
     {
         title: 'M.Sc. Thesis',
@@ -30,6 +31,7 @@ const projects = [
             'Figma',
         ],
         href: '/projects/thesis',
+        color: '#1D93F3',
     },
     {
         title: 'aWAre',
@@ -44,6 +46,7 @@ const projects = [
             'Figma',
         ],
         href: '/projects/aware',
+        color: '#1ABA87',
     },
     {
         title: 'BouldR',
@@ -53,6 +56,7 @@ const projects = [
             'A native Android app for climbers who want to log routes, track progress and review their sessions.',
         tags: ['Jetpack Compose', 'Room', 'MVVM', 'CameraX'],
         href: '/projects/bouldr',
+        color: '#EA9734',
     },
     {
         title: "Sketch'N'Guess",
@@ -62,6 +66,7 @@ const projects = [
             'A GPS-based multiplayer drawing and guessing game for mobile, developed during a design sprint using React Native, Node.js, and Socket.io for real-time communication.',
         tags: ['React Native', 'Node.js', 'Socket.io', 'Figma'],
         href: '/projects/sketchnguess',
+        color: '#E96FA6',
     },
     {
         title: 'FikaSpelet',
@@ -71,6 +76,7 @@ const projects = [
             'A web-based mobile game developed in collaboration with a company using the Design-Build-Test method, combining gamification with brand marketing and resulting in 2,500 play sessions over two days.',
         tags: ['React', 'ASP .NET Core', 'Phaser'],
         href: '/projects/fikaspelet',
+        color: '#0050A1',
     },
 ];
 

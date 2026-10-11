@@ -57,12 +57,23 @@ export default function Navbar() {
         };
     }, [isOpen]);
 
-    const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        document.getElementById('contact')?.scrollIntoView({
-            behavior: 'smooth',
+    // Scrolls to the contact footer and moves keyboard focus there too.
+    const goToContact = () => {
+        const contact = document.getElementById('contact');
+        if (!contact) return;
+        const reduceMotion = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+        ).matches;
+        contact.focus({ preventScroll: true });
+        contact.scrollIntoView({
+            behavior: reduceMotion ? 'auto' : 'smooth',
             block: 'start',
         });
+    };
+
+    const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        goToContact();
     };
 
     const handleMobileContactClick = (
@@ -70,12 +81,8 @@ export default function Navbar() {
     ) => {
         e.preventDefault();
         setIsOpen(false);
-        setTimeout(() => {
-            document.getElementById('contact')?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-            });
-        }, 300);
+        // Wait for the menu to close first.
+        setTimeout(goToContact, 300);
     };
 
     const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -163,37 +170,20 @@ export default function Navbar() {
                                 />
                             </motion.div>
                         ))}
-                        <motion.div
-                            className="relative w-fit"
-                            whileHover="hover"
-                            initial="rest"
-                            animate="rest"
+                        {/* The one solid element in the nav. It scrolls to the
+                            footer, hence the down arrow. */}
+                        <a
+                            href="#contact"
+                            onClick={handleContactClick}
+                            className="inline-flex items-center gap-1.5 rounded-full bg-foreground text-background px-4 py-1.5 text-base font-medium transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] hover:bg-[color-mix(in_srgb,var(--foreground)_82%,var(--background))]"
                         >
-                            {/* Scrolls to the footer, hence the down arrow. */}
-                            <a
-                                href="#contact"
-                                onClick={handleContactClick}
-                                className="text-base inline-flex items-center gap-1"
-                            >
-                                Contact
-                                <ArrowDown
-                                    size={14}
-                                    strokeWidth={1.5}
-                                    aria-hidden="true"
-                                />
-                            </a>
-                            <motion.span
-                                variants={{
-                                    rest: { width: 0 },
-                                    hover: { width: '100%' },
-                                }}
-                                transition={{
-                                    duration: 0.5,
-                                    ease: EASE_IN_OUT,
-                                }}
-                                className="absolute left-0 -bottom-1 h-px bg-foreground"
+                            Contact
+                            <ArrowDown
+                                size={14}
+                                strokeWidth={1.5}
+                                aria-hidden="true"
                             />
-                        </motion.div>
+                        </a>
                         <ThemeToggle />
                     </div>
 
