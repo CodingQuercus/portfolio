@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-import { ArrowDown } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
 import ThemeToggle from './ThemeToggle';
@@ -170,18 +169,22 @@ export default function Navbar() {
                                 />
                             </motion.div>
                         ))}
-                        {/* The one solid element in the nav. It scrolls to the
-                            footer, hence the down arrow. */}
+                        {/* Like the other nav links, but its underline is always
+                            there (soft), drawing solid on hover, to mark it as
+                            the main action. */}
                         <a
                             href="#contact"
                             onClick={handleContactClick}
-                            className="inline-flex items-center gap-1.5 rounded-full bg-foreground text-background px-4 py-1.5 text-base font-medium transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] hover:bg-[color-mix(in_srgb,var(--foreground)_82%,var(--background))]"
+                            className="group relative text-base"
                         >
                             Contact
-                            <ArrowDown
-                                size={14}
-                                strokeWidth={1.5}
+                            <span
                                 aria-hidden="true"
+                                className="absolute inset-x-0 -bottom-1 h-px bg-current opacity-30"
+                            />
+                            <span
+                                aria-hidden="true"
+                                className="absolute inset-x-0 -bottom-1 h-px bg-current origin-right scale-x-0 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:origin-left group-hover:scale-x-100 group-focus-visible:origin-left group-focus-visible:scale-x-100 motion-reduce:transition-none"
                             />
                         </a>
                         <ThemeToggle />
