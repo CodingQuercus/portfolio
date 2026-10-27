@@ -1,6 +1,15 @@
 import type { Metadata } from 'next';
 import ProjectCardMini from '../components/ProjectCardMini';
 
+import majMockup from '@/public/maj/maj_mockup.png';
+import thesisMockup from '@/public/thesis/thesis_mockup.png';
+import awareMockup from '@/public/aware/aware_mockup.png';
+import bouldrHome from '@/public/bouldr/bouldr_home.png';
+import bouldrRoutes from '@/public/bouldr/bouldr_routes.png';
+import bouldrRouteDetail from '@/public/bouldr/bouldr_routedetail.png';
+import sngMockup from '@/public/sng/sng_mockup.png';
+import fsMockup from '@/public/fs/fs_mockup.png';
+
 export const metadata: Metadata = {
     title: 'Projects',
     description:
@@ -16,6 +25,9 @@ const projects = [
             'A full-stack job application tracker built to solve a real problem during my own job search.',
         tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Recharts'],
         href: '/projects/maj',
+        images: [majMockup],
+        imagesAlt:
+            'Maj on a laptop and a phone, showing the list of job applications.',
         color: '#0F766E',
     },
     {
@@ -31,6 +43,9 @@ const projects = [
             'Figma',
         ],
         href: '/projects/thesis',
+        images: [thesisMockup],
+        imagesAlt:
+            'The conversational search prototype from the thesis, shown on a laptop.',
         color: '#1D93F3',
     },
     {
@@ -46,6 +61,8 @@ const projects = [
             'Figma',
         ],
         href: '/projects/aware',
+        images: [awareMockup],
+        imagesAlt: 'aWAre shown on three phones, including the hazard map.',
         color: '#1ABA87',
     },
     {
@@ -56,6 +73,9 @@ const projects = [
             'A native Android app for climbers who want to log routes, track progress and review their sessions.',
         tags: ['Jetpack Compose', 'Room', 'MVVM', 'CameraX'],
         href: '/projects/bouldr',
+        images: [bouldrHome, bouldrRoutes, bouldrRouteDetail],
+        imagesAlt:
+            'BouldR on three phones: the home screen, the route list and a route.',
         color: '#EA9734',
     },
     {
@@ -66,6 +86,8 @@ const projects = [
             'A GPS-based multiplayer drawing and guessing game for mobile, developed during a design sprint using React Native, Node.js, and Socket.io for real-time communication.',
         tags: ['React Native', 'Node.js', 'Socket.io', 'Figma'],
         href: '/projects/sketchnguess',
+        images: [sngMockup],
+        imagesAlt: "Sketch'N'Guess on three phones during a game.",
         color: '#E96FA6',
     },
     {
@@ -76,6 +98,9 @@ const projects = [
             'A web-based mobile game developed in collaboration with a company using the Design-Build-Test method, combining gamification with brand marketing and resulting in 2,500 play sessions over two days.',
         tags: ['React', 'ASP .NET Core', 'Phaser'],
         href: '/projects/fikaspelet',
+        images: [fsMockup],
+        imagesAlt:
+            'FikaSpelet on three phones: the leaderboard, the start screen and the game.',
         color: '#0050A1',
     },
 ];
