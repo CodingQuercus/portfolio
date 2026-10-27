@@ -30,6 +30,9 @@ export default function Navbar() {
     // first-visit intro plays; then it drops in after it, or shows at once.
     const [introOnLoad] = useState(pathname === '/');
     const hiddenNav = { y: '-120%' };
+    // A case study like /projects/maj still counts as being on Projects.
+    const isCurrent = (href: string) =>
+        href === '/' ? pathname === '/' : pathname.startsWith(href);
 
     const menuButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -154,10 +157,9 @@ export default function Navbar() {
                                 <motion.span
                                     variants={{
                                         rest: {
-                                            width:
-                                                pathname === link.href
-                                                    ? '100%'
-                                                    : 0,
+                                            width: isCurrent(link.href)
+                                                ? '100%'
+                                                : 0,
                                         },
                                         hover: { width: '100%' },
                                     }}
@@ -169,23 +171,15 @@ export default function Navbar() {
                                 />
                             </motion.div>
                         ))}
-                        {/* Like the other nav links, but its underline is always
-                            there (soft), drawing solid on hover, to mark it as
-                            the main action. */}
+                        {/* The main action, so a button rather than a link: a
+                            square hairline box, like the site's other lines,
+                            that fills in on hover. */}
                         <a
                             href="#contact"
                             onClick={handleContactClick}
-                            className="group relative text-base"
+                            className="border border-foreground px-5 py-2 text-base transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] hover:bg-foreground hover:text-background focus-visible:bg-foreground focus-visible:text-background motion-reduce:transition-none"
                         >
                             Contact
-                            <span
-                                aria-hidden="true"
-                                className="absolute inset-x-0 -bottom-1 h-px bg-current opacity-30"
-                            />
-                            <span
-                                aria-hidden="true"
-                                className="absolute inset-x-0 -bottom-1 h-px bg-current origin-right scale-x-0 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:origin-left group-hover:scale-x-100 group-focus-visible:origin-left group-focus-visible:scale-x-100 motion-reduce:transition-none"
-                            />
                         </a>
                         <ThemeToggle />
                     </div>
@@ -266,7 +260,7 @@ export default function Navbar() {
                                     isContact: true,
                                 },
                             ].map((link) => {
-                                const isActive = pathname === link.href;
+                                const isActive = isCurrent(link.href);
                                 return (
                                     <Link
                                         key={link.href}
@@ -277,9 +271,11 @@ export default function Navbar() {
                                                 : () => setIsOpen(false)
                                         }
                                         className={`text-lg text-center py-2 underline-offset-8 decoration-1 ${
-                                            isActive
-                                                ? 'underline'
-                                                : 'hover:underline decoration-foreground/40'
+                                            link.isContact
+                                                ? 'mt-4 border border-foreground px-8 py-3 transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] hover:bg-foreground hover:text-background motion-reduce:transition-none'
+                                                : isActive
+                                                  ? 'underline'
+                                                  : 'hover:underline decoration-foreground/40'
                                         }`}
                                     >
                                         {link.label}
