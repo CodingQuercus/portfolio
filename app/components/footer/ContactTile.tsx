@@ -44,7 +44,7 @@ export default function ContactTile({
             href={href}
             target={opensNewTab ? '_blank' : undefined}
             rel={opensNewTab ? 'noopener noreferrer' : undefined}
-            className={`group relative isolate flex flex-col justify-between gap-8 pt-3 pb-4 px-3 md:px-4 min-h-32 border-t border-foreground focus-visible:outline-offset-8 before:absolute before:inset-x-0 before:top-px before:bottom-0 before:-z-10 before:bg-foreground/5 before:opacity-0 before:transition-opacity before:duration-500 before:ease-[cubic-bezier(0.65,0,0.35,1)] hover:before:opacity-100 focus-visible:before:opacity-100 ${className}`}
+            className={`group relative isolate flex flex-col justify-between gap-8 pt-3 pb-4 px-3 md:px-4 min-h-32 md:min-h-40 border-t border-foreground focus-visible:outline-offset-8 before:absolute before:inset-x-0 before:top-px before:bottom-0 before:-z-10 before:bg-foreground/5 before:opacity-0 before:transition-opacity before:duration-500 before:ease-[cubic-bezier(0.65,0,0.35,1)] hover:before:opacity-100 focus-visible:before:opacity-100 ${className}`}
         >
             <span className="flex justify-between items-start gap-4">
                 <span className="type-small text-foreground/70">{label}</span>

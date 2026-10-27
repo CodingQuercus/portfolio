@@ -12,14 +12,19 @@ export default function Footer() {
         >
             <h2 className="type-h1">Contact</h2>
 
-            {/* Open grid: each tile has only a top hairline, with space between. */}
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-x-6 gap-y-8">
+            {/* Open grid: each tile has only a top hairline, with space
+                between. The address gets a row of its own so it can be read
+                at a glance; the other links share the row below. */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8">
                 <ContactTile
                     href="mailto:hello@akeflatholm.com"
                     kind="internal"
-                    className="col-span-2 md:row-span-2 md:min-h-64"
+                    label="Email"
+                    className="col-span-2 md:col-span-4 md:min-h-56"
                 >
-                    Email
+                    <span className="text-[clamp(1.25rem,5.5vw,4rem)]">
+                        hello@akeflatholm.com
+                    </span>
                 </ContactTile>
                 <ContactTile
                     href="https://www.linkedin.com/in/akeflatholm/"
@@ -46,7 +51,7 @@ export default function Footer() {
                 </ContactTile>
             </div>
 
-            <p className="type-caption">
+            <p className="type-caption mt-auto">
                 © {new Date().getFullYear()} Åke Flatholm
             </p>
         </footer>
