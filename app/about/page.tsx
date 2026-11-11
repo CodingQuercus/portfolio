@@ -3,9 +3,6 @@ import Image from 'next/image';
 
 import aboutImage from '@/public/about_img.png';
 
-import { Dumbbell, LucideIcon, Music, Sandwich } from 'lucide-react';
-import { CARD_TEXT } from '../components/cardText';
-
 export const metadata: Metadata = {
     title: 'About',
     description:
@@ -15,8 +12,6 @@ export const metadata: Metadata = {
 type Hobby = {
     title: string;
     description: string;
-    color: string;
-    icon: LucideIcon;
 };
 
 const hobbies: Hobby[] = [
@@ -24,22 +19,16 @@ const hobbies: Hobby[] = [
         title: 'Training',
         description:
             'My biggest passion. Gym, running, and pretty much anything else. I find it energising rather than draining.',
-        color: '#1D93F3',
-        icon: Dumbbell,
     },
     {
         title: 'Music',
         description:
             'I listen daily and play most days too. Fun fact, I play three instruments, guitar, bass, and piano.',
-        color: '#E96FA6',
-        icon: Music,
     },
     {
         title: 'Food',
         description:
             "I love eating good food. I like to cook, and lately I've gotten into baking bread.",
-        color: '#1ABA87',
-        icon: Sandwich,
     },
 ];
 
@@ -89,34 +78,19 @@ export default function About() {
 
             <div className="flex flex-col gap-2 md:gap-4 w-full">
                 <h2 className="type-h2">Get to know me</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
-                    {hobbies.map((hobby) => {
-                        const Icon = hobby.icon;
-                        return (
-                            <div
-                                key={hobby.title}
-                                style={{
-                                    background: hobby.color,
-                                    color: CARD_TEXT,
-                                }}
-                                className="flex flex-col gap-2 px-6 py-5 rounded-3xl"
-                            >
-                                <div className="flex flex-row gap-2 items-center">
-                                    <Icon size={24} />
-                                    <p className="type-h3">{hobby.title}</p>
-                                </div>
-                                <p className="type-body-sm">
-                                    {hobby.description}
-                                </p>
-                            </div>
-                        );
-                    })}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                    {hobbies.map((hobby) => (
+                        <div key={hobby.title} className="flex flex-col gap-2">
+                            <h3 className="type-h3">{hobby.title}</h3>
+                            <p className="type-body-sm">{hobby.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
 
             <div className="flex flex-col gap-2 md:gap-4 w-full">
                 <h2 className="type-h2">Education</h2>
-                <div className="flex flex-col gap-2 bg-foreground text-background px-6 md:px-8 py-4 rounded-3xl">
+                <div className="flex flex-col gap-2">
                     <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-16 type-h3 w-full">
                         <p className="flex-1">
                             Master of Science in Engineering with a

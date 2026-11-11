@@ -8,7 +8,7 @@ export default function ProjectKeyInsight({
     paragraphs,
 }: ProjectKeyInsightProps) {
     return (
-        <div className="flex flex-col bg-foreground px-4 md:px-8 py-2 md:py-6 rounded-3xl text-background gap-2 md:gap-2">
+        <div className="flex flex-col gap-2 w-full lg:w-4/5">
             <h3 className="type-h3">{introduction}</h3>
             <div className="flex flex-col gap-3">
                 {paragraphs.map((paragraph, i) => (
