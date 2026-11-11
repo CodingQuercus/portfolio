@@ -51,7 +51,7 @@ export default function MajPage() {
             <ProjectSection title="Problem">
                 <ProjectParagraph
                     paragraphs={[
-                        "I'm currently looking for my first job after graduating, and I needed a way to keep track of where I had applied.",
+                        'I was looking for my first job after graduating and needed a way to keep track of my applications.',
                         'Spreadsheets worked but felt clunky. I decided to build something purpose-built, and use it as an opportunity to learn Next.js App Router and Supabase in a real project with auth, a database, and full CRUD.',
                         "The result is a fully responsive full-stack app, testable via a live demo account."
                     ]}
