@@ -44,7 +44,8 @@ export default function MajPage() {
                     'Tailwind CSS',
                     'Recharts',
                 ]}
-                summary="I designed and built this as a personal project in spring 2026."
+                role="Developer & Designer"
+                year="2026"
             />
 
             <ProjectSection title="Problem">

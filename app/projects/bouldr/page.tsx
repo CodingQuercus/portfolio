@@ -35,7 +35,8 @@ export default function BouldRPage() {
                 backgroundColor="#EA9734"
                 description="A native Android app for climbers who want to log routes, track progress and review their sessions. Built during a mobile development course at Umeå University."
                 tags={['Kotlin', 'Jetpack Compose', 'Room', 'CameraX', 'MVVM']}
-                summary="I designed and built this as a course project in spring 2025."
+                role="Developer & Designer"
+                year="2025"
             />
 
             <ProjectSection title="Problem">

@@ -57,7 +57,8 @@ export default function SketchPage() {
                     'Prototyping',
                     'Figma',
                 ]}
-                summary="I designed and built this as a course project in autumn 2024."
+                role="Developer & Designer"
+                year="2024"
             />
 
             <ProjectSection title="Problem">

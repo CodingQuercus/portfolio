@@ -91,7 +91,8 @@ export default function AwarePage() {
                     'React Native',
                     'Firebase',
                 ]}
-                summary="I designed and built this with ECU in spring 2025."
+                role="Developer & Designer"
+                year="2025"
             />
 
             <ProjectSection title="Problem">

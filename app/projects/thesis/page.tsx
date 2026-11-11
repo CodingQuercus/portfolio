@@ -44,7 +44,8 @@ export default function ThesisPage() {
                     'Prototyping',
                     'Figma',
                 ]}
-                summary="My master's thesis with AM System in autumn 2025, where I did the research and design."
+                role="UX Researcher & Designer"
+                year="2025"
             />
 
             <ProjectSection title="Problem">

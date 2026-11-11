@@ -15,6 +15,8 @@ type ProjectCardProps = {
     mockupImage?: StaticImageData;
     mockupAlt?: string;
     variant?: 'default' | 'compact';
+    /** Short text across from the tags, e.g. role and year on project pages. */
+    note?: string;
 };
 
 export default function ProjectCard({
@@ -29,6 +31,7 @@ export default function ProjectCard({
     mockupImage,
     mockupAlt = '',
     variant = 'default',
+    note,
 }: ProjectCardProps) {
     const Heading = headingLevel;
     const isCompact = variant === 'compact';
@@ -84,6 +87,9 @@ export default function ProjectCard({
                         </li>
                     ))}
                 </ul>
+                {note && (
+                    <p className="type-small shrink-0 md:text-right">{note}</p>
+                )}
                 {showExploreLink && href && (
                     <PillButton
                         arrow="right"

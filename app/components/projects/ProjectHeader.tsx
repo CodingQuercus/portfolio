@@ -5,8 +5,8 @@ type ProjectHeaderProps = {
     backgroundColor: string;
     description: string;
     tags: string[];
-    /** One plain sentence on role, partner and when. */
-    summary: string;
+    role: string;
+    year: string;
 };
 
 export default function ProjectHeader({
@@ -14,21 +14,20 @@ export default function ProjectHeader({
     backgroundColor,
     description,
     tags,
-    summary,
+    role,
+    year,
 }: ProjectHeaderProps) {
     return (
-        <div className="flex flex-col gap-4">
-            <ProjectCard
-                title={title}
-                backgroundColor={backgroundColor}
-                description={description}
-                tags={tags}
-                href=""
-                showExploreLink={false}
-                headingLevel="h1"
-                variant="compact"
-            />
-            <p className="type-body">{summary}</p>
-        </div>
+        <ProjectCard
+            title={title}
+            backgroundColor={backgroundColor}
+            description={description}
+            tags={tags}
+            href=""
+            showExploreLink={false}
+            headingLevel="h1"
+            variant="compact"
+            note={`${role}, ${year}`}
+        />
     );
 }

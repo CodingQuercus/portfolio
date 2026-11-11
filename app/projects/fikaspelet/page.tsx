@@ -37,7 +37,8 @@ export default function FikaSpeletPage() {
                     'React',
                     'Phaser',
                 ]}
-                summary="I designed and built this for Svensk Husman in spring 2024."
+                role="Developer & Designer"
+                year="2024"
             />
 
             <ProjectSection title="Problem">
