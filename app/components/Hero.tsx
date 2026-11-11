@@ -203,7 +203,10 @@ export default function Hero() {
     const split = phase === 'split';
     const animate = mode === 'play';
 
-    const mobileName = 'text-7xl font-medium leading-none tracking-tighter';
+    // "Flatholm" is about 4.2 times as wide as its font size, so this makes it
+    // span the content width (screen minus the 16px gutters) on phones.
+    const mobileName =
+        'text-[length:min(calc((100vw-2rem)/4.2),9rem)] font-medium leading-none tracking-tighter';
     const mobilePill = 'rounded-full bg-foreground px-4 py-2';
     const mobilePillText = 'font-medium text-background text-center text-sm';
 
@@ -248,7 +251,7 @@ export default function Hero() {
             {/*Mobile*/}
             <div
                 aria-hidden="true"
-                className="flex flex-col justify-center gap-3 md:hidden w-fit mx-auto"
+                className="flex flex-col justify-center gap-3 md:hidden w-full"
             >
                 <div className="flex flex-row items-center gap-3 w-full">
                     <NameSlot
