@@ -30,8 +30,8 @@ const sizeClasses = {
     lg: 'w-full justify-center px-4 py-2 md:px-6 md:py-3 lg:py-8 text-base md:text-lg',
 };
 
-// Matches EASE_IN_OUT in motionTokens.ts.
-const ease = 'ease-[cubic-bezier(0.65,0,0.35,1)]';
+// Matches EASE_OUT in motionTokens.ts: responds at once, settles softly.
+const ease = 'ease-[cubic-bezier(0.25,1,0.5,1)]';
 
 export default function PillButton({
     href,
@@ -56,7 +56,7 @@ export default function PillButton({
         >
             <div
                 // On hover the pill grows slightly and swaps colours.
-                className={`${variantClasses[variant]} ${sizeClasses[size]} border rounded-full cursor-pointer font-medium flex flex-row items-center transition-[transform,background-color,color] duration-400 ${ease} group-hover:scale-[1.04] motion-reduce:transition-colors motion-reduce:group-hover:scale-100`}
+                className={`${variantClasses[variant]} ${sizeClasses[size]} border rounded-full cursor-pointer font-medium flex flex-row items-center transition-[transform,background-color,color] duration-300 ${ease} group-hover:scale-[1.04] motion-reduce:transition-colors motion-reduce:group-hover:scale-100`}
             >
                 <span className="flex flex-row gap-2 items-center">
                     {arrow === 'left' && (
