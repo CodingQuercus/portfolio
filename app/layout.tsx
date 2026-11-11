@@ -26,19 +26,19 @@ export const metadata: Metadata = {
         default: 'Portfolio | Åke Flatholm',
         template: '%s | Åke Flatholm',
     },
-    description: 'UX Designer and Developer based in Umeå, Sweden.',
+    description: 'UX Designer and Developer based in Sweden.',
     authors: [{ name: 'Åke Flatholm' }],
     creator: 'Åke Flatholm',
     openGraph: {
         type: 'website',
         title: 'Portfolio | Åke Flatholm',
-        description: 'UX Designer and Developer based in Umeå, Sweden.',
+        description: 'UX Designer and Developer based in Sweden.',
         images: ['/og-image.png'],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Portfolio | Åke Flatholm',
-        description: 'UX Designer and Developer based in Umeå, Sweden.',
+        description: 'UX Designer and Developer based in Sweden.',
         images: ['/og-image.png'],
     },
 };

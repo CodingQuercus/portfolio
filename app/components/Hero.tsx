@@ -225,7 +225,7 @@ export default function Hero() {
             className="relative flex flex-col gap-2 md:gap-4 justify-center min-h-screen overflow-x-clip"
         >
             <h1 className="sr-only">
-                Åke Flatholm — UX Designer and Developer based in Umeå, Sweden.
+                Åke Flatholm — UX Designer and Developer based in Sweden.
                 I enjoy the process of making complex systems easier to use.
             </h1>
 
@@ -299,7 +299,7 @@ export default function Hero() {
                     className="block rounded-full bg-foreground px-4 py-2 w-full"
                 >
                     <p className="font-medium text-background text-center text-sm">
-                        Umeå, Sweden
+                        Sweden
                     </p>
                 </SlideIn>
                 <Tagline
@@ -350,7 +350,7 @@ export default function Hero() {
                         delay={PILLS_DELAY}
                         className={desktopPill}
                     >
-                        <p className={desktopPillText}>Umeå, Sweden</p>
+                        <p className={desktopPillText}>Sweden</p>
                     </SlideIn>
                     <NameSlot
                         text={LAST}

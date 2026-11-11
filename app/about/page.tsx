@@ -9,7 +9,7 @@ import { CARD_TEXT } from '../components/cardText';
 export const metadata: Metadata = {
     title: 'About',
     description:
-        'About Åke Flatholm — UX Designer and Frontend Developer based in Umeå, Sweden.',
+        'About Åke Flatholm — UX Designer and Frontend Developer based in Sweden.',
 };
 
 type Hobby = {
@@ -54,7 +54,7 @@ export default function About() {
                     <h1 className="type-h1">Åke Flatholm</h1>
                     <div className="flex flex-col gap-2 type-body w-full md:max-w-lg">
                         <p>
-                            I&apos;m a UX designer and developer based in Umeå,
+                            I&apos;m a UX designer and developer based in
                             Sweden. I enjoy working across the full process of a
                             project, from understanding user needs through
                             research to designing and building solutions, and

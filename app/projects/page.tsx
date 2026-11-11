@@ -17,7 +17,7 @@ const projects = [
         href: '/projects/maj',
     },
     {
-        title: 'M.Sc. Thesis',
+        title: 'Designing Trustworthy CUIs for Information Retrieval',
         backgroundColor: '#1D93F3',
         description:
             'A design thinking study exploring how conversational interfaces can be designed to support reliable information retrieval in quality management systems, with a focus on transparency and user trust.',
