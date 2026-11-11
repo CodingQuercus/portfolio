@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import PillButton from './PillButton';
 import { NAVBAR_DELAY } from './introTimeline';
@@ -31,10 +31,28 @@ export default function Navbar() {
     const [introOnLoad] = useState(pathname === '/');
     const hiddenNav = { y: '-120%' };
 
+    const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+    // While the mobile menu is open it behaves as a modal dialog: the page
+    // behind can't be scrolled or reached with Tab, focus starts on the first
+    // link, and Escape closes it and returns focus to the menu button.
     useEffect(() => {
-        document.body.style.overflow = isOpen ? 'hidden' : '';
+        if (!isOpen) return;
+        const page = document.getElementById('page');
+        document.body.style.overflow = 'hidden';
+        if (page) page.inert = true;
+        document.querySelector<HTMLElement>('#mobile-menu a')?.focus();
+
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key !== 'Escape') return;
+            setIsOpen(false);
+            menuButtonRef.current?.focus();
+        };
+        document.addEventListener('keydown', onKeyDown);
         return () => {
             document.body.style.overflow = '';
+            if (page) page.inert = false;
+            document.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen]);
 
@@ -153,6 +171,7 @@ export default function Navbar() {
                     </div>
 
                     <button
+                        ref={menuButtonRef}
                         onClick={() => setIsOpen(!isOpen)}
                         className="md:hidden p-2 z-50 relative w-10 h-10 flex flex-col justify-center items-center gap-1.5"
                         aria-label={isOpen ? 'Close menu' : 'Open menu'}

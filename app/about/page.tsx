@@ -4,6 +4,7 @@ import Image from 'next/image';
 import aboutImage from '@/public/about_img.png';
 
 import { Dumbbell, LucideIcon, Music, Sandwich } from 'lucide-react';
+import { readableText } from '../components/readableText';
 
 export const metadata: Metadata = {
     title: 'About',
@@ -94,14 +95,14 @@ export default function About() {
                         return (
                             <div
                                 key={hobby.title}
-                                style={{ background: hobby.color }}
-                                className="flex flex-col gap-2 text-background px-6 py-5 rounded-3xl"
+                                style={{
+                                    background: hobby.color,
+                                    color: readableText(hobby.color),
+                                }}
+                                className="flex flex-col gap-2 px-6 py-5 rounded-3xl"
                             >
                                 <div className="flex flex-row gap-2 items-center">
-                                    <Icon
-                                        size={24}
-                                        className="text-background opacity-90"
-                                    />
+                                    <Icon size={24} />
                                     <p className="type-h3">{hobby.title}</p>
                                 </div>
                                 <p className="type-body-sm">

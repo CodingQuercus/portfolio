@@ -51,7 +51,7 @@ export default function Footer() {
                         </PillButton>
                         <PillButton href="/AF_CV_SE.pdf" target="_blank">
                             <FaDownload size={14} aria-hidden="true" />
-                            Svenska
+                            <span lang="sv">Svenska</span>
                             <span className="sr-only">(opens in new tab)</span>
                         </PillButton>
                     </div>
