@@ -16,13 +16,16 @@ export default function ProjectCodeBlock({
 
     return (
         <figure className="flex flex-col gap-2 md:w-3/4 lg:w-2/3">
-            <div className="rounded-2xl md:rounded-3xl bg-foreground/5 overflow-hidden">
+            <div className="rounded-3xl bg-foreground/5 overflow-hidden">
                 <motion.div
                     initial={false}
                     animate={{ height: expanded ? 'auto' : '8rem' }}
                     transition={{ duration: 0.4, ease: 'easeInOut' }}
                 >
+                    {/* Focusable so keyboard users can scroll long lines sideways. */}
                     <pre
+                        tabIndex={0}
+                        aria-label={description ?? 'Code example'}
                         className={`p-4 md:p-6 overflow-x-auto text-sm leading-relaxed transition-all duration-300 ${expanded ? '' : 'max-h-32 mask-[linear-gradient(to_bottom,black_40%,transparent_100%)]'}`}
                     >
                         <code>{code}</code>
@@ -48,7 +51,7 @@ export default function ProjectCodeBlock({
                 </button>
             </div>
             {description && (
-                <figcaption className="text-sm text-center text-foreground/60">
+                <figcaption className="type-caption text-center">
                     {description}
                 </figcaption>
             )}

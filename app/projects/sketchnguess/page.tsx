@@ -31,7 +31,7 @@ import androidChat from '@/public/sng/sng_a_chat.png';
 import androidCorrect from '@/public/sng/sng_a_correct_guess.png';
 import androidLeaderboard from '@/public/sng/sng_a_leaderboard.png';
 
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: "Sketch'N'Guess",
@@ -57,11 +57,8 @@ export default function SketchPage() {
                     'Prototyping',
                     'Figma',
                 ]}
-                meta={[
-                    { label: 'Role', information: 'Developer & Designer' },
-                    { label: 'Timeline', information: 'Autumn 2024' },
-                    { label: 'Type', information: 'Course project' },
-                ]}
+                role="Developer & Designer"
+                year="2024"
             />
 
             <ProjectSection title="Problem">
@@ -268,7 +265,7 @@ export default function SketchPage() {
                     target="_blank"
                 >
                     View Client Code on GitHub
-                    <FaExternalLinkAlt
+                    <ExternalLink
                         size={16}
                         className="md:w-5 md:h-5"
                         aria-hidden="true"
@@ -280,7 +277,7 @@ export default function SketchPage() {
                     target="_blank"
                 >
                     View Server Code on GitHub
-                    <FaExternalLinkAlt
+                    <ExternalLink
                         size={16}
                         className="md:w-5 md:h-5"
                         aria-hidden="true"

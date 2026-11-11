@@ -1,8 +1,7 @@
 'use client';
-import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import { motion } from 'framer-motion';
-import { FaChevronRight } from 'react-icons/fa';
+import PillButton from './PillButton';
+import { CARD_TEXT } from './cardText';
 
 type ProjectCardProps = {
     title: string;
@@ -16,6 +15,9 @@ type ProjectCardProps = {
     mockupImage?: StaticImageData;
     mockupAlt?: string;
     variant?: 'default' | 'compact';
+    /** Shown under the title on project pages. */
+    role?: string;
+    year?: string;
 };
 
 export default function ProjectCard({
@@ -30,38 +32,41 @@ export default function ProjectCard({
     mockupImage,
     mockupAlt = '',
     variant = 'default',
+    role,
+    year,
 }: ProjectCardProps) {
     const Heading = headingLevel;
     const isCompact = variant === 'compact';
 
     return (
         <div
-            className="flex flex-col gap-6 rounded-3xl p-6 md:p-8 min-h-[424px] md:min-h-0"
-            style={{ backgroundColor }}
+            className={`flex flex-col gap-6 rounded-3xl p-6 md:p-8 ${isCompact ? '' : 'min-h-[424px] md:min-h-0'}`}
+            style={{ backgroundColor, color: CARD_TEXT }}
         >
             {isCompact ? (
                 <div className="flex flex-col gap-4">
-                    <Heading className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-background w-full">
-                        {title}
-                    </Heading>
-                    <p className="text-background text-base md:text-lg opacity-90 w-full lg:w-5/6">
+                    <div className="flex flex-col gap-1">
+                        <Heading className="type-card-title w-full">
+                            {title}
+                        </Heading>
+                        {(role || year) && (
+                            <p className="type-body-sm">
+                                {[role, year].filter(Boolean).join(', ')}
+                            </p>
+                        )}
+                    </div>
+                    <p className="type-body-sm w-full lg:w-5/6">
                         {description}
                     </p>
                 </div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
                     <div className="flex flex-col gap-2">
-                        <Heading className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-background w-full">
+                        <Heading className="type-card-title w-full">
                             {title}
                         </Heading>
-                        {subtitle && (
-                            <p className="text-background text-lg md:text-xl font-medium">
-                                {subtitle}
-                            </p>
-                        )}
-                        <p className="text-background text-base md:text-lg w-full">
-                            {description}
-                        </p>
+                        {subtitle && <p className="type-h3">{subtitle}</p>}
+                        <p className="type-body-sm w-full">{description}</p>
                     </div>
                     <div className="rounded-2xl overflow-hidden aspect-video hidden md:flex items-center justify-center">
                         {mockupImage ? (
@@ -80,34 +85,27 @@ export default function ProjectCard({
                 </div>
             )}
 
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-white/20 pt-4 mt-auto">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-current/20 pt-4 mt-auto">
                 <ul
                     className="flex flex-row flex-wrap gap-x-4 gap-y-2 md:max-w-[60%]"
                     aria-label="Project tags"
                 >
                     {tags.map((tag) => (
-                        <li
-                            key={tag}
-                            className="text-background text-sm md:text-base opacity-90"
-                        >
+                        <li key={tag} className="type-small">
                             {tag}
                         </li>
                     ))}
                 </ul>
                 {showExploreLink && href && (
-                    <Link
+                    <PillButton
+                        arrow="right"
                         href={href}
-                        className="w-fit shrink-0 self-end md:self-auto"
-                        aria-label={`Explore project: ${title}`}
+                        variant="inverse"
+                        ariaLabel={`Explore project: ${title}`}
+                        className="shrink-0 self-end md:self-auto"
                     >
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            className="flex flex-row items-center gap-2 bg-background text-foreground px-4 md:px-6 py-2 md:py-3 rounded-full w-fit hover:bg-foreground hover:text-background transition-colors text-base"
-                        >
-                            Explore project
-                            <FaChevronRight size={16} aria-hidden="true" />
-                        </motion.div>
-                    </Link>
+                        Explore project
+                    </PillButton>
                 )}
             </div>
         </div>

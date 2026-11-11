@@ -2,12 +2,7 @@
 
 import ContactButton from './footer/ContactButton';
 import PillButton from './PillButton';
-import {
-    FaGithubSquare,
-    FaLinkedin,
-    FaEnvelope,
-    FaDownload,
-} from 'react-icons/fa';
+import { Download, Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -17,52 +12,46 @@ export default function Footer() {
         >
             <div className="flex flex-col gap-2 md:gap-4">
                 <div className="flex flex-col gap-2 md:gap-4">
-                    <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold">
-                        Contact
-                    </h2>
-                    <div className="flex flex-row flex-wrap gap-2 md:gap-4 w-full">
+                    <h2 className="type-h1">Contact</h2>
+                    <div className="flex flex-col md:flex-row gap-2 md:gap-4 w-full">
                         <ContactButton
                             href="https://www.linkedin.com/in/akeflatholm/"
                             label="LinkedIn"
-                            icon={<FaLinkedin size={20} aria-hidden="true" />}
+                            icon={<Linkedin size={20} aria-hidden="true" />}
                             external
                         />
                         <ContactButton
                             href="https://github.com/CodingQuercus"
                             label="GitHub"
-                            icon={
-                                <FaGithubSquare size={20} aria-hidden="true" />
-                            }
+                            icon={<Github size={20} aria-hidden="true" />}
                             external
                         />
                         <ContactButton
                             href="mailto:hello@akeflatholm.com"
                             label="Email"
-                            icon={<FaEnvelope size={20} aria-hidden="true" />}
+                            icon={<Mail size={20} aria-hidden="true" />}
                         />
                     </div>
                 </div>
 
                 <div className="flex flex-col gap-2 md:gap-4">
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold">
-                        Download CV
-                    </h3>
+                    <h3 className="type-h2">Download CV</h3>
                     <div className="flex flex-row flex-wrap gap-2 md:gap-4">
                         <PillButton href="/AF_CV_EN.pdf" target="_blank">
-                            <FaDownload size={14} aria-hidden="true" />
+                            <Download size={14} aria-hidden="true" />
                             English
                             <span className="sr-only">(opens in new tab)</span>
                         </PillButton>
                         <PillButton href="/AF_CV_SE.pdf" target="_blank">
-                            <FaDownload size={14} aria-hidden="true" />
-                            Svenska
+                            <Download size={14} aria-hidden="true" />
+                            <span lang="sv">Svenska</span>
                             <span className="sr-only">(opens in new tab)</span>
                         </PillButton>
                     </div>
                 </div>
             </div>
 
-            <p className="text-sm text-foreground/60">
+            <p className="type-caption">
                 © {new Date().getFullYear()} Åke Flatholm
             </p>
         </footer>

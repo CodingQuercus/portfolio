@@ -16,7 +16,7 @@ export default function ProjectImage({
             <div className="rounded-3xl overflow-hidden">
                 <Image src={src} alt={alt} className="rounded-3xl w-full" />
             </div>
-            <figcaption className="text-sm text-foreground/60 text-center">
+            <figcaption className="type-caption text-center">
                 {caption}
             </figcaption>
         </div>

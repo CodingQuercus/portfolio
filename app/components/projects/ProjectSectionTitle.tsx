@@ -3,5 +3,5 @@ type SectionTitleProps = {
 };
 
 export default function ProjectSectionTitle({ title }: SectionTitleProps) {
-    return <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>;
+    return <h2 className="type-h2">{title}</h2>;
 }

@@ -17,7 +17,7 @@ import newRouteFilledImage from '@/public/bouldr/bouldr_new_route.png';
 import routeDetailImage from '@/public/bouldr/bouldr_routedetail.png';
 import cameraImage from '@/public/bouldr/bouldr_camera.png';
 
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'BouldR',
@@ -35,11 +35,8 @@ export default function BouldRPage() {
                 backgroundColor="#EA9734"
                 description="A native Android app for climbers who want to log routes, track progress and review their sessions. Built during a mobile development course at Umeå University."
                 tags={['Kotlin', 'Jetpack Compose', 'Room', 'CameraX', 'MVVM']}
-                meta={[
-                    { label: 'Role', information: 'Developer & Designer' },
-                    { label: 'Timeline', information: 'Spring 2025' },
-                    { label: 'Type', information: 'Course project' },
-                ]}
+                role="Developer & Designer"
+                year="2025"
             />
 
             <ProjectSection title="Problem">
@@ -188,7 +185,7 @@ export default function BouldRPage() {
                 target="_blank"
             >
                 View on GitHub
-                <FaExternalLinkAlt
+                <ExternalLink
                     size={16}
                     className="md:w-5 md:h-5"
                     aria-hidden="true"

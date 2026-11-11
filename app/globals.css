@@ -1,29 +1,51 @@
 @import 'tailwindcss';
 
+/* Light by default. Dark follows the system setting unless the visitor has
+   picked a theme with the toggle, which sets data-theme on <html>. */
 :root {
     --background: #f7f7f7;
+    /* One step off the page colour, for the quieter boxes. */
+    --surface: #ececec;
     --foreground: #040404;
+    color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --background: #f7f7f7;
-        --foreground: #040404;
+    :root:not([data-theme='light']) {
+        --background: #121211;
+        --surface: #1d1d1b;
+        --foreground: #e6e4df;
+        color-scheme: dark;
     }
+}
+
+:root[data-theme='dark'] {
+    --background: #121211;
+    --surface: #1d1d1b;
+    --foreground: #e6e4df;
+    color-scheme: dark;
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
+    --color-surface: var(--surface);
     --color-orange: #ea9734;
     --color-blue: #0050a1;
     --color-pink: #e96fa6;
-    --color-darkGrey: #333333;
     --color-teal: #0f766e;
     --color-lightblue: #1d93f3;
     --color-mintgreen: #1aba87;
     --font-sans: var(--font-montserrat);
     --font-mono: var(--font-montserrat);
+}
+
+@layer base {
+    /* One visible focus style for keyboard users; components may refine it. */
+    :focus-visible {
+        outline: 2px solid var(--foreground);
+        outline-offset: 4px;
+    }
 }
 
 body {
@@ -40,4 +62,30 @@ html {
     html {
         scroll-behavior: auto;
     }
+}
+
+/* Type scale — use these instead of ad-hoc size/weight combinations. */
+@utility type-h1 {
+    @apply text-4xl md:text-5xl lg:text-7xl font-medium tracking-tighter;
+}
+@utility type-card-title {
+    @apply text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight;
+}
+@utility type-h2 {
+    @apply text-2xl md:text-[1.75rem] font-semibold tracking-tight;
+}
+@utility type-h3 {
+    @apply text-lg md:text-xl font-semibold;
+}
+@utility type-body {
+    @apply text-base md:text-lg leading-7 md:leading-8;
+}
+@utility type-body-sm {
+    @apply text-base leading-7;
+}
+@utility type-small {
+    @apply text-sm;
+}
+@utility type-caption {
+    @apply text-sm text-foreground/60;
 }

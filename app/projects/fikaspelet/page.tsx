@@ -37,11 +37,8 @@ export default function FikaSpeletPage() {
                     'React',
                     'Phaser',
                 ]}
-                meta={[
-                    { label: 'Role', information: 'Developer & Designer' },
-                    { label: 'Timeline', information: 'Spring 2024' },
-                    { label: 'External Partner', information: 'Svensk Husman' },
-                ]}
+                role="Developer & Designer"
+                year="2024"
             />
 
             <ProjectSection title="Problem">

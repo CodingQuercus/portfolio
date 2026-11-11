@@ -3,19 +3,15 @@ import Image from 'next/image';
 
 import aboutImage from '@/public/about_img.png';
 
-import { Dumbbell, LucideIcon, Music, Sandwich } from 'lucide-react';
-
 export const metadata: Metadata = {
     title: 'About',
     description:
-        'About Åke Flatholm — UX Designer and Frontend Developer based in Umeå, Sweden.',
+        'About Åke Flatholm — UX Designer and Frontend Developer based in Sweden.',
 };
 
 type Hobby = {
     title: string;
     description: string;
-    color: string;
-    icon: LucideIcon;
 };
 
 const hobbies: Hobby[] = [
@@ -23,22 +19,16 @@ const hobbies: Hobby[] = [
         title: 'Training',
         description:
             'My biggest passion. Gym, running, and pretty much anything else. I find it energising rather than draining.',
-        color: '#1D93F3',
-        icon: Dumbbell,
     },
     {
         title: 'Music',
         description:
             'I listen daily and play most days too. Fun fact, I play three instruments, guitar, bass, and piano.',
-        color: '#E96FA6',
-        icon: Music,
     },
     {
         title: 'Food',
         description:
             "I love eating good food. I like to cook, and lately I've gotten into baking bread.",
-        color: '#1ABA87',
-        icon: Sandwich,
     },
 ];
 
@@ -50,12 +40,10 @@ export default function About() {
         >
             <div className="flex flex-col md:flex-row items-center justify-around gap-8 w-full">
                 <div className="flex flex-col gap-2 order-2 md:order-1">
-                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold">
-                        Åke Flatholm
-                    </h1>
-                    <div className="flex flex-col gap-2 text-base md:text-lg leading-7 md:leading-8 w-full md:max-w-lg">
+                    <h1 className="type-h1">Åke Flatholm</h1>
+                    <div className="flex flex-col gap-2 type-body w-full md:max-w-lg">
                         <p>
-                            I&apos;m a UX designer and developer based in Umeå,
+                            I&apos;m a UX designer and developer based in
                             Sweden. I enjoy working across the full process of a
                             project, from understanding user needs through
                             research to designing and building solutions, and
@@ -84,52 +72,36 @@ export default function About() {
                     height={520}
                     loading="eager"
                     style={{ height: 'auto' }}
-                    className="rounded-4xl order-1 md:order-2 w-64 md:w-96"
+                    className="rounded-3xl order-1 md:order-2 w-64 md:w-96"
                 />
             </div>
 
             <div className="flex flex-col gap-2 md:gap-4 w-full">
-                <h2 className="text-2xl md:text-3xl font-bold">
-                    Get to know me
-                </h2>
+                <h2 className="type-h2">Get to know me</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
-                    {hobbies.map((hobby) => {
-                        const Icon = hobby.icon;
-                        return (
-                            <div
-                                key={hobby.title}
-                                style={{ background: hobby.color }}
-                                className="flex flex-col gap-2 text-background px-6 py-5 rounded-2xl"
-                            >
-                                <div className="flex flex-row gap-2 items-center">
-                                    <Icon
-                                        size={24}
-                                        className="text-background opacity-90"
-                                    />
-                                    <p className="font-bold text-base md:text-lg">
-                                        {hobby.title}
-                                    </p>
-                                </div>
-                                <p className="text-sm md:text-base leading-6">
-                                    {hobby.description}
-                                </p>
-                            </div>
-                        );
-                    })}
+                    {hobbies.map((hobby) => (
+                        <div
+                            key={hobby.title}
+                            className="flex flex-col gap-2 bg-surface rounded-3xl px-6 md:px-8 py-5 md:py-6"
+                        >
+                            <h3 className="type-h3">{hobby.title}</h3>
+                            <p className="type-body-sm">{hobby.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
 
             <div className="flex flex-col gap-2 md:gap-4 w-full">
-                <h2 className="text-2xl md:text-3xl font-bold">Education</h2>
-                <div className="flex flex-col gap-2 bg-darkGrey text-background px-6 md:px-8 py-4 rounded-2xl">
-                    <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-16 font-bold text-base md:text-xl w-full">
+                <h2 className="type-h2">Education</h2>
+                <div className="flex flex-col gap-2 bg-surface rounded-3xl px-6 md:px-8 py-5 md:py-6">
+                    <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-16 type-h3 w-full">
                         <p className="flex-1">
                             Master of Science in Engineering with a
                             specialization in Interaction Technology and Design
                         </p>
                         <p className="whitespace-nowrap">2021 - 2026</p>
                     </div>
-                    <p className="text-base md:text-lg">Umeå University</p>
+                    <p className="type-body">Umeå University</p>
                 </div>
             </div>
         </section>

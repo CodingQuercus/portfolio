@@ -18,7 +18,7 @@ import mockup4 from '@/public/thesis/thesis_mockup_4.png';
 import mockup5 from '@/public/thesis/thesis_mockup_5.png';
 import mockup6 from '@/public/thesis/thesis_mockup_6.png';
 
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { ExternalLink } from 'lucide-react';
 import ProjectImage from '@/app/components/projects/ProjectImage';
 
 export const metadata: Metadata = {
@@ -44,11 +44,8 @@ export default function ThesisPage() {
                     'Prototyping',
                     'Figma',
                 ]}
-                meta={[
-                    { label: 'Role', information: 'UX Researcher & Designer' },
-                    { label: 'Timeline', information: 'Autumn 2025' },
-                    { label: 'External Partner', information: 'AM System' },
-                ]}
+                role="UX Researcher & Designer"
+                year="2025"
             />
 
             <ProjectSection title="Problem">
@@ -184,7 +181,7 @@ export default function ThesisPage() {
                 target="_blank"
             >
                 Read the full thesis
-                <FaExternalLinkAlt
+                <ExternalLink
                     size={16}
                     className="md:w-5 md:h-5"
                     aria-hidden="true"

@@ -20,7 +20,7 @@ import searchImage from '@/public/maj/maj_search.png';
 import filterImage from '@/public/maj/maj_filter.png';
 import dashboardImage from '@/public/maj/maj_dashboard.png';
 
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Maj',
@@ -44,17 +44,14 @@ export default function MajPage() {
                     'Tailwind CSS',
                     'Recharts',
                 ]}
-                meta={[
-                    { label: 'Role', information: 'Developer & Designer' },
-                    { label: 'Timeline', information: 'Spring 2026' },
-                    { label: 'Type', information: 'Personal project' },
-                ]}
+                role="Developer & Designer"
+                year="2026"
             />
 
             <ProjectSection title="Problem">
                 <ProjectParagraph
                     paragraphs={[
-                        "I'm currently looking for my first job after graduating, and I needed a way to keep track of where I had applied.",
+                        'I was looking for my first job after graduating and needed a way to keep track of my applications.',
                         'Spreadsheets worked but felt clunky. I decided to build something purpose-built, and use it as an opportunity to learn Next.js App Router and Supabase in a real project with auth, a database, and full CRUD.',
                         "The result is a fully responsive full-stack app, testable via a live demo account."
                     ]}
@@ -166,7 +163,7 @@ export default function MajPage() {
             <div className="flex flex-col md:flex-row gap-4">
                 <PillButton href="https://maj.akeflatholm.com" target="_blank">
                     Live demo
-                    <FaExternalLinkAlt
+                    <ExternalLink
                         size={16}
                         className="md:w-5 md:h-5"
                         aria-hidden="true"
@@ -179,7 +176,7 @@ export default function MajPage() {
                     target="_blank"
                 >
                     View on GitHub
-                    <FaExternalLinkAlt
+                    <ExternalLink
                         size={16}
                         className="md:w-5 md:h-5"
                         aria-hidden="true"

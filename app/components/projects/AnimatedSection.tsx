@@ -2,17 +2,19 @@
 import { motion, Variants } from 'framer-motion';
 import { ReactNode } from 'react';
 
+import { EASE_OUT } from '../motionTokens';
+
 type AnimatedSectionProps = {
     children: ReactNode;
     className?: string;
 };
 
 const sectionVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 24 },
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: EASE_OUT },
     },
 };
 
