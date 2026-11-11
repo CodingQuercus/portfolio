@@ -27,7 +27,8 @@ export default function ProjectHeader({
             showExploreLink={false}
             headingLevel="h1"
             variant="compact"
-            note={`${role}, ${year}`}
+            role={role}
+            year={year}
         />
     );
 }

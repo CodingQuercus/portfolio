@@ -15,8 +15,9 @@ type ProjectCardProps = {
     mockupImage?: StaticImageData;
     mockupAlt?: string;
     variant?: 'default' | 'compact';
-    /** Short text across from the tags, e.g. role and year on project pages. */
-    note?: string;
+    /** Shown in a row of their own under the tags, on project pages. */
+    role?: string;
+    year?: string;
 };
 
 export default function ProjectCard({
@@ -31,7 +32,8 @@ export default function ProjectCard({
     mockupImage,
     mockupAlt = '',
     variant = 'default',
-    note,
+    role,
+    year,
 }: ProjectCardProps) {
     const Heading = headingLevel;
     const isCompact = variant === 'compact';
@@ -76,30 +78,35 @@ export default function ProjectCard({
                 </div>
             )}
 
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-current/20 pt-4 mt-auto">
-                <ul
-                    className="flex flex-row flex-wrap gap-x-4 gap-y-2 md:max-w-[60%]"
-                    aria-label="Project tags"
-                >
-                    {tags.map((tag) => (
-                        <li key={tag} className="type-small">
-                            {tag}
-                        </li>
-                    ))}
-                </ul>
-                {note && (
-                    <p className="type-small shrink-0 md:text-right">{note}</p>
-                )}
-                {showExploreLink && href && (
-                    <PillButton
-                        arrow="right"
-                        href={href}
-                        variant="inverse"
-                        ariaLabel={`Explore project: ${title}`}
-                        className="shrink-0 self-end md:self-auto"
+            <div className="flex flex-col gap-4 mt-auto">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-current/20 pt-4">
+                    <ul
+                        className="flex flex-row flex-wrap gap-x-4 gap-y-2 md:max-w-[60%]"
+                        aria-label="Project tags"
                     >
-                        Explore project
-                    </PillButton>
+                        {tags.map((tag) => (
+                            <li key={tag} className="type-small">
+                                {tag}
+                            </li>
+                        ))}
+                    </ul>
+                    {showExploreLink && href && (
+                        <PillButton
+                            arrow="right"
+                            href={href}
+                            variant="inverse"
+                            ariaLabel={`Explore project: ${title}`}
+                            className="shrink-0 self-end md:self-auto"
+                        >
+                            Explore project
+                        </PillButton>
+                    )}
+                </div>
+                {(role || year) && (
+                    <div className="flex flex-row justify-between gap-4 border-t border-current/20 pt-4 type-small">
+                        <p>{role}</p>
+                        <p>{year}</p>
+                    </div>
                 )}
             </div>
         </div>
