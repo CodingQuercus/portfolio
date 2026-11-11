@@ -15,7 +15,7 @@ type ProjectCardProps = {
     mockupImage?: StaticImageData;
     mockupAlt?: string;
     variant?: 'default' | 'compact';
-    /** Shown in a row of their own under the tags, on project pages. */
+    /** Shown under the title on project pages. */
     role?: string;
     year?: string;
 };
@@ -45,9 +45,16 @@ export default function ProjectCard({
         >
             {isCompact ? (
                 <div className="flex flex-col gap-4">
-                    <Heading className="type-card-title w-full">
-                        {title}
-                    </Heading>
+                    <div className="flex flex-col gap-1">
+                        <Heading className="type-card-title w-full">
+                            {title}
+                        </Heading>
+                        {(role || year) && (
+                            <p className="type-body-sm">
+                                {[role, year].filter(Boolean).join(', ')}
+                            </p>
+                        )}
+                    </div>
                     <p className="type-body-sm w-full lg:w-5/6">
                         {description}
                     </p>
@@ -78,35 +85,27 @@ export default function ProjectCard({
                 </div>
             )}
 
-            <div className="flex flex-col gap-4 mt-auto">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-current/20 pt-4">
-                    <ul
-                        className="flex flex-row flex-wrap gap-x-4 gap-y-2 md:max-w-[60%]"
-                        aria-label="Project tags"
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-current/20 pt-4 mt-auto">
+                <ul
+                    className="flex flex-row flex-wrap gap-x-4 gap-y-2 md:max-w-[60%]"
+                    aria-label="Project tags"
+                >
+                    {tags.map((tag) => (
+                        <li key={tag} className="type-small">
+                            {tag}
+                        </li>
+                    ))}
+                </ul>
+                {showExploreLink && href && (
+                    <PillButton
+                        arrow="right"
+                        href={href}
+                        variant="inverse"
+                        ariaLabel={`Explore project: ${title}`}
+                        className="shrink-0 self-end md:self-auto"
                     >
-                        {tags.map((tag) => (
-                            <li key={tag} className="type-small">
-                                {tag}
-                            </li>
-                        ))}
-                    </ul>
-                    {showExploreLink && href && (
-                        <PillButton
-                            arrow="right"
-                            href={href}
-                            variant="inverse"
-                            ariaLabel={`Explore project: ${title}`}
-                            className="shrink-0 self-end md:self-auto"
-                        >
-                            Explore project
-                        </PillButton>
-                    )}
-                </div>
-                {(role || year) && (
-                    <div className="flex flex-row justify-between gap-4 border-t border-current/20 pt-4 type-small">
-                        <p>{role}</p>
-                        <p>{year}</p>
-                    </div>
+                        Explore project
+                    </PillButton>
                 )}
             </div>
         </div>
