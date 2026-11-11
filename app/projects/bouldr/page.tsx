@@ -17,7 +17,7 @@ import newRouteFilledImage from '@/public/bouldr/bouldr_new_route.png';
 import routeDetailImage from '@/public/bouldr/bouldr_routedetail.png';
 import cameraImage from '@/public/bouldr/bouldr_camera.png';
 
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'BouldR',
@@ -188,7 +188,7 @@ export default function BouldRPage() {
                 target="_blank"
             >
                 View on GitHub
-                <FaExternalLinkAlt
+                <ExternalLink
                     size={16}
                     className="md:w-5 md:h-5"
                     aria-hidden="true"

@@ -2,12 +2,7 @@
 
 import ContactButton from './footer/ContactButton';
 import PillButton from './PillButton';
-import {
-    FaGithubSquare,
-    FaLinkedin,
-    FaEnvelope,
-    FaDownload,
-} from 'react-icons/fa';
+import { Download, Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -22,21 +17,19 @@ export default function Footer() {
                         <ContactButton
                             href="https://www.linkedin.com/in/akeflatholm/"
                             label="LinkedIn"
-                            icon={<FaLinkedin size={20} aria-hidden="true" />}
+                            icon={<Linkedin size={20} aria-hidden="true" />}
                             external
                         />
                         <ContactButton
                             href="https://github.com/CodingQuercus"
                             label="GitHub"
-                            icon={
-                                <FaGithubSquare size={20} aria-hidden="true" />
-                            }
+                            icon={<Github size={20} aria-hidden="true" />}
                             external
                         />
                         <ContactButton
                             href="mailto:hello@akeflatholm.com"
                             label="Email"
-                            icon={<FaEnvelope size={20} aria-hidden="true" />}
+                            icon={<Mail size={20} aria-hidden="true" />}
                         />
                     </div>
                 </div>
@@ -45,12 +38,12 @@ export default function Footer() {
                     <h3 className="type-h2">Download CV</h3>
                     <div className="flex flex-row flex-wrap gap-2 md:gap-4">
                         <PillButton href="/AF_CV_EN.pdf" target="_blank">
-                            <FaDownload size={14} aria-hidden="true" />
+                            <Download size={14} aria-hidden="true" />
                             English
                             <span className="sr-only">(opens in new tab)</span>
                         </PillButton>
                         <PillButton href="/AF_CV_SE.pdf" target="_blank">
-                            <FaDownload size={14} aria-hidden="true" />
+                            <Download size={14} aria-hidden="true" />
                             <span lang="sv">Svenska</span>
                             <span className="sr-only">(opens in new tab)</span>
                         </PillButton>

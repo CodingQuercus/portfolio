@@ -20,7 +20,7 @@ import searchImage from '@/public/maj/maj_search.png';
 import filterImage from '@/public/maj/maj_filter.png';
 import dashboardImage from '@/public/maj/maj_dashboard.png';
 
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Maj',
@@ -166,7 +166,7 @@ export default function MajPage() {
             <div className="flex flex-col md:flex-row gap-4">
                 <PillButton href="https://maj.akeflatholm.com" target="_blank">
                     Live demo
-                    <FaExternalLinkAlt
+                    <ExternalLink
                         size={16}
                         className="md:w-5 md:h-5"
                         aria-hidden="true"
@@ -179,7 +179,7 @@ export default function MajPage() {
                     target="_blank"
                 >
                     View on GitHub
-                    <FaExternalLinkAlt
+                    <ExternalLink
                         size={16}
                         className="md:w-5 md:h-5"
                         aria-hidden="true"

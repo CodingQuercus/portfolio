@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { ReactNode } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 type PillButtonProps = {
     href: string;
@@ -60,11 +60,11 @@ export default function PillButton({
             >
                 <span className="flex flex-row gap-2 items-center">
                     {arrow === 'left' && (
-                        <FaChevronLeft size={14} aria-hidden="true" />
+                        <ChevronLeft size={16} aria-hidden="true" />
                     )}
                     {children}
                     {arrow === 'right' && (
-                        <FaChevronRight size={14} aria-hidden="true" />
+                        <ChevronRight size={16} aria-hidden="true" />
                     )}
                 </span>
             </div>
