@@ -78,9 +78,12 @@ export default function About() {
 
             <div className="flex flex-col gap-2 md:gap-4 w-full">
                 <h2 className="type-h2">Get to know me</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
                     {hobbies.map((hobby) => (
-                        <div key={hobby.title} className="flex flex-col gap-2">
+                        <div
+                            key={hobby.title}
+                            className="flex flex-col gap-2 bg-surface rounded-3xl px-6 md:px-8 py-5 md:py-6"
+                        >
                             <h3 className="type-h3">{hobby.title}</h3>
                             <p className="type-body-sm">{hobby.description}</p>
                         </div>
@@ -90,7 +93,7 @@ export default function About() {
 
             <div className="flex flex-col gap-2 md:gap-4 w-full">
                 <h2 className="type-h2">Education</h2>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 bg-surface rounded-3xl px-6 md:px-8 py-5 md:py-6">
                     <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-16 type-h3 w-full">
                         <p className="flex-1">
                             Master of Science in Engineering with a
