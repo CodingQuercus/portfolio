@@ -31,7 +31,6 @@ import androidChat from '@/public/sng/sng_a_chat.png';
 import androidCorrect from '@/public/sng/sng_a_correct_guess.png';
 import androidLeaderboard from '@/public/sng/sng_a_leaderboard.png';
 
-
 export const metadata: Metadata = {
     title: "Sketch'N'Guess",
     description:
@@ -84,12 +83,12 @@ export default function SketchPage() {
                         {
                             src: iphoneStart,
                             alt: "iOS home screen showing the Sketch'N'Guess logo with Join, Create and Rules buttons.",
-                            caption: 'iOS — Home screen',
+                            caption: 'Home screen (iOS)',
                         },
                         {
                             src: androidStart,
                             alt: "Android home screen showing the Sketch'N'Guess logo with Join, Create and Rules buttons.",
-                            caption: 'Android — Home screen',
+                            caption: 'Home screen (Android)',
                         },
                     ]}
                 />
@@ -105,27 +104,27 @@ export default function SketchPage() {
                         {
                             src: iphoneCreate,
                             alt: 'iOS create screen showing a map with a canvas boundary and canvas size options.',
-                            caption: 'iOS — Create: Setup of canvas',
+                            caption: 'Create: Setup of canvas (iOS)',
                         },
                         {
                             src: iphoneCreate2,
                             alt: 'iOS create screen showing a map preview, canvas size set to 50x50, duration set to 3 minutes, rounds set to 5, nickname field filled with Oak, plus Back and Create buttons.',
-                            caption: 'iOS — Create: Setup of game settings',
+                            caption: 'Create: Setup of game settings (iOS)',
                         },
                         {
                             src: iphoneLobby,
                             alt: 'iOS lobby screen showing room code Q28605, a leaderboard in round 1 of 5 with player OAK on 0 points, and Leave and Start buttons.',
-                            caption: 'iOS — Created lobby',
+                            caption: 'Created lobby (iOS)',
                         },
                         {
                             src: androidJoin,
                             alt: 'Android join screen showing an empty form with fields for Lobby Code and Nickname, plus Back and Join buttons.',
-                            caption: 'Android — Join popup',
+                            caption: 'Join popup (Android)',
                         },
                         {
                             src: androidJoin2,
                             alt: 'Android join screen showing the join form filled in with lobby code Q286O5 and nickname Oak2.',
-                            caption: 'Android — Entered information',
+                            caption: 'Entered information (Android)',
                         },
                     ]}
                     cols={5}
@@ -143,22 +142,22 @@ export default function SketchPage() {
                         {
                             src: iphoneLobby2,
                             alt: 'iOS lobby screen showing room code Q28605, a leaderboard in round 1 of 5 with players OAK and OAK2 both on 0 points, and Leave and Start buttons.',
-                            caption: 'iOS — Lobby',
+                            caption: 'Lobby (iOS)',
                         },
                         {
                             src: androidLobby,
                             alt: 'Android lobby screen showing room code Q28605, a leaderboard in round 1 of 5 with players OAK and OAK2 both on 0 points, and a Leave button.',
-                            caption: 'Android — Lobby',
+                            caption: 'Lobby (Android)',
                         },
                         {
                             src: iphoneGamestart,
                             alt: 'iOS lobby screen showing the countdown overlay with the number 4, room code Q28605, and players OAK and OAK2 both on 0 points.',
-                            caption: 'iOS — Countdown before round',
+                            caption: 'Countdown before round (iOS)',
                         },
                         {
                             src: androidGamestart,
                             alt: 'Android lobby screen showing the countdown overlay with the number 4 before the round starts.',
-                            caption: 'Android — Countdown before round',
+                            caption: 'Countdown before round (Android)',
                         },
                     ]}
                     cols={5}
@@ -176,22 +175,22 @@ export default function SketchPage() {
                         {
                             src: androidDraw,
                             alt: 'Android draw screen showing the word BOX, an empty map canvas, drawing tools for brush size, stroke style, undo, and color, plus a To Lobby button.',
-                            caption: 'Android — Drawing in progress',
+                            caption: 'Drawing in progress (Android)',
                         },
                         {
                             src: androidDraw2,
                             alt: 'Android draw screen showing the word BOX with a slightly larger brush size selected on the drawing tools panel.',
-                            caption: 'Android — Drawing further along',
+                            caption: 'Drawing further along (Android)',
                         },
                         {
                             src: iphoneGuess,
                             alt: 'iOS guess screen showing a partial GPS-traced shape on the map canvas, a text input for guesses, a Guess button, and a To Lobby button.',
-                            caption: 'iOS — Watching the drawing appear',
+                            caption: 'Watching the drawing appear (iOS)',
                         },
                         {
                             src: iphoneGuess2,
                             alt: 'iOS guess screen showing a near-complete GPS-traced box shape on the map canvas, a text input for guesses, a Guess button, and a To Lobby button.',
-                            caption: 'iOS — Guessing',
+                            caption: 'Guessing (iOS)',
                         },
                     ]}
                     cols={5}
@@ -209,32 +208,32 @@ export default function SketchPage() {
                         {
                             src: iphoneChat,
                             alt: 'iOS draw screen showing the word BOX, a chat message from OAK2 reading HOUSE on the map canvas, drawing tools for brush size, stroke style, undo, and color, plus a To Lobby button.',
-                            caption: 'iOS — Chat with guesses',
+                            caption: 'Chat with guesses (iOS)',
                         },
                         {
                             src: androidChat,
                             alt: 'Android guess screen showing the map canvas, a chat message from OAK2 reading HOUSE, a text input for guesses, a Guess button, and a To Lobby button.',
-                            caption: 'Android — Chat with guesses',
+                            caption: 'Chat with guesses (Android)',
                         },
                         {
                             src: iphoneCorrect,
                             alt: 'iOS guess screen showing the correct guess overlay with the message: OAK guessed the correct word! It was BOX, with the guess input and buttons faded in the background.',
-                            caption: 'iOS — Correct guess',
+                            caption: 'Correct guess (iOS)',
                         },
                         {
                             src: androidCorrect,
                             alt: 'Android draw screen showing the correct guess overlay with the message: OAK guessed the correct word! It was BOX.',
-                            caption: 'Android — Correct guess',
+                            caption: 'Correct guess (Android)',
                         },
                         {
                             src: iphoneLeaderboard,
                             alt: 'iOS lobby screen showing room code Q28605, a leaderboard in round 2 of 5 with OAK on 10 points and OAK2 on 5 points, and Leave and Start buttons.',
-                            caption: 'iOS — Updated leaderboard',
+                            caption: 'Updated leaderboard (iOS)',
                         },
                         {
                             src: androidLeaderboard,
                             alt: 'Android lobby screen showing room code Q28605, a leaderboard in round 2 of 5 with OAK on 10 points and OAK2 on 5 points, and a Leave button.',
-                            caption: 'Android — Updated leaderboard',
+                            caption: 'Updated leaderboard (Android)',
                         },
                     ]}
                     cols={6}

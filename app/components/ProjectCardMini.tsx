@@ -34,15 +34,11 @@ export default function ProjectCardMini({
     return (
         <Reveal
             as="li"
-            className="group/row relative isolate flex flex-col gap-4 pt-3 pb-4 px-3 md:px-4"
+            className="group/row relative isolate flex flex-col gap-4 pt-4 pb-4 px-3 md:px-4"
         >
             <RevealLine />
             <RowCover href={href} color={color} />
             <div className="flex flex-col gap-4 flex-1">
-                <p className="flex justify-between gap-4 type-small text-foreground/70 mb-2">
-                    <span className="tabular-nums">{year}</span>
-                    <span className="text-right">{kind}</span>
-                </p>
                 <div
                     className="overflow-hidden aspect-video flex items-center justify-center gap-[4%] p-4 md:p-6 mb-2"
                     style={{ backgroundColor: color }}
@@ -61,7 +57,12 @@ export default function ProjectCardMini({
                         />
                     ))}
                 </div>
-                <h2 className="type-card-title">{title}</h2>
+                <div className="flex flex-col gap-2">
+                    <h2 className="type-card-title">{title}</h2>
+                    <p className="type-small text-foreground/70">
+                        {kind}, {year}
+                    </p>
+                </div>
                 <p className="type-body-sm line-clamp-3">{description}</p>
                 <ul
                     className="flex flex-row flex-wrap gap-x-4 gap-y-1 type-small text-foreground/70"
@@ -74,10 +75,10 @@ export default function ProjectCardMini({
                 <LinkButton
                     arrow="right"
                     href={href}
-                    ariaLabel={`Explore project: ${title}`}
+                    ariaLabel={`Read the case study: ${title}`}
                     className="relative z-10 mt-auto"
                 >
-                    Explore project
+                    Read the case study
                 </LinkButton>
             </div>
         </Reveal>

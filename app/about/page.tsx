@@ -3,20 +3,17 @@ import Image from 'next/image';
 
 import aboutImage from '@/public/about_img.png';
 
-import { Dumbbell, LucideIcon, Music, Sandwich } from 'lucide-react';
-
 import { Reveal, RevealLine } from '../components/Reveal';
 
 export const metadata: Metadata = {
     title: 'About',
     description:
-        'About Åke Flatholm — UX Designer and Frontend Developer based in Umeå, Sweden.',
+        'About Åke Flatholm, UX designer and frontend developer based in Sweden.',
 };
 
 type Hobby = {
     title: string;
     description: string;
-    icon: LucideIcon;
 };
 
 const hobbies: Hobby[] = [
@@ -24,19 +21,16 @@ const hobbies: Hobby[] = [
         title: 'Training',
         description:
             'My biggest passion. Gym, running, and pretty much anything else. I find it energising rather than draining.',
-        icon: Dumbbell,
     },
     {
         title: 'Music',
         description:
             'I listen daily and play most days too. Fun fact, I play three instruments, guitar, bass, and piano.',
-        icon: Music,
     },
     {
         title: 'Food',
         description:
             "I love eating good food. I like to cook, and lately I've gotten into baking bread.",
-        icon: Sandwich,
     },
 ];
 
@@ -46,13 +40,14 @@ export default function About() {
             aria-label="About"
             className="flex flex-col pt-24 md:pt-28 gap-16 md:gap-24"
         >
-            {/* Text from the left edge, photo to the right edge, like the other pages. */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start w-full">
-                <div className="flex flex-col gap-4 md:gap-6 order-2 md:order-1 md:col-span-7">
+            {/* Text from the left edge, photo to the right edge, like the other
+                pages. Below lg there isn't room for both, so the photo sits above. */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start w-full">
+                <div className="flex flex-col gap-4 md:gap-6 order-2 lg:order-1 lg:col-span-7">
                     <h1 className="type-h1">Åke Flatholm</h1>
                     <div className="flex flex-col gap-3 type-body max-w-[65ch]">
                         <p>
-                            I&apos;m a UX designer and developer based in Umeå,
+                            I&apos;m a UX designer and developer based in
                             Sweden. I enjoy working across the full process of a
                             project, from understanding user needs through
                             research to designing and building solutions, and
@@ -81,34 +76,24 @@ export default function About() {
                     height={520}
                     loading="eager"
                     style={{ height: 'auto' }}
-                    className="order-1 md:order-2 w-64 md:w-full md:col-start-9 md:col-span-4"
+                    className="order-1 lg:order-2 w-64 md:w-80 lg:w-full lg:col-start-9 lg:col-span-4 grayscale"
                 />
             </div>
 
             <div className="flex flex-col gap-6 md:gap-8 w-full">
-                <h2 className="type-h2">Get to know me</h2>
+                <h2 className="type-h2">Outside work</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {hobbies.map((hobby) => {
-                        const Icon = hobby.icon;
-                        return (
-                            <Reveal key={hobby.title} className="relative pt-4">
-                                <RevealLine />
-                                <div className="flex flex-col gap-2">
-                                    <div className="flex flex-row gap-2 items-center">
-                                        <Icon
-                                            size={20}
-                                            strokeWidth={1.5}
-                                            aria-hidden="true"
-                                        />
-                                        <p className="type-h3">{hobby.title}</p>
-                                    </div>
-                                    <p className="type-body-sm">
-                                        {hobby.description}
-                                    </p>
-                                </div>
-                            </Reveal>
-                        );
-                    })}
+                    {hobbies.map((hobby) => (
+                        <Reveal key={hobby.title} className="relative pt-4">
+                            <RevealLine />
+                            <div className="flex flex-col gap-2">
+                                <h3 className="type-h3">{hobby.title}</h3>
+                                <p className="type-body-sm">
+                                    {hobby.description}
+                                </p>
+                            </div>
+                        </Reveal>
+                    ))}
                 </div>
             </div>
 

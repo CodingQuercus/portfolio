@@ -150,12 +150,12 @@ export default function ThesisPage() {
                         stats={[
                             {
                                 value: '90',
-                                label: 'SUS Score — System Usability Scale',
+                                label: 'SUS score (System Usability Scale)',
                                 subtitle: 'Grade A • Excellent Usability',
                             },
                             {
                                 value: '5.50',
-                                label: 'Trust Score — S-TIAS',
+                                label: 'Trust score (S-TIAS)',
                                 subtitle:
                                     'High level of perceived trust in the prototype.',
                             },

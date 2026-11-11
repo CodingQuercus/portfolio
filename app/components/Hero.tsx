@@ -236,15 +236,16 @@ export default function Hero() {
     const mobileTag = 'relative pb-1';
     const mobileTagText = 'font-medium text-left text-base';
 
-    const desktopFirst =
-        'text-6xl md:text-8xl lg:text-9xl font-medium tracking-tighter';
-    const desktopLast =
-        'text-4xl md:text-8xl lg:text-9xl font-medium tracking-tighter';
-    // Bottom margin lifts each underline onto the name's baseline.
+    // The name grows smoothly with the screen, from 96px at tablet width to
+    // 128px on wide screens, instead of jumping at breakpoints.
+    const desktopName =
+        'text-[length:clamp(6rem,10vw,8rem)] font-medium leading-none tracking-tighter';
+    // Bottom margin lifts each underline onto the name's baseline, which sits
+    // 0.14 of the name's size above the bottom of its line.
     const desktopTag =
-        'relative flex-1 self-end pb-2 md:pb-3 mb-[8px] md:mb-[13px] lg:mb-[18px]';
-    const desktopTagText =
-        'font-medium text-left text-base md:text-2xl lg:text-3xl xl:text-4xl';
+        'relative flex-1 self-end pb-3 mb-[calc(clamp(6rem,10vw,8rem)*0.14)]';
+    // Labels for the name, so they stay well below it in size.
+    const desktopTagText = 'font-medium text-left text-xl lg:text-2xl';
 
     return (
         <section
@@ -252,8 +253,8 @@ export default function Hero() {
             className="relative flex flex-col gap-2 md:gap-4 justify-center min-h-screen overflow-x-clip"
         >
             <h1 className="sr-only">
-                Åke Flatholm — UX Designer and Developer based in Umeå, Sweden.
-                I enjoy the process of making complex systems easier to use.
+                Åke Flatholm, UX designer and developer based in Sweden. I enjoy
+                the process of making complex systems easier to use.
             </h1>
 
             {!split && (
@@ -268,8 +269,8 @@ export default function Hero() {
                     <IntroName
                         typed={typed}
                         idPrefix="desktop"
-                        firstClassName={desktopFirst}
-                        lastClassName={desktopLast}
+                        firstClassName={desktopName}
+                        lastClassName={desktopName}
                         className="hidden md:flex"
                     />
                 </>
@@ -337,7 +338,7 @@ export default function Hero() {
                     delay={PILLS_DELAY}
                     className={`block w-full ${mobileTag}`}
                 >
-                    <p className={mobileTagText}>Umeå, Sweden</p>
+                    <p className={mobileTagText}>Sweden</p>
                     <Underline
                         show={split}
                         animate={animate}
@@ -363,7 +364,7 @@ export default function Hero() {
                         layoutId="desktop-first"
                         phase={phase}
                         animate={animate}
-                        className={desktopFirst}
+                        className={desktopName}
                     />
                     <SlideIn
                         from="right"
@@ -402,7 +403,7 @@ export default function Hero() {
                         delay={PILLS_DELAY}
                         className={desktopTag}
                     >
-                        <p className={desktopTagText}>Umeå, Sweden</p>
+                        <p className={desktopTagText}>Sweden</p>
                         <Underline
                             show={split}
                             animate={animate}
@@ -414,14 +415,14 @@ export default function Hero() {
                         layoutId="desktop-last"
                         phase={phase}
                         animate={animate}
-                        className={desktopLast}
+                        className={desktopName}
                     />
                 </div>
                 <Tagline
                     show={split}
                     animate={animate}
                     delay={TAGLINE_DELAY}
-                    className="text-base md:text-2xl mt-4 w-full md:w-4/5"
+                    className="text-base md:text-xl mt-4 w-full md:w-4/5"
                 />
             </div>
         </section>

@@ -20,9 +20,9 @@ export default function Footer() {
                     href="mailto:hello@akeflatholm.com"
                     kind="internal"
                     label="Email"
-                    className="col-span-2 md:col-span-4 md:min-h-56"
+                    className="col-span-2 md:col-span-4"
                 >
-                    <span className="text-[clamp(1.25rem,5.5vw,4rem)]">
+                    <span className="text-[clamp(1.25rem,4.5vw,2.5rem)]">
                         hello@akeflatholm.com
                     </span>
                 </ContactTile>

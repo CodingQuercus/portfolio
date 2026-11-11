@@ -23,12 +23,10 @@ const projects = [
         href: '/projects/maj',
     },
     {
-        title: 'M.Sc. Thesis',
+        title: 'Designing Trustworthy CUIs',
         year: '2025',
         kind: "Master's thesis",
         backgroundColor: '#1D93F3',
-        subtitle:
-            'Designing Trustworthy CUIs for Reliable Information Retrieval in QMS.',
         description:
             'A design thinking study exploring how conversational interfaces can be designed to support reliable information retrieval in quality management systems, with a focus on transparency and user trust.',
         tags: [
@@ -59,8 +57,7 @@ const projects = [
             'Figma',
         ],
         mockupImage: awareMockup,
-        mockupAlt:
-            'aWAre shown on three phones, including the hazard map.',
+        mockupAlt: 'aWAre shown on three phones, including the hazard map.',
         href: '/projects/aware',
     },
     {
@@ -97,7 +94,7 @@ export default function Projects() {
                 ))}
             </div>
             <LinkButton arrow="right" href="/projects">
-                Explore more projects
+                All projects
             </LinkButton>
         </section>
     );

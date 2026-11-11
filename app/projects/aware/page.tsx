@@ -38,7 +38,7 @@ const clusterCode = `const groupPins = (pins: Pin[], region: Region) => {
     const queue = [pins[i]];
     visited.add(i);
 
-    // BFS — find all pins within threshold distance
+    // BFS: find all pins within threshold distance
     while (queue.length > 0) {
       const current = queue.pop()!;
 

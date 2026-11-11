@@ -5,7 +5,7 @@ import Link from 'next/link';
  * colour on hover, exactly as wide as the row's hairline. Place inside a `relative isolate group/row` container.
  *
  * The covering link is hidden from keyboard and screen readers: the row's
- * own "Explore project" link (raised above with `relative z-10`) is the one
+ * own "Read the case study" link (raised above with `relative z-10`) is the one
  * they use, so the project isn't announced twice.
  */
 export default function RowCover({

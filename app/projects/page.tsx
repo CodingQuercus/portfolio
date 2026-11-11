@@ -31,7 +31,7 @@ const projects = [
         color: '#0F766E',
     },
     {
-        title: 'M.Sc. Thesis',
+        title: 'Designing Trustworthy CUIs',
         year: '2025',
         kind: "Master's thesis",
         description:
@@ -70,8 +70,8 @@ const projects = [
         year: '2025',
         kind: 'Course project',
         description:
-            'A native Android app for climbers who want to log routes, track progress and review their sessions.',
-        tags: ['Jetpack Compose', 'Room', 'MVVM', 'CameraX'],
+            'A native Android app for logging climbing routes, built in Kotlin with Jetpack Compose, a local Room database and reactive MVVM state.',
+        tags: ['Kotlin', 'Jetpack Compose', 'Room', 'MVVM', 'CameraX'],
         href: '/projects/bouldr',
         images: [bouldrHome, bouldrRoutes, bouldrRouteDetail],
         imagesAlt:

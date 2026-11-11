@@ -61,16 +61,16 @@ html {
 
 /* Type scale — use these instead of ad-hoc size/weight combinations. */
 @utility type-h1 {
-    @apply text-4xl md:text-5xl lg:text-7xl font-medium tracking-tighter;
+    @apply text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter;
 }
 @utility type-card-title {
-    @apply text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight;
+    @apply text-2xl lg:text-3xl font-medium tracking-tight;
 }
 @utility type-h2 {
-    @apply text-2xl md:text-[1.75rem] font-semibold tracking-tight;
+    @apply text-2xl lg:text-3xl font-medium tracking-tight;
 }
 @utility type-h3 {
-    @apply text-lg md:text-xl font-semibold;
+    @apply text-lg md:text-xl font-medium;
 }
 @utility type-body {
     @apply text-base md:text-lg leading-7 md:leading-8;

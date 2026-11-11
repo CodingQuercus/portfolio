@@ -22,7 +22,7 @@ type ProjectCardProps = {
     mockupAlt?: string;
 };
 
-/** A project on the home page: text on a hairline, screenshot on a colour panel. */
+/** A project on the home page: text and a screenshot on a colour panel, under a hairline. */
 export default function ProjectCard({
     title,
     year,
@@ -42,20 +42,19 @@ export default function ProjectCard({
     return (
         <Reveal
             as="article"
-            className="group/row relative isolate grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 pt-3 pb-4 px-3 md:px-4"
+            className="group/row relative isolate grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 pt-4 pb-4 px-3 md:px-4"
         >
             <RevealLine />
             <RowCover href={href} color={backgroundColor} />
-            <div className="md:col-span-2 flex justify-between gap-4 type-small text-foreground/70 md:mb-4">
-                <span className="tabular-nums">{year}</span>
-                <span className="text-right">{kind}</span>
-            </div>
             <div
-                className={`flex flex-col gap-4 ${reverse ? 'md:col-start-2 md:row-start-2' : ''}`}
+                className={`flex flex-col gap-4 ${reverse ? 'md:col-start-2 md:row-start-1' : ''}`}
             >
                 <div className="flex flex-col gap-2">
                     <Heading className="type-card-title">{title}</Heading>
                     {subtitle && <p className="type-h3">{subtitle}</p>}
+                    <p className="type-small text-foreground/70">
+                        {kind}, {year}
+                    </p>
                 </div>
                 <p className="type-body-sm max-w-prose">{description}</p>
                 <ul
@@ -69,15 +68,15 @@ export default function ProjectCard({
                 <LinkButton
                     arrow="right"
                     href={href}
-                    ariaLabel={`Explore project: ${title}`}
+                    ariaLabel={`Read the case study: ${title}`}
                     className="relative z-10 mt-2 md:mt-auto"
                 >
-                    Explore project
+                    Read the case study
                 </LinkButton>
             </div>
             {mockupImage && (
                 <div
-                    className={`overflow-hidden aspect-video flex items-center justify-center p-4 md:p-6 ${reverse ? 'md:col-start-1 md:row-start-2' : ''}`}
+                    className={`overflow-hidden aspect-video flex items-center justify-center p-4 md:p-6 ${reverse ? 'md:col-start-1 md:row-start-1' : ''}`}
                     style={{ backgroundColor }}
                 >
                     <Image
