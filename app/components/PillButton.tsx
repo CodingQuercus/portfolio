@@ -20,14 +20,9 @@ type PillButtonProps = {
 };
 
 const variantClasses = {
-    solid: {
-        pill: 'bg-foreground text-background border-foreground group-hover:text-foreground',
-        fill: 'bg-background',
-    },
-    inverse: {
-        pill: 'bg-background text-foreground border-transparent group-hover:text-background',
-        fill: 'bg-foreground',
-    },
+    solid: 'bg-foreground text-background border-foreground group-hover:bg-background group-hover:text-foreground',
+    inverse:
+        'bg-background text-foreground border-transparent group-hover:bg-foreground group-hover:text-background',
 };
 
 const sizeClasses = {
@@ -49,7 +44,6 @@ export default function PillButton({
     ariaLabel,
     className = 'w-fit',
 }: PillButtonProps) {
-    const colors = variantClasses[variant];
     return (
         <Link
             href={href}
@@ -61,13 +55,9 @@ export default function PillButton({
             className={`group rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground ${className}`}
         >
             <div
-                className={`${colors.pill} ${sizeClasses[size]} relative overflow-hidden isolate border rounded-full cursor-pointer font-medium flex flex-row items-center transition-colors duration-500 ${ease}`}
+                // On hover the pill grows slightly and swaps colours.
+                className={`${variantClasses[variant]} ${sizeClasses[size]} border rounded-full cursor-pointer font-medium flex flex-row items-center transition-[transform,background-color,color] duration-400 ${ease} group-hover:scale-[1.04] motion-reduce:transition-colors motion-reduce:group-hover:scale-100`}
             >
-                {/* Sweeps in from the left on hover and exits to the right. */}
-                <span
-                    aria-hidden="true"
-                    className={`${colors.fill} absolute inset-0 -z-10 origin-right scale-x-0 group-hover:origin-left group-hover:scale-x-100 transition-transform duration-700 motion-reduce:transition-none ${ease}`}
-                />
                 <span className="flex flex-row gap-2 items-center">
                     {arrow === 'left' && (
                         <FaChevronLeft size={14} aria-hidden="true" />
