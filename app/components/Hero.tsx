@@ -210,23 +210,26 @@ export default function Hero() {
     const mobilePill = 'rounded-full bg-foreground px-4 py-2';
     const mobilePillText = 'font-medium text-background text-center text-sm';
 
+    // From tablet width up, everything is sized from the name (--name, set on
+    // the section): it grows smoothly from 96px to 128px, and each pill is as
+    // tall as the name's letters (about 0.72 of its size), so the pills never
+    // outgrow the name or jump in size between breakpoints.
     const desktopFirst =
-        'text-6xl md:text-8xl lg:text-9xl font-medium tracking-tighter';
-    const desktopLast =
-        'text-4xl md:text-8xl lg:text-9xl font-medium tracking-tighter';
+        'text-[length:var(--name)] leading-none font-medium tracking-tighter';
+    const desktopLast = desktopFirst;
     const desktopPill =
-        'flex-1 rounded-full bg-foreground px-2 py-2 sm:p-4 md:p-6 lg:px-12 lg:py-12';
+        'flex-1 flex items-center justify-center rounded-full bg-foreground h-[calc(var(--name)*0.72)] px-[calc(var(--name)*0.2)]';
     const desktopPillText =
-        'font-medium text-background text-center text-sm md:text-xl xl:text-2xl';
+        'font-medium text-background text-center whitespace-nowrap text-[length:calc(var(--name)*0.19)]';
 
     return (
         <section
             aria-label="Introduction"
-            className="relative flex flex-col gap-2 md:gap-4 justify-center min-h-screen overflow-x-clip"
+            className="relative flex flex-col gap-2 md:gap-4 justify-center min-h-screen overflow-x-clip [--name:clamp(6rem,10vw,8rem)]"
         >
             <h1 className="sr-only">
-                Åke Flatholm — UX Designer and Developer based in Sweden.
-                I enjoy the process of making complex systems easier to use.
+                Åke Flatholm — UX Designer and Developer based in Sweden. I
+                enjoy the process of making complex systems easier to use.
             </h1>
 
             {!split && (
