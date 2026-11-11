@@ -1,17 +1,12 @@
 import ProjectCard from '@/app/components/ProjectCard';
-import ProjectMetaRow from '@/app/components/projects/ProjectMetaRow';
-
-type MetaItem = {
-    label: string;
-    information: string;
-};
 
 type ProjectHeaderProps = {
     title: string;
     backgroundColor: string;
     description: string;
     tags: string[];
-    meta: MetaItem[];
+    /** One plain sentence on role, partner and when. */
+    summary: string;
 };
 
 export default function ProjectHeader({
@@ -19,7 +14,7 @@ export default function ProjectHeader({
     backgroundColor,
     description,
     tags,
-    meta,
+    summary,
 }: ProjectHeaderProps) {
     return (
         <div className="flex flex-col gap-4">
@@ -33,7 +28,7 @@ export default function ProjectHeader({
                 headingLevel="h1"
                 variant="compact"
             />
-            <ProjectMetaRow items={meta} />
+            <p className="type-body">{summary}</p>
         </div>
     );
 }

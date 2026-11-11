@@ -57,11 +57,7 @@ export default function SketchPage() {
                     'Prototyping',
                     'Figma',
                 ]}
-                meta={[
-                    { label: 'Role', information: 'Developer & Designer' },
-                    { label: 'Timeline', information: 'Autumn 2024' },
-                    { label: 'Type', information: 'Course project' },
-                ]}
+                summary="I designed and built this as a course project in autumn 2024."
             />
 
             <ProjectSection title="Problem">

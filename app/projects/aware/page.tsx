@@ -91,11 +91,7 @@ export default function AwarePage() {
                     'React Native',
                     'Firebase',
                 ]}
-                meta={[
-                    { label: 'Role', information: 'Developer & Designer' },
-                    { label: 'Timeline', information: 'Spring 2025' },
-                    { label: 'External Partner', information: 'ECU' },
-                ]}
+                summary="I designed and built this with ECU in spring 2025."
             />
 
             <ProjectSection title="Problem">

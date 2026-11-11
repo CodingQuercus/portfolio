@@ -44,11 +44,7 @@ export default function MajPage() {
                     'Tailwind CSS',
                     'Recharts',
                 ]}
-                meta={[
-                    { label: 'Role', information: 'Developer & Designer' },
-                    { label: 'Timeline', information: 'Spring 2026' },
-                    { label: 'Type', information: 'Personal project' },
-                ]}
+                summary="I designed and built this as a personal project in spring 2026."
             />
 
             <ProjectSection title="Problem">

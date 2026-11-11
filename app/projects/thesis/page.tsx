@@ -44,11 +44,7 @@ export default function ThesisPage() {
                     'Prototyping',
                     'Figma',
                 ]}
-                meta={[
-                    { label: 'Role', information: 'UX Researcher & Designer' },
-                    { label: 'Timeline', information: 'Autumn 2025' },
-                    { label: 'External Partner', information: 'AM System' },
-                ]}
+                summary="My master's thesis with AM System in autumn 2025, where I did the research and design."
             />
 
             <ProjectSection title="Problem">
