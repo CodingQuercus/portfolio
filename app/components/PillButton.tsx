@@ -27,7 +27,7 @@ const variantClasses = {
 
 const sizeClasses = {
     md: 'px-4 py-2 text-sm md:text-base',
-    lg: 'w-full justify-center px-4 py-2 md:px-6 md:py-3 lg:py-8 text-base md:text-lg',
+    lg: 'w-full justify-center px-6 py-3 md:py-4 text-base md:text-lg',
 };
 
 // Matches EASE_OUT in motionTokens.ts: responds at once, settles softly.

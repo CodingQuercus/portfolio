@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="flex flex-col gap-2 md:gap-4">
                 <div className="flex flex-col gap-2 md:gap-4">
                     <h2 className="type-h1">Contact</h2>
-                    <div className="flex flex-row flex-wrap gap-2 md:gap-4 w-full">
+                    <div className="flex flex-col md:flex-row gap-2 md:gap-4 w-full">
                         <ContactButton
                             href="https://www.linkedin.com/in/akeflatholm/"
                             label="LinkedIn"

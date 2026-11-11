@@ -18,7 +18,7 @@ export default function ContactButton({
             href={href}
             target={external ? '_blank' : undefined}
             size="lg"
-            className="w-44 md:w-auto md:flex-1"
+            className="w-full md:flex-1"
         >
             {icon}
             {label}
