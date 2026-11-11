@@ -1,6 +1,6 @@
 'use client';
 import PillButton from './PillButton';
-import { readableText } from './readableText';
+import { CARD_TEXT } from './cardText';
 
 type ProjectCardMiniProps = {
     title: string;
@@ -20,7 +20,7 @@ export default function ProjectCardMini({
     return (
         <li
             className="flex flex-col rounded-3xl p-6 md:p-8 min-h-80"
-            style={{ backgroundColor, color: readableText(backgroundColor) }}
+            style={{ backgroundColor, color: CARD_TEXT }}
         >
             <div className="flex flex-col gap-2 mb-4">
                 <h2 className="type-card-title">{title}</h2>

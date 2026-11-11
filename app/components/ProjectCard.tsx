@@ -1,7 +1,7 @@
 'use client';
 import Image, { StaticImageData } from 'next/image';
 import PillButton from './PillButton';
-import { readableText } from './readableText';
+import { CARD_TEXT } from './cardText';
 
 type ProjectCardProps = {
     title: string;
@@ -36,7 +36,7 @@ export default function ProjectCard({
     return (
         <div
             className={`flex flex-col gap-6 rounded-3xl p-6 md:p-8 ${isCompact ? '' : 'min-h-[424px] md:min-h-0'}`}
-            style={{ backgroundColor, color: readableText(backgroundColor) }}
+            style={{ backgroundColor, color: CARD_TEXT }}
         >
             {isCompact ? (
                 <div className="flex flex-col gap-4">

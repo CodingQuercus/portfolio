@@ -4,7 +4,7 @@ import Image from 'next/image';
 import aboutImage from '@/public/about_img.png';
 
 import { Dumbbell, LucideIcon, Music, Sandwich } from 'lucide-react';
-import { readableText } from '../components/readableText';
+import { CARD_TEXT } from '../components/cardText';
 
 export const metadata: Metadata = {
     title: 'About',
@@ -97,7 +97,7 @@ export default function About() {
                                 key={hobby.title}
                                 style={{
                                     background: hobby.color,
-                                    color: readableText(hobby.color),
+                                    color: CARD_TEXT,
                                 }}
                                 className="flex flex-col gap-2 px-6 py-5 rounded-3xl"
                             >
