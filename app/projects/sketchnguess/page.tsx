@@ -259,7 +259,7 @@ export default function SketchPage() {
                 />
             </ProjectSection>
 
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-row flex-wrap gap-2 md:gap-4">
                 <PillButton
                     href="https://github.com/codingquercus/sng-app"
                     target="_blank"
