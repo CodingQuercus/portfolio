@@ -30,12 +30,6 @@
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-surface: var(--surface);
-    --color-orange: #ea9734;
-    --color-blue: #0050a1;
-    --color-pink: #e96fa6;
-    --color-teal: #0f766e;
-    --color-lightblue: #1d93f3;
-    --color-mintgreen: #1aba87;
     --font-sans: var(--font-montserrat);
     --font-mono: var(--font-montserrat);
 }

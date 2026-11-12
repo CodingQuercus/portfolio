@@ -6,7 +6,7 @@ export const TOTAL_CHARS = FIRST.length + LAST.length;
 
 export const TYPE_START = 0.3;
 export const CHAR_DURATION = 0.08;
-export const HOLD_BEFORE_SPLIT = 0.45;
+const HOLD_BEFORE_SPLIT = 0.45;
 export const SPLIT_AT =
     TYPE_START + TOTAL_CHARS * CHAR_DURATION + HOLD_BEFORE_SPLIT;
 export const SPLIT_DURATION = 1;

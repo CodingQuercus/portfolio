@@ -6,11 +6,9 @@ import { CARD_TEXT } from './cardText';
 type ProjectCardProps = {
     title: string;
     backgroundColor: string;
-    subtitle?: string;
     description: string;
     tags: string[];
     href?: string;
-    showExploreLink?: boolean;
     headingLevel?: 'h1' | 'h2' | 'h3';
     mockupImage?: StaticImageData;
     mockupAlt?: string;
@@ -23,11 +21,9 @@ type ProjectCardProps = {
 export default function ProjectCard({
     title,
     backgroundColor,
-    subtitle,
     description,
     tags,
     href,
-    showExploreLink,
     headingLevel = 'h3',
     mockupImage,
     mockupAlt = '',
@@ -55,9 +51,7 @@ export default function ProjectCard({
                             </p>
                         )}
                     </div>
-                    <p className="type-body w-full lg:w-5/6">
-                        {description}
-                    </p>
+                    <p className="type-body w-full lg:w-5/6">{description}</p>
                 </div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
@@ -65,7 +59,6 @@ export default function ProjectCard({
                         <Heading className="type-card-title w-full">
                             {title}
                         </Heading>
-                        {subtitle && <p className="type-h3">{subtitle}</p>}
                         <p className="type-body w-full">{description}</p>
                     </div>
                     <div className="rounded-2xl overflow-hidden aspect-video hidden md:flex items-center justify-center">
@@ -96,7 +89,7 @@ export default function ProjectCard({
                         </li>
                     ))}
                 </ul>
-                {showExploreLink && href && (
+                {href && (
                     <PillButton
                         arrow="right"
                         href={href}
