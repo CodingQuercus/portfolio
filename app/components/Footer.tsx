@@ -1,9 +1,9 @@
 import CvMenu from './CvMenu';
+import { TEXT_LINK } from './linkStyle';
 
 // Plain text links: the pages above already end with buttons, so the footer
 // stays quiet.
-const linkClass =
-    'underline decoration-1 underline-offset-4 decoration-foreground/30 hover:decoration-foreground transition-colors duration-300';
+const linkClass = TEXT_LINK;
 
 export default function Footer() {
     return (
