@@ -2,7 +2,9 @@
 
 import { motion, Variants } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import PillButton from './PillButton';
+import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
+import { TEXT_LINK } from './linkStyle';
 import { useIntroMode } from './useIntroMode';
 import { EASE_OUT } from './motionTokens';
 
@@ -112,9 +114,13 @@ export default function Projects() {
                     </motion.div>
                 ))}
             </div>
-            <PillButton arrow="right" href="/projects">
-                Explore more projects
-            </PillButton>
+            <Link
+                href="/projects"
+                className="flex flex-row items-center gap-1 w-fit type-body"
+            >
+                <span className={TEXT_LINK}>Explore more projects</span>
+                <ChevronRight size={16} aria-hidden="true" />
+            </Link>
         </section>
     );
 }

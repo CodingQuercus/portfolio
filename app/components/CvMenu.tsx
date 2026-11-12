@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useId, useRef, useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Download } from 'lucide-react';
 
 type CvMenuProps = {
     /** Same link style as the other footer links. */
@@ -47,9 +47,10 @@ export default function CvMenu({ linkClass }: CvMenuProps) {
                 aria-expanded={open}
                 aria-controls={listId}
                 onClick={() => setOpen((o) => !o)}
-                className={`flex flex-row items-center gap-1 cursor-pointer ${linkClass}`}
+                className="flex flex-row items-center gap-2 cursor-pointer"
             >
-                Download CV
+                <Download size={16} aria-hidden="true" />
+                <span className={linkClass}>Download CV</span>
                 <ChevronDown
                     size={16}
                     aria-hidden="true"

@@ -1,5 +1,6 @@
 import CvMenu from './CvMenu';
 import { TEXT_LINK } from './linkStyle';
+import { Github, Linkedin } from 'lucide-react';
 
 // Plain text links: the pages above already end with buttons, so the footer
 // stays quiet.
@@ -24,9 +25,10 @@ export default function Footer() {
                         <a
                             href="https://www.linkedin.com/in/akeflatholm/"
                             target="_blank"
-                            className={linkClass}
+                            className="flex flex-row items-center gap-2"
                         >
-                            LinkedIn
+                            <Linkedin size={16} aria-hidden="true" />
+                            <span className={linkClass}>LinkedIn</span>
                             <span className="sr-only"> (opens in new tab)</span>
                         </a>
                     </li>
@@ -34,9 +36,10 @@ export default function Footer() {
                         <a
                             href="https://github.com/CodingQuercus"
                             target="_blank"
-                            className={linkClass}
+                            className="flex flex-row items-center gap-2"
                         >
-                            GitHub
+                            <Github size={16} aria-hidden="true" />
+                            <span className={linkClass}>GitHub</span>
                             <span className="sr-only"> (opens in new tab)</span>
                         </a>
                     </li>
