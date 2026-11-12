@@ -1,3 +1,4 @@
+import { READING_WIDTH } from './readingWidth';
 type ProcessListItemProps = {
     number: string;
     title: string;
@@ -15,7 +16,7 @@ export default function ProcessListItem({
                 <span aria-hidden="true">{number}.</span>
                 {title}
             </p>
-            <p className="type-body w-full lg:w-4/5">{information}</p>
+            <p className={`type-body ${READING_WIDTH}`}>{information}</p>
         </li>
     );
 }

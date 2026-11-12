@@ -1,5 +1,6 @@
 import ProjectStatCard from './ProjectStatCard';
 
+import { READING_WIDTH } from './readingWidth';
 type StatItem = {
     value: string;
     label: string;
@@ -12,7 +13,7 @@ type ProjectStatRowProps = {
 
 export default function ProjectStatRow({ stats }: ProjectStatRowProps) {
     return (
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8">
+        <div className={`flex flex-col md:flex-row gap-4 ${READING_WIDTH}`}>
             {stats.map((stat) => (
                 <ProjectStatCard key={stat.label} {...stat} />
             ))}

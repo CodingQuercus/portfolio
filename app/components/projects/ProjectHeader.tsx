@@ -23,8 +23,6 @@ export default function ProjectHeader({
             backgroundColor={backgroundColor}
             description={description}
             tags={tags}
-            href=""
-            showExploreLink={false}
             headingLevel="h1"
             variant="compact"
             role={role}

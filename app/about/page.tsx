@@ -85,7 +85,7 @@ export default function About() {
                             className="flex flex-col gap-2 bg-surface rounded-3xl px-6 md:px-8 py-5 md:py-6"
                         >
                             <h3 className="type-h3">{hobby.title}</h3>
-                            <p className="type-body-sm">{hobby.description}</p>
+                            <p className="type-body">{hobby.description}</p>
                         </div>
                     ))}
                 </div>

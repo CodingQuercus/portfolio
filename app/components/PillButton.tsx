@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { ReactNode } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 type PillButtonProps = {
     href: string;
@@ -10,10 +10,8 @@ type PillButtonProps = {
     onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
     /** 'inverse' is for use on dark or coloured backgrounds. */
     variant?: 'solid' | 'inverse';
-    /** 'lg' is the oversized pill used for the contact links. */
-    size?: 'md' | 'lg';
-    /** Adds a chevron; 'left' sits before the label. */
-    arrow?: 'left' | 'right';
+    /** Adds a chevron after the label. */
+    arrow?: 'right';
     ariaLabel?: string;
     /** Classes for the outer link, e.g. width or alignment. */
     className?: string;
@@ -25,11 +23,6 @@ const variantClasses = {
         'bg-background text-foreground border-transparent group-hover:bg-foreground group-hover:text-background',
 };
 
-const sizeClasses = {
-    md: 'px-4 py-2 text-sm md:text-base',
-    lg: 'w-full justify-center px-6 py-3 md:py-4 text-base md:text-lg',
-};
-
 // Matches EASE_OUT in motionTokens.ts: responds at once, settles softly.
 const ease = 'ease-[cubic-bezier(0.25,1,0.5,1)]';
 
@@ -39,7 +32,6 @@ export default function PillButton({
     target,
     onClick,
     variant = 'solid',
-    size = 'md',
     arrow,
     ariaLabel,
     className = 'w-fit',
@@ -47,8 +39,6 @@ export default function PillButton({
     return (
         <Link
             href={href}
-            // Files like the CVs aren't pages, so don't prefetch page data for them.
-            prefetch={/\.\w+$/.test(href) ? false : undefined}
             target={target}
             onClick={onClick}
             aria-label={ariaLabel}
@@ -56,12 +46,9 @@ export default function PillButton({
         >
             <div
                 // On hover the pill grows slightly and swaps colours.
-                className={`${variantClasses[variant]} ${sizeClasses[size]} border rounded-full cursor-pointer font-medium flex flex-row items-center transition-[transform,background-color,color] duration-300 ${ease} group-hover:scale-[1.04] motion-reduce:transition-colors motion-reduce:group-hover:scale-100`}
+                className={`${variantClasses[variant]} px-4 py-2 text-sm md:text-base border rounded-full cursor-pointer font-medium flex flex-row items-center transition-[transform,background-color,color] duration-300 ${ease} group-hover:scale-[1.04] motion-reduce:transition-colors motion-reduce:group-hover:scale-100`}
             >
                 <span className="flex flex-row gap-2 items-center">
-                    {arrow === 'left' && (
-                        <ChevronLeft size={16} aria-hidden="true" />
-                    )}
                     {children}
                     {arrow === 'right' && (
                         <ChevronRight size={16} aria-hidden="true" />

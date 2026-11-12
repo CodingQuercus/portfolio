@@ -24,7 +24,7 @@ export default function ProjectCardMini({
         >
             <div className="flex flex-col gap-2 mb-4">
                 <h2 className="type-card-title">{title}</h2>
-                <p className="type-body-sm line-clamp-3">{description}</p>
+                <p className="type-body line-clamp-3">{description}</p>
             </div>
 
             <div className="flex flex-col md:flex-col lg:flex-row lg:items-center justify-between gap-4 border-t border-current/20 pt-4 mt-auto">

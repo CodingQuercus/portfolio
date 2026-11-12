@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { READING_WIDTH } from './readingWidth';
 
 type ProjectCodeBlockProps = {
     code: string;
@@ -15,7 +16,7 @@ export default function ProjectCodeBlock({
     const [expanded, setExpanded] = useState(false);
 
     return (
-        <figure className="flex flex-col gap-2 md:w-3/4 lg:w-2/3">
+        <figure className={`flex flex-col gap-2 ${READING_WIDTH}`}>
             <div className="rounded-3xl bg-foreground/5 overflow-hidden">
                 <motion.div
                     initial={false}
@@ -51,9 +52,7 @@ export default function ProjectCodeBlock({
                 </button>
             </div>
             {description && (
-                <figcaption className="type-caption text-center">
-                    {description}
-                </figcaption>
+                <figcaption className="type-caption">{description}</figcaption>
             )}
         </figure>
     );
