@@ -1,3 +1,4 @@
+import { READING_WIDTH } from './readingWidth';
 type ProjectKeyInsightProps = {
     introduction: string;
     paragraphs: string[];
@@ -8,7 +9,9 @@ export default function ProjectKeyInsight({
     paragraphs,
 }: ProjectKeyInsightProps) {
     return (
-        <div className="flex flex-col gap-2 w-full lg:w-4/5 bg-surface rounded-3xl px-6 md:px-8 py-5 md:py-6">
+        <div
+            className={`flex flex-col gap-2 ${READING_WIDTH} bg-surface rounded-3xl px-6 md:px-8 py-5 md:py-6`}
+        >
             <h3 className="type-h3">{introduction}</h3>
             <div className="flex flex-col gap-3">
                 {paragraphs.map((paragraph, i) => (

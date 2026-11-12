@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
 
+import { READING_WIDTH } from './readingWidth';
 type ProjectImageProps = {
     src: StaticImageData;
     alt: string;
@@ -12,13 +13,11 @@ export default function ProjectImage({
     caption = alt,
 }: ProjectImageProps) {
     return (
-        <div className="flex flex-col gap-1 md:gap-2 md:w-3/4 lg:w-2/3 mx-auto">
+        <figure className={`flex flex-col gap-1 md:gap-2 ${READING_WIDTH}`}>
             <div className="rounded-3xl overflow-hidden">
                 <Image src={src} alt={alt} className="rounded-3xl w-full" />
             </div>
-            <figcaption className="type-caption text-center">
-                {caption}
-            </figcaption>
-        </div>
+            <figcaption className="type-caption">{caption}</figcaption>
+        </figure>
     );
 }
