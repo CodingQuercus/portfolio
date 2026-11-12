@@ -234,7 +234,7 @@ export default function Navbar() {
                                 duration: 0.5,
                                 ease: EASE_OUT,
                             }}
-                            className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-background shadow-xl z-40 md:hidden flex flex-col items-center justify-center gap-3 px-6 pt-24 pb-8"
+                            className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-background shadow-xl z-40 md:hidden flex flex-col items-start justify-center gap-3 px-6 pt-24 pb-8"
                             id="mobile-menu"
                             role="dialog"
                             aria-modal="true"
@@ -258,7 +258,7 @@ export default function Navbar() {
                                                 ? handleMobileContactClick
                                                 : () => setIsOpen(false)
                                         }
-                                        className={`text-lg text-center px-4 py-2 rounded-full transition-colors ${
+                                        className={`text-lg text-left px-4 py-2 rounded-full transition-colors ${
                                             isActive
                                                 ? 'underline underline-offset-8 decoration-2'
                                                 : 'hover:bg-foreground/5'
