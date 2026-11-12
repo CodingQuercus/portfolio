@@ -29,7 +29,7 @@ export default function ContactLinks({ compact }: ContactLinksProps) {
                 hello@akeflatholm.com
             </a>
             <ul
-                className={`flex flex-row flex-wrap gap-x-6 gap-y-2 ${compact ? 'type-body-sm' : 'type-body'}`}
+                className={`flex flex-row flex-wrap gap-x-6 gap-y-2 ${compact ? 'type-body' : 'type-body'}`}
             >
                 {socials.map(({ href, label, Icon }) => (
                     <li key={href}>

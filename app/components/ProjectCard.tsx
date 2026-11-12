@@ -50,12 +50,12 @@ export default function ProjectCard({
                             {title}
                         </Heading>
                         {(role || year) && (
-                            <p className="type-body-sm">
+                            <p className="type-body">
                                 {[role, year].filter(Boolean).join(', ')}
                             </p>
                         )}
                     </div>
-                    <p className="type-body-sm w-full lg:w-5/6">
+                    <p className="type-body w-full max-w-2xl">
                         {description}
                     </p>
                 </div>
@@ -66,7 +66,7 @@ export default function ProjectCard({
                             {title}
                         </Heading>
                         {subtitle && <p className="type-h3">{subtitle}</p>}
-                        <p className="type-body-sm w-full">{description}</p>
+                        <p className="type-body w-full">{description}</p>
                     </div>
                     <div className="rounded-2xl overflow-hidden aspect-video hidden md:flex items-center justify-center">
                         {mockupImage ? (

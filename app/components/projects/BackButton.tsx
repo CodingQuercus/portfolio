@@ -10,7 +10,7 @@ export default function BackButton({ label }: BackButtonProps) {
     return (
         <Link
             href="/projects"
-            className="flex flex-row items-center gap-1 w-fit type-body-sm"
+            className="flex flex-row items-center gap-1 w-fit type-body"
         >
             <ChevronLeft size={16} aria-hidden="true" />
             <span className={TEXT_LINK}>{label}</span>
