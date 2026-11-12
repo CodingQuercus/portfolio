@@ -7,6 +7,7 @@ import { useState, useEffect, useRef } from 'react';
 
 import PillButton from './PillButton';
 import ThemeToggle from './ThemeToggle';
+import ContactLinks from './ContactLinks';
 import { NAVBAR_DELAY } from './introTimeline';
 import { useIntroMode } from './useIntroMode';
 import { EASE_IN_OUT, EASE_OUT } from './motionTokens';
@@ -14,7 +15,6 @@ import { EASE_IN_OUT, EASE_OUT } from './motionTokens';
 type NavLink = {
     href: string;
     label: string;
-    isContact?: boolean;
 };
 
 const navLinks: NavLink[] = [
@@ -63,19 +63,6 @@ export default function Navbar() {
             behavior: 'smooth',
             block: 'start',
         });
-    };
-
-    const handleMobileContactClick = (
-        e: React.MouseEvent<HTMLAnchorElement>
-    ) => {
-        e.preventDefault();
-        setIsOpen(false);
-        setTimeout(() => {
-            document.getElementById('contact')?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-            });
-        }, 300);
     };
 
     const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -221,7 +208,7 @@ export default function Navbar() {
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.4, ease: EASE_OUT }}
                             onClick={() => setIsOpen(false)}
-                            className="fixed inset-0 bg-black/40 z-40 md:hidden"
+                            className="fixed inset-x-0 top-20 bottom-0 bg-black/40 z-40 md:hidden"
                             aria-hidden="true"
                         />
 
@@ -234,40 +221,41 @@ export default function Navbar() {
                                 duration: 0.5,
                                 ease: EASE_OUT,
                             }}
-                            className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-background shadow-xl z-40 md:hidden flex flex-col items-start justify-center gap-3 px-6 pt-24 pb-8"
+                            className="fixed top-20 bottom-0 right-0 w-4/5 max-w-sm bg-background shadow-xl z-40 md:hidden flex flex-col justify-between gap-8 px-6 pt-8 pb-8 overflow-y-auto"
                             id="mobile-menu"
                             role="dialog"
                             aria-modal="true"
                             aria-label="Mobile navigation menu"
                         >
-                            {[
-                                ...navLinks,
-                                {
-                                    href: '#contact',
-                                    label: 'Contact',
-                                    isContact: true,
-                                },
-                            ].map((link) => {
-                                const isActive = pathname === link.href;
-                                return (
-                                    <Link
-                                        key={link.href}
-                                        href={link.href}
-                                        onClick={
-                                            link.isContact
-                                                ? handleMobileContactClick
-                                                : () => setIsOpen(false)
-                                        }
-                                        className={`text-lg text-left px-4 py-2 rounded-full transition-colors ${
-                                            isActive
-                                                ? 'underline underline-offset-8 decoration-2'
-                                                : 'hover:bg-foreground/5'
-                                        }`}
-                                    >
-                                        {link.label}
-                                    </Link>
-                                );
-                            })}
+                            <ul className="flex flex-col gap-1">
+                                {navLinks.map((link) => {
+                                    const isActive =
+                                        link.href === '/'
+                                            ? pathname === '/'
+                                            : pathname.startsWith(link.href);
+                                    return (
+                                        <li key={link.href}>
+                                            <Link
+                                                href={link.href}
+                                                aria-current={
+                                                    isActive
+                                                        ? 'page'
+                                                        : undefined
+                                                }
+                                                onClick={() => setIsOpen(false)}
+                                                className={`inline-block text-lg py-2 ${
+                                                    isActive
+                                                        ? 'underline underline-offset-8 decoration-2'
+                                                        : ''
+                                                }`}
+                                            >
+                                                {link.label}
+                                            </Link>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                            <ContactLinks compact />
                         </motion.aside>
                     </>
                 )}

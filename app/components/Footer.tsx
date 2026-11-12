@@ -1,11 +1,7 @@
-import CvMenu from './CvMenu';
-import { TEXT_LINK } from './linkStyle';
-import { Github, Linkedin } from 'lucide-react';
+import ContactLinks from './ContactLinks';
 
 // Plain text links: the pages above already end with buttons, so the footer
 // stays quiet.
-const linkClass = TEXT_LINK;
-
 export default function Footer() {
     return (
         <footer
@@ -14,39 +10,7 @@ export default function Footer() {
         >
             <div className="flex flex-col gap-4 md:gap-6">
                 <h2 className="type-h1">Contact</h2>
-                <a
-                    href="mailto:hello@akeflatholm.com"
-                    className={`type-h2 w-fit break-all ${linkClass}`}
-                >
-                    hello@akeflatholm.com
-                </a>
-                <ul className="flex flex-row flex-wrap gap-x-6 gap-y-2 type-body">
-                    <li>
-                        <a
-                            href="https://www.linkedin.com/in/akeflatholm/"
-                            target="_blank"
-                            className="flex flex-row items-center gap-2"
-                        >
-                            <Linkedin size={16} aria-hidden="true" />
-                            <span className={linkClass}>LinkedIn</span>
-                            <span className="sr-only"> (opens in new tab)</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://github.com/CodingQuercus"
-                            target="_blank"
-                            className="flex flex-row items-center gap-2"
-                        >
-                            <Github size={16} aria-hidden="true" />
-                            <span className={linkClass}>GitHub</span>
-                            <span className="sr-only"> (opens in new tab)</span>
-                        </a>
-                    </li>
-                    <li>
-                        <CvMenu linkClass={linkClass} />
-                    </li>
-                </ul>
+                <ContactLinks />
             </div>
 
             <p className="type-caption">
