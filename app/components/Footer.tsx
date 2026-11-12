@@ -1,3 +1,5 @@
+import CvMenu from './CvMenu';
+
 // Plain text links: the pages above already end with buttons, so the footer
 // stays quiet.
 const linkClass =
@@ -39,28 +41,7 @@ export default function Footer() {
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="/AF_CV_EN.pdf"
-                            target="_blank"
-                            className={linkClass}
-                        >
-                            CV in English
-                            <span className="sr-only"> (opens in new tab)</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/AF_CV_SE.pdf"
-                            target="_blank"
-                            className={linkClass}
-                            lang="sv"
-                        >
-                            CV på svenska
-                            <span className="sr-only" lang="en">
-                                {' '}
-                                (opens in new tab)
-                            </span>
-                        </a>
+                        <CvMenu linkClass={linkClass} />
                     </li>
                 </ul>
             </div>
