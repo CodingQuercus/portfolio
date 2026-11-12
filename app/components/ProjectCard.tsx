@@ -55,7 +55,7 @@ export default function ProjectCard({
                             </p>
                         )}
                     </div>
-                    <p className="type-body w-full max-w-2xl">
+                    <p className="type-body w-full lg:w-5/6">
                         {description}
                     </p>
                 </div>
