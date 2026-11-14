@@ -13,6 +13,17 @@ const MontserratFont = Montserrat({
     subsets: ['latin'],
 });
 
+const SITE_DESCRIPTION =
+    'UX Designer and Developer based in Sweden. I enjoy the process of making complex systems easier to use.';
+
+// Rendered at 2x so it stays sharp after LinkedIn and others compress it.
+const SHARE_IMAGE = {
+    url: '/og-image.png',
+    width: 2400,
+    height: 1260,
+    alt: 'Åke Flatholm: UX Designer, Developer, Sweden',
+};
+
 export const metadata: Metadata = {
     metadataBase: new URL('https://akeflatholm.com'),
     alternates: {
@@ -26,20 +37,20 @@ export const metadata: Metadata = {
         default: 'Portfolio | Åke Flatholm',
         template: '%s | Åke Flatholm',
     },
-    description: 'UX Designer and Developer based in Sweden.',
+    description: SITE_DESCRIPTION,
     authors: [{ name: 'Åke Flatholm' }],
     creator: 'Åke Flatholm',
     openGraph: {
         type: 'website',
         title: 'Portfolio | Åke Flatholm',
-        description: 'UX Designer and Developer based in Sweden.',
-        images: ['/og-image.png'],
+        description: SITE_DESCRIPTION,
+        images: [SHARE_IMAGE],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Portfolio | Åke Flatholm',
-        description: 'UX Designer and Developer based in Sweden.',
-        images: ['/og-image.png'],
+        description: SITE_DESCRIPTION,
+        images: [SHARE_IMAGE],
     },
 };
 
