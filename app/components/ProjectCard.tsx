@@ -36,7 +36,7 @@ export default function ProjectCard({
 
     return (
         <div
-            className={`flex flex-col gap-6 rounded-3xl p-6 md:p-8 ${isCompact ? '' : 'min-h-[424px] md:min-h-0'}`}
+            className="flex flex-col gap-6 rounded-3xl p-6 md:p-8"
             style={{ backgroundColor, color: CARD_TEXT }}
         >
             {isCompact ? (
@@ -61,7 +61,7 @@ export default function ProjectCard({
                         </Heading>
                         <p className="type-body w-full">{description}</p>
                     </div>
-                    <div className="rounded-2xl overflow-hidden aspect-video hidden md:flex items-center justify-center">
+                    <div className="rounded-2xl overflow-hidden aspect-video flex items-center justify-center">
                         {mockupImage ? (
                             <Image
                                 src={mockupImage}
