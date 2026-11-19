@@ -10,12 +10,12 @@ export default function ProjectKeyInsight({
 }: ProjectKeyInsightProps) {
     return (
         <div
-            className={`flex flex-col gap-2 ${READING_WIDTH} bg-surface rounded-3xl px-6 md:px-8 py-5 md:py-6`}
+            className={`flex flex-col gap-2 ${READING_WIDTH} bg-surface rounded-2xl px-6 md:px-8 py-5 md:py-6`}
         >
             <h3 className="type-h3">{introduction}</h3>
             <div className="flex flex-col gap-3">
                 {paragraphs.map((paragraph, i) => (
-                    <p key={i} className="type-body">
+                    <p key={i} className="type-reading">
                         {paragraph}
                     </p>
                 ))}

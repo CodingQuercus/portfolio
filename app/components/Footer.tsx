@@ -9,7 +9,7 @@ export default function Footer() {
             className="my-6 md:my-12 flex flex-col gap-6 md:gap-8"
         >
             <div className="flex flex-col gap-4 md:gap-6">
-                <h2 className="type-h1">Contact</h2>
+                <h2 className="type-section">Contact</h2>
                 <ContactLinks />
             </div>
 

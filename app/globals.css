@@ -80,3 +80,10 @@ html {
 @utility type-caption {
     @apply text-sm text-foreground/60;
 }
+@utility type-section {
+    @apply text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight;
+}
+/* Case-study prose: a little larger than body on wider screens. */
+@utility type-reading {
+    @apply text-base leading-7 md:text-lg md:leading-8;
+}

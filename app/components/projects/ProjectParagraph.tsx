@@ -7,7 +7,7 @@ export default function ProjectParagraph({
     paragraphs,
 }: ProjectParagraphProps) {
     return (
-        <div className={`flex flex-col gap-2 type-body ${READING_WIDTH}`}>
+        <div className={`flex flex-col gap-3 type-reading ${READING_WIDTH}`}>
             {paragraphs.map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
             ))}

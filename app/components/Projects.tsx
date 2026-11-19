@@ -25,7 +25,7 @@ export default function Projects() {
 
     return (
         <section className="flex flex-col w-full gap-4">
-            <h2 className="type-h1">Projects</h2>
+            <h2 className="type-section">Projects</h2>
             <div className="flex flex-col gap-4 md:gap-6">
                 {featured.map((project) => (
                     <motion.div
