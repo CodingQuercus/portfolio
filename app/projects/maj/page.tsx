@@ -9,28 +9,33 @@ import ProjectMockupGrid from '@/app/components/projects/ProjectMockupGrid';
 import ProjectKeyInsight from '@/app/components/projects/ProjectKeyInsight';
 import PillButton from '@/app/components/PillButton';
 
-import landingImage from '@/public/maj/maj_start.png';
+// Raw screenshots of the current app (demo account). To be replaced with device mockups.
 import erImage from '@/public/maj/maj_er.png';
 import schemaImage from '@/public/maj/maj_schema.png';
-import listImage from '@/public/maj/maj_applications.png';
-import drawerImage from '@/public/maj/maj_new.png';
-import detailImage from '@/public/maj/maj_detail.png';
-import editImage from '@/public/maj/maj_edit.png';
-import searchImage from '@/public/maj/maj_search.png';
-import filterImage from '@/public/maj/maj_filter.png';
-import dashboardImage from '@/public/maj/maj_dashboard.png';
+import startImage from '@/public/maj/v2/desktop-01-start.png';
+import listImage from '@/public/maj/v2/desktop-02-applications.png';
+import dateFilterImage from '@/public/maj/v2/desktop-08-date-filter.png';
+import newSavedImage from '@/public/maj/v2/desktop-05-new-saved.png';
+import deadlinePassedImage from '@/public/maj/v2/desktop-07-saved-deadline-passed.png';
+import detailImage from '@/public/maj/v2/desktop-06-detail-events.png';
+import calendarImage from '@/public/maj/v2/desktop-04-calendar.png';
+import calendarAddImage from '@/public/maj/v2/desktop-09-calendar-add-event.png';
+import overviewImage from '@/public/maj/v2/desktop-03-overview.png';
+import mobileListImage from '@/public/maj/v2/mobile-02-applications.png';
+import mobileCalendarImage from '@/public/maj/v2/mobile-04-calendar.png';
+import mobileDetailImage from '@/public/maj/v2/mobile-06-detail-events.png';
 
 import { ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Maj',
     description:
-        'A full-stack job application tracker built with Next.js, TypeScript, and Supabase. Features auth, CRUD, search, filtering, and a live dashboard.',
+        'A full-stack job application tracker built with Next.js, TypeScript and Supabase: applications, saved jobs with deadlines, interviews in a calendar and an overview that measures effort.',
 };
 
 export default function MajPage() {
     return (
-        <article className="flex flex-col gap-4 md:gap-6 min-h-screen pt-24 md:pt-28">
+        <article className="flex flex-col gap-10 md:gap-14 min-h-screen pt-24 md:pt-28">
             <BackButton label="Back to projects" />
 
             <ProjectHeader
@@ -42,6 +47,7 @@ export default function MajPage() {
                     'TypeScript',
                     'Supabase',
                     'Tailwind CSS',
+                    'shadcn/ui',
                     'Recharts',
                 ]}
                 role="Developer & Designer"
@@ -53,67 +59,81 @@ export default function MajPage() {
                     paragraphs={[
                         'I was looking for my first job after graduating and needed a way to keep track of my applications.',
                         'Spreadsheets worked but felt clunky. I decided to build something purpose-built, and use it as an opportunity to learn Next.js App Router and Supabase in a real project with auth, a database, and full CRUD.',
-                        "The result is a fully responsive full-stack app, testable via a live demo account."
+                        'The result is a fully responsive full-stack app, testable via a live demo account.',
                     ]}
                 />
-                <ProjectImage src={landingImage} alt="Maj landing page." />
+                <ProjectImage src={startImage} alt="Maj start page." />
             </ProjectSection>
 
             <ProjectSection title="Data model">
                 <ProjectParagraph
                     paragraphs={[
-                        'The database has three tables, users, job_applications and contacts. Each application belongs to a user, and each contact belongs to an application.',
+                        'The database has four tables: users, job_applications, contacts and events. Each application belongs to a user, and its contacts and events belong to the application.',
+                        'Row Level Security on every table means a user can only read and change their own rows, enforced by the database rather than the client.',
                     ]}
                 />
                 <ProjectMockupGrid
                     mockups={[
                         {
                             src: erImage,
-                            alt: 'Entity relationship diagram showing users, applications and contacts.',
+                            alt: 'Entity relationship diagram: a user has many applications, and an application has many contacts and many events.',
                             caption: 'Entity relationship diagram',
                         },
                         {
                             src: schemaImage,
-                            alt: 'Database schema showing all fields per table.',
+                            alt: 'Database schema showing all fields of users, job_applications, contacts and events.',
                             caption: 'Database schema',
                         },
                     ]}
                     cols={2}
+                    framed
                 />
             </ProjectSection>
 
             <ProjectSection title="Application list">
                 <ProjectParagraph
                     paragraphs={[
-                        'The list lets you sort by any column, filter by one or more statuses, and search by role or company. Clicking a row opens the full detail view.',
-                        "Multi-status filtering lets you hide statuses you don't want to see and stay focused on applications that are still active. For a lot of people, a growing list of rejections might create anxiety. Keeping them out of view is a small thing that might make the process feel more manageable."                    ]}
+                        'The list is where most time is spent, so the header with search, filters and New application stays in place while the list scrolls, instead of splitting it into pages.',
+                        "Filter by one or more statuses, by date applied, and export what you need as CSV. Hiding statuses you don't want to see, like a growing list of rejections, is a small thing that can make a job search feel more manageable.",
+                        'On larger screens the list is a table with the role column pinned while it scrolls sideways; on phones each application is a card.',
+                    ]}
                 />
-                <ProjectImage src={listImage} alt="Applications list view" caption="Sortable columns for role, company, location, applied date and status" />
-                <ProjectImage src={searchImage} alt="Applications list filtered by search query" caption="Search filters results by role or company name" />
-                <ProjectImage src={filterImage} alt="Applications list filtered by status" caption="Filter by status to narrow down your applications" />
+                <ProjectImage
+                    src={listImage}
+                    alt="Applications list with saved jobs first, then applications by date."
+                    caption="Saved jobs first, each with how long is left to apply"
+                />
+                <ProjectImage
+                    src={dateFilterImage}
+                    alt="Date applied filter open, with quick ranges and a two-month calendar."
+                    caption="Filter on date applied: quick ranges, or pick a start and end date and apply"
+                />
+            </ProjectSection>
+
+            <ProjectSection title="Saving jobs before applying">
+                <ProjectParagraph
+                    paragraphs={[
+                        'A job is often found days before you apply. A new entry can be saved for later instead of logged as applied. A saved job has no date applied yet; its deadline is the last day to apply, and the list, calendar and overview remind you as it gets close.',
+                        'When you apply, one click moves it on and dates it today.',
+                    ]}
+                />
+                <ProjectImage
+                    src={newSavedImage}
+                    alt="New application drawer with Saved for later selected and an Apply by date."
+                    caption="Saved for later or already applied, chosen when adding"
+                />
+                <ProjectImage
+                    src={deadlinePassedImage}
+                    alt="A saved job past its deadline, asking whether you applied."
+                    caption="A missed deadline asks what to do instead of deciding for you"
+                />
             </ProjectSection>
 
             <ProjectSection title="Adding and editing applications">
                 <ProjectParagraph
                     paragraphs={[
-                        'Instead of navigating to a separate page, a slide-in drawer keeps the user in context. Opening a new page breaks the scanning flow, so editing happens inline without interrupting the overview.',
-                        'The same drawer handles both create and edit. On desktop it is resizable, useful when editing longer job descriptions or notes where more space helps.',
-                    ]}
-                />
-                <ProjectMockupGrid
-                    mockups={[
-                        {
-                            src: drawerImage,
-                            alt: 'Application list with the new application drawer open on the right side.',
-                            caption:
-                                'Application list with the new application drawer open on the right side',
-                        },
-                        {
-                            src: editImage,
-                            alt: 'Application detail view with the edit drawer open.',
-                            caption:
-                                'Application detail view with the edit drawer open',
-                        },
+                        'Instead of navigating to a separate page, a slide-in drawer keeps the user in context. Opening a new page breaks the scanning flow, so editing happens without leaving the list or the application.',
+                        'The same drawer handles both create and edit.',
                     ]}
                 />
             </ProjectSection>
@@ -121,27 +141,80 @@ export default function MajPage() {
             <ProjectSection title="Detail view">
                 <ProjectParagraph
                     paragraphs={[
-                        'Each application has a detail page with the full job description, notes, contacts and inline status updates.',
-                        'Status can be changed directly on the detail page, or via a popover by clicking the status badge in the list. Either way, no navigation required. Status updates happen frequently, especially early in a search, and removing that friction keeps the workflow fast.',
+                        'Each application has a page with its status, the job description, events, notes and contacts.',
+                        'Status can be changed here or straight from the list, with the same menu in both places.',
                     ]}
                 />
                 <ProjectImage
                     src={detailImage}
-                    alt="Application detail view"
-                    caption="Full job description, notes, contacts and inline status selector"
+                    alt="Application detail page with status, events and contacts."
+                    caption="Status, events, notes and contacts on one page"
                 />
             </ProjectSection>
 
-            <ProjectSection title="Dashboard">
+            <ProjectSection title="Calendar">
                 <ProjectParagraph
                     paragraphs={[
-                        'The dashboard gives a quick overview without having to scan the list. You can see how your applications are distributed across statuses and how your activity has trended over time. The in-process rate shows what percentage of applications are currently past the initial applied stage and not yet rejected or withdrawn, a quick way to see how many are still in play. Right now it is display only, but a next step would be making each stat card clickable to filter the list by status or in-process rate.',
+                        "The calendar gathers interviews, tests and other events in one place, together with the last day to apply for saved jobs. Beside the month, a list shows what's coming up in the next seven days. Pick a day to see only that day and add to it.",
+                        'Each kind of event has the same colour as its status, so an interview looks the same everywhere in the app. Deadlines are marked with a flag instead of a dot, so they stand out by shape as well as colour, and a legend explains the marks.',
                     ]}
                 />
                 <ProjectImage
-                    src={dashboardImage}
-                    alt="Application dashboard"
-                    caption="Stat cards per status and a donut chart showing the breakdown of all applications"
+                    src={calendarImage}
+                    alt="Calendar with the month on one side and the next seven days on the other."
+                    caption="The month beside the next seven days"
+                />
+                <ProjectImage
+                    src={calendarAddImage}
+                    alt="Add event drawer opened from the calendar, with the picked date filled in."
+                    caption="Events are added for the picked day"
+                />
+            </ProjectSection>
+
+            <ProjectSection title="Overview">
+                <ProjectParagraph
+                    paragraphs={[
+                        'The overview shows how many applications you have sent, this week and this month, how many are in progress, the spread across statuses, what is coming up and your activity over time.',
+                        'Every number leads somewhere: a status opens the list filtered on it, and a bar in the chart zooms into that period and its applications.',
+                    ]}
+                />
+                <ProjectKeyInsight
+                    introduction="Measure effort, not outcomes."
+                    paragraphs={[
+                        'An earlier version showed the share of applications that had progressed. Replies are mostly out of your control, a low percentage can feel like a grade, and it even drops the more you apply. The numbers now count what you do yourself.',
+                    ]}
+                />
+                <ProjectImage
+                    src={overviewImage}
+                    alt="Overview with counts, applications by status, upcoming events and a monthly chart."
+                    caption="Counts of what you do, status spread, upcoming events and activity"
+                />
+            </ProjectSection>
+
+            <ProjectSection title="On phones">
+                <ProjectParagraph
+                    paragraphs={['Everything works just as well on a phone.']}
+                />
+                <ProjectMockupGrid
+                    cols={3}
+                    framed
+                    mockups={[
+                        {
+                            src: mobileListImage,
+                            alt: 'Applications as cards on a phone.',
+                            caption: 'Applications',
+                        },
+                        {
+                            src: mobileCalendarImage,
+                            alt: 'Calendar on a phone, with the next seven days below the month.',
+                            caption: 'Calendar',
+                        },
+                        {
+                            src: mobileDetailImage,
+                            alt: 'Application page on a phone.',
+                            caption: 'Application',
+                        },
+                    ]}
                 />
             </ProjectSection>
 

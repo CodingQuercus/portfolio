@@ -36,9 +36,9 @@ export default function About() {
     return (
         <section
             aria-label="About"
-            className="flex flex-col items-center pt-24 md:pt-28 gap-4 md:gap-8"
+            className="flex flex-col pt-24 md:pt-28 gap-10 md:gap-14"
         >
-            <div className="flex flex-col md:flex-row items-center justify-around gap-8 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center w-full">
                 <div className="flex flex-col gap-2 order-2 md:order-1">
                     <h1 className="type-h1">Åke Flatholm</h1>
                     <div className="flex flex-col gap-2 type-body w-full md:max-w-lg">
@@ -72,7 +72,7 @@ export default function About() {
                     height={520}
                     loading="eager"
                     style={{ height: 'auto' }}
-                    className="rounded-3xl order-1 md:order-2 w-64 md:w-96"
+                    className="rounded-2xl order-1 md:order-2 w-64 md:w-96 justify-self-center md:justify-self-end"
                 />
             </div>
 
@@ -82,7 +82,7 @@ export default function About() {
                     {hobbies.map((hobby) => (
                         <div
                             key={hobby.title}
-                            className="flex flex-col gap-2 bg-surface rounded-3xl px-6 md:px-8 py-5 md:py-6"
+                            className="flex flex-col gap-2 bg-surface rounded-2xl px-6 md:px-8 py-5 md:py-6"
                         >
                             <h3 className="type-h3">{hobby.title}</h3>
                             <p className="type-body">{hobby.description}</p>
@@ -93,7 +93,7 @@ export default function About() {
 
             <div className="flex flex-col gap-2 md:gap-4 w-full">
                 <h2 className="type-h2">Education</h2>
-                <div className="flex flex-col gap-2 bg-surface rounded-3xl px-6 md:px-8 py-5 md:py-6">
+                <div className="flex flex-col gap-2 bg-surface rounded-2xl px-6 md:px-8 py-5 md:py-6">
                     <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-16 type-h3 w-full">
                         <p className="flex-1">
                             Master of Science in Engineering with a

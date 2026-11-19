@@ -91,7 +91,7 @@ export default function Navbar() {
                           }
                         : { duration: 0 }
                 }
-                className="fixed z-50 top-0 inset-x-0 bg-background shadow-md"
+                className="fixed z-50 top-0 inset-x-0 bg-background border-b border-foreground/10"
                 aria-label="Main navigation"
             >
                 <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-4 flex items-center justify-between">
@@ -221,7 +221,7 @@ export default function Navbar() {
                                 duration: 0.5,
                                 ease: EASE_OUT,
                             }}
-                            className="fixed top-20 bottom-0 right-0 w-4/5 max-w-sm bg-background shadow-xl z-40 md:hidden flex flex-col justify-between gap-8 px-6 pt-8 pb-8 overflow-y-auto"
+                            className="fixed top-20 bottom-0 right-0 w-4/5 max-w-sm bg-background border-l border-foreground/10 z-40 md:hidden flex flex-col justify-between gap-8 px-6 pt-8 pb-8 overflow-y-auto"
                             id="mobile-menu"
                             role="dialog"
                             aria-modal="true"

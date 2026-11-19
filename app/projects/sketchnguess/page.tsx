@@ -41,12 +41,12 @@ export const metadata: Metadata = {
 
 export default function SketchPage() {
     return (
-        <article className="flex flex-col gap-4 md:gap-6 min-h-screen pt-24 md:pt-28">
+        <article className="flex flex-col gap-10 md:gap-14 min-h-screen pt-24 md:pt-28">
             <BackButton label="Back to projects" />
 
             <ProjectHeader
                 title="Sketch'N'Guess"
-                backgroundColor="#E96FA6"
+                backgroundColor="#D11F70"
                 description="A GPS-based multiplayer drawing and guessing game for mobile, developed during a design sprint using React Native, Node.js and Socket.io for real-time communication."
                 tags={[
                     'Mobile Development',

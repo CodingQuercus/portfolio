@@ -16,7 +16,7 @@ export default function ProcessListItem({
                 <span aria-hidden="true">{number}.</span>
                 {title}
             </p>
-            <p className={`type-body ${READING_WIDTH}`}>{information}</p>
+            <p className={`type-reading ${READING_WIDTH}`}>{information}</p>
         </li>
     );
 }

@@ -74,12 +74,12 @@ const clusterCode = `const groupPins = (pins: Pin[], region: Region) => {
 
 export default function AwarePage() {
     return (
-        <article className="flex flex-col gap-4 md:gap-6 min-h-screen pt-24 md:pt-28">
+        <article className="flex flex-col gap-10 md:gap-14 min-h-screen pt-24 md:pt-28">
             <BackButton label="Back to projects" />
 
             <ProjectHeader
                 title="aWAre"
-                backgroundColor="#1ABA87"
+                backgroundColor="#137F5C"
                 description="A safety app developed in collaboration with marketing students at Edith Cowan University in Perth, providing users with hazard alerts and local community posts across Western Australia."
                 tags={[
                     'International Collaboration',
