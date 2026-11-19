@@ -10,12 +10,15 @@ type ProjectMockupGridProps = {
     mockups: Mockup[];
     cols?: 1 | 2 | 3 | 4 | 5 | 6;
     aspectRatio?: string;
+    /** Hairline around each image, for raw screenshots and diagrams. */
+    framed?: boolean;
 };
 
 export default function ProjectMockupGrid({
     mockups,
     cols = 1,
     aspectRatio,
+    framed = false,
 }: ProjectMockupGridProps) {
     const colClass = {
         1: 'grid-cols-1 md:grid-cols-2',
@@ -34,7 +37,7 @@ export default function ProjectMockupGrid({
                     className="flex flex-col gap-2 items-center"
                 >
                     <div
-                        className="rounded-3xl overflow-hidden"
+                        className={`rounded-2xl overflow-hidden ${framed ? 'border border-foreground/10' : ''}`}
                         style={{ aspectRatio: aspectRatio ?? 'auto' }}
                     >
                         <Image

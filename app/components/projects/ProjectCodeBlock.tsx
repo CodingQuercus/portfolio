@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { READING_WIDTH } from './readingWidth';
+import { motion } from 'framer-motion';
+import { MEDIA_WIDTH } from './readingWidth';
 
 type ProjectCodeBlockProps = {
     code: string;
@@ -16,8 +16,8 @@ export default function ProjectCodeBlock({
     const [expanded, setExpanded] = useState(false);
 
     return (
-        <figure className={`flex flex-col gap-2 ${READING_WIDTH}`}>
-            <div className="rounded-3xl bg-foreground/5 overflow-hidden">
+        <figure className={`flex flex-col gap-2 ${MEDIA_WIDTH}`}>
+            <div className="rounded-2xl bg-surface overflow-hidden">
                 <motion.div
                     initial={false}
                     animate={{ height: expanded ? 'auto' : '8rem' }}
@@ -31,17 +31,6 @@ export default function ProjectCodeBlock({
                     >
                         <code>{code}</code>
                     </pre>
-                    <AnimatePresence>
-                        {!expanded && (
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.2 }}
-                                className="absolute bottom-0 left-0 h-16 gradient-to-t from-foreground/5 to-transparent"
-                            />
-                        )}
-                    </AnimatePresence>
                 </motion.div>
 
                 <button
