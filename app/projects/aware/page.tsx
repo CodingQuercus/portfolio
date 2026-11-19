@@ -79,7 +79,7 @@ export default function AwarePage() {
 
             <ProjectHeader
                 title="aWAre"
-                backgroundColor="#1ABA87"
+                backgroundColor="#137F5C"
                 description="A safety app developed in collaboration with marketing students at Edith Cowan University in Perth, providing users with hazard alerts and local community posts across Western Australia."
                 tags={[
                     'International Collaboration',

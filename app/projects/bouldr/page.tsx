@@ -32,7 +32,7 @@ export default function BouldRPage() {
 
             <ProjectHeader
                 title="BouldR"
-                backgroundColor="#EA9734"
+                backgroundColor="#B45309"
                 description="A native Android app for climbers who want to log routes, track progress and review their sessions. Built during a mobile development course at Umeå University."
                 tags={['Kotlin', 'Jetpack Compose', 'Room', 'CameraX', 'MVVM']}
                 role="Developer & Designer"

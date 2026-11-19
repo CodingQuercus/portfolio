@@ -34,7 +34,7 @@ export default function ThesisPage() {
 
             <ProjectHeader
                 title="Designing Trustworthy CUIs for Reliable Information Retrieval"
-                backgroundColor="#1D93F3"
+                backgroundColor="#0B6FC2"
                 description="A design thinking study exploring how conversational interfaces can be designed to support reliable, AI-driven information retrieval in quality management systems, with a focus on transparency and user trust."
                 tags={[
                     'M.Sc. Thesis',

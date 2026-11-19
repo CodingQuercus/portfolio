@@ -35,7 +35,7 @@ export const projectList: ProjectSummary[] = [
     },
     {
         title: 'Designing Trustworthy CUIs for Information Retrieval',
-        backgroundColor: '#1D93F3',
+        backgroundColor: '#0B6FC2',
         description:
             'A design thinking study exploring how conversational interfaces can be designed to support reliable information retrieval in quality management systems, with a focus on transparency and user trust.',
         href: '/projects/thesis',
@@ -59,7 +59,7 @@ export const projectList: ProjectSummary[] = [
     },
     {
         title: 'aWAre',
-        backgroundColor: '#1ABA87',
+        backgroundColor: '#137F5C',
         description:
             'A safety app developed in collaboration with marketing students at Edith Cowan University in Perth, providing users with hazard alerts and local community posts across Western Australia.',
         href: '/projects/aware',
@@ -81,7 +81,7 @@ export const projectList: ProjectSummary[] = [
     },
     {
         title: 'BouldR',
-        backgroundColor: '#EA9734',
+        backgroundColor: '#B45309',
         description:
             'A native Android app for climbers who want to log routes, track progress and review their sessions.',
         href: '/projects/bouldr',
@@ -90,7 +90,7 @@ export const projectList: ProjectSummary[] = [
     },
     {
         title: "Sketch'N'Guess",
-        backgroundColor: '#E96FA6',
+        backgroundColor: '#D11F70',
         description:
             'A GPS-based multiplayer drawing and guessing game for mobile, developed during a design sprint using React Native, Node.js, and Socket.io for real-time communication.',
         href: '/projects/sketchnguess',
